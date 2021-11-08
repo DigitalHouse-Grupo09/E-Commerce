@@ -46,8 +46,8 @@ Administrador (adminitradores logeados)
 
 ### Equipo
 
-Denominación fiscal: **Grupo 09**
-Denominación de fantasia: **Globant**
+- Denominación fiscal: **Grupo 09**
+- Denominación de fantasia: **Globant**
 
  * [Cristian Besada][https://github.com/cristianebes]
  * [Paloma Gras][https://github.com/PalomaG11]
