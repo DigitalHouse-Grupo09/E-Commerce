@@ -75,7 +75,7 @@ npm start
 ```
 
 <!-- deep links -->
-[introduction]: #introduccion
+[introduction]: #introducción
 [team]: #equipo
 [getting_started]: #comenzando
 [download]: #descargar
