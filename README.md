@@ -15,13 +15,13 @@
 
 
 <!-- INTRODUCTION -->
-## Introducción
+## 🤯 Introducción
 
 E-Commerse - DH Venture Capital es un sistema de venta de libros online.
 
 
 <!-- INTRODUCTION :: FEATURES -->
-### Descripción técnica
+### 🤓 Descripción técnica
 
 #### Cliente
 Ve el listado de archivos. Puede buscar libros, mirar el detalle (precio, escritor, etc), comprar (o no) y contactarse con el web master (ayuda, queja, mejora).
@@ -55,7 +55,7 @@ Administrador (adminitradores logeados)
 
 
 <!-- INTRODUCTION :: TEAM -->
-### Equipo
+### 👬👫 Equipo
 
 #### Nombre
 - Denominación fiscal: **Grupo 09**
@@ -67,7 +67,9 @@ Administrador (adminitradores logeados)
  * [Sergio Abadia](https://github.com/Garasaki)
  * [Nicolas Molina](https://github.com/comodinx)
 
-### Inspiración
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### 👨🏻‍🏫 Inspiración
 
  * https://tienda.planetadelibros.com.ar
  * https://www.buscalibre.com.ar
@@ -84,7 +86,7 @@ Administrador (adminitradores logeados)
 <!-- GETTING STARTED -->
 ## Comenzando
 
-### Descargar
+### 👩🏼‍💻 Descargar
 
 1. Clonar el repositorio
    ```sh
@@ -112,9 +114,9 @@ npm start
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- deep links -->
-[introduction]: #introducción
-[team]: #equipo
-[inspiration]: #inspiración
+[introduction]: #-introducción
+[team]: #-equipo
+[inspiration]: #-inspiración
 [getting_started]: #comenzando
-[download]: #descargar
-[run]: #correr
+[download]: #-descargar
+[run]: #-correr
