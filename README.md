@@ -7,11 +7,12 @@
 ## Indice
 
 * [Introducción][introduction].
-	- [Equipo][team].
-    - [Inspiración][inspiration].
+* [Equipo][team].
+* [Inspiración][inspiration].
 * [Comenzando][getting_started].
 	- [Descargar][download].
 	- [Correr][run].
+* [Descripción técnica][details].
 
 
 <!-- INTRODUCTION -->
@@ -20,8 +21,70 @@
 E-Commerse - DH Venture Capital es un sistema de venta de libros online.
 
 
-<!-- INTRODUCTION :: FEATURES -->
-### 🤓 Descripción técnica
+<!-- TEAM -->
+## 👬👫 Equipo
+
+#### Nombre
+- Denominación fiscal: **Grupo 09**
+- Denominación de fantasia: **Globant**
+
+#### Integrantes
+ * [Cristian Besada](https://github.com/cristianebes)
+ * [Paloma Gras](https://github.com/PalomaG11)
+ * [Sergio Abadia](https://github.com/Garasaki)
+ * [Nicolas Molina](https://github.com/comodinx)
+
+<p align="right">(<a href="#top">volver arriba</a>)</p>
+
+
+<!-- INSPIRATION -->
+## 👨🏻‍🏫 Inspiración
+
+ * https://tienda.planetadelibros.com.ar
+ * https://www.buscalibre.com.ar
+ * https://www.tematika.com
+ * https://www.cuspide.com
+ * https://www.tiendadelibros.com.ar
+ * https://www.casadellibro.com/libros
+ * https://www.bajalibros.com/AR
+ * https://listado.mercadolibre.com.ar/libros#D[A:libros]
+
+<p align="right">(<a href="#top">volver arriba</a>)</p>
+
+
+<!-- GETTING STARTED -->
+## Comenzando
+
+### 👩🏼‍💻 Descargar
+
+1. Clonar el repositorio
+   ```sh
+   git clone https://github.com/DigitalHouse-Grupo09/E-Commerce.git Grupo09-E-Commerce
+   ```
+3. Movernos a la carpeta creada
+   ```sh
+   cd Grupo09-E-Commerce
+   ```
+3. Instalar las dependencias de NodeJs
+   ```sh
+   npm i
+   ```
+
+### 🚀 Correr
+
+```shell
+# modo desarrollo - observación de cambio en tiempo real
+npm run dev
+
+# producción
+npm start
+```
+
+<p align="right">(<a href="#top">volver arriba</a>)</p>
+
+
+<!-- FEATURES -->
+## 🤓 Descripción técnica
 
 #### Cliente
 Ve el listado de archivos. Puede buscar libros, mirar el detalle (precio, escritor, etc), comprar (o no) y contactarse con el web master (ayuda, queja, mejora).
@@ -53,66 +116,6 @@ Administrador (adminitradores logeados)
         + modificar
 ```
 
-
-<!-- INTRODUCTION :: TEAM -->
-### 👬👫 Equipo
-
-#### Nombre
-- Denominación fiscal: **Grupo 09**
-- Denominación de fantasia: **Globant**
-
-#### Integrantes
- * [Cristian Besada](https://github.com/cristianebes)
- * [Paloma Gras](https://github.com/PalomaG11)
- * [Sergio Abadia](https://github.com/Garasaki)
- * [Nicolas Molina](https://github.com/comodinx)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-### 👨🏻‍🏫 Inspiración
-
- * https://tienda.planetadelibros.com.ar
- * https://www.buscalibre.com.ar
- * https://www.tematika.com
- * https://www.cuspide.com
- * https://www.tiendadelibros.com.ar
- * https://www.casadellibro.com/libros
- * https://www.bajalibros.com/AR
- * https://listado.mercadolibre.com.ar/libros#D[A:libros]
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-<!-- GETTING STARTED -->
-## Comenzando
-
-### 👩🏼‍💻 Descargar
-
-1. Clonar el repositorio
-   ```sh
-   git clone https://github.com/DigitalHouse-Grupo09/E-Commerce.git Grupo09-E-Commerce
-   ```
-3. Movernos a la carpeta creada
-   ```sh
-   cd Grupo09-E-Commerce
-   ```
-3. Instalar las dependencias de NodeJs
-   ```sh
-   npm i
-   ```
-
-### 🚀 Correr
-
-```shell
-# modo desarrollo - observación de cambio en tiempo real
-npm run dev
-
-# producción
-npm start
-```
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 <!-- deep links -->
 [introduction]: #-introducción
 [team]: #-equipo
@@ -120,3 +123,4 @@ npm start
 [getting_started]: #comenzando
 [download]: #-descargar
 [run]: #-correr
+[details]: #-descripción-técnica
