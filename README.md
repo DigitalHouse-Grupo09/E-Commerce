@@ -99,7 +99,7 @@ Administrador (adminitradores logeados)
    npm i
    ```
 
-### Correr
+### 🚀 Correr
 
 ```shell
 # modo desarrollo - observación de cambio en tiempo real
