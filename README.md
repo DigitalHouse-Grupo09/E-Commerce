@@ -17,7 +17,7 @@ E-Commerse - DH Venture Capital es un sistema de venta de libros online.
 #### Cliente
 Ve el listado de archivos. Puede buscar libros, mirar el detalle (precio, escritor, etc), comprar (o no) y contactarse con el web master (ayuda, queja, mejora).
 
-> [portal][javascript:alert('proximamente!');].
+> **PROXIMAMENTE!** https://dhventure-capital.e-commerse.com
 
 ```
 Usuario final (cliente)
@@ -33,7 +33,7 @@ Usuario final (cliente)
 #### Administrador
 Maneja el backoffice. Ingresa al sistema por medio de un login. Puede hacer el alta, baja o modificación de los libros, puede ver la lista de libros existentes y puede dar de alta, baja y/o modificar otros usuarios.
 
-> [backoffice][javascript:alert('proximamente!');].
+> **PROXIMAMENTE!** https://dhventure-capital.e-commerse.com/admin
 
 ```
 Administrador (adminitradores logeados)
