@@ -54,7 +54,7 @@ E-Commerse - DH Venture Capital es un sistema de venta de libros online.
 
 
 <!-- HELPER LINKS -->
-## Links útiles
+## 🪄 Links útiles
 
 * Seguimiento. [Trello](https://trello.com/b/JwisJ7RO)
 * Wireframes + Diseño UI/UX. [Figma](https://www.figma.com/file/sx843dH2Djp7oQiAv3VfVX/DH-Venture-Capital---E-Commerse?node-id=18%3A109)
