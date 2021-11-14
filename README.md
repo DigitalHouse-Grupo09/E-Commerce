@@ -9,6 +9,7 @@
 * [Introducción][introduction].
 * [Equipo][team].
 * [Inspiración][inspiration].
+* [Links útiles][helper_links].
 * [Comenzando][getting_started].
 	- [Descargar][download].
 	- [Correr][run].
@@ -48,6 +49,15 @@ E-Commerse - DH Venture Capital es un sistema de venta de libros online.
  * https://www.casadellibro.com/libros
  * https://www.bajalibros.com/AR
  * https://listado.mercadolibre.com.ar/libros#D[A:libros]
+
+<p align="right">(<a href="#top">volver arriba</a>)</p>
+
+
+<!-- HELPER LINKS -->
+## Links útiles
+
+* Seguimiento. [Trello](https://trello.com/b/JwisJ7RO)
+* Wireframes + Diseño UI/UX. [Figma](https://www.figma.com/file/sx843dH2Djp7oQiAv3VfVX/DH-Venture-Capital---E-Commerse?node-id=18%3A109)
 
 <p align="right">(<a href="#top">volver arriba</a>)</p>
 
@@ -120,6 +130,7 @@ Administrador (adminitradores logeados)
 [introduction]: #-introducción
 [team]: #-equipo
 [inspiration]: #-inspiración
+[helper_links]: #-links-útiles
 [getting_started]: #comenzando
 [download]: #-descargar
 [run]: #-correr
