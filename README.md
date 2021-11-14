@@ -82,11 +82,13 @@ E-Commerse - DH Venture Capital es un sistema de venta de libros online.
 
 ### 🚀 Correr
 
-```shell
-# modo desarrollo - observación de cambio en tiempo real
+Modo desarrollo - observación de cambio en tiempo real
+```sh
 npm run dev
+```
 
-# producción
+Modo producción
+```sh
 npm start
 ```
 
