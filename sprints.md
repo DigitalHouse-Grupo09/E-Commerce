@@ -16,9 +16,9 @@
 Wireframes + boceto
 
 **Tareas**:
-* Github repository
-* Wireframes + boceto
-* Trello
+* ✅ Github repository
+* ✅ Wireframes + boceto
+* ✅ Trello
 
 <p align="right">(<a href="#top">volver arriba</a>)</p>
 
