@@ -7,10 +7,10 @@
 **Fecha**: 15/11
 
 **Participantes**:
-    + Cristian
-    + Paloma
-    + Sergio
-    + Milo
++ Cristian
++ Paloma
++ Sergio
++ Milo
 
 
 ### Puntos a resolver
