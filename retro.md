@@ -4,8 +4,9 @@
 
 ## SPRING 1
 
-Fecha: 15/11
-Participantes:
+**Fecha**: 15/11
+
+**Participantes**:
     + Cristian
     + Paloma
     + Sergio
