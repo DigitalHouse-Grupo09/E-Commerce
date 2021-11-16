@@ -13,7 +13,7 @@
 + Milo
 
 
-### Puntos a resolver
+### Puntos a revisar
 
 1. Comenzar a hacer.
 2. Hacer más.
@@ -52,7 +52,7 @@
     * Dejar de limitarnos, mandar mano a morir, aunque nos equivoquemos.
 
 
-### Resumen
+### Conclusión
 
 1. Comenzar a hacer.
     * Organización.
