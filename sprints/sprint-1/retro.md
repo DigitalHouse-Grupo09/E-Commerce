@@ -1,6 +1,6 @@
 <div id="top"></div>
 
-# Retrospectiva - SPRING 1
+# Retrospectiva - SPRINT 1
 
 📅 **Fecha**: 15/11
 

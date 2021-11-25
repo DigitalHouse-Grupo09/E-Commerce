@@ -1,6 +1,6 @@
-# Springs
+# Sprints
 
-Sobre esta carpeta encontraran las retrospectivas de los springs y las tareas de los mismos.
+Sobre esta carpeta encontraran las retrospectivas de los SPRINTs y las tareas de los mismos.
 
 ## Retrospectivas
 

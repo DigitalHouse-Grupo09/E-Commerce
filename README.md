@@ -8,7 +8,7 @@
 
 * [Introducción][introduction].
 * [Equipo][team].
-* [Springs][springs].
+* [Sprints][sprints].
 * [Inspiración][inspiration].
 * [Links útiles][helper_links].
 * [Comenzando][getting_started].
@@ -39,13 +39,14 @@ E-Commerse - DH Venture Capital es un sistema de venta de libros online.
 <p align="right">(<a href="#top">volver arriba</a>)</p>
 
 
-<!-- SPRINGS -->
-## 🌻 Springs
+<!-- SPRINTS -->
+## 🌻 Sprints
 
-Las retrospectivas y detalles de cada spring, van a estar anidados, de forma ordenada, dentro de la carpeta [**springs**](https://github.com/DigitalHouse-Grupo09/E-Commerce/tree/master/springs).
- * [Spring 1](https://github.com/DigitalHouse-Grupo09/E-Commerce/tree/master/springs/spring-1)
- * [Spring 2](https://github.com/DigitalHouse-Grupo09/E-Commerce/tree/master/springs/spring-2)
- * [Spring 3](https://github.com/DigitalHouse-Grupo09/E-Commerce/tree/master/springs/spring-3)
+Las retrospectivas y detalles de cada sprint, van a estar anidados, de forma ordenada, dentro de la carpeta [**sprints**](https://github.com/DigitalHouse-Grupo09/E-Commerce/tree/master/sprints).
+
+ * [Sprint 1](https://github.com/DigitalHouse-Grupo09/E-Commerce/tree/master/sprints/sprint-1)
+ * [Sprint 2](https://github.com/DigitalHouse-Grupo09/E-Commerce/tree/master/sprints/sprint-2)
+ * [Sprint 3](https://github.com/DigitalHouse-Grupo09/E-Commerce/tree/master/sprints/sprint-3)
 
 <p align="right">(<a href="#top">volver arriba</a>)</p>
 
@@ -143,7 +144,7 @@ Administrador (adminitradores logeados)
 <!-- deep links -->
 [introduction]: #-introducción
 [team]: #-equipo
-[springs]: #-springs
+[sprints]: #-sprints
 [inspiration]: #-inspiración
 [helper_links]: #-links-útiles
 [getting_started]: #comenzando

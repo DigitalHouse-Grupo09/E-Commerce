@@ -1,4 +1,4 @@
-# Tareas - SPRING 1
+# Tareas - SPRINT 1
 
 Wireframes + boceto
 

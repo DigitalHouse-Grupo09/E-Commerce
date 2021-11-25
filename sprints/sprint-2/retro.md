@@ -1,6 +1,6 @@
 <div id="top"></div>
 
-# Retrospectiva - SPRING 2
+# Retrospectiva - SPRINT 2
 
 📅 **Fecha**: 24/11
 
