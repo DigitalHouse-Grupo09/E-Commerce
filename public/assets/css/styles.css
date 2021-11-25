@@ -18,14 +18,12 @@
     /* FONTS */
     --font-family: Roboto;
     --font-size: 14px;
-    --font-size-brand: 18px;
-    --font-size-title: 24px;
-    --font-size-price: 18px;
-    --font-size-subtitle: 16px;
-    --font-size-label: 14px;
+    --font-size-md: 16px;
+    --font-size-lg: 18px;
+    --font-size-xl: 24px;
 
     /* ICONS */
-    --icon-size-lg: 2em;
+    --icon-size-lg: 1rem;
 
     /* SPACING */
     --spacing-sm: 10px;
@@ -122,17 +120,24 @@ header {
 
 .header-brand .header-brand-text {
     color: var(--white);
-    font-size: var(--font-size-brand);
+    font-size: var(--font-size-lg);
     margin-left: var(--spacing);
 }
 
 .header-nav {
+    display: flex;
+    justify-content: flex-end;
     flex-basis: 60%;
 }
 
 .header-nav .header-menu-items,
 .header-nav .header-account-items {
     display: none;
+    margin-top: var(--spacing);
+}
+
+.header-nav .header-trigger {
+    display: block;
     margin-top: var(--spacing);
 }
 
@@ -143,7 +148,12 @@ header {
 
 .header-nav .header-menu-items i,
 .header-nav .header-account-items i {
+    font-size: var(--icon-size-lg);
     margin-left: var(--spacing-sm);
+}
+
+.header-nav .header-trigger i {
+    font-size: var(--icon-size-lg);
 }
 
 .header-nav .header-nav-trigger {
@@ -217,7 +227,7 @@ main {
 }
 
 .form-group .form-label {
-    font-size: var(--font-size-label);
+    font-size: var(--font-size);
     font-weight: bold;
     margin-bottom: var(--spacing-sm);
     display: block;
@@ -299,7 +309,7 @@ main {
 
 .products-header {
     padding: var(--spacing-big) 0 var(--spacing-lg);
-    font-size: var(--font-size-title);
+    font-size: var(--font-size-xl);
     text-align: center;
 }
 
@@ -310,7 +320,7 @@ main {
 
 .products-header-subtitle {
     margin: var(--spacing-sm) 0 0;
-    font-size: var(--font-size-subtitle);
+    font-size: var(--font-size-md);
     color: var(--grey);
 }
 
@@ -319,7 +329,7 @@ main {
     margin: var(--spacing-sm);
     border-radius: var(--radius);
     background-color: var(--white);
-    font-size: var(--font-size-subtitle);
+    font-size: var(--font-size-md);
     flex-grow: 100%;
     transition: box-shadow 500ms ease;
 }
@@ -336,7 +346,7 @@ main {
 
 .products .product .product-price .product-amount {
     flex-grow: 0.3;
-    font-size: var(--font-size-price);
+    font-size: var(--font-size-lg);
 }
 
 .products .product .product-price .product-offer {
@@ -429,7 +439,6 @@ main {
     }
 
     .header-nav {
-        display: flex;
         justify-content: space-between;
     }
 
@@ -437,6 +446,10 @@ main {
     .header-nav .header-account-items {
         display: flex;
         justify-content: space-between;
+    }
+
+    .header-nav .header-trigger {
+        display: none;
     }
 
     /*
