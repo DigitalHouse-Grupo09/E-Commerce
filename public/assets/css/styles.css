@@ -94,6 +94,17 @@ a:active {
 }
 
 /*
+ * GENERICS
+ */
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*
  * HEADER
  */
 header {
@@ -427,6 +438,13 @@ main {
  * DESKTOP :: Large devices (desktops, 769px and up)
  */
 @media (min-width: 769px) {
+    /*
+     * GENERICS
+     */
+    .container {
+        width: 750px;
+    }
+
     /*
      * HEADER
      */
