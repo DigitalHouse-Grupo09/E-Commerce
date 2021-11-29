@@ -7,13 +7,65 @@
 })(window);
 
 /**
+ * STORE
+ */
+(function (window) {
+    app.store = {
+        DEFAULT_KEY_PREFIX: 'app.store.'
+    };
+
+    function get (name, defaultValue, forceName) {
+
+        try {
+            let value = localStorage.getItem(!forceName ? app.store.DEFAULT_KEY_PREFIX + name : name);
+
+            if (value != null) {
+                try {
+                    return JSON.parse(value);
+                }
+                catch (e) {
+                    console.warn('Error on parse value [' + value + '].', e);
+                    return value;
+                }
+            }
+        }
+        catch (e) {
+            console.error('Error on get store.', e);
+        }
+        return defaultValue;
+    }
+
+    function set (name, value, forceName) {
+        try {
+            localStorage.setItem((!forceName ? app.store.DEFAULT_KEY_PREFIX + name : name), value);
+        }
+        catch (e) {
+            console.error('Error on set store.', e);
+        }
+    }
+
+    function remove (name, forceName) {
+        try {
+            localStorage.removeItem(!forceName ? app.store.DEFAULT_KEY_PREFIX + name : name);
+        }
+        catch (e) {
+            console.error('Error on remove store.', e);
+        }
+    }
+
+    // App Store instance
+    app.store.get = get;
+    app.store.set = set;
+    app.store.remove = remove;
+})(window);
+
+/**
  * BANNERS
  */
 (function (window) {
     const bannerTime = 5000;
     let slideIndex = 1;
     let slideTimeout;
-
 
     /**
      * @param  {number}  direction  1 for next, -1 for previous.
@@ -62,10 +114,9 @@
     // Initialize banner
     showSlides(slideIndex);
 
-    // Add slider to app
-    window.app = window.app || {};
-    window.app.banner = window.app.banner || {};
-    window.app.banner.changeSlides = changeSlides;
-    window.app.banner.currentSlide = currentSlide;
-    window.app.banner.showSlides = showSlides;
+    // App Banner instance
+    app.banner = app.banner || {};
+    app.banner.changeSlides = changeSlides;
+    app.banner.currentSlide = currentSlide;
+    app.banner.showSlides = showSlides;
 })(window);
