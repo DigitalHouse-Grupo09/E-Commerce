@@ -8,7 +8,23 @@
 
     <!-- MAIN :: BEGIN -->
     <main class="product-details">
-        DETALLE DE PRODUCTO
+        <section class="product-detail">
+            <div class="row">
+                <!-- PRODUCT IMAGE AND TITLE -->
+                <div class="md:column-2 column-1 product-images">
+                    <article>
+                        <figure>
+                            <img src="<%= product.image %>" class="product-image" />
+                        </figure>
+                    </article>
+                </div>
+
+                <!-- PRODUCT DETAILS -->
+                <div class="md:column-2 column-1 product-properties">
+                    <h3 class="product-title"><%= product.title %></h3>
+                </div>
+            </div>
+        </section>
     </main>
     <!-- MAIN :: END -->
 

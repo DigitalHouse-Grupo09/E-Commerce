@@ -3,7 +3,7 @@
     <section>
         <div class="separator"></div>
         <div class="row">
-            <div class="md:column-5 column-1">
+            <div class="column-1 md:column-5">
                 <div class="footer-brand">
                     <img src="/assets/img/logo-light.png" alt="Bookify" class="footer-brand-logo" />
                 </div>
@@ -11,22 +11,22 @@
                     <em>Para viajar lejos, no hay mejor nave que <strong>un libro</strong></em>
                 </p>
             </div>
-            <div class="md:column-5 column-1">
+            <div class="column-1 md:column-5">
                 <!-- EMPTY COLUMN STRATEGY -->
             </div>
-            <div class="md:column-5 column-1">
+            <div class="column-1 md:column-5">
                 <h3>Categorías</h3>
                 <ul type="none" class="footer-categories">
                     <% categories.forEach(category => { %>
                         <li>
                             <a href="javascript:void(0);" data-href="/categories/<%= category.slug %>">
-                                <i class="fas fa-<%= category.icon %>"></i> <span><%= category.title %></span>
+                                <i class="<%= category.icon %>"></i> <span><%= category.title %></span>
                             </a>
                         </li>
                     <% }); %>
                 </ul>
             </div>
-            <div class="md:column-5 column-1">
+            <div class="column-1 md:column-5">
                 <h3>Atención al Cliente</h3>
                 <ul type="none" class="footer-help">
                     <li>
@@ -71,7 +71,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="md:column-5 column-1">
+            <div class="column-1 md:column-5">
                 <h3>Redes</h3>
                 <div class="footer-social">
                     <a target="_blank" class="social-instagram" href="https://instagram.com/bookify"><i class="fab fa-instagram"></i></a>
