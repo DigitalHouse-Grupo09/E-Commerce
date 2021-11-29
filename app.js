@@ -53,6 +53,11 @@ app.get('/products/:id', (req, res, next) => {
     return res.render('products/details', { product });
 });
 
+// cart
+app.get('/cart', (req, res) => {
+    return res.render('cart', { products });
+});
+
 // register
 app.get('/register', (req, res) => res.render('register'));
 app.post('/register', (req, res) => {
