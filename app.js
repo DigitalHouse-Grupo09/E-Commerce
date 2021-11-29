@@ -20,7 +20,7 @@ const baseViewsPath = path.join(__dirname, 'views');
 // middlewares
 //
 app.use(express.static('public'));
-app.use(favicon(`${__dirname}/public/logo.ico`));
+app.use(favicon(`${__dirname}/public/favicon.ico`));
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
