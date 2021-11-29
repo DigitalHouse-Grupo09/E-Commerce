@@ -42,6 +42,16 @@ app.engine('html', ejs.renderFile);
 // home
 app.get('/', (req, res) => res.render('home', { products }));
 
+// products
+app.get('/products/:id', (req, res, next) => {
+    const product = products.find(product => product.id === Number(req.params.id));
+
+    if (!product) {
+        return next();
+    }
+    return res.render('products/details', { product });
+});
+
 // register
 app.get('/register', (req, res) => res.render('register'));
 app.post('/register', (req, res) => {

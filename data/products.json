@@ -1,25 +1,53 @@
 [{
     "id": 1,
     "title": "Diego. Nacido para molestar",
+    "description": "Esta biografía ilustrada del mejor futbolista de todos los tiempos es la biografía de Dios, sin duda.<br/><br/>Miguel Rep da a luz a su Diego desde las entrañas mismas de un argentino fanático del fútbol, la política, la literatura y el arte: desde ese corazón mixto de artista.<br/><br/>'En este trabajo, Miguel usa todas las herramientas que adquirió en todos estos años de oficio. Y dibuja más al Maradona que caminó sobre las aguas que al que terminó en la cruz de la que varias veces se pudo bajar. Diego siempre buscó la manera de volver a pisar una cancha. Miguel hace todo para seguir dibujando. Así es la gente que no deja de hacer lo que siempre hizo de chico: jugar a la pelota o dibujar. Toda una carrera tratando de seguir siendo un nene'.<br/><br/>DEL PRÓLOGO DE PEDRO SABORIDO",
     "image": "/assets/img/books/book-01.jpg",
     "price": "$2.900",
-    "offer": "40% OFF"
+    "offer": "40% OFF",
+    "author": "Miguel Rep",
+    "publishedAt": "01/11/2021",
+    "pages": 192,
+    "language": "Occidental",
+    "format": "19,50 x 24,00 cm.",
+    "presentation": "Rústica con solapas"
 }, {
     "id": 2,
     "title": "La Bestia",
+    "description": "Corre el año 1834 y Madrid, una pequeña ciudad que trata de abrirse paso más allá de las murallas que la rodean, sufre una terrible epidemia de cólera. Pero la peste no es lo único que aterroriza a sus habitantes: en los arrabales aparecen cadáveres desmembrados de niñas que nadie reclama. Todos los rumores apuntan a la Bestia, un ser a quien nadie ha visto pero al que todos temen.<br/><br/>Cuando la pequeña Clara desaparece, su hermana Lucía, junto con Donoso, un policía tuerto, y Diego, un periodista buscavidas, inician una frenética cuenta atrás para encontrar a la niña con vida. En su camino tropiezan con fray Braulio, un monje guerrillero, y con un misterioso anillo de oro con dos mazas cruzadas que todo el mundo codicia y por el que algunos están dispuestos a matar.<br/><br/>De manera magistral, Carmen Mola teje, con los hilos del mejor thriller, esta novela impactante, frenética e implacable, de infierno y oscuridad.",
     "image": "/assets/img/books/book-02.jpg",
     "price": "$2.490",
-    "offer": "20% OFF"
+    "offer": "20% OFF",
+    "author": "Carmen Mola",
+    "publishedAt": "04/11/2021",
+    "pages": 544,
+    "language": "Español",
+    "format": "15,00 x 23,00 cm.",
+    "presentation": "Rústica con solapas"
 }, {
     "id": 3,
-    "title": "La Rueda del Tiempo nº 02/14 La Gran Cacería",
+    "title": "La Rueda del Tiempo",
+    "description": "Rand ha sobrevivido a su primer enfrentamiento con los perversos seguidores del Oscuro, pero ni sus amigos ni él están a salvo, ya que el Señor del mal ha liberado a los Renegados, mientras los héroes de todas las eras se levantan de la tumba cuando el Cuerno de Valere los saca de su sueño. Al verse obligado a enfrentarse a las fuerzas de la oscuridad, Rand decide escapar de su destino. Pero la profecía tiene que cumplirse.Cada día que pasa aumenta la fuerza del Oscuro, que lucha con empeño por destruir su arcaica prisión para acabar con la Rueda y poner fin al tiempo. Si nadie se lo impide, hará añicos el Entramado que sustenta la realidad y el mundo estará perdido para siempre. Así pues, mientras Rand huye, el Entramado lo acerca a su sino'Por su calidad literaria, su ambicioso planteamiento y su monumental historia, La Rueda del Tiempo es la saga de fantasía más importante de los últimos años. El lector que inicie el camino junto a Rand, Mat y Perrin no podrá abandonar el viaje hasta su incierto y sorprendente final.",
     "image": "/assets/img/books/book-03.jpg",
     "price": "$2.490",
-    "offer": "10% OFF"
+    "offer": "10% OFF",
+    "author": "Robert Jordan",
+    "publishedAt": "01/11/2021",
+    "pages": 720,
+    "language": "Occidental",
+    "format": "15,00 x 23,00 cm.",
+    "presentation": "Rústica con solapas"
 }, {
     "id": 4,
     "title": "La reina",
+    "description": "Cusco, Perú, octubre de 1818. Un general porteño visita a Irenea, una monja de clausura que vive con sus hijas en el convento de Santa Clara. El general viene con la misiónsecreta de coronar a la menor de las hermanas. Shiamara y Nuna descienden de una pareja revolucionaria, Micaela Bastidas y Tupac Amaru, y por sus venas corre sangre real y mestizada. Una es negra y la otra es blanca. En el Congreso de Tucumán de 1816, ha triunfado la propuesta de Manuel Belgrano de establecer, como sistema de gobierno, una monarquía incaica en América Latina, con sede en esa ciudad peruana, entonces considerada ombligo del mundo. Mientras espera a su príncipe, Nuna, la adolescente virgen, despierta deseos prohibidos en el hombre que ha sufrido derrotas y victorias, amores y pérdidas. El hecho puede cambiar el rumbo de los acontecimientos. Gabriela Saidon narra una historia apasionante. Con el trasfondo de la ciudad colonial, de iglesias erigidas sobre las ruinas de un imperio dorado, su gran personaje, Nuna, confronta a Belgrano en el ocaso de su vida, y también a su madre, en lo que por momentos se convierte en una comedia de enredos, desafía las estrategias de un poder inclaudicable y la moral hipócrita de la época.",
     "image": "/assets/img/books/book-04.jpg",
     "price": "$1.460",
-    "offer": "5% OFF"
+    "offer": "5% OFF",
+    "author": "Gabriela Saidon",
+    "publishedAt": "01/10/2020",
+    "pages": 328,
+    "language": "Español",
+    "format": "15,00 x 23,00 cm.",
+    "presentation": "Rústica con solapas"
 }]
