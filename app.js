@@ -2,11 +2,12 @@
 // imports
 //
 const ejs = require('ejs');
+const path = require('path');
 const morgan = require('morgan');
 const express = require('express');
 const bodyParser = require('body-parser');
 const favicon = require('serve-favicon');
-const path = require('path');
+const products = require('./data/products.json');
 const app = express();
 
 //
@@ -39,7 +40,7 @@ app.engine('html', ejs.renderFile);
 //
 
 // home
-app.get('/', (req, res) => res.render('home'));
+app.get('/', (req, res) => res.render('home', { products }));
 
 // register
 app.get('/register', (req, res) => res.render('register'));
@@ -61,7 +62,7 @@ app.post('/login', (req, res) => {
 app.use((req, res, next) => res.status(404).render('404'));
 
 // uncached errors
-app.use((error, req, res, next) => res.status(500).render('500'));
+app.use((error, req, res, next) => res.status(500).render('500', { error }));
 
 //
 // listen application

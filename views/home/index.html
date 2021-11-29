@@ -1,0 +1,40 @@
+<html>
+<head>
+    <%- include('../partials/metas.html') %>
+    <%- include('../partials/styles.html') %>
+</head>
+<body>
+    <%- include('../partials/header.html') %>
+
+    <%- include('../partials/banner.html') %>
+
+    <!-- MAIN :: BEGIN -->
+    <main >
+        <!-- VIEWED -->
+        <div class="products-header">
+            <h3 class="products-header-title">Basado en tu última visita</h3>
+            <p class="products-header-subtitle">Pídelo para ti o para tus seres queridos.</p>
+        </div>
+        <section class="products">
+            <!-- PRODUCTS -->
+            <% products.forEach(product => { %>
+                <%- include('./product.html', { product }); %>
+            <% }); %>
+        </section>
+
+        <!-- OFFERS -->
+        <h3 class="products-header">Ofertas</h3>
+        <section class="products">
+            <!-- PRODUCTS -->
+            <% products.forEach(product => { %>
+                <%- include('./product.html', { product }); %>
+            <% }); %>
+        </section>
+    </main>
+    <!-- MAIN :: END -->
+
+    <%- include('../partials/footer.html') %>
+
+    <%- include('../partials/scripts.html') %>
+</body>
+</html>

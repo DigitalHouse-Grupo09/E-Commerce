@@ -1,0 +1,25 @@
+[{
+    "id": 1,
+    "title": "Diego. Nacido para molestar",
+    "image": "/assets/img/books/book-01.jpg",
+    "price": "$2.900",
+    "offer": "40% OFF"
+}, {
+    "id": 2,
+    "title": "La Bestia",
+    "image": "/assets/img/books/book-02.jpg",
+    "price": "$2.490",
+    "offer": "20% OFF"
+}, {
+    "id": 3,
+    "title": "La Rueda del Tiempo nº 02/14 La Gran Cacería",
+    "image": "/assets/img/books/book-03.jpg",
+    "price": "$2.490",
+    "offer": "10% OFF"
+}, {
+    "id": 4,
+    "title": "La reina",
+    "image": "/assets/img/books/book-04.jpg",
+    "price": "$1.460",
+    "offer": "5% OFF"
+}]
