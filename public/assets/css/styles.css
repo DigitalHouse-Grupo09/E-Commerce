@@ -15,15 +15,22 @@
     --white: #FFF;
     --black: #000;
 
+    --instagram: #CA396D;
+    --facebook: #3b5998;
+    --twitter: #00aced;
+
     /* FONTS */
     --font-family: 'Quicksand', Helvetica, Arial, sans-serif;;
     --font-size: 14px;
+    --font-size-sm: 12px;
     --font-size-md: 16px;
     --font-size-lg: 18px;
     --font-size-xl: 24px;
 
     /* ICONS */
+    --icon-size-sm: .6rem;
     --icon-size-lg: 1rem;
+    --icon-size-xl: 1.4rem;
 
     /* SPACING */
     --spacing-sm: 10px;
@@ -187,13 +194,94 @@ header {
  * FOOTER
  */
 footer {
-    background-color: var(--white);
+    background-color: var(--grey);
     padding: var(--spacing);
+    text-align: left;
+}
+
+footer h3 {
     text-align: center;
+    margin: var(--spacing) 0;
+}
+
+.footer-categories,
+.footer-help,
+.footer-social,
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-categories li {
+    margin-top: var(--spacing);
+}
+
+.footer-categories i {
+    font-size: var(--font-size-sm);
+    width: var(--icon-size-sm);
+    margin-right: var(--spacing-sm);
+}
+
+.footer-categories span {
+    font-size: var(--font-size-sm);
+}
+
+.footer-help {
+    font-size: var(--font-size-sm);
+}
+
+.footer-help li {
+    margin-top: var(--spacing);
+}
+
+.footer-social a {
+    display: inline-block;
+    width: var(--icon-size-xl);
+    height: var(--icon-size-xl);
+    line-height: var(--icon-size-xl);
+    margin-right: var(--spacing-sm);
+    margin-bottom: var(--spacing);
+    text-align: center;
+    color: inherit;
+    font-size: var(--font-size-lg);
+    border-radius: var(--radius);
+    opacity: 0.8;
+    transition: .4s ease-out;
+}
+
+.footer-social {
+    flex-direction: row;
+}
+
+.footer-social a:last-child {
+    margin-right: 0;
+}
+
+.footer-social a.social-instagram:hover {
+    color: var(--instagram);
+}
+
+.footer-social a.social-facebook:hover {
+    color: var(--facebook);
+}
+
+.footer-social a.social-twitter:hover {
+    color: var(--twitter);
+}
+
+.footer-brand {
+    margin: var(--spacing) 0;
+}
+
+.footer-brand-logo {
+    width: 50%;
 }
 
 footer .copyright {
-    margin-top: var(--spacing);
+    font-size: var(--font-size-sm);
+    margin: var(--spacing-big) 0;
     color: var(--grey-dark);
     text-align: left;
 }
@@ -309,6 +397,39 @@ main {
 }
 
 /*
+ * GRID
+ */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 calc(var(--spacing-sm) * -1);
+}
+
+.row .column-1,
+.row .column-2,
+.row .column-3,
+.row .column-4 {
+    padding: var(--spacing-sm);
+}
+
+.row .column-1 {
+    flex: 0 0 100%;
+}
+
+.row .column-2 {
+    flex: 0 0 50%;
+}
+
+.row .column-3 {
+    flex: 0 0 33%;
+}
+
+.row .column-4 {
+    flex: 0 0 25%;
+}
+
+/*
  * PRODUCTS
  */
 .products {
@@ -401,6 +522,44 @@ main {
     }
 
     /*
+     * FOOTER
+     */
+    footer h3 {
+        text-align: left;
+    }
+
+    .footer-categories,
+    .footer-help,
+    .footer-social,
+    .footer-brand {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .footer-logo {
+        width: 75%;
+    }
+
+    /*
+     * GRID
+     */
+    .row .md\:column-1 {
+        flex: 0 0 100%;
+    }
+
+    .row .md\:column-2 {
+        flex: 0 0 50%;
+    }
+
+    .row .md\:column-3 {
+        flex: 0 0 33%;
+    }
+
+    .row .md\:column-4 {
+        flex: 0 0 25%;
+    }
+
+    /*
      * PRODUCTS
      */
     .products .product {
@@ -463,6 +622,10 @@ main {
         padding: var(--spacing) 15%;
     }
 
+    .footer-logo {
+        width: 100%;
+    }
+
     /*
      * MAIN
      */
@@ -485,6 +648,25 @@ main {
     .form-group .form-input[type=file],
     .form-group .form-input[type=email], .form-group .form-input[type=password] {
         width: 50%;
+    }
+
+    /*
+     * GRID
+     */
+    .row .lg\:column-1 {
+        flex: 0 0 100%;
+    }
+
+    .row .lg\:column-2 {
+        flex: 0 0 50%;
+    }
+
+    .row .lg\:column-3 {
+        flex: 0 0 33%;
+    }
+
+    .row .lg\:column-4 {
+        flex: 0 0 25%;
     }
 
     /*

@@ -11,29 +11,29 @@
     <!-- MAIN :: BEGIN -->
     <main >
         <!-- VIEWED -->
-        <div class="products-header">
-            <h3 class="products-header-title">Basado en tu última visita</h3>
-            <p class="products-header-subtitle">Pídelo para ti o para tus seres queridos.</p>
-        </div>
-        <section class="products">
-            <!-- PRODUCTS -->
-            <% products.forEach(product => { %>
-                <%- include('./product.html', { product }); %>
-            <% }); %>
+        <section>
+            <div class="products-header">
+                <h3 class="products-header-title">Basado en tu última visita</h3>
+                <p class="products-header-subtitle">Pídelo para ti o para tus seres queridos.</p>
+            </div>
+            <div class="products">
+                <!-- PRODUCTS -->
+                <% products.forEach(product => { %>
+                    <%- include('./product.html', { product }); %>
+                <% }); %>
+            </div>
         </section>
 
-        <!-- OFFERS -->
-        <h3 class="products-header">Ofertas</h3>
-        <section class="products">
-            <!-- PRODUCTS -->
-            <% products.forEach(product => { %>
-                <%- include('./product.html', { product }); %>
+        <!-- CATEGORIES -->
+        <section class="categories">
+            <% categories.slice(0, 4).forEach(category => { %>
+                <%- include('./category.html', { category }); %>
             <% }); %>
         </section>
     </main>
     <!-- MAIN :: END -->
 
-    <%- include('../partials/footer.html') %>
+    <%- include('../partials/footer.html', { categories }) %>
 
     <%- include('../partials/scripts.html') %>
 </body>

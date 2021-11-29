@@ -1,0 +1,46 @@
+[{
+    "id": 1,
+    "title": "Literatura",
+    "slug": "literatura",
+    "icon": "book"
+}, {
+    "id": 2,
+    "title": "Conocimiento y ciencia",
+    "slug": "conocimiento-y-ciencia",
+    "icon": "brain"
+}, {
+    "id": 3,
+    "title": "Cómic y fantasía",
+    "slug": "comic-y-fantasia",
+    "icon": "mask"
+}, {
+    "id": 4,
+    "title": "Cocina y gastronomía",
+    "slug": "cocina-y-gastronomia",
+    "icon": "hamburger"
+}, {
+    "id": 5,
+    "title": "Infantil y juvenil",
+    "slug": "infantil-y-juvenil",
+    "icon": "baby"
+}, {
+    "id": 6,
+    "title": "Actualidad y empresa",
+    "slug": "actualidad-y-empresa",
+    "icon": "building"
+}, {
+    "id": 7,
+    "title": "Bienestar y salud",
+    "slug": "bienestar-y-salud",
+    "icon": "syringe"
+}, {
+    "id": 8,
+    "title": "Viajes y negocio",
+    "slug": "viajes-y-negocio",
+    "icon": "route"
+}, {
+    "id": 9,
+    "title": "Agendas y calendarios",
+    "slug": "agendas-y-calendarios",
+    "icon": "calendar"
+}]

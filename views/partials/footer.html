@@ -1,9 +1,81 @@
 <!-- FOOTER :: BEGIN -->
 <footer>
     <section>
-        <article class="copyright">
-            <p>Copyright © 1999-2020 Bookify S.R.L.</p>
-        </article>
+        <div class="row">
+            <div class="md:column-4 column-1">
+                <h3>Categorías</h3>
+                <ul type="none" class="footer-categories">
+                    <% categories.forEach(category => { %>
+                        <li>
+                            <a href="javascript:void(0);" data-href="/categories/<%= category.slug %>">
+                                <i class="fas fa-<%= category.icon %>"></i> <span><%= category.title %></span>
+                            </a>
+                        </li>
+                    <% }); %>
+                </ul>
+            </div>
+            <div class="md:column-4 column-1">
+                <h3>Atención al Cliente</h3>
+                <ul type="none" class="footer-help">
+                    <li>
+                        <a href="javascript:void(0);">
+                            Contacto
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            Preguntas Frecuentes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            Medios de Pago
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            Política de cookies
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            Política de privacidad
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            Devoluciones
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            Garantía
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            Arrepentimiento de compra
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="md:column-4 column-1">
+                <h3>Redes</h3>
+                <div class="footer-social">
+                    <a target="_blank" class="social-instagram" href="https://instagram.com/bookify"><i class="fab fa-instagram"></i></a>
+                    <a target="_blank" class="social-facebook" href="https://www.facebook.com/bookify"><i class="fab fa-facebook"></i></a>
+                    <a target="_blank" class="social-twitter" href="http://twitter.com/bookify"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="md:column-4 column-1">
+                <div class="footer-brand">
+                    <img src="/assets/img/logo.png" alt="Bookify" class="footer-brand-logo" />
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © 2021 Bookify. Todos los derechos reservados</p>
+        </div>
     </section>
 </footer>
 <!-- FOOTER :: END -->

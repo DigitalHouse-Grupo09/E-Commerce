@@ -8,6 +8,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const favicon = require('serve-favicon');
 const products = require('./data/products.json');
+const categories = require('./data/categories.json');
 const app = express();
 
 //
@@ -28,12 +29,12 @@ app.use(bodyParser.json());
 //
 // template engine
 //
-// Add template engine for parse HTML files in views folder.
+// add template engine for parse HTML files in views folder.
 app.set('view engine', 'html');
 app.set('views', `${__dirname}/views`);
 app.engine('html', ejs.renderFile);
-// Nico Molina :: USO FUTURO :: Extend locals with lodash module.
-// app.locals = _.extend(app.locals || {}, { _ });
+// locals 
+app.locals = { ...app.locals || {}, categories };
 
 //
 // routes
