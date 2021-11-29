@@ -7,7 +7,7 @@ HTML + CSS
 * ✅ Enlace al tablero de trabasjo en el archivo README.md
 * ✅ Aplicación Node.JS+Express con:
    - ✅ Home (index.html)
-   - Detalle del producto (productDetail.html)
-   - Carrito de compras (productCart.html)
+   - ✅ Detalle del producto (productDetail.html)
+   - ✅ Carrito de compras (productCart.html)
    - ✅ Formulario de registro (register.html)
    - ✅ Formulario de login (login.html)
