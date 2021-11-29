@@ -47,6 +47,28 @@
 }
 
 /*
+ * ANIMATIONS
+ */
+
+@keyframes fade{
+    0%{
+        opacity: 1;
+    }
+    10.5% {
+        opacity:1;
+    }
+    12.5%{
+        opacity: 0;
+    }
+    98% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+/*
  * GLOBAL
  */
 body {
@@ -185,6 +207,59 @@ main {
     margin: 0 auto;
     padding-bottom: var(--spacing-sm);
 }
+
+/*
+ * BANNER
+ */
+
+.banner {
+    position: relative;
+    height: 250px;
+}
+
+.banner figure img{
+    position: absolute;
+    margin: 0;
+    top: 0;
+}
+
+.banner figure:hover{
+    transition: opacity 0.5s;
+    opacity: 0.9;
+}
+
+.banner-image-01{
+    animation: fade 48s 42s infinite;
+}
+
+.banner-image-02{
+    animation: fade 48s 36s infinite;
+}
+
+.banner-image-03{
+    animation: fade 48s 30s infinite;
+}
+
+.banner-image-04{
+    animation: fade 48s 24s infinite;
+}
+
+.banner-image-05{
+    animation: fade 48s 18s infinite;
+}
+
+.banner-image-06{
+    animation: fade 48s 12s infinite;
+}
+
+.banner-image-07{
+    animation: fade 48s 6s infinite;
+}
+
+.banner-image-08{
+    animation: fade 48s 0s infinite;
+}
+
 
 /*
  * FORMS
@@ -482,5 +557,14 @@ main {
      */
     .login {
         padding: var(--spacing-big) 0;
+    }
+}
+
+@media (min-width: 1400px) {
+    /*
+     * BANNER
+     */
+    .banner{
+        height: 400px;
     }
 }
