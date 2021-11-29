@@ -1,8 +1,20 @@
 <!-- FOOTER :: BEGIN -->
 <footer>
     <section>
+        <div class="separator"></div>
         <div class="row">
-            <div class="md:column-4 column-1">
+            <div class="md:column-5 column-1">
+                <div class="footer-brand">
+                    <img src="/assets/img/logo-light.png" alt="Bookify" class="footer-brand-logo" />
+                </div>
+                <p class="footer-brand-legend">
+                    <em>Para viajar lejos, no hay mejor nave que <strong>un libro</strong></em>
+                </p>
+            </div>
+            <div class="md:column-5 column-1">
+                <!-- EMPTY COLUMN STRATEGY -->
+            </div>
+            <div class="md:column-5 column-1">
                 <h3>Categorías</h3>
                 <ul type="none" class="footer-categories">
                     <% categories.forEach(category => { %>
@@ -14,7 +26,7 @@
                     <% }); %>
                 </ul>
             </div>
-            <div class="md:column-4 column-1">
+            <div class="md:column-5 column-1">
                 <h3>Atención al Cliente</h3>
                 <ul type="none" class="footer-help">
                     <li>
@@ -59,17 +71,12 @@
                     </li>
                 </ul>
             </div>
-            <div class="md:column-4 column-1">
+            <div class="md:column-5 column-1">
                 <h3>Redes</h3>
                 <div class="footer-social">
                     <a target="_blank" class="social-instagram" href="https://instagram.com/bookify"><i class="fab fa-instagram"></i></a>
                     <a target="_blank" class="social-facebook" href="https://www.facebook.com/bookify"><i class="fab fa-facebook"></i></a>
                     <a target="_blank" class="social-twitter" href="http://twitter.com/bookify"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-            <div class="md:column-4 column-1">
-                <div class="footer-brand">
-                    <img src="/assets/img/logo-light.png" alt="Bookify" class="footer-brand-logo" />
                 </div>
             </div>
         </div>

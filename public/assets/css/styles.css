@@ -205,6 +205,10 @@ footer h3 {
     margin: var(--spacing) 0;
 }
 
+footer .row {
+    padding-top: var(--spacing-lg);
+}
+
 .footer-categories,
 .footer-help,
 .footer-social,
@@ -220,14 +224,14 @@ footer h3 {
 }
 
 .footer-categories i {
-    color: var(--grey-light);
+    color: var(--grey);
     font-size: var(--font-size-sm);
     width: var(--icon-size-sm);
     margin-right: var(--spacing-sm);
 }
 
 .footer-categories span {
-    color: var(--grey-light);
+    color: var(--grey);
     font-size: var(--font-size-sm);
 }
 
@@ -240,7 +244,7 @@ footer h3 {
 }
 
 .footer-help a {
-    color: var(--grey-light);
+    color: var(--grey);
 }
 
 .footer-social a {
@@ -248,6 +252,7 @@ footer h3 {
     width: var(--icon-size-xl);
     height: var(--icon-size-xl);
     line-height: var(--icon-size-xl);
+    margin-top: var(--spacing);
     margin-right: var(--spacing-sm);
     margin-bottom: var(--spacing);
     text-align: center;
@@ -263,7 +268,7 @@ footer h3 {
 }
 
 .footer-social a {
-    color: var(--grey-light);
+    color: var(--grey);
 }
 
 .footer-social a:last-child {
@@ -290,9 +295,13 @@ footer h3 {
     width: 50%;
 }
 
+.footer-brand-legend {
+    color: var(--grey);
+}
+
 footer .copyright {
     font-size: var(--font-size-sm);
-    margin: var(--spacing-big) 0;
+    margin: var(--spacing-big) 0 0;
     color: var(--grey-dark);
     text-align: left;
 }
@@ -420,7 +429,8 @@ main {
 .row .column-1,
 .row .column-2,
 .row .column-3,
-.row .column-4 {
+.row .column-4,
+.row .column-5 {
     padding: var(--spacing-sm);
 }
 
@@ -438,6 +448,10 @@ main {
 
 .row .column-4 {
     flex: 0 0 25%;
+}
+
+.row .column-5 {
+    flex: 0 0 20%;
 }
 
 /*
@@ -535,6 +549,10 @@ main {
     /*
      * FOOTER
      */
+    footer {
+        padding-top: var(--spacing-big);
+    }
+
     footer h3 {
         text-align: left;
     }
@@ -568,6 +586,10 @@ main {
 
     .row .md\:column-4 {
         flex: 0 0 25%;
+    }
+
+    .row .md\:column-5 {
+        flex: 0 0 20%;
     }
 
     /*
@@ -630,7 +652,7 @@ main {
      * FOOTER
      */
     footer {
-        padding: var(--spacing) 15%;
+        padding: var(--spacing-big) 15%;
     }
 
     .footer-brand-logo {
@@ -678,6 +700,10 @@ main {
 
     .row .lg\:column-4 {
         flex: 0 0 25%;
+    }
+
+    .row .lg\:column-5 {
+        flex: 0 0 20%;
     }
 
     /*
