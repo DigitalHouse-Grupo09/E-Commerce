@@ -424,8 +424,8 @@ main {
 
 .banners-dots .banner-dot {
     cursor: pointer;
-    height: var(--icon-size);
-    width: var(--icon-size);
+    height: var(--icon-size-sm);
+    width: var(--icon-size-sm);
     margin: 0 2px;
     background-color: var(--grey);
     border-radius: 50%;
