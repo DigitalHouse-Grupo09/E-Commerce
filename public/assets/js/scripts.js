@@ -86,6 +86,10 @@
         const dots = document.getElementsByClassName('banner-dot');
         let i;
 
+        if (!slides.length) {
+            return;
+        }
+
         if (slide > slides.length) {
             slideIndex = 1;
         }
@@ -139,6 +143,6 @@
         account.style.display = isVisible ? 'none' : 'flex';
         account.classList.toggle('fade');
 
-        header.style.height = isVisible ? '60px' : '170px';
+        header.style.height = isVisible ? '65px' : '170px';
     };
 })(window);
