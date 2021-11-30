@@ -21,9 +21,13 @@
 
                 <!-- PRODUCT DETAILS -->
                 <div class="column-1 md:column-2 product-properties">
+                    <!-- PRODUCT TITLE -->
                     <h3 class="product-title"><%= product.title %></h3>
+
+                    <!-- PRODUCT PRICE -->
                     <p class="product-price"><%= product.price %></p>
 
+                    <!-- PRODUCT QUANTITY -->
                     <form class="form">
                         <div class="form-group">
                             <label for="product-quantity" class="form-label" >Cantidad</label>
@@ -37,15 +41,31 @@
 
                     <div class="separator"></div>
 
-                    <p class="product-description"><%- product.description %></p>
+                    <% if (product.description) { %>
+                        <!-- PRODUCT DESCRIPTION -->
+                        <p class="product-description"><%- product.description %></p>
+                    <% } %>
+
+                    <!-- PRODUCT SHEETS -->
                     <div class="product-sheet">
                         <ul type="none">
-                            <li class="product-sheet-item"><b>Autor</b>: <%- product.author %></li>
-                            <li class="product-sheet-item"><b>Fecha de publicación</b>: <%- product.publishedAt %></li>
-                            <li class="product-sheet-item"><b>Páginas</b>: <%- product.pages %></li>
-                            <li class="product-sheet-item"><b>Idioma</b>: <%- product.language %></li>
-                            <li class="product-sheet-item"><b>Formato</b>: <%- product.format %></li>
-                            <li class="product-sheet-item"><b>Presentación</b>: <%- product.presentation %></li>
+                            <!-- SHEET AVAILABLES -->
+                            <% const sheetProperties = []; %>
+                            <% sheetProperties.push({ name: 'author', label: 'Autor' }); %>
+                            <% sheetProperties.push({ name: 'publishedAt', label: 'Fecha de publicación' }); %>
+                            <% sheetProperties.push({ name: 'pages', label: 'Páginas' }); %>
+                            <% sheetProperties.push({ name: 'language', label: 'Idioma' }); %>
+                            <% sheetProperties.push({ name: 'format', label: 'Formato' }); %>
+                            <% sheetProperties.push({ name: 'presentation', label: 'Presentación' }); %>
+
+                            <!-- SHEET EACH -->
+                            <% sheetProperties.forEach(sheet => { %>
+                                <% if (product[sheet.name]) { %>
+                                    <li class="product-sheet-item">
+                                        <b><%= sheet.label %></b>: <%- product[sheet.name] %>
+                                    </li>
+                                <% } %>
+                            <% }); %>
                         </ul>
                     </div>
                 </div>

@@ -18,7 +18,7 @@
             </div>
             <div class="row products-list">
                 <!-- PRODUCTS -->
-                <% products.forEach(product => { %>
+                <% products.slice(0, 4).forEach(product => { %>
                     <%- include('./product.html', { product }); %>
                 <% }); %>
             </div>

@@ -1,7 +1,7 @@
 //
 // imports
 //
-const products = require('../data/products.json');
+const products = require('../data/products.json').sort(() => .5 - Math.random());
 
 //
 // endpoints
