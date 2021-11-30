@@ -6,15 +6,14 @@ const path = require('path');
 const morgan = require('morgan');
 const express = require('express');
 const bodyParser = require('body-parser');
-const products = require('./data/products.json');
 const categories = require('./data/categories.json');
+const routes = require('./routes');
 const app = express();
 
 //
 // constants
 //
 const port = process.env.PORT || 3000;
-const baseViewsPath = path.join(__dirname, 'views');
 
 //
 // middlewares
@@ -37,42 +36,16 @@ app.locals = { ...app.locals || {}, categories };
 //
 // routes
 //
+app.use('/', routes.main);
+app.use('/', routes.users);
+app.use('/cart', routes.cart);
+app.use('/products', routes.products);
 
-// home
-app.get('/', (req, res) => res.render('home', { products }));
-
-// products
-app.get('/products/:id', (req, res, next) => {
-    const product = products.find(product => product.id === Number(req.params.id));
-
-    if (!product) {
-        return next();
-    }
-    return res.render('products/details', { product });
-});
-
-// cart
-app.get('/cart', (req, res) => res.render('cart', { products }));
-
-// register
-app.get('/register', (req, res) => res.render('register'));
-app.post('/register', (req, res) => {
-    console.log('Sended form for register:', req.body);
-    res.redirect(302, '/');
-});
-
-// login
-app.get('/login', (req, res) => res.render('login'));
-app.post('/login', (req, res) => {
-    console.log('Sended form for login:', req.body);
-    res.redirect(302, '/');
-});
-
+//
 // error pages
-
+//
 // 404
 app.use((req, res, next) => res.status(404).render('404'));
-
 // uncached errors
 app.use((error, req, res, next) => res.status(500).render('500', { error }));
 
