@@ -6,7 +6,6 @@ const path = require('path');
 const morgan = require('morgan');
 const express = require('express');
 const bodyParser = require('body-parser');
-const favicon = require('serve-favicon');
 const products = require('./data/products.json');
 const categories = require('./data/categories.json');
 const app = express();
@@ -21,7 +20,6 @@ const baseViewsPath = path.join(__dirname, 'views');
 // middlewares
 //
 app.use(express.static('public'));
-app.use(favicon(`${__dirname}/public/favicon.ico`));
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
