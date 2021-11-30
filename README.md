@@ -1,6 +1,6 @@
 <div id="top"></div>
 
-# E-Commerse - DH Venture Capital
+# Bookify
 
 
 <!-- INDEX -->
@@ -20,7 +20,7 @@
 <!-- INTRODUCTION -->
 ## 🤯 Introducción
 
-E-Commerse - DH Venture Capital es un sistema de venta de libros online.
+[Bookify](https://bookify-commerce.herokuapp.com) es un sistema de venta de libros online.
 
 
 <!-- TEAM -->
@@ -114,7 +114,7 @@ npm start
 #### Cliente
 Ve el listado de archivos. Puede buscar libros, mirar el detalle (precio, escritor, etc), comprar (o no) y contactarse con el web master (ayuda, queja, mejora).
 
-> **PROXIMAMENTE!** https://dhventure-capital.e-commerse.com
+> https://bookify-commerce.herokuapp.com
 
 ```
 Usuario final (cliente)
@@ -130,7 +130,7 @@ Usuario final (cliente)
 #### Administrador
 Maneja el backoffice. Ingresa al sistema por medio de un login. Puede hacer el alta, baja o modificación de los libros, puede ver la lista de libros existentes y puede dar de alta, baja y/o modificar otros usuarios.
 
-> **PROXIMAMENTE!** https://dhventure-capital.e-commerse.com/admin
+> https://bookify-commerce.herokuapp.com/admin
 
 ```
 Administrador (adminitradores logeados)
