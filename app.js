@@ -54,9 +54,7 @@ app.get('/products/:id', (req, res, next) => {
 });
 
 // cart
-app.get('/cart', (req, res) => {
-    return res.render('cart', { products });
-});
+app.get('/cart', (req, res) => res.render('cart', { products }));
 
 // register
 app.get('/register', (req, res) => res.render('register'));

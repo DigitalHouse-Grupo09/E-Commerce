@@ -356,14 +356,20 @@ a:active {
  */
 header {
     width: 100%;
+    height: 60px;
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
     padding: var(--spacing);
     background-color: var(--default);
+    transition: .4s ease-out;
+    position: relative;
 }
 
 .header-brand {
-    flex-basis: 40%;
+    position: absolute;
+    left: var(--spacing);
+    top: var(--spacing);
 }
 
 .header-brand .header-brand-wrapper {
@@ -384,24 +390,31 @@ header {
 
 .header-nav {
     display: flex;
+    flex-direction: column-reverse;
     justify-content: flex-end;
-    flex-basis: 60%;
+    align-items: center;
+    flex-basis: 100%;
 }
 
 .header-nav .header-menu-items,
 .header-nav .header-account-items {
     display: none;
-    margin-top: var(--spacing);
+    transition: .4s ease-out;
+}
+
+.header-nav .header-account-items {
+    justify-content: space-between;
 }
 
 .header-nav .header-trigger {
     display: block;
-    margin-top: var(--spacing);
+    margin-top: var(--spacing-sm);
 }
 
 .header-nav .header-menu-items li,
 .header-nav .header-account-items li {
-    padding: 0 var(--spacing-sm);
+    padding-top: var(--spacing-sm);
+    text-align: center;
 }
 
 .header-nav .header-menu-items i,
@@ -410,24 +423,12 @@ header {
     margin-left: var(--spacing-sm);
 }
 
+.header-nav .header-trigger {
+    align-self: flex-end;
+}
+
 .header-nav .header-trigger i {
     font-size: var(--icon-size-lg);
-}
-
-.header-nav .header-nav-trigger {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.header-nav .header-nav-trigger .burger-menu {
-    display: inline-block;
-    text-align: center;
-    background-color: var(--cyan);
-    color: var(--white);
-    border-radius: var(--radius);
-    padding: var(--spacing);
 }
 
 /*
@@ -1103,18 +1104,26 @@ main {
         padding: var(--spacing) 15%;
     }
 
-    .header-brand .header-brand-logo {
-        height: 42px;
+    .header-brand {
+        left: 15%;
     }
 
     .header-nav {
+        flex-direction: row;
         justify-content: space-between;
+        align-items: center;
+        flex: 0 0 60%;
     }
 
     .header-nav .header-menu-items,
     .header-nav .header-account-items {
         display: flex;
         justify-content: space-between;
+    }
+
+    .header-nav .header-menu-items li,
+    .header-nav .header-account-items li {
+        padding: 0 var(--spacing-sm);
     }
 
     .header-nav .header-trigger {
