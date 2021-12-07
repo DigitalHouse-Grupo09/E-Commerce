@@ -1,12 +1,12 @@
 <html>
 <head>
-    <%- include('../partials/metas.html') %>
-    <%- include('../partials/styles.html') %>
+    <%- include('../partials/metas') %>
+    <%- include('../partials/styles') %>
 </head>
 <body>
-    <%- include('../partials/header.html') %>
+    <%- include('../partials/header') %>
 
-    <%- include('../partials/banner.html') %>
+    <%- include('../partials/banner') %>
 
     <!-- MAIN :: BEGIN -->
     <main >
@@ -19,7 +19,7 @@
             <div class="row products-list">
                 <!-- PRODUCTS -->
                 <% products.slice(0, 4).forEach(product => { %>
-                    <%- include('./product.html', { product }); %>
+                    <%- include('./product', { product }); %>
                 <% }); %>
             </div>
         </section>
@@ -33,15 +33,15 @@
             <div class="row categories-list">
             <!-- CATEGORIES -->
                 <% categories.slice(0, 4).forEach(category => { %>
-                    <%- include('./category.html', { category }); %>
+                    <%- include('./category', { category }); %>
                 <% }); %>
             </div>
         </section>
     </main>
     <!-- MAIN :: END -->
 
-    <%- include('../partials/footer.html') %>
+    <%- include('../partials/footer') %>
 
-    <%- include('../partials/scripts.html') %>
+    <%- include('../partials/scripts') %>
 </body>
 </html>

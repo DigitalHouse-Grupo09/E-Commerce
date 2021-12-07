@@ -27,9 +27,9 @@ app.use(bodyParser.json());
 // template engine
 //
 // add template engine for parse HTML files in views folder.
-app.set('view engine', 'html');
+app.set('view engine', 'ejs');
 app.set('views', `${__dirname}/views`);
-app.engine('html', ejs.renderFile);
+app.engine('ejs', ejs.renderFile);
 // locals 
 app.locals = { ...app.locals || {}, categories };
 
