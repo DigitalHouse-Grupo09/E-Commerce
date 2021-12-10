@@ -24,24 +24,62 @@ const searcheableProperties = [
 //
 // class
 //
-class Products {
-    getAll () {
+const modelProducts = {
+    /**
+     * List all products
+     *
+     * @return array<Product>
+     */
+    getAll: function () {
         return products;
-    }
+    },
 
-    filter (keywords) {
+    /**
+     * Filter products by keywords
+     *
+     * @param keywords {string} Searched words
+     *
+     * @return array<Product>
+     */
+    filter: function (keywords) {
         // Add wildcards to keywords for optimize search
         const term = `*${keywords}*`;
 
         // Search matches in all available properties
-        return products.filter(product => searcheableProperties.some(property => minimatch(String(product[property] || ''), term)));
-    }
+        return this.getAll().filter(product => searcheableProperties.some(property => minimatch(String(product[property] || ''), term)));
+    },
 
-    getById (id) {
-        return products.find(product => product.id === id);
-    }
+    /**
+     * Get product by ID
+     *
+     * @param id {number} Searched product ID
+     *
+     * @return Product || null
+     */
+    getById: function (id) {
+        return this.getAll().find(product => product.id === id);
+    },
 
-    create (data) {
+    /**
+     * Create and store new product
+     *
+     * @param data               {object} Product properties
+     * @param data[title]        {string} Product title
+     * @param data[description]  {string} Product description
+     * @param data[price]        {number} Product price
+     * @param data[discount]     {number} Product discount. Default is 0
+     * @param data[author]       {string} Product author
+     * @param data[publishedAt]  {date}   Product date published at. Default is now
+     * @param data[pages]        {number} Product pages
+     * @param data[language]     {string} Product language
+     * @param data[format]       {string} Product format
+     * @param data[presentation] {string} Product presentation
+     *
+     * @return Product
+     */
+    create: function (data) {
+        // List all products
+        const products = this.getAll();
         // Generate next product ID
         const nextId = (Math.max.apply(Math, products.map(product => product.id)) || 0) + 1;
         // Destructuring of the request body, to avoid junk properties
@@ -68,9 +106,9 @@ class Products {
         // Save products on file
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 1), 'utf-8');
     }
-}
+};
 
 //
 // export
 //
-module.exports = new Products();
+module.exports = modelProducts;
