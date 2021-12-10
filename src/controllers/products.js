@@ -1,14 +1,14 @@
 //
 // imports
 //
-const products = require('../data/products.json');
+const { products } = require('../models');
 
 //
 // endpoints
 //
 // products by id
 const productById = (req, res, next) => {
-    const product = products.find(product => product.id === Number(req.params.id));
+    const product = products.getById(Number(req.params.id));
 
     if (!product) {
         // Strategy used for response with 404

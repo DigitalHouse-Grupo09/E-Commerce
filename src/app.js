@@ -6,7 +6,7 @@ const path = require('path');
 const morgan = require('morgan');
 const express = require('express');
 const bodyParser = require('body-parser');
-const categories = require('./data/categories.json');
+const { categories } = require('./models');
 const routes = require('./routes');
 const app = express();
 
@@ -31,7 +31,7 @@ app.set('view engine', 'ejs');
 app.set('views', `${__dirname}/views`);
 app.engine('ejs', ejs.renderFile);
 // locals 
-app.locals = { ...app.locals || {}, categories };
+app.locals = { ...app.locals || {}, categories: categories.getAll() };
 
 //
 // routes

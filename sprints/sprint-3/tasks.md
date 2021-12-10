@@ -8,7 +8,7 @@ Node.js + Express + EJS
 ★ ✅ Aplicación con:
    - ✅ Archivos parciales (head, header, footer, etc.)
    - ✅ Home
-   - Listado de productos
+   - ✅ Listado de productos
    - ✅ Detalle del producto
    - ✅ Carrito de productos
    - ✅ Formulario de registro y login

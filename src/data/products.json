@@ -4,8 +4,8 @@
         "title": "Diego. Nacido para molestar",
         "description": "Esta biografía ilustrada del mejor futbolista de todos los tiempos es la biografía de Dios, sin duda.<br/><br/>Miguel Rep da a luz a su Diego desde las entrañas mismas de un argentino fanático del fútbol, la política, la literatura y el arte: desde ese corazón mixto de artista.<br/><br/>'En este trabajo, Miguel usa todas las herramientas que adquirió en todos estos años de oficio. Y dibuja más al Maradona que caminó sobre las aguas que al que terminó en la cruz de la que varias veces se pudo bajar. Diego siempre buscó la manera de volver a pisar una cancha. Miguel hace todo para seguir dibujando. Así es la gente que no deja de hacer lo que siempre hizo de chico: jugar a la pelota o dibujar. Toda una carrera tratando de seguir siendo un nene'.<br/><br/>DEL PRÓLOGO DE PEDRO SABORIDO",
         "image": "/assets/img/books/book-01.jpg",
-        "price": "$2.900",
-        "offer": "40% OFF",
+        "price": 2900,
+        "discount": 40,
         "author": "Miguel Rep",
         "publishedAt": "01/11/2021",
         "pages": 192,
@@ -18,8 +18,8 @@
         "title": "La Bestia",
         "description": "Corre el año 1834 y Madrid, una pequeña ciudad que trata de abrirse paso más allá de las murallas que la rodean, sufre una terrible epidemia de cólera. Pero la peste no es lo único que aterroriza a sus habitantes: en los arrabales aparecen cadáveres desmembrados de niñas que nadie reclama. Todos los rumores apuntan a la Bestia, un ser a quien nadie ha visto pero al que todos temen.<br/><br/>Cuando la pequeña Clara desaparece, su hermana Lucía, junto con Donoso, un policía tuerto, y Diego, un periodista buscavidas, inician una frenética cuenta atrás para encontrar a la niña con vida. En su camino tropiezan con fray Braulio, un monje guerrillero, y con un misterioso anillo de oro con dos mazas cruzadas que todo el mundo codicia y por el que algunos están dispuestos a matar.<br/><br/>De manera magistral, Carmen Mola teje, con los hilos del mejor thriller, esta novela impactante, frenética e implacable, de infierno y oscuridad.",
         "image": "/assets/img/books/book-02.jpg",
-        "price": "$2.490",
-        "offer": "20% OFF",
+        "price": 2490,
+        "discount": 20,
         "author": "Carmen Mola",
         "publishedAt": "04/11/2021",
         "pages": 544,
@@ -32,8 +32,8 @@
         "title": "La Rueda del Tiempo",
         "description": "Rand ha sobrevivido a su primer enfrentamiento con los perversos seguidores del Oscuro, pero ni sus amigos ni él están a salvo, ya que el Señor del mal ha liberado a los Renegados, mientras los héroes de todas las eras se levantan de la tumba cuando el Cuerno de Valere los saca de su sueño. Al verse obligado a enfrentarse a las fuerzas de la oscuridad, Rand decide escapar de su destino. Pero la profecía tiene que cumplirse.Cada día que pasa aumenta la fuerza del Oscuro, que lucha con empeño por destruir su arcaica prisión para acabar con la Rueda y poner fin al tiempo. Si nadie se lo impide, hará añicos el Entramado que sustenta la realidad y el mundo estará perdido para siempre. Así pues, mientras Rand huye, el Entramado lo acerca a su sino'Por su calidad literaria, su ambicioso planteamiento y su monumental historia, La Rueda del Tiempo es la saga de fantasía más importante de los últimos años. El lector que inicie el camino junto a Rand, Mat y Perrin no podrá abandonar el viaje hasta su incierto y sorprendente final.",
         "image": "/assets/img/books/book-03.jpg",
-        "price": "$2.490",
-        "offer": "10% OFF",
+        "price": 2490,
+        "discount": 10,
         "author": "Robert Jordan",
         "publishedAt": "01/11/2021",
         "pages": 720,
@@ -46,8 +46,8 @@
         "title": "La reina",
         "description": "Cusco, Perú, octubre de 1818. Un general porteño visita a Irenea, una monja de clausura que vive con sus hijas en el convento de Santa Clara. El general viene con la misiónsecreta de coronar a la menor de las hermanas. Shiamara y Nuna descienden de una pareja revolucionaria, Micaela Bastidas y Tupac Amaru, y por sus venas corre sangre real y mestizada. Una es negra y la otra es blanca. En el Congreso de Tucumán de 1816, ha triunfado la propuesta de Manuel Belgrano de establecer, como sistema de gobierno, una monarquía incaica en América Latina, con sede en esa ciudad peruana, entonces considerada ombligo del mundo. Mientras espera a su príncipe, Nuna, la adolescente virgen, despierta deseos prohibidos en el hombre que ha sufrido derrotas y victorias, amores y pérdidas. El hecho puede cambiar el rumbo de los acontecimientos. Gabriela Saidon narra una historia apasionante. Con el trasfondo de la ciudad colonial, de iglesias erigidas sobre las ruinas de un imperio dorado, su gran personaje, Nuna, confronta a Belgrano en el ocaso de su vida, y también a su madre, en lo que por momentos se convierte en una comedia de enredos, desafía las estrategias de un poder inclaudicable y la moral hipócrita de la época.",
         "image": "/assets/img/books/book-04.jpg",
-        "price": "$1.460",
-        "offer": "5% OFF",
+        "price": 1460,
+        "discount": 5,
         "author": "Gabriela Saidon",
         "publishedAt": "01/10/2020",
         "pages": 328,
@@ -62,7 +62,7 @@
         "country": "Nigeria",
         "image": "/assets/img/books/things-fall-apart.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 209,
         "publishedAt": 1958
     },
@@ -73,7 +73,7 @@
         "country": "Denmark",
         "image": "/assets/img/books/fairy-tales.jpg",
         "language": "Danish",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 784,
         "publishedAt": 1836
     },
@@ -84,7 +84,7 @@
         "country": "Italy",
         "image": "/assets/img/books/the-divine-comedy.jpg",
         "language": "Italian",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 928,
         "publishedAt": 1315
     },
@@ -95,7 +95,7 @@
         "country": "Sumer and Akkadian Empire",
         "image": "/assets/img/books/the-epic-of-gilgamesh.jpg",
         "language": "Akkadian",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 160,
         "publishedAt": -1700
     },
@@ -106,7 +106,7 @@
         "country": "Achaemenid Empire",
         "image": "/assets/img/books/the-book-of-job.jpg",
         "language": "Hebrew",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 176,
         "publishedAt": -600
     },
@@ -117,7 +117,7 @@
         "country": "India/Iran/Iraq/Egypt/Tajikistan",
         "image": "/assets/img/books/one-thousand-and-one-nights.jpg",
         "language": "Arabic",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 288,
         "publishedAt": 1200
     },
@@ -128,7 +128,7 @@
         "country": "Iceland",
         "image": "/assets/img/books/njals-saga.jpg",
         "language": "Old Norse",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 384,
         "publishedAt": 1350
     },
@@ -139,7 +139,7 @@
         "country": "United Kingdom",
         "image": "/assets/img/books/pride-and-prejudice.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 226,
         "publishedAt": 1813
     },
@@ -150,7 +150,7 @@
         "country": "France",
         "image": "/assets/img/books/le-pere-goriot.jpg",
         "language": "French",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 443,
         "publishedAt": 1835
     },
@@ -161,7 +161,7 @@
         "country": "Republic of Ireland",
         "image": "/assets/img/books/molloy-malone-dies-the-unnamable.jpg",
         "language": "French, English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 256,
         "publishedAt": 1952
     },
@@ -172,7 +172,7 @@
         "country": "Italy",
         "image": "/assets/img/books/the-decameron.jpg",
         "language": "Italian",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 1024,
         "publishedAt": 1351
     },
@@ -183,7 +183,7 @@
         "country": "Argentina",
         "image": "/assets/img/books/ficciones.jpg",
         "language": "Spanish",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 224,
         "publishedAt": 1965
     },
@@ -194,7 +194,7 @@
         "country": "United Kingdom",
         "image": "/assets/img/books/wuthering-heights.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 342,
         "publishedAt": 1847
     },
@@ -205,7 +205,7 @@
         "country": "Algeria, French Empire",
         "image": "/assets/img/books/l-etranger.jpg",
         "language": "French",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 185,
         "publishedAt": 1942
     },
@@ -216,7 +216,7 @@
         "country": "Romania, France",
         "image": "/assets/img/books/poems-paul-celan.jpg",
         "language": "German",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 320,
         "publishedAt": 1952
     },
@@ -227,7 +227,7 @@
         "country": "France",
         "image": "/assets/img/books/voyage-au-bout-de-la-nuit.jpg",
         "language": "French",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 505,
         "publishedAt": 1932
     },
@@ -238,7 +238,7 @@
         "country": "Spain",
         "image": "/assets/img/books/don-quijote-de-la-mancha.jpg",
         "language": "Spanish",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 1056,
         "publishedAt": 1610
     },
@@ -249,7 +249,7 @@
         "country": "England",
         "image": "/assets/img/books/the-canterbury-tales.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 544,
         "publishedAt": 1450
     },
@@ -260,7 +260,7 @@
         "country": "Russia",
         "image": "/assets/img/books/stories-of-anton-chekhov.jpg",
         "language": "Russian",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 194,
         "publishedAt": 1886
     },
@@ -271,7 +271,7 @@
         "country": "United Kingdom",
         "image": "/assets/img/books/nostromo.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 320,
         "publishedAt": 1904
     },
@@ -282,7 +282,7 @@
         "country": "United Kingdom",
         "image": "/assets/img/books/great-expectations.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 194,
         "publishedAt": 1861
     },
@@ -293,7 +293,7 @@
         "country": "France",
         "image": "/assets/img/books/jacques-the-fatalist.jpg",
         "language": "French",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 596,
         "publishedAt": 1796
     },
@@ -304,7 +304,7 @@
         "country": "Germany",
         "image": "/assets/img/books/berlin-alexanderplatz.jpg",
         "language": "German",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 600,
         "publishedAt": 1929
     },
@@ -315,7 +315,7 @@
         "country": "Russia",
         "image": "/assets/img/books/crime-and-punishment.jpg",
         "language": "Russian",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 551,
         "publishedAt": 1866
     },
@@ -326,7 +326,7 @@
         "country": "Russia",
         "image": "/assets/img/books/the-idiot.jpg",
         "language": "Russian",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 656,
         "publishedAt": 1869
     },
@@ -337,7 +337,7 @@
         "country": "Russia",
         "image": "/assets/img/books/the-possessed.jpg",
         "language": "Russian",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 768,
         "publishedAt": 1872
     },
@@ -348,7 +348,7 @@
         "country": "Russia",
         "image": "/assets/img/books/the-brothers-karamazov.jpg",
         "language": "Russian",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 824,
         "publishedAt": 1880
     },
@@ -359,7 +359,7 @@
         "country": "United Kingdom",
         "image": "/assets/img/books/middlemarch.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 800,
         "publishedAt": 1871
     },
@@ -370,7 +370,7 @@
         "country": "United States",
         "image": "/assets/img/books/invisible-man.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 581,
         "publishedAt": 1952
     },
@@ -381,7 +381,7 @@
         "country": "Greece",
         "image": "/assets/img/books/medea.jpg",
         "language": "Greek",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 104,
         "publishedAt": -431
     },
@@ -392,7 +392,7 @@
         "country": "United States",
         "image": "/assets/img/books/absalom-absalom.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 313,
         "publishedAt": 1936
     },
@@ -403,7 +403,7 @@
         "country": "United States",
         "image": "/assets/img/books/the-sound-and-the-fury.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 326,
         "publishedAt": 1929
     },
@@ -414,7 +414,7 @@
         "country": "France",
         "image": "/assets/img/books/madame-bovary.jpg",
         "language": "French",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 528,
         "publishedAt": 1857
     },
@@ -425,7 +425,7 @@
         "country": "France",
         "image": "/assets/img/books/l-education-sentimentale.jpg",
         "language": "French",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 606,
         "publishedAt": 1869
     },
@@ -436,7 +436,7 @@
         "country": "Spain",
         "image": "/assets/img/books/gypsy-ballads.jpg",
         "language": "Spanish",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 218,
         "publishedAt": 1928
     },
@@ -447,7 +447,7 @@
         "country": "Colombia",
         "image": "/assets/img/books/one-hundred-years-of-solitude.jpg",
         "language": "Spanish",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 417,
         "publishedAt": 1967
     },
@@ -458,7 +458,7 @@
         "country": "Colombia",
         "image": "/assets/img/books/love-in-the-time-of-cholera.jpg",
         "language": "Spanish",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 368,
         "publishedAt": 1985
     },
@@ -469,7 +469,7 @@
         "country": "Saxe-Weimar",
         "image": "/assets/img/books/faust.jpg",
         "language": "German",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 158,
         "publishedAt": 1832
     },
@@ -480,7 +480,7 @@
         "country": "Russia",
         "image": "/assets/img/books/dead-souls.jpg",
         "language": "Russian",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 432,
         "publishedAt": 1842
     },
@@ -491,7 +491,7 @@
         "country": "Germany",
         "image": "/assets/img/books/the-tin-drum.jpg",
         "language": "German",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 600,
         "publishedAt": 1959
     },
@@ -502,7 +502,7 @@
         "country": "Brazil",
         "image": "/assets/img/books/the-devil-to-pay-in-the-backlands.jpg",
         "language": "Portuguese",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 494,
         "publishedAt": 1956
     },
@@ -513,7 +513,7 @@
         "country": "Norway",
         "image": "/assets/img/books/hunger.jpg",
         "language": "Norwegian",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 176,
         "publishedAt": 1890
     },
@@ -524,7 +524,7 @@
         "country": "United States",
         "image": "/assets/img/books/the-old-man-and-the-sea.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 128,
         "publishedAt": 1952
     },
@@ -535,7 +535,7 @@
         "country": "Greece",
         "image": "/assets/img/books/the-iliad-of-homer.jpg",
         "language": "Greek",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 608,
         "publishedAt": -735
     },
@@ -546,7 +546,7 @@
         "country": "Greece",
         "image": "/assets/img/books/the-odyssey-of-homer.jpg",
         "language": "Greek",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 374,
         "publishedAt": -800
     },
@@ -557,7 +557,7 @@
         "country": "Norway",
         "image": "/assets/img/books/a-Dolls-house.jpg",
         "language": "Norwegian",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 68,
         "publishedAt": 1879
     },
@@ -568,7 +568,7 @@
         "country": "Irish Free State",
         "image": "/assets/img/books/ulysses.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 228,
         "publishedAt": 1922
     },
@@ -579,7 +579,7 @@
         "country": "Czechoslovakia",
         "image": "/assets/img/books/stories-of-franz-kafka.jpg",
         "language": "German",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 488,
         "publishedAt": 1924
     },
@@ -590,7 +590,7 @@
         "country": "Czechoslovakia",
         "image": "/assets/img/books/the-trial.jpg",
         "language": "German",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 160,
         "publishedAt": 1925
     },
@@ -601,7 +601,7 @@
         "country": "Czechoslovakia",
         "image": "/assets/img/books/the-castle.jpg",
         "language": "German",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 352,
         "publishedAt": 1926
     },
@@ -612,7 +612,7 @@
         "country": "India",
         "image": "/assets/img/books/the-recognition-of-shakuntala.jpg",
         "language": "Sanskrit",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 147,
         "publishedAt": 150
     },
@@ -623,7 +623,7 @@
         "country": "Japan",
         "image": "/assets/img/books/the-sound-of-the-mountain.jpg",
         "language": "Japanese",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 288,
         "publishedAt": 1954
     },
@@ -634,7 +634,7 @@
         "country": "Greece",
         "image": "/assets/img/books/zorba-the-greek.jpg",
         "language": "Greek",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 368,
         "publishedAt": 1946
     },
@@ -645,7 +645,7 @@
         "country": "United Kingdom",
         "image": "/assets/img/books/sons-and-lovers.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 432,
         "publishedAt": 1913
     },
@@ -656,7 +656,7 @@
         "country": "Iceland",
         "image": "/assets/img/books/independent-people.jpg",
         "language": "Icelandic",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 470,
         "publishedAt": 1934
     },
@@ -667,7 +667,7 @@
         "country": "Italy",
         "image": "/assets/img/books/poems-giacomo-leopardi.jpg",
         "language": "Italian",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 184,
         "publishedAt": 1818
     },
@@ -678,7 +678,7 @@
         "country": "United Kingdom",
         "image": "/assets/img/books/the-golden-notebook.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 688,
         "publishedAt": 1962
     },
@@ -689,7 +689,7 @@
         "country": "Sweden",
         "image": "/assets/img/books/pippi-longstocking.jpg",
         "language": "Swedish",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 160,
         "publishedAt": 1945
     },
@@ -700,7 +700,7 @@
         "country": "China",
         "image": "/assets/img/books/diary-of-a-madman.jpg",
         "language": "Chinese",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 389,
         "publishedAt": 1918
     },
@@ -711,7 +711,7 @@
         "country": "Egypt",
         "image": "/assets/img/books/children-of-gebelawi.jpg",
         "language": "Arabic",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 355,
         "publishedAt": 1959
     },
@@ -722,7 +722,7 @@
         "country": "Germany",
         "image": "/assets/img/books/buddenbrooks.jpg",
         "language": "German",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 736,
         "publishedAt": 1901
     },
@@ -733,7 +733,7 @@
         "country": "Germany",
         "image": "/assets/img/books/the-magic-mountain.jpg",
         "language": "German",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 720,
         "publishedAt": 1924
     },
@@ -744,7 +744,7 @@
         "country": "United States",
         "image": "/assets/img/books/moby-dick.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 378,
         "publishedAt": 1851
     },
@@ -755,7 +755,7 @@
         "country": "France",
         "image": "/assets/img/books/essais.jpg",
         "language": "French",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 404,
         "publishedAt": 1595
     },
@@ -766,7 +766,7 @@
         "country": "Italy",
         "image": "/assets/img/books/history.jpg",
         "language": "Italian",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 600,
         "publishedAt": 1974
     },
@@ -777,7 +777,7 @@
         "country": "United States",
         "image": "/assets/img/books/beloved.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 321,
         "publishedAt": 1987
     },
@@ -788,7 +788,7 @@
         "country": "Japan",
         "image": "/assets/img/books/the-tale-of-genji.jpg",
         "language": "Japanese",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 1360,
         "publishedAt": 1006
     },
@@ -799,7 +799,7 @@
         "country": "Austria",
         "image": "/assets/img/books/the-man-without-qualities.jpg",
         "language": "German",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 365,
         "publishedAt": 1931
     },
@@ -810,7 +810,7 @@
         "country": "Russia/United States",
         "image": "/assets/img/books/lolita.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 317,
         "publishedAt": 1955
     },
@@ -821,7 +821,7 @@
         "country": "United Kingdom",
         "image": "/assets/img/books/nineteen-eighty-four.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 272,
         "publishedAt": 1949
     },
@@ -832,7 +832,7 @@
         "country": "Roman Empire",
         "image": "/assets/img/books/the-metamorphoses-of-ovid.jpg",
         "language": "Classical Latin",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 576,
         "publishedAt": 100
     },
@@ -843,7 +843,7 @@
         "country": "Portugal",
         "image": "/assets/img/books/the-book-of-disquiet.jpg",
         "language": "Portuguese",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 272,
         "publishedAt": 1928
     },
@@ -854,7 +854,7 @@
         "country": "United States",
         "image": "/assets/img/books/tales-and-poems-of-edgar-allan-poe.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 842,
         "publishedAt": 1950
     },
@@ -865,7 +865,7 @@
         "country": "France",
         "image": "/assets/img/books/a-la-recherche-du-temps-perdu.jpg",
         "language": "French",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 2408,
         "publishedAt": 1920
     },
@@ -876,7 +876,7 @@
         "country": "France",
         "image": "/assets/img/books/gargantua-and-pantagruel.jpg",
         "language": "French",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 623,
         "publishedAt": 1533
     },
@@ -887,7 +887,7 @@
         "country": "Mexico",
         "image": "/assets/img/books/pedro-paramo.jpg",
         "language": "Spanish",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 124,
         "publishedAt": 1955
     },
@@ -898,7 +898,7 @@
         "country": "Sultanate of Rum",
         "image": "/assets/img/books/the-masnavi.jpg",
         "language": "Persian",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 438,
         "publishedAt": 1236
     },
@@ -909,7 +909,7 @@
         "country": "United Kingdom, India",
         "image": "/assets/img/books/midnights-children.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 536,
         "publishedAt": 1981
     },
@@ -920,7 +920,7 @@
         "country": "Persia, Persian Empire",
         "image": "/assets/img/books/bostan.jpg",
         "language": "Persian",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 298,
         "publishedAt": 1257
     },
@@ -931,7 +931,7 @@
         "country": "Sudan",
         "image": "/assets/img/books/season-of-migration-to-the-north.jpg",
         "language": "Arabic",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 139,
         "publishedAt": 1966
     },
@@ -942,7 +942,7 @@
         "country": "Portugal",
         "image": "/assets/img/books/blindness.jpg",
         "language": "Portuguese",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 352,
         "publishedAt": 1995
     },
@@ -953,7 +953,7 @@
         "country": "England",
         "image": "/assets/img/books/hamlet.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 432,
         "publishedAt": 1603
     },
@@ -964,7 +964,7 @@
         "country": "England",
         "image": "/assets/img/books/king-lear.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 384,
         "publishedAt": 1608
     },
@@ -975,7 +975,7 @@
         "country": "England",
         "image": "/assets/img/books/othello.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 314,
         "publishedAt": 1609
     },
@@ -986,7 +986,7 @@
         "country": "Greece",
         "image": "/assets/img/books/oedipus-the-king.jpg",
         "language": "Greek",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 88,
         "publishedAt": -430
     },
@@ -997,7 +997,7 @@
         "country": "France",
         "image": "/assets/img/books/le-rouge-et-le-noir.jpg",
         "language": "French",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 576,
         "publishedAt": 1830
     },
@@ -1008,7 +1008,7 @@
         "country": "England",
         "image": "/assets/img/books/the-life-and-opinions-of-tristram-shandy.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 640,
         "publishedAt": 1760
     },
@@ -1019,7 +1019,7 @@
         "country": "Italy",
         "image": "/assets/img/books/confessions-of-zeno.jpg",
         "language": "Italian",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 412,
         "publishedAt": 1923
     },
@@ -1030,7 +1030,7 @@
         "country": "Ireland",
         "image": "/assets/img/books/gullivers-travels.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 178,
         "publishedAt": 1726
     },
@@ -1041,7 +1041,7 @@
         "country": "Russia",
         "image": "/assets/img/books/war-and-peace.jpg",
         "language": "Russian",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 1296,
         "publishedAt": 1867
     },
@@ -1052,7 +1052,7 @@
         "country": "Russia",
         "image": "/assets/img/books/anna-karenina.jpg",
         "language": "Russian",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 864,
         "publishedAt": 1877
     },
@@ -1063,7 +1063,7 @@
         "country": "Russia",
         "image": "/assets/img/books/the-death-of-ivan-ilyich.jpg",
         "language": "Russian",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 92,
         "publishedAt": 1886
     },
@@ -1074,7 +1074,7 @@
         "country": "United States",
         "image": "/assets/img/books/the-adventures-of-huckleberry-finn.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 224,
         "publishedAt": 1884
     },
@@ -1085,7 +1085,7 @@
         "country": "India",
         "image": "/assets/img/books/ramayana.jpg",
         "language": "Sanskrit",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 152,
         "publishedAt": -450
     },
@@ -1096,7 +1096,7 @@
         "country": "Roman Empire",
         "image": "/assets/img/books/the-aeneid.jpg",
         "language": "Classical Latin",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 442,
         "publishedAt": -23
     },
@@ -1107,7 +1107,7 @@
         "country": "India",
         "image": "/assets/img/books/the-mahab-harata.jpg",
         "language": "Sanskrit",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 276,
         "publishedAt": -700
     },
@@ -1118,7 +1118,7 @@
         "country": "United States",
         "image": "/assets/img/books/leaves-of-grass.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 152,
         "publishedAt": 1855
     },
@@ -1129,7 +1129,7 @@
         "country": "United Kingdom",
         "image": "/assets/img/books/mrs-dalloway.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 216,
         "publishedAt": 1925
     },
@@ -1140,7 +1140,7 @@
         "country": "United Kingdom",
         "image": "/assets/img/books/to-the-lighthouse.jpg",
         "language": "English",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 209,
         "publishedAt": 1927
     },
@@ -1151,7 +1151,7 @@
         "country": "France/Belgium",
         "image": "/assets/img/books/memoirs-of-hadrian.jpg",
         "language": "French",
-        "price": "$2.490",
+        "price": 2490,
         "pages": 408,
         "publishedAt": 1951
     }

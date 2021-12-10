@@ -1,13 +1,13 @@
 //
 // imports
 //
-const products = require('../data/products.json');
+const { products } = require('../models');
 
 //
 // endpoints
 //
 // cart
-const cart = (req, res) => res.render('cart', { products });
+const cart = (req, res) => res.render('cart', { products: products.getAll() });
 
 //
 // export

@@ -1,13 +1,13 @@
 //
 // imports
 //
-const products = require('../data/products.json').sort(() => .5 - Math.random());
+const { products } = require('../models');
 
 //
 // endpoints
 //
 // home
-const home = (req, res) => res.render('home', { products });
+const home = (req, res) => res.render('home', { products: products.getAll().sort(() => .5 - Math.random()) });
 
 //
 // export
