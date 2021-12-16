@@ -40,6 +40,8 @@ app.use('/', routes.main);
 app.use('/', routes.users);
 app.use('/cart', routes.cart);
 app.use('/products', routes.products);
+app.use('/admin', routes.admin);
+
 
 //
 // error pages
