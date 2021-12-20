@@ -1,0 +1,22 @@
+<html>
+<head>
+    <%- include('./partials/metas') %>
+    <%- include('./partials/styles') %>
+</head>
+<body>
+    <%- include('./partials/header') %>
+
+    <!-- MAIN :: BEGIN -->
+    <main >
+        Ooops... Parece que algo salio mal.
+        <br/>
+        <br/>
+        <pre><%= error.stack %></pre>
+    </main>
+    <!-- MAIN :: END -->
+
+    <%- include('./partials/footer') %>
+
+    <%- include('./partials/scripts') %>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<html>
+<head>
+    <%- include('../partials/metas') %>
+    <%- include('../partials/styles') %>
+</head>
+<body>
+    <%- include('../partials/header') %>
+
+    <!-- MAIN :: BEGIN -->
+    <main class="product-details my-5">
+        <section class="product-detail">
+            <div class="row">
+                <!-- PRODUCT IMAGE AND TITLE -->
+                <div class="column-1 md:column-2 product-images">
+                    <article>
+                        <figure>
+                            <img src="<%= product.image %>" class="product-image" />
+                        </figure>
+                    </article>
+                </div>
+
+                <!-- PRODUCT DETAILS -->
+                <div class="column-1 md:column-2 product-properties">
+                    <!-- PRODUCT TITLE -->
+                    <h3 class="product-title"><%= product.title %></h3>
+
+                    <!-- PRODUCT PRICE -->
+                    <p class="product-price"><%= product.price %></p>
+
+                    <!-- PRODUCT QUANTITY -->
+                    <form class="form">
+                        <div class="form-group">
+                            <label for="product-quantity" class="form-label" >Cantidad</label>
+                            <input type="number" id="product-quantity" name="product-quantity" class="product-quantity form-input" value="1" />
+                        </div>
+
+                        <div class="form-actions form-actions-end">
+                            <button type="button" class="form-action"><i class="fas fa-cart-arrow-down" ></i> Agregar al carrito</button>
+                        </div>
+                    </form>
+
+                    <div class="separator"></div>
+
+                    <% if (product.description) { %>
+                        <!-- PRODUCT DESCRIPTION -->
+                        <p class="product-description"><%- product.description %></p>
+                    <% } %>
+
+                    <!-- PRODUCT SHEETS -->
+                    <div class="product-sheet">
+                        <ul type="none">
+                            <!-- SHEET AVAILABLES -->
+                            <% const sheetProperties = []; %>
+                            <% sheetProperties.push({ name: 'author', label: 'Autor' }); %>
+                            <% sheetProperties.push({ name: 'publishedAt', label: 'Fecha de publicación' }); %>
+                            <% sheetProperties.push({ name: 'pages', label: 'Páginas' }); %>
+                            <% sheetProperties.push({ name: 'language', label: 'Idioma' }); %>
+                            <% sheetProperties.push({ name: 'format', label: 'Formato' }); %>
+                            <% sheetProperties.push({ name: 'presentation', label: 'Presentación' }); %>
+
+                            <!-- SHEET EACH -->
+                            <% sheetProperties.forEach(sheet => { %>
+                                <% if (product[sheet.name]) { %>
+                                    <li class="product-sheet-item">
+                                        <b><%= sheet.label %></b>: <%- product[sheet.name] %>
+                                    </li>
+                                <% } %>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- MAIN :: END -->
+
+    <%- include('../partials/footer') %>
+
+    <%- include('../partials/scripts') %>
+</body>
+</html>

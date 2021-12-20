@@ -1,0 +1,47 @@
+<html>
+<head>
+    <%- include('../partials/metas') %>
+    <%- include('../partials/styles') %>
+</head>
+<body>
+    <%- include('../partials/header') %>
+
+    <%- include('../partials/banner') %>
+
+    <!-- MAIN :: BEGIN -->
+    <main >
+        <!-- VIEWED -->
+        <section class="products">
+            <div class="title-subtitle">
+                <h3 class="title-subtitle-title">Basado en tu última visita</h3>
+                <p class="title-subtitle-subtitle">Pídelo para ti o para tus seres queridos.</p>
+            </div>
+            <div class="row products-list">
+                <!-- PRODUCTS -->
+                <% products.slice(0, 4).forEach(product => { %>
+                    <%- include('./product', { product }); %>
+                <% }); %>
+            </div>
+        </section>
+
+        <!-- CATEGORIES -->
+        <section class="categories">
+            <div class="title-subtitle">
+                <h3 class="title-subtitle-title">Categorías</h3>
+                <p class="title-subtitle-subtitle">Recomendadas para ti.</p>
+            </div>
+            <div class="row categories-list">
+            <!-- CATEGORIES -->
+                <% categories.slice(0, 4).forEach(category => { %>
+                    <%- include('./category', { category }); %>
+                <% }); %>
+            </div>
+        </section>
+    </main>
+    <!-- MAIN :: END -->
+
+    <%- include('../partials/footer') %>
+
+    <%- include('../partials/scripts') %>
+</body>
+</html>

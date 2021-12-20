@@ -1,0 +1,86 @@
+<html>
+<head>
+    <%- include('../partials/metas') %>
+    <%- include('../partials/styles') %>
+</head>
+<body>
+    <%- include('../partials/header') %>
+
+    <!-- MAIN :: BEGIN -->
+    <main class="cart mb-5">
+        <!-- VIEWED -->
+        <section class="cart-products">
+            <div class="title-subtitle">
+                <h3 class="title-subtitle-title">Tu carrito</h3>
+                <p class="title-subtitle-subtitle">
+                    <a href="/" class="text-primary">
+                        <small>continuar comprando</small>
+                    </a>
+                </p>
+            </div>
+            <form class="form">
+                <table class="table">
+                    <!-- HEADERS -->
+                    <thead>
+                        <tr>
+                            <th class="text-left">Producto</th>
+                            <th class="text-right">Precio</th>
+                            <th class="text-right">Cantidad</th>
+                            <th class="text-right">Total</th>
+                        </tr>
+                    </thead>
+
+                    <!-- PRODUCTS -->
+                    <tbody>
+                        <tr>
+                            <td class="text-left">
+                                <div class="symbol">
+                                    <figure class="symbol-media">
+                                        <img class="symbol-media-image" src="<%= products[0].image %>" width="100%" />
+                                    </figure>
+                                    <div class="symbol-content">
+                                        <h4 class="symbol-title"><%= products[0].title %></h4>
+                                        <p class="symbol-subtitle">
+                                            <a href="/" class="text-primary">
+                                                <small><i class="fas fa-trash"></i> eliminar</small>
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-right"><%= products[0].price %></td>
+                            <td class="text-right">
+                                <div class="form-group">
+                                    <input type="number" id="product-quantity" name="product-quantity" class="form-input" value="1" style="width: 80px" />
+                                </div>
+                            </td>
+                            <td class="text-right"><%= products[0].price %></td>
+                        </tr>
+                    </tbody>
+
+                    <!-- FOOTER -->
+                    <tfoot>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th class="text-right">
+                                <b>Total</b>: <%= products[0].price %>
+                            </th>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <div class="form-actions form-actions-end">
+                    <button type="submit" class="btn btn-big">Confirmar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <!-- MAIN :: END -->
+
+    <%- include('../partials/footer') %>
+
+    <%- include('../partials/scripts') %>
+</body>
+</html>

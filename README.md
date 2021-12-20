@@ -1,6 +1,6 @@
 <div id="top"></div>
 
-# E-Commerse - DH Venture Capital
+# Bookify
 
 
 <!-- INDEX -->
@@ -8,6 +8,7 @@
 
 * [Introducción][introduction].
 * [Equipo][team].
+* [Sprints][sprints].
 * [Inspiración][inspiration].
 * [Links útiles][helper_links].
 * [Comenzando][getting_started].
@@ -19,7 +20,7 @@
 <!-- INTRODUCTION -->
 ## 🤯 Introducción
 
-E-Commerse - DH Venture Capital es un sistema de venta de libros online.
+[Bookify](https://bookify-commerce.herokuapp.com) es un sistema de venta de libros online.
 
 
 <!-- TEAM -->
@@ -34,6 +35,18 @@ E-Commerse - DH Venture Capital es un sistema de venta de libros online.
  * [Paloma Gras](https://github.com/PalomaG11)
  * [Sergio Abadia](https://github.com/Garasaki)
  * [Nicolas Molina](https://github.com/comodinx)
+
+<p align="right">(<a href="#top">volver arriba</a>)</p>
+
+
+<!-- SPRINTS -->
+## 🌻 Sprints
+
+Las retrospectivas y detalles de cada sprint, van a estar anidados, de forma ordenada, dentro de la carpeta [**sprints**](https://github.com/DigitalHouse-Grupo09/E-Commerce/tree/master/sprints).
+
+ * [Sprint 1](https://github.com/DigitalHouse-Grupo09/E-Commerce/tree/master/sprints/sprint-1)
+ * [Sprint 2](https://github.com/DigitalHouse-Grupo09/E-Commerce/tree/master/sprints/sprint-2)
+ * [Sprint 3](https://github.com/DigitalHouse-Grupo09/E-Commerce/tree/master/sprints/sprint-3)
 
 <p align="right">(<a href="#top">volver arriba</a>)</p>
 
@@ -101,7 +114,7 @@ npm start
 #### Cliente
 Ve el listado de archivos. Puede buscar libros, mirar el detalle (precio, escritor, etc), comprar (o no) y contactarse con el web master (ayuda, queja, mejora).
 
-> **PROXIMAMENTE!** https://dhventure-capital.e-commerse.com
+> https://bookify-commerce.herokuapp.com
 
 ```
 Usuario final (cliente)
@@ -117,7 +130,7 @@ Usuario final (cliente)
 #### Administrador
 Maneja el backoffice. Ingresa al sistema por medio de un login. Puede hacer el alta, baja o modificación de los libros, puede ver la lista de libros existentes y puede dar de alta, baja y/o modificar otros usuarios.
 
-> **PROXIMAMENTE!** https://dhventure-capital.e-commerse.com/admin
+> https://bookify-commerce.herokuapp.com/admin
 
 ```
 Administrador (adminitradores logeados)
@@ -131,6 +144,7 @@ Administrador (adminitradores logeados)
 <!-- deep links -->
 [introduction]: #-introducción
 [team]: #-equipo
+[sprints]: #-sprints
 [inspiration]: #-inspiración
 [helper_links]: #-links-útiles
 [getting_started]: #comenzando
