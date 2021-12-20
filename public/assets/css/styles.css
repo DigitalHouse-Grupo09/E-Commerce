@@ -61,6 +61,28 @@
 }
 
 /*
+ * ANIMATIONS
+ */
+
+@keyframes fade{
+    0%{
+        opacity: 1;
+    }
+    10.5% {
+        opacity:1;
+    }
+    12.5%{
+        opacity: 0;
+    }
+    98% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+/*
  * GLOBAL
  */
 body {
@@ -869,6 +891,12 @@ main {
 .product-details .product-properties .product-sheet .product-sheet-item {
     margin: var(--spacing);
 }
+
+/* ADMIN
+ *
+ */
+ 
+ 
 
 /*
  * RESPONSIVE
