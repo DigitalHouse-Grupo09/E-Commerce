@@ -892,10 +892,22 @@ main {
     margin: var(--spacing);
 }
 
-/* ADMIN
- *
- */
- 
+/*
+* ADMIN
+*/
+
+.functions-admin{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+
+}
+
+.title-admin{
+    text-align: center;
+    padding: 30px;
+}
+     
  
 
 /*
