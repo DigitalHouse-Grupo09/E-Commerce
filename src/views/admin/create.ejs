@@ -7,11 +7,57 @@
     <%- include('../partials/header') %>
 
     <!-- MAIN :: BEGIN -->
-<main>
-    <section>
-        <h1>CREATE</h1>
-    </section>
-</main>
+    <main>
+        <h1 class="create-title">Formulario de creación</h1>
+        <section class="form-wrapper">
+            <form action="/admin/create" method="POST" class="form">
+                <div class="form-group">
+                    <input type="text" name="title" placeholder="Titulo" class="form-input">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="description" placeholder="Descripción" class="form-input">
+                </div>
+                <div class="form-group">
+                    <input type="file" name="image" placeholder="Imagen" class="form-input"> 
+                </div>
+                <div class="form-group">
+                    <input type="number" name="price" placeholder="Precio" class="form-input">
+                </div>
+                <div class="form-group">
+                    <input type="number" name="discount" placeholder="Descuento" class="form-input">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="author" placeholder="Autor" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="publishedAt" class="form-label">Fecha de publicación</label>
+                    <input type="date" name="publishedAt" class="form-input">
+                </div>
+                <div class="form-group">
+                    <input type="number" name="pages" placeholder="Cantidad de paginas" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="language" class="form-label">Seleccionar idioma</label>
+                    <select name="language">
+                        <option value="spanish">Español</option>
+                        <option value="english">Inglés</option>
+                        <option value="french">Francés</option>
+                        <option value="portuguese">Portugues</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="format" placeholder="Tamaño" class="form-input">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="presentation" placeholder="Presentación" class="form-input">
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="form-action-submit">Enviar</button>
+                    <button type="reset" class="form-action-reset">Limpiar</button>
+                </div>
+            </form>
+        </section>
+    </main>
     <!-- MAIN :: END -->
 
     <%- include('../partials/footer') %>

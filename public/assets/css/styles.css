@@ -683,6 +683,7 @@ main {
 }
 
 .form-group .form-input[type=text],
+.form-group .form-input[type=number],
 .form-group .form-input[type=date],
 .form-group .form-input[type=file],
 .form-group .form-input[type=email],
@@ -906,6 +907,11 @@ main {
 .title-admin{
     text-align: center;
     padding: 30px;
+}
+
+.create-title{
+    text-align: center;
+    margin: 30px;
 }
      
  
@@ -1192,9 +1198,11 @@ main {
     }
 
     .form-group .form-input[type=text],
-    .form-group .form-input[type=date],
+    .form-group .form-input[type=number],
     .form-group .form-input[type=file],
-    .form-group .form-input[type=email], .form-group .form-input[type=password] {
+    .form-group .form-input[type=date],
+    .form-group .form-input[type=email], 
+    .form-group .form-input[type=password] {
         width: 50%;
     }
 
