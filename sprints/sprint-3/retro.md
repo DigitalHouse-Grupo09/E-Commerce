@@ -5,7 +5,10 @@
 📅 **Fecha**: **¿?**
 
 👨‍👨‍👧‍👦 **Participantes**:
-**¿?**
++ Cristian
++ Paloma
++ Sergio
++ Milo
 
 
 ### ⭐️ Puntos a revisar
