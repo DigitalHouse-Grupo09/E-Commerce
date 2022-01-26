@@ -10,8 +10,6 @@ const controller = require('../controllers/products');
 //
 router.get('/:id', controller.productById);
 
-
-
 //
 // export
 //

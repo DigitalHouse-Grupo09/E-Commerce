@@ -7,8 +7,8 @@ JSON + CRUD
 * ✅ Tablero de trabajo actualizado.
 * ✅ Archivos products.json y users.json con datos de productos y usuarios.
 * Administración completa de productos con:
-   - Listado
+   - ✅ Listado
    - Detalle
-   - Creación
-   - Edición
-   - Eliminación
+   - ✅ Creación
+   - ✅ Edición
+   - ✅ Eliminación

@@ -6,6 +6,7 @@ const path = require('path');
 const morgan = require('morgan');
 const express = require('express');
 const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
 const { categories } = require('./models');
 const routes = require('./routes');
 const app = express();
@@ -22,6 +23,7 @@ app.use(express.static('public'));
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(methodOverride('_method'));
 
 //
 // template engine

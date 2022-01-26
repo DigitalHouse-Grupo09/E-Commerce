@@ -66,4 +66,4 @@ const modelCategories = {
 //
 // export
 //
-module.exports = modelCategories;
+module.exports = () => modelCategories;

@@ -1,0 +1,40 @@
+<html>
+<head>
+    <%- include('../../partials/metas') %>
+    <%- include('../../partials/styles') %>
+</head>
+<body>
+    <%- include('../../partials/header') %>
+
+    <!-- MAIN :: BEGIN -->
+    <main class="main-fluid">
+        <section class="admin">
+            <div class="title-subtitle">
+                <h1 class="title-subtitle-title">
+                    Bienvenido @USUARIO
+                    <small class="mt-1 float-end">
+                        <a href="/admin/products/create">➕</a>
+                    </small>
+                </h1>
+            </div>
+
+            <!-- PRODUCT :: LIST :: BEGIN -->
+            <table class="table table-striped table-hover table-responsive">
+                <thead>
+                    <%- include('./partials/listItemProductHeaders') %>
+                </thead>
+                <tbody>
+                    <% products.forEach(product => { %>
+                        <%- include('./partials/listItemProduct', { product }) %>
+                    <% }); %>
+                </tbody>
+            </table>
+            <!-- PRODUCT :: LIST :: END -->
+        </section>
+    </main>
+    <!-- MAIN :: END -->
+
+    <%- include('../../partials/footer') %>
+    <%- include('../../partials/scripts') %>
+</body>
+</html>
