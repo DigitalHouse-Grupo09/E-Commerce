@@ -12,4 +12,4 @@ Node.js + Express + EJS
    - ✅ Detalle del producto
    - ✅ Carrito de productos
    - ✅ Formulario de registro y login
-   - Formulario de carga y edición de productos
+   - ✅ Formulario de carga y edición de productos

@@ -1,20 +1,20 @@
 <html>
 <head>
-    <%- include('./partials/metas') %>
-    <%- include('./partials/styles') %>
+    <%- include('../partials/metas') %>
+    <%- include('../partials/styles') %>
 </head>
 <body>
-    <%- include('./partials/header') %>
+    <%- include('../partials/header') %>
 
     <!-- MAIN :: BEGIN -->
     <main class="login">
         <section class="form-wrapper">
             <!-- FORM -->
-            <form method="POST" action="/login" class="form">
+            <form method="POST" action="/admin/login" class="form">
 
                 <!-- FORM :: ACCOUNT -->
                 <div class="form-group form-group-center">
-                    <input type="text" class="form-input" id="username" name="username" placeholder="Nombre de usuari@" />
+                    <input type="text" class="form-input" id="email" name="email" placeholder="Nombre de usuari@" />
                 </div>
                 <div class="form-group form-group-center">
                     <input type="password" class="form-input" id="password" name="password" placeholder="Contraseña" />
@@ -31,8 +31,8 @@
     </main>
     <!-- MAIN :: END -->
 
-    <%- include('./partials/footer') %>
+    <%- include('../partials/footer') %>
 
-    <%- include('./partials/scripts') %>
+    <%- include('../partials/scripts') %>
 </body>
 </html>

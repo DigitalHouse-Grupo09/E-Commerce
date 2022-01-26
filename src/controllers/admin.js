@@ -1,7 +1,7 @@
 //
 // imports
 //
-const { products } = require('../models');
+const { products, users } = require('../models');
 
 //
 // endpoints
@@ -10,6 +10,56 @@ const { products } = require('../models');
 const main = (req, res) => res.render('admin/products', {
     products: products.getAll()
 });
+
+//
+// login
+//
+const login = (req, res) => res.render('admin/login');
+
+const loginPost = (req, res) => {
+    // Normalize body
+    const { email, password } = req.body;
+
+    // Try to get model
+    const user = users.getAll().find(user => user.email === email);
+
+    // Check if user email exist
+    if (!user || user.password !== password) {
+        return res.status(400).render('admin/login', {
+            errors: [{
+                param: 'general',
+                msg: 'Por favor verifique los datos ingresados. El correo electrónico o la contraseña no coinciden.'
+            }]
+        });
+    }
+
+    // Save session
+    req.session.user = {
+        idUser: user.id,
+        email: user.email,
+        name: user.name
+    };
+
+    // Redirect to home
+    req.session.save(() => res.redirect('/admin'));
+};
+
+//
+// logout
+//
+const logout = (req, res) => {
+    req.session.destroy(() => res.redirect('/'));
+};
+
+//
+// register
+//
+// const register = (req, res) => res.render('admin/register');
+
+// const registerPost = (req, res) => {
+//     console.log('Sended form for register:', req.body);
+//     res.redirect(302, '/admin');
+// };
 
 //
 // product creation
@@ -115,4 +165,4 @@ const destroy = (req, res) => {
 //
 // export
 //
-module.exports = { main, create, createPost, update, updatePut, destroy };
+module.exports = { main, login, loginPost, logout, create, createPost, update, updatePut, destroy };

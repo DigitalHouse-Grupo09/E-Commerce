@@ -10,8 +10,10 @@ MIDLEWARES + AUTH
    - Subida de una imagen de perfil.
    - Guardado en JSON con encriptación de contraseña.
 * Formulario de login con:
-   - Campos de email y password.
+   - ✅ Campos de email y password.
    - (Opcional) Función de recordar al usuario.
 * Rutas de huéspedes y usuarios:
    - Las de huéspedes deberán redireccionar al perfil si el usuario está logueado.
    - Las de usuarios deberán redireccionar al login si el usuario no está logueado.
+   - ✅ (admin) Las de huéspedes deberán redireccionar al perfil si el usuario está logueado.
+   - ✅ (admin) Las de usuarios deberán redireccionar al login si el usuario no está logueado.

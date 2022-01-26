@@ -5,7 +5,9 @@ const ejs = require('ejs');
 const path = require('path');
 const morgan = require('morgan');
 const express = require('express');
+const session = require('express-session');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
 const { categories } = require('./models');
 const routes = require('./routes');
@@ -21,9 +23,15 @@ const port = process.env.PORT || 3000;
 //
 app.use(express.static('public'));
 app.use(morgan('dev'));
+app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(methodOverride('_method'));
+app.use(session({
+    secret: process.env.SESSION_SECRET || 'bookify-1234abcd',
+    saveUninitialized: false,
+    resave: true
+}));
 
 //
 // template engine
@@ -39,10 +47,9 @@ app.locals = { ...app.locals || {}, categories: categories.getAll() };
 // routes
 //
 app.use('/', routes.main);
-app.use('/', routes.users);
-app.use('/cart', routes.cart);
-app.use('/products', routes.products);
 app.use('/admin', routes.admin);
+app.use('/products', routes.products);
+app.use('/cart', routes.cart);
 
 
 //
