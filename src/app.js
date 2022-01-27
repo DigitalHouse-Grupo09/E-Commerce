@@ -51,7 +51,6 @@ app.use('/admin', routes.admin);
 app.use('/products', routes.products);
 app.use('/cart', routes.cart);
 
-
 //
 // error pages
 //

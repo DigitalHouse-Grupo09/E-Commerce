@@ -7,7 +7,7 @@ const middleware = (req, res, next) => {
     }
     // Set session on all views
     res.locals = res.locals || {};
-    res.locals.session = req.session;
+    res.locals.session = req.session.user;
     return next();
 };
 

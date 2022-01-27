@@ -72,9 +72,9 @@ const createPost = (req, res) => {
     const data = { title, description, image, price, discount, author, publishedAt, pages, language, format, presentation };
 
     try {
-        // Try to insert movie
+        // Try to insert model
         products.create(data);
-        // Redirect to movies
+        // Redirect to models
         res.redirect('/admin');
 
     // Handle errors
