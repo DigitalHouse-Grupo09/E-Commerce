@@ -1,9 +1,22 @@
 //
-// middleware
+// admin session
 //
-const middleware = (req, res, next) => {
-    if (!req.session || !req.session.user) {
+const adminMiddleware = (req, res, next) => {
+    if (!req.session.admin) {
         return res.redirect('/admin/login');
+    }
+    // Set session on all views
+    res.locals = res.locals || {};
+    res.locals.session = req.session;
+    return next();
+};
+
+//
+// client session
+//
+const clientMiddleware = (req, res, next) => {
+    if (!req.session.client) {
+        return res.redirect('/client/login');
     }
     // Set session on all views
     res.locals = res.locals || {};
@@ -14,4 +27,4 @@ const middleware = (req, res, next) => {
 //
 // export
 //
-module.exports = middleware;
+module.exports = { adminMiddleware, clientMiddleware };

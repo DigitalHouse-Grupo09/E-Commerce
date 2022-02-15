@@ -48,6 +48,7 @@ app.locals = { ...app.locals || {}, categories: categories.getAll() };
 //
 app.use('/', routes.main);
 app.use('/admin', routes.admin);
+app.use('/client', routes.client);
 app.use('/products', routes.products);
 app.use('/cart', routes.cart);
 

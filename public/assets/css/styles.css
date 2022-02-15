@@ -1020,23 +1020,31 @@ main {
 * ADMIN
 */
 
-.functions-admin{
+.functions-admin {
     display: flex;
     justify-content: space-around;
     padding: 30px;
 
 }
 
-.title-admin{
+.title-admin {
     text-align: center;
     padding: 30px;
 }
 
-.create-title{
+.create-title {
     text-align: center;
     margin: 30px;
 }
-     
+
+/*
+ * PRODUCT DETAILS
+ */
+
+ .client-register {
+    text-align: center;
+    
+ }   
  
 
 /*

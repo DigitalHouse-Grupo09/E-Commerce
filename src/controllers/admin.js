@@ -2,6 +2,7 @@
 // imports
 //
 const { products, users } = require('../models');
+const multer = require('multer');
 
 //
 // endpoints
@@ -21,7 +22,7 @@ const loginPost = (req, res) => {
     const { email, password } = req.body;
 
     // Try to get model
-    const user = users.getAll().find(user => user.email === email);
+    const user = users.getAll().find(user => user.email === email && user.type === "admin");
 
     // Check if user email exist
     if (!user || user.password !== password) {
@@ -34,10 +35,11 @@ const loginPost = (req, res) => {
     }
 
     // Save session
-    req.session.user = {
+    req.session.admin = {
         idUser: user.id,
         email: user.email,
-        name: user.name
+        name: user.name,
+        user: user
     };
 
     // Redirect to home
@@ -66,15 +68,18 @@ const logout = (req, res) => {
 //
 const create = (req, res) => res.render('admin/products/create');
 
+//
+// post creation
+//
 const createPost = (req, res) => {
     // Normalize body
-    const { title, description, image, price, discount, author, publishedAt, pages, language, format, presentation } = req.body;
-    const data = { title, description, image, price, discount, author, publishedAt, pages, language, format, presentation };
+    const { title, description, price, discount, author, publishedAt, pages, language, format, presentation } = req.body;
+    const data = { title, description, image: req.files, price, discount, author, publishedAt, pages, language, format, presentation };
 
     try {
-        // Try to insert movie
+        // Try to insert books
         products.create(data);
-        // Redirect to movies
+        // Redirect to books
         res.redirect('/admin');
 
     // Handle errors

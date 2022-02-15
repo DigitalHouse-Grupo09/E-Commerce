@@ -15,17 +15,6 @@ const searcheableProperties = [
 ];
 
 //
-// helpers
-//
-const save = models => {
-    // Save users on file
-    fs.writeFileSync(usersFilePath, JSON.stringify(models, null, 1), 'utf-8');
-
-    // Restore with new users
-    users = models;
-};
-
-//
 // class
 //
 const modelUsers = {
@@ -62,6 +51,17 @@ const modelUsers = {
      */
     getById: function (id) {
         return this.getAll().find(user => user.id === id);
+    },
+
+    //
+    // helpers
+    //
+    save : function(models) {
+        // Save users on file
+        fs.writeFileSync(usersFilePath, JSON.stringify(models, null, 1), 'utf-8');
+
+        // Restore with new users
+        users = models;
     }
 };
 

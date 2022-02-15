@@ -1,0 +1,43 @@
+<html>
+<head>
+    <%- include('../partials/metas') %>
+    <%- include('../partials/styles') %>
+</head>
+<body>
+    <%- include('../partials/header') %>
+
+    <!-- MAIN :: BEGIN -->
+    <main class="login">
+        <section class="form-wrapper">
+            <!-- FORM -->
+            <form method="POST" action="/client/login" class="form">
+
+                <!-- FORM :: ACCOUNT -->
+                <div class="form-group form-group-center">
+                    <input type="text" class="form-input" id="email" name="email" placeholder="Email" />
+                </div>
+                <div class="form-group form-group-center">
+                    <input type="password" class="form-input" id="password" name="password" placeholder="Contraseña" />
+                </div>
+
+                <div class="separator separator-dashed"></div>
+
+                <!-- FORM :: ACTIONS -->
+                <div class="form-actions form-actions-center">
+                    <button type="submit" class="form-action-submit">Entrar</button>
+                </div>
+            </form>   
+        </section>
+        <div class="client-register">
+            <a href="/client/register">
+                <small>¿No estas registrado? Registrate!</small>
+            </a>
+        </div>
+    </main>
+    <!-- MAIN :: END -->
+
+    <%- include('../partials/footer') %>
+
+    <%- include('../partials/scripts') %>
+</body>
+</html>

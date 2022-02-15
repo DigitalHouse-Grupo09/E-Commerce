@@ -1,8 +1,23 @@
 [
  {
   "id": 1,
-  "email": "demo@bookify.com",
+  "email": "admin@bookify.com",
   "password": "bookify",
-  "name": "John Doe"
+  "name": "John Doe",
+  "type": "admin"
+ },
+ {
+  "id": 2,
+  "email": "client@bookify.com",
+  "password": "bookify",
+  "name": "John Doe",
+  "type": "client"
+ },
+ {
+  "id": 3,
+  "email": "martin@bookify.com",
+  "password": "bookify",
+  "name": "Martin Palermo",
+  "type": "client"
  }
 ]
