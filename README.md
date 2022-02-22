@@ -49,6 +49,7 @@ Las retrospectivas y detalles de cada sprint, van a estar anidados, de forma ord
  * [Sprint 3](https://github.com/DigitalHouse-Grupo09/E-Commerce/tree/master/sprints/sprint-3)
  * [Sprint 4](https://github.com/DigitalHouse-Grupo09/E-Commerce/tree/master/sprints/sprint-4)
  * [Sprint 5](https://github.com/DigitalHouse-Grupo09/E-Commerce/tree/master/sprints/sprint-5)
+ * [Sprint 6](https://github.com/DigitalHouse-Grupo09/E-Commerce/tree/master/sprints/sprint-6)
 
 <p align="right">(<a href="#top">volver arriba</a>)</p>
 
