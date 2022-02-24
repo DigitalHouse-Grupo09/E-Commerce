@@ -1,4 +1,9 @@
 //
+// dependencies
+//
+require('dotenv').config();
+
+//
 // imports
 //
 const ejs = require('ejs');

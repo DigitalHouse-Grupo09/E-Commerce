@@ -82,6 +82,12 @@ Las retrospectivas y detalles de cada sprint, van a estar anidados, de forma ord
 <!-- GETTING STARTED -->
 ## Comenzando
 
+### 💾 Base de datos
+
+Toda la información de base de datos (SQL, DER e instalación) se encuentran en [el README.md de la carpeta database, haciendo click acá, seran redirigidos](https://github.com/DigitalHouse-Grupo09/E-Commerce/tree/master/database).
+ 
+> Scheme https://drawsql.app/comodinx/diagrams/bookify
+
 ### 👩🏼‍💻 Descargar
 
 1. Clonar el repositorio
@@ -108,12 +114,6 @@ Modo producción
 ```sh
 npm start
 ```
-
-### 💾 Base de datos
-
-Toda la información de base de datos (SQL, DER e instalación) se encuentran en [el README.md de la carpeta database, haciendo click acá, seran redirigidos](https://github.com/DigitalHouse-Grupo09/E-Commerce/tree/master/database).
- 
-> Scheme https://drawsql.app/comodinx/diagrams/bookify
 
 <p align="right">(<a href="#top">volver arriba</a>)</p>
 

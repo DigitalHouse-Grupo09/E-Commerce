@@ -22,7 +22,7 @@ const loginPost = (req, res) => {
     const { email, password } = req.body;
 
     // Try to get model
-    const user = users.getAll().find(user => user.email === email && user.type === "admin");
+    const user = users.getAll().find(user => user.email === email && user.type === 'admin');
 
     // Check if user email exist
     if (!user || user.password !== password) {

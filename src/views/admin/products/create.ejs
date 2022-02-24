@@ -12,7 +12,7 @@
         <section class="form-wrapper">
             <form action="/admin/products/create" method="POST" class="form">
                 <div class="form-group">
-                    <input type="text" name="title" placeholder="Titulo" class="form-input" value="<%= (locals.old || {}).title || '' %>">
+                    <input type="text" id="title" name="title" placeholder="Titulo" class="form-input" value="<%= (locals.old || {}).title || '' %>">
                 </div>
                 <div class="form-group">
                     <textarea name="description" placeholder="Descripción" class="form-input" rows="5" cols="43"><%= (locals.old || {}).description || '' %></textarea>
