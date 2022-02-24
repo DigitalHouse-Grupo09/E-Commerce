@@ -14,6 +14,7 @@
 * [Comenzando][getting_started].
 	- [Descargar][download].
 	- [Correr][run].
+   - [Base de datos][database].
 * [Descripción técnica][details].
 
 
@@ -108,6 +109,12 @@ Modo producción
 npm start
 ```
 
+### 💾 Base de datos
+
+Toda la información de base de datos (SQL, DER e instalación) se encuentran en [el README.md de la carpeta database, haciendo click acá, seran redirigidos](https://github.com/DigitalHouse-Grupo09/E-Commerce/tree/master/database).
+ 
+> Scheme https://drawsql.app/comodinx/diagrams/bookify
+
 <p align="right">(<a href="#top">volver arriba</a>)</p>
 
 
@@ -153,4 +160,5 @@ Administrador (adminitradores logeados)
 [getting_started]: #comenzando
 [download]: #-descargar
 [run]: #-correr
+[database]: #-base-de-datos
 [details]: #-descripción-técnica

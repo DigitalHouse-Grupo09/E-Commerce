@@ -211,4 +211,33 @@ INSERT INTO `users` (`id`, `id_user_status`, `id_role`, `full_name`, `email`, `p
     (2, 2, 2, 'John Client Doe', 'client@bookify.com', 'bookify'),
     (3, 2, 2, 'Martin Palermo', 'martin@bookify.com', 'bookify');
 
+
+
+# ================================================================================================
+# CONSTRAINTS
+# ================================================================================================
+
+USE `bookify`;
+
 # ================================================
+
+ALTER TABLE `products` ADD FOREIGN KEY (`id_category`) REFERENCES `categories` (`id`);
+
+# ================================================
+
+ALTER TABLE `product_attributes` ADD FOREIGN KEY (`id_product`) REFERENCES `products` (`id`);
+ALTER TABLE `product_attributes` ADD FOREIGN KEY (`id_attribute`) REFERENCES `attributes` (`id`);
+
+# ================================================
+
+ALTER TABLE `product_images` ADD FOREIGN KEY (`id_product`) REFERENCES `products` (`id`);
+
+# ================================================
+
+ALTER TABLE `product_authors` ADD FOREIGN KEY (`id_product`) REFERENCES `products` (`id`);
+ALTER TABLE `product_authors` ADD FOREIGN KEY (`id_author`) REFERENCES `authors` (`id`);
+
+# ================================================
+
+ALTER TABLE `users` ADD FOREIGN KEY (`id_user_status`) REFERENCES `user_statuses` (`id`);
+ALTER TABLE `users` ADD FOREIGN KEY (`id_role`) REFERENCES `roles` (`id`);
