@@ -541,6 +541,15 @@ header {
     flex-basis: 100%;
 }
 
+.header-menu {
+    display: flex;
+    align-items: center;
+}
+
+.header-menu .d-flex {
+    width: 500px;
+}
+
 .header-nav .header-menu-items,
 .header-nav .header-account-items {
     display: none;
