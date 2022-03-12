@@ -9,6 +9,7 @@ const controller = require('../controllers/main');
 // mapping
 //
 router.get('/', controller.home);
+router.get('/help', controller.help);
 
 //
 // export
