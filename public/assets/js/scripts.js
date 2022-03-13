@@ -155,8 +155,8 @@
 // document.querySelector() is used to select an element from the document using its ID
 let captchaText = document.querySelector('#captcha');
 var ctx = captchaText.getContext("2d");
-ctx.font = "30px Roboto";
-ctx.fillStyle = "#08e5ff";
+ctx.font = "40px Roboto";
+ctx.fillStyle = "#ebebeb";
 
 let userText = document.querySelector('#textBox');
 let submitButton = document.querySelector('#submitButton');
@@ -185,7 +185,7 @@ userText.addEventListener('keyup', function(e) {
  output.innerHTML = "Correct!";
  } else {
  output.classList.add("incorrectCaptcha");
- output.innerHTML = "Incorrect, please try again";
+ output.innerHTML = "Incorrect captcha, please try again";
  }
  }
 });
@@ -198,7 +198,7 @@ submitButton.addEventListener('click', function() {
  output.innerHTML = "Correct!";
  } else {
  output.classList.add("incorrectCaptcha");
- output.innerHTML = "Incorrect, please try again";
+ output.innerHTML = "Incorrect captcha, please try again";
  }
 });
 // This event listener is stimulated whenever the user press the "Refresh" button

@@ -7,28 +7,28 @@
 
     <!-- MAIN :: BEGIN -->
     <main>
-      <form id="regretful" action="/regretful" method="POST">
+      <form id="regretful" action="/" method="POST">
         <label for="1">N° de Pedido</label>
-        <input type="text" id="1" />
+        <input type="text" id="1" required />
 
         <label for="2">Nombre y Apellido</label>
-        <input type="text" id="2" />
+        <input type="text" id="2" required/>
 
         <label for="3">D.N.I</label>
-        <input type="number" id="3" />
+        <input type="number" id="3" required/>
 
         <label for="4">Direccion de Email</label>
-        <input type="mail" id="4" />
+        <input type="mail" id="4" required/>
 
         <label for="comentarios">Comentarios</label>
-        <textarea name="comentarios" id="comentarios"></textarea>
+        <textarea name="comentarios" id="comentarios" required></textarea>
 
         <div class="center">
           <h4 id="captchaHeading">Validar</h4>
           <div id="captchaBackground">
             <canvas id="captcha">captcha text</canvas>
-            <input id="textBox" type="text" name="text" />
           </div>
+          <input id="textBox" type="text" name="text" required/>
         </div>
         <div class="captcha-buttons">
           <input id="submitButton" type="submit" />

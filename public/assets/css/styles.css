@@ -1823,20 +1823,20 @@ main {
      */
 
   #captchaBackground {
-    height: 250px;
+    height: 200px;
     width: 210px;
-    background-color: var(--grey-dark);
+    background-color: var(--facebook);
     align-items: center;
   }
 
   #captchaHeading {
     font-family: var(--font-family);
-    font-size: 14px;  
+    font-size: 14px;
     color: var(--black-dark);
   }
 
   #captcha {
-    font-size: large;  
+    font-size: large;
     height: 80%;
     width: 80%;
     letter-spacing: 3px;
@@ -1855,7 +1855,7 @@ main {
   }
 
   .captcha-buttons {
-    padding-top: 10px;  
+    padding-top: 10px;
     display: flex;
     justify-content: center;
   }
@@ -1894,15 +1894,16 @@ main {
   }
 
   #textBox {
-    height: 30px;  
-    width: 100%;
+    margin-top: 10px;
+    height: 30px;
+    width: 210px;
     align-items: center;
- }
+  }
 
- #output{
-     text-align: center;
- }
- 
+  #output {
+    text-align: center;
+  }
+
   .incorrectCaptcha {
     color: #ff0000;
   }
