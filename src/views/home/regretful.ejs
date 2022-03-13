@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <%- include('../partials/metas') %> <%- include('../partials/styles') %>
+  </head>
+  <body>
+    <%- include('../partials/header') %> <%- include('../partials/banner') %>
+
+    <!-- MAIN :: BEGIN -->
+    <main>
+      <form id="regretful" action="/regretful" method="POST">
+        <label for="1">N° de Pedido</label>
+        <input type="text" id="1" />
+
+        <label for="2">Nombre y Apellido</label>
+        <input type="text" id="2" />
+
+        <label for="3">D.N.I</label>
+        <input type="number" id="3" />
+
+        <label for="4">Direccion de Email</label>
+        <input type="mail" id="4" />
+
+        <label for="comentarios">Comentarios</label>
+        <textarea name="comentarios" id="comentarios"></textarea>
+
+        <div class="center">
+          <h4 id="captchaHeading">Validar</h4>
+          <div id="captchaBackground">
+            <canvas id="captcha">captcha text</canvas>
+            <input id="textBox" type="text" name="text" />
+          </div>
+        </div>
+        <div class="captcha-buttons">
+          <input id="submitButton" type="submit" />
+          <button id="refreshButton" type="submit">Refresh</button>
+        </div>
+        <span id="output"></span>
+
+        <script src="/assets/js/scripts.js"></script>
+      </form>
+    </main>
+
+    <!-- MAIN :: END -->
+
+    <%- include('../partials/footer') %> <%- include('../partials/scripts') %>
+  </body>
+</html>
