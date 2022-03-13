@@ -1814,7 +1814,7 @@ main {
 
   #comentarios {
     margin-top: 10px;
-    height: 150px;
+    height: 120px;
     margin-bottom: 25px;
   }
 
@@ -1823,8 +1823,8 @@ main {
      */
 
   #captchaBackground {
-    height: 200px;
-    width: 210px;
+    height: 75px;
+    width: 150px;
     background-color: var(--facebook);
     align-items: center;
   }
@@ -1836,9 +1836,10 @@ main {
   }
 
   #captcha {
+    position: relative;
     font-size: large;
-    height: 80%;
-    width: 80%;
+    height: 100%;
+    width: 100%;
     letter-spacing: 3px;
     margin: auto;
     display: block;
@@ -1896,7 +1897,7 @@ main {
   #textBox {
     margin-top: 10px;
     height: 30px;
-    width: 210px;
+    width: 150px;
     align-items: center;
   }
 
