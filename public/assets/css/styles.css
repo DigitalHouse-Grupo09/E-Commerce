@@ -18,6 +18,7 @@
   --white: #fff;
   --black: #272727;
   --black-dark: #000000;
+  --pink: #F072CB; 
 
   --instagram: #ca396d;
   --facebook: #3b5998;
@@ -808,6 +809,11 @@ footer .row {
   margin-right: var(--spacing-sm);
 }
 
+.footer-categories span:hover{
+  color: var(--primary-light);
+  font-weight:bold;
+}
+
 .footer-categories span {
   color: var(--grey);
   font-size: var(--font-size-sm);
@@ -823,6 +829,11 @@ footer .row {
 
 .footer-help a {
   color: var(--grey);
+}
+
+.footer-help a:hover{
+  color: var(--pink);
+  font-weight:bold;
 }
 
 .footer-social a {
