@@ -1,0 +1,29 @@
+<html>
+<head>
+    <%- include('../partials/metas') %>
+    <%- include('../partials/styles') %>
+</head>
+<body>
+    <%- include('../partials/header') %>
+
+    <%- include('../partials/banner') %>
+
+    <!-- MAIN :: BEGIN -->
+    <main >
+        <!-- VIEWED -->
+        <section class="products">
+            <div class="row products-list">
+                <!-- PRODUCTS -->
+                <% products.forEach(product => { %>
+                    <%- include('./product', { product }); %>
+                <% }); %>
+            </div>
+        </section>
+    </main>
+    <!-- MAIN :: END -->
+
+    <%- include('../partials/footer') %>
+
+    <%- include('../partials/scripts') %>
+</body>
+</html>

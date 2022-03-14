@@ -9,6 +9,7 @@ const controller = require('../controllers/main');
 // mapping
 //
 router.get('/', controller.home);
+router.post('/', controller.search);
 router.get('/help', controller.help);
 router.get('/regretful', controller.regretful);
 router.get('/contact', controller.contact);
