@@ -2,7 +2,6 @@
 
 # Bookify
 
-
 <!-- INDEX -->
 ## Indice
 
