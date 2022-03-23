@@ -714,6 +714,8 @@ header {
 
 .header-nav .header-account-items {
   justify-content: space-between;
+  padding-top: 20px;
+
 }
 
 .header-nav .header-trigger {
@@ -781,6 +783,10 @@ header {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.custom-control-label{
+  width: 50px;
 }
 
 /*
@@ -1800,6 +1806,10 @@ main {
     display: flex;
   }
 
+  .search-bar{
+    width: 150px;
+  }
+  
   /*
      * FOOTER
      */
@@ -1958,4 +1968,13 @@ main {
   .login {
     padding: var(--spacing-big) 0;
   }
+}
+
+  /*
+     * Dark Mode
+     */
+
+[data-theme="dark"] {
+  background-color: var(--grey-dark) !important;
+  color: #eee;
 }
