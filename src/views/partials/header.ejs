@@ -1,65 +1,72 @@
 <!-- HEADER :: BEGIN -->
 <header>
-    <!-- HEADER :: BRAND -->
-    <div class="header-brand">
-        <a href="/" class="header-brand-wrapper" >
-            <img src="/assets/img/logo.png" alt="Bookify" class="header-brand-logo" />
-        </a>
+  <!-- HEADER :: BRAND -->
+  <div class="header-brand">
+    <a href="/" class="header-brand-wrapper">
+      <img src="/assets/img/logo.png" alt="Bookify" class="header-brand-logo" />
+    </a>
+  </div>
+
+  <!-- HEADER :: NAVIGATION -->
+  <nav class="header-nav">
+    <!-- HEADER :: MENU -->
+    <div class="header-menu">
+      <form class="d-flex" method="POST" action="/">
+        <input class="seach-bar" type="search" placeholder="Search" aria-label="Search" name="search" required />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <ul type="none" class="header-menu-items">
+        <li>
+          <a href="javascript:alert('PROXIMAMENTE!');">Ofertas</a>
+        </li>
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn">Ayuda</button>
+            <div class="dropdown-content">
+              <a href="/help/#cerP">Atencion al Cliente</a>
+              <a href="/help/#segP">Formas de Pago</a>
+              <a href="/help/#cuaP">Costos de Envio</a>
+              <a href="/help/#sepP">Preguntas Frecuentes</a>
+              <a href="/regretful">Arrepentimiento de Compra</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="/contact">Contacto</a>
+        </li>
+      </ul>
     </div>
 
-    <!-- HEADER :: NAVIGATION -->
-    <nav class="header-nav">
-        <!-- HEADER :: MENU -->
-        <div class="header-menu">
-            <form class="d-flex" method="POST" action='/'>
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search" required>
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-            <ul type="none" class="header-menu-items">
-                <li>
-                    <a href="javascript:alert('PROXIMAMENTE!');">Ofertas</a>
-                </li>
-                <li>
-                    <div class="dropdown">
-                        <button class="dropbtn">Ayuda</button>
-                        <div class="dropdown-content">
-                          <a href="/help/#cerP">Atencion al Cliente</a>
-                          <a href="/help/#segP">Formas de Pago</a>
-                          <a href="/help/#cuaP">Costos de Envio</a>
-                          <a href="/help/#sepP">Preguntas Frecuentes</a>
-                          <a href="/regretful">Arrepentimiento de Compra</a>
-                        </div>
-                      </div>
-                </li>
-                <li>
-                    <a href="/contact">Contacto</a>
-                </li>
-            </ul>
-        </div>
+    <!-- HEADER :: ACCOUNT -->
+    <div class="header-account">
+      <ul type="none" class="header-account-items">
+        <li>
+          <a href="/admin/login"><i class="far fa-user"></i></a>
+        </li>
+        <li>
+          <a href="/cart"><i class="fas fa-shopping-cart"></i></a>
+        </li>
+        <li>
+            <div class="form-check form-switch">
+                <input type="checkbox" class="form-check-input" id="darkSwitch">
+                <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+              </div>
+              <script src="/assets/js/dark-mode-switch.min.js"></script>
+        </li>
+        <% if (locals.session) { %>
+        <li>
+          <a href="/admin/logout"><i class="fas fa-sign-out-alt"></i></a>
+        </li>
+        <% } %>
+      </ul>
+    </div>
 
-        <!-- HEADER :: ACCOUNT -->
-        <div class="header-account">
-            <ul type="none" class="header-account-items">
-                <li>
-                    <a href="/admin/login"><i class="far fa-user"></i></a>
-                </li>
-                <li>
-                    <a href="/cart"><i class="fas fa-shopping-cart"></i></a>
-                </li>
-                <% if (locals.session) { %>
-                    <li>
-                        <a href="/admin/logout"><i class="fas fa-sign-out-alt"></i></a>
-                    </li>
-                <% } %>
-            </ul>
-        </div>
-
-        <!-- HEADER :: TRIGGER -->
-        <div class="header-trigger">
-            <div class="header-trigger-button">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </nav>
+    <!-- HEADER :: TRIGGER -->
+    <div class="header-trigger">
+      <div class="header-trigger-button">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
 </header>
 <!-- HEADER :: END -->
