@@ -19,6 +19,7 @@
   --black: #272727;
   --black-dark: #000000;
   --pink: #F072CB; 
+  --orange: #ff8723;
 
   --instagram: #ca396d;
   --facebook: #3b5998;
@@ -567,7 +568,7 @@ header {
 .header-search-wrapper .header-search-icon {
     color: var(--primary);
     position: absolute;
-    top: 13px;
+    top: 15px;
     right: 10px;
 }
 
@@ -663,7 +664,7 @@ header {
 }
 
 #dark-mode-toggler:checked+.dark-mode-toggler:before {
-    background: var(--black);
+    background: var(--grey);
     content: '';
     text-align: left;
     color: var(--black);
@@ -672,11 +673,11 @@ header {
 .header-nav .dark-mode-toggler span {
     position: absolute;
     top: 4px;
-    left: 0;
+    left: 31px;
     width: 24px;
     height: 24px;
     display: block;
-    background: var(--grey);
+    background: var(--orange);
     border-radius: 50%;
     -webkit-box-shadow: 0 3px 8px rgb(0 0 0 / 20%);
     box-shadow: 0 3px 8px rgb(0 0 0 / 20%);
@@ -688,10 +689,10 @@ header {
 
 #dark-mode-toggler:checked+.dark-mode-toggler span,
 #dark-mode-toggler:checked+.dark-mode-toggler span {
-    background: var(--white);
+    background: var(--orange);
     -webkit-transform: translateX(31px);
     -ms-transform: translateX(31px);
-    transform: translateX(31px);
+    transform: translateX(-31px);
     -webkit-transition: all .2s cubic-bezier(.8,.4,.3,1.25) , background .15s ease;
     -o-transition: all .2s cubic-bezier(.8,.4,.3,1.25) , background .15s ease;
     transition: all .2s cubic-bezier(.8,.4,.3,1.25) , background .15s ease;
@@ -699,40 +700,6 @@ header {
     box-shadow: 0 3px 8px rgb(86, 178, 128 / 70%);
 }
 
-.header-nav .dark-mode-toggler span:before {
-    font-family: 'Fontawesome';
-    content: '\f185';
-    position: absolute;
-    display: block;
-    margin: 0;
-    width: 24px;
-    height: 24px;
-    background: var(--grey);
-    border-radius: 50%;
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
-    pointer-events: none;
-    color: var(--black);
-    padding-top: 2px;
-}
-
-#dark-mode-toggler:checked+.dark-mode-toggler span:before,
-#dark-mode-toggler:checked+.dark-mode-toggler span:before {
-    font-family: 'Fontawesome';
-    content: '\f186';
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
-    -webkit-transition: all .4s ease;
-    -o-transition: all .4s ease;
-    transition: all .4s ease;
-    background: var(--black);
-    color: var(--white);
-    padding-top: 2px;
-}
 
 /* Dropdown Button */
 .dropbtn {
@@ -1983,4 +1950,23 @@ main {
 [data-theme="dark"] {
   background-color: var(--grey-dark) !important;
   color: #eee;
+  --header-font-color: #fff;
 }
+
+ .theme-switch-wrapper .bi-sun,
+ .theme-switch-wrapper .bi-moon-fill {
+  color: white; 
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  cursor:pointer;
+  width:12px;
+  height:12px
+ }
+
+ .theme-switch-wrapper .bi-sun {
+  right:1px
+ }
+ .theme-switch-wrapper .bi-moon-fill {
+  left:6px
+ }

@@ -37,6 +37,7 @@ const privacy = (req, res) => res.render('home/privacy');
 
 
 
+
 //
 // export
 //

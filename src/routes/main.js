@@ -17,7 +17,6 @@ router.get('/privacy', controller.privacy);
 
 
 
-
 //
 // export
 //
