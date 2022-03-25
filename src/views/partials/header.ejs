@@ -9,13 +9,17 @@
 
   <!-- HEADER :: NAVIGATION -->
   <nav class="header-nav">
+    <!-- HEADER :: SEARCH -->
+    <div class="header-search-wrapper">
+      <form onsubmit="javascript: function() {return false;}">
+        <input type="search" placeholder="¿Qué estas buscando?" class="header-search" />
+        <i class="fas fa-search header-search-icon"></i>
+      </form>
+    </div>
+
     <!-- HEADER :: MENU -->
     <div class="header-menu">
-      <form class="d-flex" method="POST" action="/">
-        <input class="seach-bar" type="search" placeholder="Search" aria-label="Search" name="search" required />
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-      <ul type="none" class="header-menu-items">
+      <ul type="none" class="header-menu-items show">
         <li>
           <a href="javascript:alert('PROXIMAMENTE!');">Ofertas</a>
         </li>
@@ -39,7 +43,7 @@
 
     <!-- HEADER :: ACCOUNT -->
     <div class="header-account">
-      <ul type="none" class="header-account-items">
+      <ul type="none" class="header-account-items show">
         <li>
           <a href="/admin/login"><i class="far fa-user"></i></a>
         </li>
@@ -47,11 +51,10 @@
           <a href="/cart"><i class="fas fa-shopping-cart"></i></a>
         </li>
         <li>
-            <div class="form-check form-switch">
-                <input type="checkbox" class="form-check-input" id="darkSwitch">
-                <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
-              </div>
-              <script src="/assets/js/dark-mode-switch.min.js"></script>
+          <div class="checkbox">
+            <input type="checkbox" id="dark-mode-toggler" style="display:none">
+            <label for="dark-mode-toggler" class="dark-mode-toggler"><span></span></label>
+          </div>
         </li>
         <% if (locals.session) { %>
         <li>
