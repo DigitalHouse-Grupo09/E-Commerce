@@ -34,6 +34,7 @@ const help = (req, res) => res.render('home/help');
 const regretful = (req, res) => res.render('home/regretful');
 const contact = (req, res) => res.render('home/contact');
 const privacy = (req, res) => res.render('home/privacy');
+const test = (req, res) => res.render('home/test');
 
 
 
@@ -41,4 +42,4 @@ const privacy = (req, res) => res.render('home/privacy');
 //
 // export
 //
-module.exports = { home, search, help, regretful, contact, privacy };
+module.exports = { home, search, help, regretful, contact, privacy, test };

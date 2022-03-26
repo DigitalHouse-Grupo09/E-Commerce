@@ -25,6 +25,9 @@
   --facebook: #3b5998;
   --twitter: #00aced;
 
+  --bg-color-nav: #24201f;
+
+
   /* FONTS */
   --font-family: "Quicksand", Helvetica, Arial, sans-serif;
   --font-size: 14px;
@@ -574,7 +577,7 @@ header {
 
 .header-search-wrapper .header-search:hover,
 .header-search-wrapper .header-search:focus {
-    background-color: var(--white);;
+    background-color: var(--white);
 }
 
 .header-nav .header-menu-items,
@@ -1950,8 +1953,16 @@ main {
 [data-theme="dark"] {
   background-color: var(--grey-dark) !important;
   color: #eee;
-  --header-font-color: #fff;
-}
+  }
+
+[data-theme="dark"] .category-title {
+    background-color: var(--grey-dark);
+    color: #eee;
+  }
+
+  /*
+     * Toogler icon Styles
+     */
 
  .theme-switch-wrapper .bi-sun,
  .theme-switch-wrapper .bi-moon-fill {
