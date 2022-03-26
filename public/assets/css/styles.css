@@ -884,7 +884,16 @@ footer .copyright {
 main {
   width: 90%;
   margin: 0 auto;
-  padding-bottom: var(--spacing-sm);
+  padding-bottom: var(--spacing);
+}
+
+.site li a {
+  color: var(--primary-light);
+    font-weight:bold;
+}
+
+.site li a:hover{
+  text-decoration: underline;
 }
 
 /*

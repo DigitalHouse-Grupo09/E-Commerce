@@ -19,5 +19,19 @@
   "password": "bookify",
   "name": "Martin Palermo",
   "type": "client"
+ },
+ {
+  "id": 4,
+  "email": "cristian@bookify.com",
+  "password": "cristian",
+  "name": "Cristian",
+  "type": "client"
+ },
+ {
+  "id": 5,
+  "email": "cristian@bookify.com",
+  "password": "cristian",
+  "name": "Cristian",
+  "type": "client"
  }
 ]
