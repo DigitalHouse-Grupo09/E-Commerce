@@ -763,6 +763,7 @@ footer h3 {
   color: var(--grey-light);
   text-align: center;
   margin: var(--spacing) 0;
+  font-size: var(--font-size-lg);
 }
 
 footer .row {
@@ -777,6 +778,7 @@ footer .row {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-left: 0;
 }
 
 .footer-categories li {
