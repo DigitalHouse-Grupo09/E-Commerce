@@ -1,34 +1,13 @@
 # ================================================================================================
-# DATABASE
-# ================================================================================================
-
-# create database
-DROP DATABASE IF EXISTS `bookify`;
-CREATE DATABASE `bookify` CHARACTER SET utf8 COLLATE utf8_general_ci;
-
-# ================================================
-
-USE `bookify`;
-
-# create user
-DROP USER IF EXISTS `bookify`;
-CREATE USER `bookify` IDENTIFIED BY 'Unq3u9DdYg2P7efG';
-
-# add privileges to created user
-GRANT ALL PRIVILEGES ON bookify.* TO 'bookify'@'%';
-
-
-
-# ================================================================================================
 # TABLES
 # ================================================================================================
 
-USE `bookify`;
+USE `heroku_33299a48260ae4d`;
 
 # ================================================
 
 # clean previous table if exists
-DROP TABLE IF EXISTS `attributes`;
+-- DROP TABLE IF EXISTS `attributes`;
 # create table
 CREATE TABLE `attributes` (
  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -39,7 +18,7 @@ CREATE TABLE `attributes` (
 # ================================================
 
 # clean previous table if exists
-DROP TABLE IF EXISTS `categories`;
+-- DROP TABLE IF EXISTS `categories`;
 # create table
 CREATE TABLE `categories` (
  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -53,7 +32,7 @@ CREATE TABLE `categories` (
 # ================================================
 
 # clean previous table if exists
-DROP TABLE IF EXISTS `authors`;
+-- DROP TABLE IF EXISTS `authors`;
 # create table
 CREATE TABLE `authors` (
  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -66,7 +45,7 @@ CREATE TABLE `authors` (
 # ================================================
 
 # clean previous table if exists
-DROP TABLE IF EXISTS `products`;
+-- DROP TABLE IF EXISTS `products`;
 # create table
 CREATE TABLE `products` (
  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -81,7 +60,7 @@ CREATE TABLE `products` (
 # ================================================
 
 # clean previous table if exists
-DROP TABLE IF EXISTS `product_attributes`;
+-- DROP TABLE IF EXISTS `product_attributes`;
 # create table
 CREATE TABLE `product_attributes` (
  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -98,7 +77,7 @@ CREATE TABLE `product_attributes` (
 # ================================================
 
 # clean previous table if exists
-DROP TABLE IF EXISTS `product_images`;
+-- DROP TABLE IF EXISTS `product_images`;
 # create table
 CREATE TABLE `product_images` (
  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -114,7 +93,7 @@ CREATE TABLE `product_images` (
 # ================================================
 
 # clean previous table if exists
-DROP TABLE IF EXISTS `product_authors`;
+-- DROP TABLE IF EXISTS `product_authors`;
 # create table
 CREATE TABLE `product_authors` (
  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -130,7 +109,7 @@ CREATE TABLE `product_authors` (
 # ================================================
 
 # clean previous table if exists
-DROP TABLE IF EXISTS `roles`;
+-- DROP TABLE IF EXISTS `roles`;
 # create table
 CREATE TABLE `roles` (
  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -141,7 +120,7 @@ CREATE TABLE `roles` (
 # ================================================
 
 # clean previous table if exists
-DROP TABLE IF EXISTS `user_statuses`;
+-- DROP TABLE IF EXISTS `user_statuses`;
 # create table
 CREATE TABLE `user_statuses` (
  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -152,7 +131,7 @@ CREATE TABLE `user_statuses` (
 # ================================================
 
 # clean previous table if exists
-DROP TABLE IF EXISTS `users`;
+-- DROP TABLE IF EXISTS `users`;
 # create table
 CREATE TABLE `users` (
  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -174,7 +153,7 @@ CREATE TABLE `users` (
 # BASE DATA
 # ================================================================================================
 
-USE `bookify`;
+USE `heroku_33299a48260ae4d`;
 
 # ================================================
 
@@ -217,9 +196,9 @@ INSERT INTO `user_statuses` (`id`, `description`) VALUES
 # ================================================
 
 INSERT INTO `users` (`id`, `id_user_status`, `id_role`, `full_name`, `email`, `password`, `created_at`, `updated_at`) VALUES
-    (1, 2, 1, 'John Admin Doe', 'admin@bookify.com', 'bookify', NOW(), NULL),
-    (2, 2, 2, 'John Client Doe', 'client@bookify.com', 'bookify', NOW(), NULL),
-    (3, 2, 2, 'Martin Palermo', 'martin@bookify.com', 'bookify', NOW(), NULL);
+    (1, 2, 1, 'John Admin Doe', 'admin@bookify.com', '196fabbbefd260989c66befc2457ce7e32f8d50d809ba8216ac1e960b2fe0892', NOW(), NULL),
+    (2, 2, 2, 'John Client Doe', 'client@bookify.com', '196fabbbefd260989c66befc2457ce7e32f8d50d809ba8216ac1e960b2fe0892', NOW(), NULL),
+    (3, 2, 2, 'Martin Palermo', 'martin@bookify.com', '196fabbbefd260989c66befc2457ce7e32f8d50d809ba8216ac1e960b2fe0892', NOW(), NULL);
 
 
 
@@ -227,7 +206,7 @@ INSERT INTO `users` (`id`, `id_user_status`, `id_role`, `full_name`, `email`, `p
 # CONSTRAINTS
 # ================================================================================================
 
-USE `bookify`;
+USE `heroku_33299a48260ae4d`;
 
 # ================================================
 
