@@ -1,67 +1,12 @@
 //
 // imports
 //
-const { products, users } = require('../models');
 const multer = require('multer');
+const { products } = require('../../models');
 
 //
 // endpoints
 //
-// admin home (main)
-const main = (req, res) => res.render('admin/products', {
-    products: products.getAll()
-});
-
-//
-// login
-//
-const login = (req, res) => res.render('admin/login');
-
-const loginPost = (req, res) => {
-    // Normalize body
-    const { email, password } = req.body;
-
-    // Try to get model
-    const user = users.getAll().find(user => user.email === email && user.type === 'admin');
-
-    // Check if user email exist
-    if (!user || user.password !== password) {
-        return res.status(400).render('admin/login', {
-            errors: [{
-                param: 'general',
-                msg: 'Por favor verifique los datos ingresados. El correo electrónico o la contraseña no coinciden.'
-            }]
-        });
-    }
-
-    // Save session
-    req.session.admin = {
-        idUser: user.id,
-        email: user.email,
-        name: user.name,
-        user: user
-    };
-
-    // Redirect to home
-    req.session.save(() => res.redirect('/admin'));
-};
-
-//
-// logout
-//
-const logout = (req, res) => {
-    req.session.destroy(() => res.redirect('/'));
-};
-
-//
-// register
-//
-// const register = (req, res) => res.render('admin/register');
-
-// const registerPost = (req, res) => {
-//     console.log('Sended form for register:', req.body);
-//     res.redirect(302, '/admin');
-// };
 
 //
 // product creation
@@ -74,11 +19,23 @@ const create = (req, res) => res.render('admin/products/create');
 const createPost = (req, res) => {
     // Normalize body
     const { title, description, price, discount, author, publishedAt, pages, language, format, presentation } = req.body;
-    const data = { title, description, image: req.files, price, discount, author, publishedAt, pages, language, format, presentation };
+    // Normalize body
 
     try {
         // Try to insert model
-        products.create(data);
+        Products.create({
+            title,
+            description,
+            image: req.files,
+            price,
+            discount,
+            author,
+            publishedAt,
+            pages,
+            language,
+            format,
+            presentation
+        });
         // Redirect to models
         res.redirect('/admin');
 
@@ -170,4 +127,4 @@ const destroy = (req, res) => {
 //
 // export
 //
-module.exports = { main, login, loginPost, logout, create, createPost, update, updatePut, destroy };
+module.exports = { create, createPost, update, updatePut, destroy };

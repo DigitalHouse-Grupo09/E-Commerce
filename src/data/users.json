@@ -22,9 +22,16 @@
  },
  {
   "id": 4,
-  "email": "sergiodanielabadia@gmail.com",
-  "password": "holaquetal",
-  "name": "Sergio Abadia",
+  "email": "cristian@bookify.com",
+  "password": "cristian",
+  "name": "Cristian",
+  "type": "client"
+ },
+ {
+  "id": 5,
+  "email": "cristian@bookify.com",
+  "password": "cristian",
+  "name": "Cristian",
   "type": "client"
  }
 ]

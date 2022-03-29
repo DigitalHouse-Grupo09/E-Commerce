@@ -6,13 +6,25 @@
 
 https://drawsql.app/comodinx/diagrams/bookify
 
-## Instalación
+## Connectar (Producción)
 
 ```sh
-mysql -u <USUARIO> -p<PASSWORD> < bookify.sql
+npm run db
+```
+
+## Instalación (Local)
+
+```sh
+mysql -u <USUARIO> -p<PASSWORD> < database.sql
 ```
 
 > Reemplazar las variables `<USUARIO>` y `<PASSWORD>` por lo que corresponda.
+
+## Tablas y base data
+
+```sh
+mysql -u <USUARIO> -p<PASSWORD> < tables.sql
+```
 
 ## Data dummy (de prueba)
 

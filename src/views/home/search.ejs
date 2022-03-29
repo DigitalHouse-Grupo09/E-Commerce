@@ -1,0 +1,37 @@
+<html>
+<head>
+    <%- include('../partials/metas') %>
+    <%- include('../partials/styles') %>
+</head>
+<body>
+    <%- include('../partials/header', { search }) %>
+
+    <!-- MAIN :: BEGIN -->
+    <main >
+        <% if (products.length) { %>
+            <!-- VIEWED -->
+            <section class="products">
+                <div class="row products-list">
+                    <!-- PRODUCTS -->
+                    <% products.forEach(product => { %>
+                        <%- include('./product', { product }); %>
+                    <% }); %>
+                </div>
+            </section>
+        <% } else { %>
+            <section class="empty-state">
+                <div class="row text-center">
+                    <!-- EMPTY STATE -->
+                    <h4 class="mt-5">No se encontraron resultados para "<%= search %>"</h4>
+                    <img class="mx-auto" src="/assets/img/empty.png" alt="No se encontraron resultado para <%= search %>" style="width: 50%; height: 50%">
+                </div>
+            </section>
+        <% } %>
+    </main>
+    <!-- MAIN :: END -->
+
+    <%- include('../partials/footer') %>
+
+    <%- include('../partials/scripts') %>
+</body>
+</html>
