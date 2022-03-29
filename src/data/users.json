@@ -19,5 +19,12 @@
   "password": "bookify",
   "name": "Martin Palermo",
   "type": "client"
+ },
+ {
+  "id": 4,
+  "email": "sergiodanielabadia@gmail.com",
+  "password": "holaquetal",
+  "name": "Sergio Abadia",
+  "type": "client"
  }
 ]
