@@ -10,7 +10,6 @@ const controller = require('../controllers/main');
 //
 router.get('/', controller.home);
 router.post('/', controller.search);
-router.get('/offers', controller.offers);
 router.get('/help', controller.help);
 router.get('/regretful', controller.regretful);
 router.get('/contact', controller.contact);
