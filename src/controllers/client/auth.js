@@ -1,7 +1,9 @@
 //
 // imports
 //
-const { users } = require('../models');
+const crypto = require('../../helpers/crypto');
+const { User } = require('../../database');
+const { ROLE_CLIENT } = require('../../constants/users');
 
 //
 // login
@@ -12,11 +14,42 @@ const loginPost = (req, res) => {
     // Normalize body
     const { email, password } = req.body;
 
-    // Try to get model
-    const user = users.getAll().find(user => user.email === email && user.type === "client");
+    // Prepare find options
+    const options = {
+        include: ['status', 'role'],
+        where: {
+            id_role: ROLE_CLIENT,
+            password: crypto(password),
+            email
+        }
+    };
 
-    // Check if user email exist
-    if (!user || user.password !== password) {
+    // Try to get model
+    try {
+        const user = await User.findOne(options);
+
+        // Check if user email exist
+        if (!user) {
+            return res.status(400).render('client/login', {
+                errors: [{
+                    param: 'general',
+                    msg: 'Por favor verifique los datos ingresados. El correo electrónico o la contraseña no coinciden.'
+                }]
+            });
+        }
+
+        // Save session
+        req.session.client = {
+            idUser: user.id,
+            email: user.email,
+            name: user.name,
+            user
+        };
+
+        // Redirect to home
+        req.session.save(() => res.redirect('/'));
+    }
+    catch (e) {
         return res.status(400).render('client/login', {
             errors: [{
                 param: 'general',
@@ -24,16 +57,6 @@ const loginPost = (req, res) => {
             }]
         });
     }
-
-    // Save session
-    req.session.client = {
-        idUser: user.id,
-        email: user.email,
-        name: user.name
-    };
-
-    // Redirect to home
-    req.session.save(() => res.redirect('/'));
 };
 
 //
@@ -70,4 +93,3 @@ const registerPost = (req, res) => {
 // exports
 //
 module.exports = { login, loginPost, logout, register, registerPost }
-

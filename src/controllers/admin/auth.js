@@ -32,8 +32,6 @@ const loginPost = async (req, res) => {
     try {
         const user = await User.findOne(options);
 
-        console.log(user)
-
         // Check if user email exist
         if (!user) {
             return res.status(400).render('admin/login', {
@@ -49,7 +47,7 @@ const loginPost = async (req, res) => {
             idUser: user.id,
             email: user.email,
             name: user.name,
-            user: user
+            user
         };
 
         // Redirect to home
