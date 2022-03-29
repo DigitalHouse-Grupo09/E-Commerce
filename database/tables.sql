@@ -7,7 +7,7 @@ USE `heroku_33299a48260ae4d`;
 # ================================================
 
 # clean previous table if exists
--- DROP TABLE IF EXISTS `attributes`;
+DROP TABLE IF EXISTS `attributes`;
 # create table
 CREATE TABLE `attributes` (
  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -18,7 +18,7 @@ CREATE TABLE `attributes` (
 # ================================================
 
 # clean previous table if exists
--- DROP TABLE IF EXISTS `categories`;
+DROP TABLE IF EXISTS `categories`;
 # create table
 CREATE TABLE `categories` (
  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -32,7 +32,7 @@ CREATE TABLE `categories` (
 # ================================================
 
 # clean previous table if exists
--- DROP TABLE IF EXISTS `authors`;
+DROP TABLE IF EXISTS `authors`;
 # create table
 CREATE TABLE `authors` (
  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -45,7 +45,7 @@ CREATE TABLE `authors` (
 # ================================================
 
 # clean previous table if exists
--- DROP TABLE IF EXISTS `products`;
+DROP TABLE IF EXISTS `products`;
 # create table
 CREATE TABLE `products` (
  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -60,7 +60,7 @@ CREATE TABLE `products` (
 # ================================================
 
 # clean previous table if exists
--- DROP TABLE IF EXISTS `product_attributes`;
+DROP TABLE IF EXISTS `product_attributes`;
 # create table
 CREATE TABLE `product_attributes` (
  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -77,7 +77,7 @@ CREATE TABLE `product_attributes` (
 # ================================================
 
 # clean previous table if exists
--- DROP TABLE IF EXISTS `product_images`;
+DROP TABLE IF EXISTS `product_images`;
 # create table
 CREATE TABLE `product_images` (
  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -93,7 +93,7 @@ CREATE TABLE `product_images` (
 # ================================================
 
 # clean previous table if exists
--- DROP TABLE IF EXISTS `product_authors`;
+DROP TABLE IF EXISTS `product_authors`;
 # create table
 CREATE TABLE `product_authors` (
  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -109,7 +109,25 @@ CREATE TABLE `product_authors` (
 # ================================================
 
 # clean previous table if exists
--- DROP TABLE IF EXISTS `roles`;
+DROP TABLE IF EXISTS `product_prices`;
+# create table
+CREATE TABLE `product_prices` (
+ `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+ `id_product` bigint(20) unsigned NOT NULL,
+ `amount` decimal(8,2) unsigned NOT NULL DEFAULT 0,
+ `currency` varchar(512) NOT NULL DEFAULT 'AR$',
+ `discount_amount` decimal(8,2) unsigned NOT NULL DEFAULT 0,
+ `discount_type` varchar(16) NOT NULL DEFAULT '%',
+ `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
+ `updated_at` datetime ON UPDATE CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`),
+ KEY `id_product` (`id_product`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+# ================================================
+
+# clean previous table if exists
+DROP TABLE IF EXISTS `roles`;
 # create table
 CREATE TABLE `roles` (
  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -120,7 +138,7 @@ CREATE TABLE `roles` (
 # ================================================
 
 # clean previous table if exists
--- DROP TABLE IF EXISTS `user_statuses`;
+DROP TABLE IF EXISTS `user_statuses`;
 # create table
 CREATE TABLE `user_statuses` (
  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -131,7 +149,7 @@ CREATE TABLE `user_statuses` (
 # ================================================
 
 # clean previous table if exists
--- DROP TABLE IF EXISTS `users`;
+DROP TABLE IF EXISTS `users`;
 # create table
 CREATE TABLE `users` (
  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,

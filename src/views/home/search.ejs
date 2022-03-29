@@ -20,9 +20,9 @@
             </section>
         <% } else { %>
             <section class="empty-state">
-                <div class="row text-center">
+                <div class="row d-flex flex-column justify-content-center align-items-center">
                     <!-- EMPTY STATE -->
-                    <h4 class="mt-5">No se encontraron resultados para "<%= search %>"</h4>
+                    <h1 class="mt-5 text-center">No se encontraron resultados para "<%= search %>"</h1>
                     <img class="mx-auto" src="/assets/img/empty.png" alt="No se encontraron resultado para <%= search %>" style="width: 50%; height: 50%">
                 </div>
             </section>

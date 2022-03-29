@@ -1,6 +1,7 @@
 <html>
   <head>
-    <%- include('../partials/metas') %> <%- include('../partials/styles') %>
+    <%- include('../partials/metas') %>
+    <%- include('../partials/styles') %>
   </head>
   <body>
     <%- include('../partials/header') %> 
@@ -9,17 +10,17 @@
     <main>
       <form id="contact" action="/" method="POST">
         <label for="asunto">Asunto</label>
-      <select id= "asunto" name="asunto">
-        <option value="Informacion libros">Informacion libros</option>
-        <option value="Mi compra online">Mi compra online</option>
-        <option value="Reportar problemas">Reportar problemas</option>
-        <option value="Eventos y presentaciones de libros">Eventos y presentaciones de libros</option>
-        <option value="Sugerencias de la web">Sugerencias de la web</option>
-        <option value="Suscripciones por mail">Suscripciones por mail</option>
-        <option value="Compras mayoristas">Compras mayoristas</option>
-        <option value="Trabajar en Bookify">Trabajar en Bookify</option>
-        <option value="Otros">Otros</option>
-      </select>
+        <select id= "asunto" name="asunto">
+          <option value="Informacion libros">Informacion libros</option>
+          <option value="Mi compra online">Mi compra online</option>
+          <option value="Reportar problemas">Reportar problemas</option>
+          <option value="Eventos y presentaciones de libros">Eventos y presentaciones de libros</option>
+          <option value="Sugerencias de la web">Sugerencias de la web</option>
+          <option value="Suscripciones por mail">Suscripciones por mail</option>
+          <option value="Compras mayoristas">Compras mayoristas</option>
+          <option value="Trabajar en Bookify">Trabajar en Bookify</option>
+          <option value="Otros">Otros</option>
+        </select>
 
         <label for="nombre">Nombre</label>
         <input type="text" id="nombre" name="" required/>
@@ -33,9 +34,10 @@
         <button type="submit" class="enviar">Enviar</button> 
       </form>  
     </main>
-
     <!-- MAIN :: END -->
 
-    <%- include('../partials/footer') %> <%- include('../partials/scripts') %>
+    <%- include('../partials/footer') %>
+
+    <%- include('../partials/scripts') %>
   </body>
 </html>

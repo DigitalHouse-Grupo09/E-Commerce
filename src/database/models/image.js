@@ -6,7 +6,9 @@
 const alias = 'Image';
 const config = {
     tableName: 'product_images',
-    timestamps: false,
+    timestamps: true,
+    createdAt: 'created_at',
+    updatedAt: 'updated_at',
     deletedAt: false
 };
 
