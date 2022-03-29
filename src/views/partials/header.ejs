@@ -1,14 +1,14 @@
 <!-- HEADER :: BEGIN -->
 <header>
-  <!-- HEADER :: BRAND -->
-  <div class="header-brand">
-    <a href="/" class="header-brand-wrapper">
-      <img src="/assets/img/logo.png" alt="Bookify" class="header-brand-logo" />
-    </a>
-  </div>
-
   <!-- HEADER :: NAVIGATION -->
   <nav class="header-nav">
+    <!-- HEADER :: LOGO -->
+    <div class="header-brand">
+      <a href="/" class="header-brand-wrapper">
+        <img src="/assets/img/logo.png" alt="Bookify" class="header-brand-logo" />
+      </a>
+    </div>
+
     <!-- HEADER :: SEARCH -->
     <div class="header-search-wrapper">
       <form method="GET" action="/">
@@ -19,55 +19,68 @@
 
     <!-- HEADER :: MENU -->
     <div class="header-menu">
+      <!-- HEADER :: ITEMS -->
       <ul type="none" class="header-menu-items show">
         <li>
           <div class="dropdown">
-            <button class="dropbtn">Ayuda</button>
+            <button class="dropbtn">
+              <i class="fa-solid fa-circle-question"></i>
+            </button>
+
             <div class="dropdown-content">
-              <a href="/help/#cerP">Atencion al Cliente</a>
-              <a href="/help/#segP">Formas de Pago</a>
-              <a href="/help/#cuaP">Costos de Envio</a>
-              <a href="/help/#sepP">Preguntas Frecuentes</a>
-              <a href="/regretful">Arrepentimiento de Compra</a>
+              <a href="/help/#cerP">
+                <i class="fa-solid fa-phone mr-1"></i> Atencion al Cliente
+              </a>
+              <a href="/help/#segP">
+                <i class="fa-solid fa-credit-card mr-1"></i> Formas de Pago
+              </a>
+              <a href="/help/#cuaP">
+                <i class="fa-solid fa-truck mr-1"></i> Costos de Envio
+              </a>
+              <a href="/help/#sepP">
+                <i class="fa-solid fa-circle-question mr-1"></i> Preguntas Frecuentes
+              </a>
+              <a href="/regretful">
+                <i class="fa-solid fa-hand-holding-hand mr-1"></i> Devoluciones
+              </a>
             </div>
           </div>
         </li>
-        <li>
-          <a href="/contact">Contacto</a>
+        <li data-tooltip title="Contacto">
+          <a href="/contact">
+            <i class="fa-solid fa-phone"></i>
+          </a>
         </li>
-      </ul>
-    </div>
-
-    <!-- HEADER :: ACCOUNT -->
-    <div class="header-account">
-      <ul type="none" class="header-account-items show">
-        <li>
-          <a href="/admin/login"><i class="far fa-user"></i></a>
+        <li data-tooltip title="Cuenta">
+          <a href="/client/login">
+            <i class="fa-solid fa-user"></i>
+          </a>
         </li>
-        <li>
-          <a href="/cart"><i class="fas fa-shopping-cart"></i></a>
+        <li data-tooltip title="Carrito">
+          <a href="/cart">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
         </li>
-        <li>
+        <li class="ml-1">
           <div class="theme-switch-wrapper">
             <input type="checkbox" id="dark-mode-toggler" style="display: none" />
-            <label class="dark-mode-toggler" for="dark-mode-toggler"
-              ><span></span>
+            <label class="dark-mode-toggler" for="dark-mode-toggler">
+              <span></span>
 
               <div class="slider-round"></div>
+
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="" class="bi bi-sun" viewBox="0 0 16 16">
-                <path
-                  d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
-                />
+                <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
               </svg>
+
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="" class="bi bi-moon-fill" viewBox="0 0 16 16">
                 <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
               </svg>
             </label>
           </div>
-          
         </li>
         <% if (locals.session) { %>
-        <li>
+        <li data-tooltip title="Salir">
           <a href="/admin/logout"><i class="fas fa-sign-out-alt"></i></a>
         </li>
         <% } %>
@@ -75,7 +88,7 @@
     </div>
 
     <!-- HEADER :: TRIGGER -->
-    <div class="header-trigger">
+    <div class="header-menu-trigger">
       <div class="header-trigger-button">
         <i class="fas fa-bars"></i>
       </div>

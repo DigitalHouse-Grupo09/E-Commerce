@@ -1,0 +1,36 @@
+
+/*
+ * Dark Mode
+ */
+
+[data-theme="dark"] {
+  background-color: var(--grey-dark) !important;
+  color: #eee;
+}
+
+[data-theme="dark"] .category-title {
+  background-color: var(--grey-dark);
+  color: #eee;
+}
+
+/*
+ * Toogler icon Styles
+ */
+.theme-switch-wrapper .bi-sun,
+.theme-switch-wrapper .bi-moon-fill {
+  color: white; 
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  cursor:pointer;
+  width:12px;
+  height:12px
+ }
+
+.theme-switch-wrapper .bi-sun {
+  right:1px
+}
+
+.theme-switch-wrapper .bi-moon-fill {
+  left:6px
+}

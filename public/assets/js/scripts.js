@@ -128,24 +128,24 @@
 /**
  * HEADER MENU
  */
-(function (window) {
-    const header = document.querySelector('header');
-    const trigger = document.querySelector('.header-trigger');
-    const account = document.querySelector('.header-account-items');
-    const menu = document.querySelector('.header-menu-items');
+// (function (window) {
+//     const header = document.querySelector('header');
+//     const trigger = document.querySelector('.header-trigger');
+//     const account = document.querySelector('.header-account-items');
+//     const menu = document.querySelector('.header-menu-items');
 
-    trigger.onclick = () => {
-        const isVisible = menu.style.display === 'block';
+//     trigger.onclick = () => {
+//         const isVisible = menu.style.display === 'block';
 
-        menu.style.display = isVisible ? 'none' : 'block';
-        menu.classList.toggle('fade');
+//         menu.style.display = isVisible ? 'none' : 'block';
+//         menu.classList.toggle('fade');
 
-        account.style.display = isVisible ? 'none' : 'flex';
-        account.classList.toggle('fade');
+//         account.style.display = isVisible ? 'none' : 'flex';
+//         account.classList.toggle('fade');
 
-        header.style.height = isVisible ? '65px' : '170px';
-    };
-})(window);
+//         header.style.height = isVisible ? '65px' : '170px';
+//     };
+// })(window);
 
 
 /**
