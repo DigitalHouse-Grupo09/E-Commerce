@@ -1865,15 +1865,18 @@ main {
     padding: 12px 20px;
     margin: 8px 0;
     display: flex;
-    border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     flex-direction: column;
   }
 
- 
-  .enviar {
-    width: 100%;
+  #contact input,
+  #contact select,
+  #contact textarea {
+    margin-bottom: 10px;
+  }
+
+  #contact .enviar {
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;

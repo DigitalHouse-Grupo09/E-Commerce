@@ -3,7 +3,7 @@
     <%- include('../partials/metas') %> <%- include('../partials/styles') %>
   </head>
   <body>
-    <%- include('../partials/header') %> <%- include('../partials/banner') %>
+    <%- include('../partials/header') %> 
 
     <!-- MAIN :: BEGIN -->
     <main>
@@ -22,15 +22,15 @@
       </select>
 
         <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" required/>
+        <input type="text" id="nombre" name="" required/>
 
-        <label for="email">Direccion de Email</label>
-        <input type="mail" id="email" required/>
+        <label for="email">Correo electrónico</label>
+        <input type="mail" id="email" name="" required/>
 
         <label for="comentarios">Comentarios</label>
-        <textarea name="comentarios" id="comentarios" required></textarea>
+        <textarea name="comentarios" id="comentarios" name=""required></textarea>
 
-        <input type="submit" class="enviar" value="Enviar">
+        <button type="submit" class="enviar">Enviar</button> 
       </form>  
     </main>
 
