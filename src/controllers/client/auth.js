@@ -10,7 +10,7 @@ const { ROLE_CLIENT } = require('../../constants/users');
 //
 const login = (req, res) => res.render('client/login');
 
-const loginPost = (req, res) => {
+const loginPost = async (req, res) => {
     // Normalize body
     const { email, password } = req.body;
 
