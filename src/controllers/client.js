@@ -2,6 +2,7 @@
 // imports
 //
 const { users } = require('../models');
+const { validationResult } = require('express-validator');
 
 //
 // login
@@ -9,31 +10,42 @@ const { users } = require('../models');
 const login = (req, res) => res.render('client/login');
 
 const loginPost = (req, res) => {
-    // Normalize body
-    const { email, password } = req.body;
+    //Validation
+    const errors = validationResult(req);
 
-    // Try to get model
-    const user = users.getAll().find(user => user.email === email && user.type === "client");
+    if(errors.isEmpty()) {
 
-    // Check if user email exist
-    if (!user || user.password !== password) {
-        return res.status(400).render('client/login', {
-            errors: [{
-                param: 'general',
-                msg: 'Por favor verifique los datos ingresados. El correo electrónico o la contraseña no coinciden.'
-            }]
-        });
+        // Normalize body
+        const { email, password } = req.body;
+
+        // Try to get model
+        const user = users.getAll().find(user => user.email === email && user.type === "client");
+
+        // Check if user email exist
+        if (!user || user.password !== password) {
+            return res.status(400).render('client/login', {
+                errors: [{
+                    param: 'general',
+                    msg: 'Por favor verifique los datos ingresados. El correo electrónico o la contraseña no coinciden.'
+                }]
+            });
+        }
+
+        // Save session
+        req.session.client = {
+            idUser: user.id,
+            email: user.email,
+            name: user.name
+        };
+
+        // Redirect to home
+        req.session.save(() => res.redirect('/'));
+
+    } else {
+
+        res.render('client/login', { errors: errors.mapped(), old: req.body })
+
     }
-
-    // Save session
-    req.session.client = {
-        idUser: user.id,
-        email: user.email,
-        name: user.name
-    };
-
-    // Redirect to home
-    req.session.save(() => res.redirect('/'));
 };
 
 //
@@ -49,21 +61,32 @@ const logout = (req, res) => {
 const register = (req, res) => res.render('client/register');
 
 const registerPost = (req, res) => {
-    const clients = users.getAll();
+    //Validation
+    const errors = validationResult(req);
 
-    const newClient = {
-        id: users.getAll().length +1,
-        email: req.body.email,
-        password: req.body.password,
-        name: req.body.name,
-        type: "client"
-    };
+    if(errors.isEmpty()) {
 
-    clients.push(newClient);
+        const clients = users.getAll();
 
-    users.save(clients);
+        const newClient = {
+            id: users.getAll().length +1,
+            email: req.body.email,
+            password: req.body.password,
+            name: req.body.name,
+            type: "client"
+        };
 
-    res.render("client/login");
+        clients.push(newClient);
+
+        users.save(clients);
+
+        res.render("client/login");
+
+    } else {
+
+        res.render('client/register', { errors: errors.mapped(), old: req.body })
+
+    }
 };
 
 //

@@ -4,6 +4,7 @@
 const crypto = require('../../helpers/crypto');
 const { User } = require('../../database');
 const { ROLE_ADMIN } = require('../../constants/users');
+const { validationResult } = require('express-validator');
 
 //
 // endpoints
@@ -15,27 +16,50 @@ const { ROLE_ADMIN } = require('../../constants/users');
 const login = (req, res) => res.render('admin/login');
 
 const loginPost = async (req, res) => {
-    // Normalize body
-    const { email, password } = req.body;
+    // Validation
+    const errors = validationResult(req);
 
-    // Prepare find options
-    const options = {
-        include: ['status', 'role'],
-        where: {
-            id_role: ROLE_ADMIN,
-            password: crypto(password),
-            email
+    if(errors.isEmpty()) {
+
+        // Normalize body
+        const { email, password } = req.body;
+
+        // Prepare find options
+        const options = {
+            include: ['status', 'role'],
+            where: {
+                id_role: ROLE_ADMIN,
+                password: crypto(password),
+                email
+            }
+        };
+
+        // Try to get model
+        try {
+            const user = await User.findOne(options);
+
+            // Check if user email exist
+            if (!user) {
+                return res.status(400).render('admin/login', {
+                    errors: [{
+                        param: 'general',
+                        msg: 'Por favor verifique los datos ingresados. El correo electrónico o la contraseña no coinciden.'
+                    }]
+                });
+            }
+
+            // Save session
+            req.session.admin = {
+                idUser: user.id,
+                email: user.email,
+                name: user.name,
+                user: user
+            };
+
+            // Redirect to home
+            req.session.save(() => res.redirect('/admin'));
         }
-    };
-
-    // Try to get model
-    try {
-        const user = await User.findOne(options);
-
-        console.log(user)
-
-        // Check if user email exist
-        if (!user) {
+        catch (e) {
             return res.status(400).render('admin/login', {
                 errors: [{
                     param: 'general',
@@ -44,25 +68,13 @@ const loginPost = async (req, res) => {
             });
         }
 
-        // Save session
-        req.session.admin = {
-            idUser: user.id,
-            email: user.email,
-            name: user.name,
-            user: user
-        };
+    } else {
 
-        // Redirect to home
-        req.session.save(() => res.redirect('/admin'));
+        res.render('admin/login', { errors: errors.mapped(), old: req.body })
+
     }
-    catch (e) {
-        return res.status(400).render('admin/login', {
-            errors: [{
-                param: 'general',
-                msg: 'Por favor verifique los datos ingresados. El correo electrónico o la contraseña no coinciden.'
-            }]
-        });
-    }
+
+    
 };
 
 //
