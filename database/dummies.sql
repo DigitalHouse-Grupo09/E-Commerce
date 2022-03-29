@@ -28,6 +28,11 @@ INSERT INTO `product_images` (`id`, `id_product`, `src`, `priority`, `created_at
 
 # ================================================
 
+INSERT INTO `product_prices` (`id`, `id_product`, `amount`, `currency`, `created_at`, `updated_at`) VALUES
+    (NULL, 1, 3670.00, 'AR$', NOW(), NULL);
+
+# ================================================
+
 #
 # Attributes
 #

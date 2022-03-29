@@ -130,18 +130,18 @@
  */
 (function (window) {
     const header = document.querySelector('header');
-    const trigger = document.querySelector('.header-trigger');
-    const account = document.querySelector('.header-account-items');
-    const menu = document.querySelector('.header-menu-items');
+    const trigger = document.querySelector('.header-menu-trigger');
+    const search = document.querySelector('.header-search-wrapper');
+    const menu = document.querySelector('.header-menu');
 
     trigger.onclick = () => {
-        const isVisible = menu.style.display === 'block';
+        const isVisible = menu.style.display === 'flex';
 
-        menu.style.display = isVisible ? 'none' : 'block';
+        search.style.display = isVisible ? 'none' : 'block';
+        search.classList.toggle('fade');
+
+        menu.style.display = isVisible ? 'none' : 'flex';
         menu.classList.toggle('fade');
-
-        account.style.display = isVisible ? 'none' : 'flex';
-        account.classList.toggle('fade');
 
         header.style.height = isVisible ? '65px' : '170px';
     };

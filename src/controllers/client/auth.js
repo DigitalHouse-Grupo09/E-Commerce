@@ -3,16 +3,12 @@
 //
 const crypto = require('../../helpers/crypto');
 const { User } = require('../../database');
-const { ROLE_ADMIN } = require('../../constants/users');
-
-//
-// endpoints
-//
+const { ROLE_CLIENT } = require('../../constants/users');
 
 //
 // login
 //
-const login = (req, res) => res.render('admin/login');
+const login = (req, res) => res.render('client/login');
 
 const loginPost = async (req, res) => {
     // Normalize body
@@ -22,7 +18,7 @@ const loginPost = async (req, res) => {
     const options = {
         include: ['status', 'role'],
         where: {
-            id_role: ROLE_ADMIN,
+            id_role: ROLE_CLIENT,
             password: crypto(password),
             email
         }
@@ -34,7 +30,7 @@ const loginPost = async (req, res) => {
 
         // Check if user email exist
         if (!user) {
-            return res.status(400).render('admin/login', {
+            return res.status(400).render('client/login', {
                 errors: [{
                     param: 'general',
                     msg: 'Por favor verifique los datos ingresados. El correo electrónico o la contraseña no coinciden.'
@@ -43,7 +39,7 @@ const loginPost = async (req, res) => {
         }
 
         // Save session
-        req.session.admin = {
+        req.session.client = {
             idUser: user.id,
             email: user.email,
             name: user.name,
@@ -51,10 +47,10 @@ const loginPost = async (req, res) => {
         };
 
         // Redirect to home
-        req.session.save(() => res.redirect('/admin'));
+        req.session.save(() => res.redirect('/'));
     }
     catch (e) {
-        return res.status(400).render('admin/login', {
+        return res.status(400).render('client/login', {
             errors: [{
                 param: 'general',
                 msg: 'Por favor verifique los datos ingresados. El correo electrónico o la contraseña no coinciden.'
@@ -71,6 +67,29 @@ const logout = (req, res) => {
 };
 
 //
-// export
+// register
 //
-module.exports = { login, loginPost, logout };
+const register = (req, res) => res.render('client/register');
+
+const registerPost = (req, res) => {
+    const clients = users.getAll();
+
+    const newClient = {
+        id: users.getAll().length +1,
+        email: req.body.email,
+        password: req.body.password,
+        name: req.body.name,
+        type: "client"
+    };
+
+    clients.push(newClient);
+
+    users.save(clients);
+
+    res.render("client/login");
+};
+
+//
+// exports
+//
+module.exports = { login, loginPost, logout, register, registerPost }
