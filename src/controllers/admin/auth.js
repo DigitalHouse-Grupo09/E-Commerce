@@ -4,6 +4,7 @@
 const crypto = require('../../helpers/crypto');
 const { User } = require('../../database');
 const { ROLE_ADMIN } = require('../../constants/users');
+const { validationResult } = require('express-validator');
 
 //
 // endpoints
@@ -15,6 +16,16 @@ const { ROLE_ADMIN } = require('../../constants/users');
 const login = (req, res) => res.render('admin/login');
 
 const loginPost = async (req, res) => {
+    // Validation
+    const errors = validationResult(req);
+
+    if (!errors.isEmpty()) {
+        return res.status(400).render('admin/login', {
+            errors: errors.mapped(),
+            old: req.body
+        });
+    }
+
     // Normalize body
     const { email, password } = req.body;
 

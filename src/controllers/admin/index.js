@@ -1,7 +1,7 @@
 //
 // imports
 //
-const { products } = require('../../models');
+const { Product } = require('../../database');
 
 //
 // endpoints
@@ -11,8 +11,8 @@ const { create, createPost, update, updatePut, destroy } = require('./products')
 
 
 // admin home (main)
-const main = (req, res) => res.render('admin/products', {
-    products: products.getAll()
+const main = async (req, res) => res.render('admin/products', {
+    products: (await Product.scope('fully').findAll())
 });
 
 //

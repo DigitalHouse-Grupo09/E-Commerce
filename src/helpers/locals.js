@@ -47,8 +47,52 @@ const formatDiscount = (discount = 0, type = '%') => {
   }
 };
 
+/**
+ * For easy take a first element from array on EJS templates
+ */
+const firstOrDefault = (array, defaultValue, key) => {
+  let value = defaultValue;
+
+  if (array && array.length) {
+    value = array[0];
+
+    if (key && value) {
+      value = value[key];
+    }
+  }
+  return value;
+};
+
+/**
+ * For easy take a first image from product on EJS templates
+ */
+const firstImage = (product = {}) => {
+  return firstOrDefault(product.images, '/assets/img/books/placeholder.jpeg', 'src');
+};
+
+/**
+ * For easy take all authors name from product on EJS templates
+ */
+const authorsName = (product = {}, defaultValue = '') => {
+  // Check if has any author
+  if (product.authors && product.authors.length) {
+    // Reduce author to single array with full author name
+    return product.authors.reduce((carry, author) => {
+      // For each author, save full name on carry array
+      carry.push(author.full_name);
+      return carry;
+    }, [])
+      // Join authors name
+      .join(', ');
+  }
+  return defaultValue;
+};
+
 module.exports = {
   attr,
   formatPrice,
-  formatDiscount
+  formatDiscount,
+  firstOrDefault,
+  firstImage,
+  authorsName
 };

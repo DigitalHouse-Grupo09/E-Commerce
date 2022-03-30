@@ -12,9 +12,9 @@ const upload = require('../helpers/image');
 //
 // public routes
 router.get('/login', controller.login);
-router.post('/login', controller.loginPost);
+router.post('/login', middlewares.validation.validateLogin, controller.loginPost);
 router.get('/register', controller.register);
-router.post('/register', controller.registerPost);
+router.post('/register', middlewares.validation.validateRegister, controller.registerPost);
 
 //
 // export
