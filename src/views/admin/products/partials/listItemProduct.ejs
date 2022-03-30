@@ -3,14 +3,14 @@
     <td class="text-center"><%= product.id %></td>
     <td>
         <div class="d-flex align-items-start justify-content-start">
-            <img src="<%= product.image %>" width="40px" />
-            <div class="ml-3"><%= product.title %></div>
+            <img src="<%= firstImage(product) %>" width="40px" />
+            <div class="ml-3"><%= attr(product.attributes, 'title') %></div>
         </div>
     </td>
-    <td class="text-right">AR$ <%= product.price.toFixed(2) %></td>
-    <td><%= product.author %></td>
-    <td><%= product.language %></td>
-    <td><%= product.publishedAt %></td>
+    <td class="text-right"><%= formatPrice(product.price.amount, product.price.currency) %></td>
+    <td><%= authorsName(product) %></td>
+    <td><%= attr(product.attributes, 'language') %></td>
+    <td><%= attr(product.attributes, 'published_at') %></td>
     <td>
         <div class="d-flex align-items-center justify-content-center">
             <a href="/admin/products/update/<%= product.id %>" class="text-center" title="Editar">📝</a>

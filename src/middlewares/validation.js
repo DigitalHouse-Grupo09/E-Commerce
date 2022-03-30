@@ -12,7 +12,7 @@ const validateRegister = [
 	check('password')
 		.notEmpty().withMessage('Debes completar la contraseña')
 		.bail()
-		.isLength({ min: 8 }).withMessage('La contraseña debe ser más larga')
+		.isLength({ min: 4 }).withMessage('La contraseña debe ser más larga')
 ];
 
 const validateLogin = [
@@ -23,7 +23,7 @@ const validateLogin = [
 	check('password')
 		.notEmpty().withMessage('Debes completar la contraseña')
 		.bail()
-		.isLength({ min: 8 }).withMessage('La contraseña debe ser más larga')
+		.isLength({ min: 4 }).withMessage('La contraseña debe ser más larga')
 ];
 
 module.exports = { validateRegister, validateLogin };
