@@ -1459,6 +1459,10 @@ main {
   /*
    * HEADER
    */
+  header {
+    padding: var(--spacing) 15%;
+  }
+
   .header-nav {
     flex-direction: row;
     align-items: center;
