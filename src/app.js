@@ -14,7 +14,7 @@ const session = require('express-session');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
-const { categories } = require('./models');
+const { Category } = require('./database');
 const locals = require('./helpers/locals');
 const routes = require('./routes');
 const app = express();
@@ -46,31 +46,35 @@ app.use(session({
 app.set('view engine', 'ejs');
 app.set('views', `${__dirname}/views`);
 app.engine('ejs', ejs.renderFile);
-// locals 
-app.locals = {
-    ...app.locals || {},
-    ...locals,
-    categories: categories.getAll()
-};
 
-//
-// routes
-//
-app.use('/', routes.main);
-app.use('/admin', routes.admin);
-app.use('/client', routes.client);
-app.use('/products', routes.products);
-app.use('/cart', routes.cart);
+// For configure locals, we need run async auto-executable process
+(async () => {
+    // locals
+    app.locals = {
+        ...app.locals || {},
+        ...locals,
+        categories: (await Category.findAll())
+    };
 
-//
-// error pages
-//
-// 404
-app.use((req, res, next) => res.status(404).render('404'));
-// uncached errors
-app.use((error, req, res, next) => res.status(500).render('500', { error }));
+    //
+    // routes
+    //
+    app.use('/', routes.main);
+    app.use('/admin', routes.admin);
+    app.use('/client', routes.client);
+    app.use('/products', routes.products);
+    app.use('/cart', routes.cart);
 
-//
-// listen application
-//
-app.listen(port, () => console.log(`Servidor iniciado - http://localhost:${port}`));
+    //
+    // error pages
+    //
+    // 404
+    app.use((req, res, next) => res.status(404).render('404'));
+    // uncached errors
+    app.use((error, req, res, next) => res.status(500).render('500', { error }));
+
+    //
+    // listen application
+    //
+    app.listen(port, () => console.log(`Servidor iniciado - http://localhost:${port}`));
+})();
