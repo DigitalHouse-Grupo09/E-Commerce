@@ -1,11 +1,11 @@
 <article class="category column-1 md:column-2 lg:column-4" data-id="<%= category.id %>">
-    <a href="javascript:void(0);" data-href="/categories/<%= category.slug %>">
+    <a href="/categories/<%= category.slug %>">
         <div class="category-content">
             <figure>
                 <i class="<%= category.icon %>" ></i>
             </figure>
             <div class="category-content-separator"></div>
-            <h4 class="category-title"><%= category.title %></h4>
+            <h4 class="category-title"><%= category.description %></h4>
         </div>
     </a>
 </article>
