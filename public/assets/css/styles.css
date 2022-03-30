@@ -581,7 +581,6 @@ header {
   flex-direction: column;
   padding: var(--spacing);
   background-color: var(--default);
-  transition: .4s ease-out;
 }
 
 .header-nav {
