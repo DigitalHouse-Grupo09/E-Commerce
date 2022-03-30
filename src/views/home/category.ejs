@@ -2,10 +2,10 @@
     <a href="/categories/<%= category.slug %>">
         <div class="category-content">
             <figure>
-                <i class="<%= category.icon %>" ></i>
+                <i class="category-<%= category.slug %>" ></i>
             </figure>
             <div class="category-content-separator"></div>
-            <h4 class="category-title"><%= category.description %></h4>
+            <h4 class="category-title"><%- category.description %></h4>
         </div>
     </a>
 </article>

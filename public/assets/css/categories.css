@@ -1,9 +1,49 @@
-.countItem {
-    position: relative;
-    bottom: 10px;
+/*
+ * CATEGORIES
+ */
 
+.category-literatura:before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f02d"
 }
-
-span{
-    font-size: 1.5rem;
+.category-conocimiento-y-ciencia:before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f5dc"
+}
+.category-comic-y-fantasia:before {
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 900;
+    content: "\f2dd"
+}
+.category-cocina-y-gastronomia:before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f805"
+}
+.category-infantil-y-juvenil:before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f77c"
+}
+.category-actualidad-y-empresa:before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f1ad"
+}
+.category-bienestar-y-salud:before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f48e"
+}
+.category-viajes-y-negocio:before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f4d7"
+}
+.category-agendas-y-calendarios:before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f133"
 }
