@@ -1000,6 +1000,14 @@ main {
   margin-right: var(--spacing-sm);
 }
 
+.form-group.form-group-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: var(--spacing-sm);
+}
+
 .form-group .form-label {
   font-size: var(--font-size);
   font-weight: bold;
@@ -1535,6 +1543,16 @@ main {
   .form-group .form-input[type="email"],
   .form-group .form-input[type="password"] {
     width: 50%;
+  }
+
+  .form-group .form-group-center{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feedback {
+    margin: 20px;
+    color: red;
   }
 
   #regretful {
