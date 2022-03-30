@@ -10,7 +10,7 @@ const upload = require('../helpers/image');
 //
 // mapping
 //
-router.get('/', middlewares.session.clientMiddleware, controller.cart);
+router.get('/', /* middlewares.session.clientMiddleware, */ controller.cart);
 
 //
 // export
