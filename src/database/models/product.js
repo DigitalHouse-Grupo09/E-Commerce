@@ -1,6 +1,11 @@
 'use strict';
 
 //
+// imports
+//
+const Sequelize = require('sequelize');
+
+//
 // constants
 //
 const alias = 'Product';
@@ -11,12 +16,23 @@ const config = {
     deletedAt: false,
     scopes: {
         fully: {
-            include: ['category', 'images', 'authors', {
+            include: ['category', 'price', 'images', 'authors', {
                 association: 'attributes',
                 include: ['attribute'],
                 as: 'attributes'
             }],
             order: [
+                ['images', 'priority', 'ASC']
+            ]
+        },
+        rand: {
+            include: ['category', 'price', 'images', 'authors', {
+                association: 'attributes',
+                include: ['attribute'],
+                as: 'attributes'
+            }],
+            order: [
+                Sequelize.literal('rand()'),
                 ['images', 'priority', 'ASC']
             ]
         }
@@ -61,6 +77,16 @@ module.exports = (sequelize, dataTypes) => {
         Model.belongsTo(models.Category, {
             as: 'category',
             foreignKey: 'id_category'
+        });
+
+        // price relationship
+        Model.hasOne(models.Price, {
+            as: 'price',
+            foreignKey: 'id_product',
+            timestamps: true,
+            createdAt: 'created_at',
+            updatedAt: 'updated_at',
+            onDelete: 'cascade'
         });
 
         // images relationship

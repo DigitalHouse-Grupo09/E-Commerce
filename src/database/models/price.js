@@ -3,8 +3,9 @@
 //
 // constants
 //
-const alias = 'Author';
+const alias = 'Price';
 const config = {
+    tableName: 'product_prices',
     timestamps: true,
     createdAt: 'created_at',
     updatedAt: 'updated_at',
@@ -24,9 +25,18 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        full_name: {
-            type: dataTypes.STRING,
+        id_product: {
+            type: dataTypes.BIGINT(20).UNSIGNED,
             allowNull: false
+        },
+        amount: {
+            type: dataTypes.DECIMAL(8, 2),
+            allowNull: false
+        },
+        currency: {
+            type: dataTypes.STRING,
+            allowNull: false,
+            defaultValue: 'AR$'
         }
     };
 
@@ -40,15 +50,9 @@ module.exports = (sequelize, dataTypes) => {
     //
     Model.associate = function (models) {
         // product relationship
-        Model.belongsToMany(models.Product, {
-            as: 'products',
-            through: 'product_authors',
-            foreignKey: 'id_author',
-            otherKey: 'id_product',
-            timestamps: true,
-            createdAt: 'created_at',
-            updatedAt: 'updated_at',
-            onDelete: 'cascade'
+        Model.belongsTo(models.Product, {
+            as: 'product',
+            foreignKey: 'id_product'
         });
     };
 

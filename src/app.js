@@ -15,6 +15,7 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
 const { categories } = require('./models');
+const locals = require('./helpers/locals');
 const routes = require('./routes');
 const app = express();
 
@@ -46,7 +47,11 @@ app.set('view engine', 'ejs');
 app.set('views', `${__dirname}/views`);
 app.engine('ejs', ejs.renderFile);
 // locals 
-app.locals = { ...app.locals || {}, categories: categories.getAll() };
+app.locals = {
+    ...app.locals || {},
+    ...locals,
+    categories: categories.getAll()
+};
 
 //
 // routes
