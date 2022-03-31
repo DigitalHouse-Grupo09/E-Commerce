@@ -1183,7 +1183,12 @@ main {
 
 .product-details .product-detail .product-image {
   border-radius: var(--radius);
+  width: auto;
+}
+
+.product-details .product-detail .product-image.product-image-large {
   width: 100%;
+  height: 100%;
 }
 
 .product-details .product-detail .product-properties {
