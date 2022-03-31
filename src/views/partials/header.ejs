@@ -61,7 +61,7 @@
           </a>
         </li>
         <li data-tooltip title="Cuenta">
-          <a href="/client/login">
+          <a href="<%= (locals.session && locals.session.isLogged) ? '/client/account' : '/client/login' %>">
             <i class="fa-solid fa-user"></i>
           </a>
         </li>
