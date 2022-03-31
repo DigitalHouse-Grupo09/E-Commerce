@@ -27,9 +27,15 @@
             </section>
         <% } else { %>
             <section class="empty-state">
+                <div class="title-subtitle">
+                    <figure>
+                        <i class="category-icon category-<%= category.slug %>" ></i>
+                    </figure>
+                    <h3 class="title-subtitle-title mt-1"><%= decodeUtf8(category.description) %></h3>
+                </div>
                 <div class="row d-flex flex-column justify-content-center align-items-center">
                     <!-- EMPTY STATE -->
-                    <h1 class="mt-5 text-center">No se encontraron resultados para la categoría "<%= decodeUtf8(category.description) %>"</h1>
+                    <h1 class="mt-5 text-center">No se encontraron resultados</h1>
                     <img class="mx-auto" src="/assets/img/empty.png" alt="No se encontraron resultados para la categoría <%= decodeUtf8(category.description) %>" style="width: 50%; height: 50%">
                 </div>
             </section>
