@@ -60,10 +60,11 @@ app.engine('ejs', ejs.renderFile);
     // routes
     //
     app.use('/', routes.main);
+    app.use('/', routes.others);
+    app.use('/cart', routes.cart);
     app.use('/admin', routes.admin);
     app.use('/client', routes.client);
     app.use('/categories', routes.categories);
-    app.use('/cart', routes.cart);
     app.use('/', routes.products);
 
     //

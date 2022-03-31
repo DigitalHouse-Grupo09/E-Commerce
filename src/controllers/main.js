@@ -57,13 +57,7 @@ const home = async (req, res) => {
     return res.render(view, { products, search })
 };
 
-const help = (req, res) => res.render('home/help');
-const regretful = (req, res) => res.render('home/regretful');
-const contact = (req, res) => res.render('home/contact');
-const privacy = (req, res) => res.render('home/privacy');
-const test = (req, res) => res.render('home/test');
-
 //
 // export
 //
-module.exports = { home, help, regretful, contact, privacy, test };
+module.exports = { home };

@@ -264,8 +264,12 @@
         let botones = document.querySelectorAll('.addToCart');
 
         //-loop with elemnents
-        botones.forEach(boton => boton.addEventListener('click', () => {
-            addProductToBasket({
+        botones.forEach(boton => boton.addEventListener('click', e => {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            e.stopPropagation();
+
+            const added = addProductToBasket({
                 id: boton.dataset.id,
                 title: boton.dataset.title,
                 price: boton.dataset.price,
@@ -273,25 +277,62 @@
                 currency: boton.dataset.currency,
                 image: boton.dataset.image
             });
+
+            if (added) {
+                toast.success({
+                    text: 'El libro fue agregado correctamente.',
+                    timeout: 4000
+                });
+            }
         }));
 
+        /**
+         * Add product to busket
+         */
         function addProductToBasket (product) {
             let basket = JSON.parse(localStorage.getItem('basket') || '[]');
+            let exists = basket.find(p => p.id === product.id);
+
+            if (exists) {
+                toast.warning({
+                    text: 'El libro que usted esta agregando, ya se encuentra en el carrito.',
+                    timeout: 4000
+                });
+                return false;
+            }
 
             basket.push(product);
             localStorage.setItem('basket', JSON.stringify(basket));
+
+            countProductsOnBasket();
+            return true;
         }
 
-        function onLoadProductsOnBasket () {
+        /**
+         * Count product on busket
+         */
+        function countProductsOnBasket () {
             let basket = JSON.parse(localStorage.getItem('basket') || '[]');
-            const countItem = document.querySelector('.countItem');
+            const counter = document.querySelector('#busket-count');
 
-            if (countItem && basket && basket.length) {
-                countItem.textContent = basket.length;
+            if (counter) {
+                if (basket && basket.length) {
+                    counter.style.display = 'flex';
+                    counter.textContent = basket.length;
+                }
+                else {
+                    counter.style.display = 'none';
+                    counter.textContent = '0';
+                }
             }
         }
 
-        onLoadProductsOnBasket();
+        // Globalize function for all site
+        window.addProductToBasket = addProductToBasket;
+        window.countProductsOnBasket = countProductsOnBasket;
+
+        // Force count products on busket on initial screen load
+        countProductsOnBasket();
     });
 })();
 

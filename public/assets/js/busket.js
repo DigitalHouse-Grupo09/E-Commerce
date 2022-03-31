@@ -13,6 +13,11 @@
         basket = basket.filter(product => product.id !== id);
         localStorage.setItem('basket', JSON.stringify(basket));
 
+        toast.success({
+            text: 'El libro fue eliminado correctamente.',
+            timeout: 4000
+        });
+
         render();
     });
 
@@ -27,6 +32,8 @@
         });
 
         totalProducts.text(`$ ${numeral(total).format('0,0.00')}`);
+
+        countProductsOnBasket();
     }
 
     $(() => render());

@@ -181,7 +181,7 @@ INSERT INTO `attributes` (`id`, `description`) VALUES
     (3, 'published_at'),
     (4, 'pages'),
     (5, 'language'),
-    (6, 'format'),
+    (6, 'editorial'),
     (7, 'presentation');
 
 # ================================================

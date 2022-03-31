@@ -5,6 +5,16 @@
                 <img class="product-image" src="<%= firstImage(product) %>" width="100%" />
             </figure>
             <div class="product-details">
+                <div
+                    class="product-busket addToCart"
+                    data-id="<%= product.id %>"
+                    data-title="<%= attr(product.attributes, 'title') %>"
+                    data-price="<%= formatPrice(product.price.amount, product.price.currency) %>"
+                    data-amount="<%= product.price.amount %>"
+                    data-currency="<%= product.price.currency %>"
+                    data-image="<%= firstImage(product) %>">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
                 <h4 class="product-title"><%= attr(product.attributes, 'title') %></h4>
                 <p class="product-price">
                     <span class="product-amount"><%= formatPrice(product.price.amount, product.price.currency) %></span> <% if (product.price.discount_amount) { %><small class="product-offer"><%= formatDiscount(product.price.discount_amount, product.price.discount_type) %></small><% } %>
