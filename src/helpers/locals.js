@@ -22,7 +22,7 @@ const attr = (attrs = [], name, defaultValue) => {
   const value = attrs.find(attr => attr.attribute && attr.attribute.description === name);
 
   if (value) {
-    return value.value;
+    return decodeUtf8(value.value);
   }
   return defaultValue;
 };
@@ -88,11 +88,27 @@ const authorsName = (product = {}, defaultValue = '') => {
   return defaultValue;
 };
 
+/**
+ * Encode UT8 characters
+ */
+function encodeUtf8(s) {
+  return unescape(encodeURIComponent(s));
+}
+
+/**
+ * Decode UT8 characters
+ */
+function decodeUtf8(s) {
+  return decodeURIComponent(escape(s));
+}
+
 module.exports = {
   attr,
   formatPrice,
   formatDiscount,
   firstOrDefault,
   firstImage,
-  authorsName
+  authorsName,
+  encodeUtf8,
+  decodeUtf8
 };

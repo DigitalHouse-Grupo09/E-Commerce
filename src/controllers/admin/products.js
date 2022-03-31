@@ -18,7 +18,7 @@ const create = (req, res) => res.render('admin/products/create');
 //
 const createPost = (req, res) => {
     // Normalize body
-    const { title, description, price, discount, author, publishedAt, pages, language, format, presentation } = req.body;
+    const { title, description, price, discount, author, publishedAt, pages, language, editorial, presentation } = req.body;
     // Normalize body
 
     try {
@@ -33,7 +33,7 @@ const createPost = (req, res) => {
             publishedAt,
             pages,
             language,
-            format,
+            editorial,
             presentation
         });
         // Redirect to models
@@ -70,8 +70,8 @@ const update = (req, res, next) => {
 const updatePut = (req, res) => {
     // Normalize body
     const { id } = req.params;
-    const { title, description, image, price, discount, author, publishedAt, pages, language, format, presentation } = req.body;
-    const data = { id, title, description, image, price, discount, author, publishedAt, pages, language, format, presentation };
+    const { title, description, image, price, discount, author, publishedAt, pages, language, editorial, presentation } = req.body;
+    const data = { id, title, description, image, price, discount, author, publishedAt, pages, language, editorial, presentation };
 
     // Try to get model
     const product = products.getById(Number(id));

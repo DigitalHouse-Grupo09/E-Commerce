@@ -17,7 +17,7 @@ const searcheableProperties = [
     'author',
     'pages',
     'language',
-    'format',
+    'editorial',
     'presentation'
 ];
 
@@ -83,7 +83,7 @@ const modelProducts = {
      * @param data[publishedAt]  {date}   Product date published at. Default is now
      * @param data[pages]        {number} Product pages
      * @param data[language]     {string} Product language
-     * @param data[format]       {string} Product format
+     * @param data[editorial]       {string} Product editorial
      * @param data[presentation] {string} Product presentation
      *
      * @return Product
@@ -94,7 +94,7 @@ const modelProducts = {
         // Generate next product ID
         const nextId = (Math.max.apply(Math, products.map(product => product.id)) || 0) + 1;
         // Destructuring of the request body, to avoid junk properties
-        const { title, description, image, price, discount = 0, author, publishedAt, pages, language, format, presentation } = data;
+        const { title, description, image, price, discount = 0, author, publishedAt, pages, language, editorial, presentation } = data;
         // Create new product
         const product = {
             id: nextId,
@@ -107,7 +107,7 @@ const modelProducts = {
             author,
             publishedAt,
             language,
-            format,
+            editorial,
             presentation
         };
 
@@ -133,7 +133,7 @@ const modelProducts = {
      * @param data[publishedAt]  {date}   Product date published at. Default is now
      * @param data[pages]        {number} Product pages
      * @param data[language]     {string} Product language
-     * @param data[format]       {string} Product format
+     * @param data[editorial]       {string} Product editorial
      * @param data[presentation] {string} Product presentation
      *
      * @return Product
@@ -144,7 +144,7 @@ const modelProducts = {
         // List all products
         const product = products.find(product => product.id === id);
         // Destructuring of the request body, to avoid junk properties
-        const { title, description, image, price, discount = 0, author, publishedAt, pages, language, format, presentation } = data;
+        const { title, description, image, price, discount = 0, author, publishedAt, pages, language, editorial, presentation } = data;
         // Update current product
         product.pages = Number(pages);
         product.price = Number(price);
@@ -155,7 +155,7 @@ const modelProducts = {
         product.author = author;
         product.publishedAt = publishedAt;
         product.language = language;
-        product.format = format;
+        product.editorial = editorial;
         product.presentation = presentation;
 
         // Save products

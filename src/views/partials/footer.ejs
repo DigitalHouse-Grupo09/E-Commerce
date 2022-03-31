@@ -22,7 +22,7 @@
                     <% categories.forEach(category => { %>
                         <li>
                             <a href="/categories/<%= category.slug %>">
-                                <i class="category-icon category-<%= category.slug %>"></i> <span><%- category.description %></span>
+                                <i class="category-icon category-<%= category.slug %>"></i> <span><%- decodeUtf8(category.description) %></span>
                             </a>
                         </li>
                     <% }); %>
