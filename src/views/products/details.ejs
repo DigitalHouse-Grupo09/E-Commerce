@@ -14,7 +14,7 @@
                 <div class="column-1 md:column-2 product-images">
                     <article>
                         <figure>
-                            <img src="<%= product.image %>" class="product-image" />
+                            <img src="<%= firstImage(product) %>" class="product-image" />
                         </figure>
                     </article>
                 </div>
@@ -22,48 +22,50 @@
                 <!-- PRODUCT DETAILS -->
                 <div class="column-1 md:column-2 product-properties">
                     <!-- PRODUCT TITLE -->
-                    <h3 class="product-title"><%= product.title %></h3>
+                    <h3 class="product-title"><%= attr(product.attributes, 'title') %></h3>
 
                     <!-- PRODUCT PRICE -->
-                    <p class="product-price"><%= product.price %></p>
+                    <p class="product-price"><%= formatPrice(product.price.amount, product.price.currency) %></p>
 
                     <!-- PRODUCT QUANTITY -->
                     <form class="form">
                         <div class="form-group">
-                            <label for="product-quantity" class="form-label" >Cantidad</label>
-                            <input type="number" id="product-quantity" name="product-quantity" class="product-quantity form-input" value="1" />
+                            <label for="product-quantity" class="form-label" >Cantidad <small>(proximamente)</small></label>
+                            <input type="number" id="product-quantity" name="product-quantity" class="product-quantity form-input" value="1" disabled />
                         </div>
 
                         <div class="form-actions form-actions-end">
                             <button type="button" class="btn btn-primary addToCart"><i class="fas fa-cart-arrow-down" ></i> Agregar al carrito</button>
-                            <span class="countItem">0</span>
                         </div>
                     </form>
 
                     <div class="separator"></div>
 
-                    <% if (product.description) { %>
+                    <% if (attr(product.attributes, 'description')) { %>
                         <!-- PRODUCT DESCRIPTION -->
-                        <p class="product-description"><%- product.description %></p>
+                        <p class="product-description"><%- attr(product.attributes, 'description') %></p>
                     <% } %>
 
                     <!-- PRODUCT SHEETS -->
                     <div class="product-sheet">
                         <ul type="none">
+                            <li class="product-sheet-item">
+                                <b>Autor</b>: <%- authorsName(product) %>
+                            </li>
+
                             <!-- SHEET AVAILABLES -->
                             <% const sheetProperties = []; %>
-                            <% sheetProperties.push({ name: 'author', label: 'Autor' }); %>
-                            <% sheetProperties.push({ name: 'publishedAt', label: 'Fecha de publicación' }); %>
+                            <% sheetProperties.push({ name: 'published_at', label: 'Fecha de publicación' }); %>
                             <% sheetProperties.push({ name: 'pages', label: 'Páginas' }); %>
                             <% sheetProperties.push({ name: 'language', label: 'Idioma' }); %>
-                            <% sheetProperties.push({ name: 'format', label: 'Formato' }); %>
+                            <% sheetProperties.push({ name: 'format', label: 'Editorial' }); %>
                             <% sheetProperties.push({ name: 'presentation', label: 'Presentación' }); %>
 
                             <!-- SHEET EACH -->
                             <% sheetProperties.forEach(sheet => { %>
-                                <% if (product[sheet.name]) { %>
+                                <% if (attr(product.attributes, sheet.name)) { %>
                                     <li class="product-sheet-item">
-                                        <b><%= sheet.label %></b>: <%- product[sheet.name] %>
+                                        <b><%= sheet.label %></b>: <%- attr(product.attributes, sheet.name) %>
                                     </li>
                                 <% } %>
                             <% }); %>
