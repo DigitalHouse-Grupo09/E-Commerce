@@ -5,17 +5,21 @@
 
 [data-theme="dark"] {
   background-color: var(--grey-dark) !important;
-  color: #eee;
+  color: var(--grey);
 }
 
 [data-theme="dark"] .category-title {
   background-color: var(--grey-dark);
-  color: #eee;
+  color: var(--grey);
 }
 
 [data-theme="dark"] header {
-  background-color: var(--grey-dark);
-  color: #eee;
+  background-color: var(--black);
+  color: var(--grey);
+}
+
+[data-theme="dark"] header .header-menu-items i {
+  color: var(--grey);
 }
 
 [data-theme="dark"] .header-nav .header-brand .header-brand-logo.header-brand-logo-dark {
@@ -24,6 +28,18 @@
 
 [data-theme="dark"] .header-nav .header-brand .header-brand-logo.header-brand-logo-light {
   display: block;
+}
+
+[data-theme="dark"] .products .product .product-content {
+  background-color: var(--black);
+  color: var(--grey);
+}
+
+[data-theme="dark"] .products .product .product-details,
+[data-theme="dark"] .products .product .product-title,
+[data-theme="dark"] .products .product .product-price,
+[data-theme="dark"] .category-icon {
+  color: var(--grey);
 }
 
 
