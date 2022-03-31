@@ -1719,8 +1719,3 @@ main {
     padding: var(--spacing-big) 0;
   }
 }
-
-.product-image{
-  height: 400px;
-  object-fit: fill;
-}
