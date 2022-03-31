@@ -10,7 +10,7 @@
 
   --red: #C13E18;
   --blue: #03264c;
-  --cyan: #1259c3;
+  --cyan: #27ABDB;
   --cyan-dark: #0022aa;
   --green: #39b54a;
   --grey-dark: #666;
@@ -19,7 +19,7 @@
   --white: #fff;
   --black: #272727;
   --black-dark: #000000; 
-  --orange: #ff8723;
+  --orange: #DB9215;
 
 
   --instagram: #ca396d;
@@ -226,19 +226,18 @@ a:active {
 .table {
   --bs-table-bg: transparent;
   --bs-table-accent-bg: transparent;
-  --bs-table-striped-color: #212529;
+  --bs-table-striped-color: var(--primary);
   --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
-  --bs-table-active-color: #212529;
+  --bs-table-active-color: var(--primary);
   --bs-table-active-bg: rgba(0, 0, 0, 0.1);
-  --bs-table-hover-color: #212529;
+  --bs-table-hover-color: var(--primary);
   --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
   width: 100%;
   margin-bottom: var(--spacing);
   background-color: transparent;
   border-collapse: collapse;
-  color: #212529;
   vertical-align: top;
-  border-color: #dee2e6;
+  border-color: var(--grey-dark);
 }
 
 .table > :not(caption) > * > * {

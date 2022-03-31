@@ -279,7 +279,10 @@
             });
 
             if (added) {
-                alert('\n\n¡FELICITACIONES!\n\n\nEl libro fue agregado correctament.');
+                toast.success({
+                    text: 'El libro fue agregado correctamente.',
+                    timeout: 4000
+                });
             }
         }));
 
@@ -291,7 +294,10 @@
             let exists = basket.find(p => p.id === product.id);
 
             if (exists) {
-                alert('\n\n******************\n* ADVERTENCIA *\n******************\n\n\nEl libro que usted esta agregando, ya se encuentra en el carrito.');
+                toast.warning({
+                    text: 'El libro que usted esta agregando, ya se encuentra en el carrito.',
+                    timeout: 4000
+                });
                 return false;
             }
 
