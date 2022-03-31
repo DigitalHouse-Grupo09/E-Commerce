@@ -264,15 +264,25 @@
         let botones = document.querySelectorAll('.addToCart');
 
         //-loop with elemnents
-        botones.forEach(boton => boton.addEventListener('click', () => {
-            addProductToBasket({
+        botones.forEach(boton => boton.addEventListener('click', e => {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            e.stopPropagation();
+
+            const product = {
                 id: boton.dataset.id,
                 title: boton.dataset.title,
                 price: boton.dataset.price,
                 amount: boton.dataset.amount,
                 currency: boton.dataset.currency,
                 image: boton.dataset.image
-            });
+            };
+
+            console.log(product);
+
+            addProductToBasket(product);
+
+            alert('¡El libro fue agregado correctament!');
         }));
 
         function addProductToBasket (product) {

@@ -1115,6 +1115,28 @@ main {
   padding-top: var(--spacing);
 }
 
+.products .product .product-details .product-busket {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  top: -50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 10px white;
+}
+
+.products .product:hover .product-details .product-busket {
+  display: flex;
+}
+
+.products .product .product-details .product-busket i {
+  color: var(--primary);
+}
+
 .products .product .product-title {
   margin-bottom: var(--spacing-sm);
 }
@@ -1134,6 +1156,7 @@ main {
   margin-left: var(--spacing);
   color: var(--green);
 }
+
 
 /*
  * CATEGORIES
