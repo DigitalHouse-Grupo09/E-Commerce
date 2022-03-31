@@ -13,6 +13,20 @@
   color: #eee;
 }
 
+[data-theme="dark"] header {
+  background-color: var(--grey-dark);
+  color: #eee;
+}
+
+[data-theme="dark"] .header-nav .header-brand .header-brand-logo.header-brand-logo-dark {
+  display: none;
+}
+
+[data-theme="dark"] .header-nav .header-brand .header-brand-logo.header-brand-logo-light {
+  display: block;
+}
+
+
 /*
  * Toogler icon Styles
  */
