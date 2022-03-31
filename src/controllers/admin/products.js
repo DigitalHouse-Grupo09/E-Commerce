@@ -2,6 +2,7 @@
 // imports
 //
 const multer = require('multer');
+const { Category, Author } = require('../../database');
 const { products } = require('../../models');
 
 //
@@ -11,7 +12,10 @@ const { products } = require('../../models');
 //
 // product creation
 //
-const create = (req, res) => res.render('admin/products/create');
+const create = async (req, res) => res.render('admin/products/create', {
+    categories: (await Category.findAll()),
+    authors: (await Author.findAll())
+});
 
 //
 // post creation

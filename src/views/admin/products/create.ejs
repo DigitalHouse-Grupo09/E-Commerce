@@ -9,54 +9,112 @@
 
     <!-- MAIN :: BEGIN -->
     <main>
-        <section class="form-wrapper">
-            <form action="/admin/products/create" method="POST" class="form">
-                <div class="form-group">
-                    <input type="text" id="title" name="title" placeholder="Titulo" class="form-input" value="<%= (locals.old || {}).title || '' %>">
+        <h1 class="create-title">Formulario de alta</h1>
+        <form action="/admin/products/create" method="POST" class="form">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+                <section class="w-100 lg:w-75">
+                    <div class="form-header mb-3">
+                        <h2>Datos principales</h2>
+                    </div>
+                    <div class="form-wrapper w-100 p-2">
+                        <div class="row form-group mx-0">
+                            <label for="title" class="form-label">Título <span class="required"></span></label>
+                            <input type="text" id="title" name="title" placeholder="Titulo del libro" class="form-input w-100" value="<%= (locals.old || {}).title || '' %>">
+                        </div>
+                        <div class="row form-group mx-0 mt-3">
+                            <label for="description" class="form-label">Descripción</label>
+                            <textarea name="description" placeholder="Breve reseña del libro" class="form-input w-100" rows="5" cols="43"><%= (locals.old || {}).description || '' %></textarea>
+                        </div>
+                        <div class="row form-group mx-0 mt-3">
+                            <label for="category" class="form-label">Categoría <span class="required"></span></label>
+                            <select name="category" class="form-select">
+                                <% categories.forEach(category => { %>
+                                    <option value="<%= category.id %>" <%= ((locals.old || {}).category || -1) === category.id ? 'selected' : '' %>><%- decodeUtf8(category.description) %></option>
+                                <% }); %>
+                            </select>
+                        </div>
+                        <div class="row form-group mx-0 mt-3">
+                            <div class="column-2 pl-0">
+                                <label for="price" class="form-label">Precio <span class="required"></span></label>
+                                <div class="form-input-wrapper">
+                                    <i class="fa fa-dollar form-input-icon form-input-icon-start"></i>
+                                    <input type="number" name="price" placeholder="Precio del libro" class="form-input form-input-start w-100" value="<%= (locals.old || {}).price || '' %>">
+                                </div>
+                            </div>
+                            <div class="column-2 pr-0">
+                                <label for="discount" class="form-label">Descuento</label>
+                                <div class="form-input-wrapper">
+                                    <input type="number" name="discount" placeholder="Descuento" class="form-input form-input-end w-100" value="<%= (locals.old || {}).discount || '' %>">
+                                    <i class="fa fa-percent form-input-icon form-input-icon-end"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="w-100 lg:w-75">
+                    <div class="form-header my-3">
+                        <h2>Imagenes</h2>
+                    </div>
+                    <div class="form-wrapper w-100 p-2">
+                        <div class="row form-group mx-0 mt-3">
+                            <label for="image" class="form-label">Portada del libro</label>
+                            <input type="file" name="image" placeholder="Imagen" class="form-input w-100" value="<%= (locals.old || {}).image || '' %>"> 
+                            <small class="form-help">
+                                <i class="fa-solid fa-circle-info"></i> Actualmente solo contamos con una imagen por libro. Próximamente se podran agregar hasta 5 imagenes.
+                            </small>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="w-100 lg:w-75">
+                    <div class="form-header my-3">
+                        <h2>Información adicional</h2>
+                    </div>
+                    <div class="form-wrapper w-100 p-2">
+                        <div class="row form-group mx-0 mt-3">
+                            <label for="author" class="form-label">Author <span class="required"></span></label>
+                            <select name="author" class="form-select">
+                                <% authors.forEach(author => { %>
+                                    <option value="<%= author.id %>" <%= ((locals.old || {}).author || -1) === author.id ? 'selected' : '' %>><%= author.full_name %></option>
+                                <% }); %>
+                            </select>
+                        </div>
+
+                        <!-- SHEET AVAILABLES -->
+                        <% const sheetProperties = []; %>
+                        <% sheetProperties.push({ name: 'published_at', label: 'Fecha de publicación', placeholder: 'MM/AAAA' }); %>
+                        <% sheetProperties.push({ name: 'pages', label: 'Páginas' }); %>
+                        <% sheetProperties.push({ name: 'language', label: 'Idioma', type: 'select', options: ['Español', 'Ingles', 'Francés', 'Portugues'] }); %>
+                        <% sheetProperties.push({ name: 'editorial', label: 'Editorial' }); %>
+                        <% sheetProperties.push({ name: 'presentation', label: 'Presentación' }); %>
+
+                        <!-- SHEET EACH -->
+                        <% sheetProperties.forEach(sheet => { %>
+                            <% sheet.type = sheet.type || 'text'; %>
+
+                            <div class="row form-group mx-0">
+                                <label for="<%= sheet.name %>" class="form-label"><%= sheet.label %></label>
+                                <% if (sheet.type === 'select' ) { %>
+                                    <select name="<%= sheet.name %>" class="form-select">
+                                        <% sheet.options.forEach(option => { %>
+                                            <option value="<%= option %>" <%= ((locals.old || {}).option || '') === option ? 'selected' : '' %>><%= option %></option>
+                                        <% }); %>
+                                    </select>
+                                <% } else { %>
+                                    <input type="<%= sheet.type %>" id="<%= sheet.name %>" name="<%= sheet.name %>" placeholder="<%= sheet.placeholder || '' %>" class="form-input w-100" value="<%= (locals.old || {})[sheet.name] || '' %>">
+                                <% } %>
+                            </div>
+                        <% }); %>
+                    </div>
+                </section>
+
+                <div class="row form-actions my-3">
+                    <button type="submit" class="form-action-submit">Crear</button>
+                    <a href="/admin" class="form-action-cancel">Cancelar</a>
                 </div>
-                <div class="form-group">
-                    <textarea name="description" placeholder="Descripción" class="form-input" rows="5" cols="43"><%= (locals.old || {}).description || '' %></textarea>
-                </div>
-                <div class="form-group">
-                    <input type="file" name="image" placeholder="Imagen" class="form-input" value="<%= (locals.old || {}).image || '' %>"> 
-                </div>
-                <div class="form-group">
-                    <input type="number" name="price" placeholder="Precio" class="form-input" value="<%= (locals.old || {}).price || '' %>">
-                </div>
-                <div class="form-group">
-                    <input type="number" name="discount" placeholder="Descuento" class="form-input" value="<%= (locals.old || {}).discount || '' %>">
-                </div>
-                <div class="form-group">
-                    <input type="text" name="author" placeholder="Autor" class="form-input" value="<%= (locals.old || {}).author || '' %>">
-                </div>
-                <div class="form-group">
-                    <label for="publishedAt" class="form-label">Fecha de publicación</label>
-                    <input type="date" name="publishedAt" class="form-input" value="<%= (locals.old || {}).publishedAt || '' %>">
-                </div>
-                <div class="form-group">
-                    <input type="number" name="pages" placeholder="Cantidad de paginas" class="form-input" value="<%= (locals.old || {}).pages || '' %>">
-                </div>
-                <div class="form-group">
-                    <label for="language" class="form-label">Seleccionar idioma</label>
-                    <select name="language">
-                        <option value="spanish" <%= ((locals.old || {}).language || '') === 'spanish' ? 'selected' : '' %>>Español</option>
-                        <option value="english" <%= ((locals.old || {}).language || '') === 'english' ? 'selected' : '' %>>Inglés</option>
-                        <option value="french" <%= ((locals.old || {}).language || '') === 'french' ? 'selected' : '' %>>Francés</option>
-                        <option value="portuguese" <%= ((locals.old || {}).language || '') === 'portuguese' ? 'selected' : '' %>>Portugues</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="editorial" placeholder="Tamaño" class="form-input" value="<%= (locals.old || {}).editorial || '' %>">
-                </div>
-                <div class="form-group">
-                    <input type="text" name="presentation" placeholder="Presentación" class="form-input" value="<%= (locals.old || {}).presentation || '' %>">
-                </div>
-                <div class="form-actions">
-                    <button type="submit" class="form-action-submit">Enviar</button>
-                    <button type="reset" class="form-action-reset">Limpiar</button>
-                </div>
-            </form>
-        </section>
+            </div>
+        </form>
     </main>
     <!-- MAIN :: END -->
 
