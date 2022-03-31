@@ -1,13 +1,24 @@
 //
 // admin session
 //
+const sessionMiddleware = (req, res, next) => {
+    if (req.session) {
+        // Set session on all views
+        res.locals = res.locals || {};
+        res.locals.session = res.locals.session || {};
+        res.locals.session.user = req.session.admin || req.session.client;
+        res.locals.session.isLogged = !!res.locals.session.user;
+    }
+    return next();
+};
+
+//
+// admin session
+//
 const adminMiddleware = (req, res, next) => {
-    if (!req.session.admin) {
+    if (!req.session || !req.session.admin) {
         return res.redirect('/admin/login');
     }
-    // Set session on all views
-    res.locals = res.locals || {};
-    res.locals.session = req.session.user;
     return next();
 };
 
@@ -15,16 +26,13 @@ const adminMiddleware = (req, res, next) => {
 // client session
 //
 const clientMiddleware = (req, res, next) => {
-    if (!req.session.client) {
+    if (!req.session || !req.session.client) {
         return res.redirect('/client/login');
     }
-    // Set session on all views
-    res.locals = res.locals || {};
-    res.locals.session = req.session;
     return next();
 };
 
 //
 // export
 //
-module.exports = { adminMiddleware, clientMiddleware };
+module.exports = { sessionMiddleware, adminMiddleware, clientMiddleware };

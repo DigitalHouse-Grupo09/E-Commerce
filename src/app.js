@@ -14,6 +14,7 @@ const session = require('express-session');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
+const middlewares = require('./middlewares');
 const { Category } = require('./database');
 const locals = require('./helpers/locals');
 const routes = require('./routes');
@@ -38,6 +39,7 @@ app.use(session({
     saveUninitialized: false,
     resave: true
 }));
+app.use(middlewares.session.sessionMiddleware);
 
 //
 // template engine

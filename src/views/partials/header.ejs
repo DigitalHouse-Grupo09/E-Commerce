@@ -89,10 +89,10 @@
             </label>
           </div>
         </li>
-        <% if (locals.session) { %>
-        <li data-tooltip title="Salir">
-          <a href="/admin/logout"><i class="fas fa-sign-out-alt"></i></a>
-        </li>
+        <% if (locals.session && locals.session.isLogged) { %>
+          <li data-tooltip title="Salir">
+            <a href="/admin/logout"><i class="fas fa-sign-out-alt"></i></a>
+          </li>
         <% } %>
       </ul>
     </div>

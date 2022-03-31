@@ -11,12 +11,12 @@
     <main class="main-fluid">
         <section class="admin">
             <div class="title-subtitle">
-                <h1 class="title-subtitle-title">
-                    Bienvenido
+                <h3 class="title-subtitle-title">
+                    Bienvenido <span class="text-primary">@<%= locals.session.user.name %></span>
                     <small class="mt-1 float-end">
                         <a href="/admin/products/create"><i class="fa-solid fa-file-circle-plus"></i></a>
                     </small>
-                </h1>
+                </h3>
             </div>
 
             <!-- PRODUCT :: LIST :: BEGIN -->

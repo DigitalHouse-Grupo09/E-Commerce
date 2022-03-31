@@ -552,6 +552,10 @@ a:active {
   width: 50% !important;
 }
 
+.w-25 {
+  width: 25% !important;
+}
+
 /*
  * POSITIONS
  */
@@ -1450,6 +1454,10 @@ main {
 
   .lg\:w-50 {
     width: 50% !important;
+  }
+
+  .lg\:w-25 {
+    width: 25% !important;
   }
 
   /*
