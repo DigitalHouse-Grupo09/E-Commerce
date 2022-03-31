@@ -269,39 +269,64 @@
             e.stopImmediatePropagation();
             e.stopPropagation();
 
-            const product = {
+            const added = addProductToBasket({
                 id: boton.dataset.id,
                 title: boton.dataset.title,
                 price: boton.dataset.price,
                 amount: boton.dataset.amount,
                 currency: boton.dataset.currency,
                 image: boton.dataset.image
-            };
+            });
 
-            console.log(product);
-
-            addProductToBasket(product);
-
-            alert('¡El libro fue agregado correctament!');
+            if (added) {
+                alert('\n\n¡FELICITACIONES!\n\n\nEl libro fue agregado correctament.');
+            }
         }));
 
+        /**
+         * Add product to busket
+         */
         function addProductToBasket (product) {
             let basket = JSON.parse(localStorage.getItem('basket') || '[]');
+            let exists = basket.find(p => p.id === product.id);
+
+            if (exists) {
+                alert('\n\n******************\n* ADVERTENCIA *\n******************\n\n\nEl libro que usted esta agregando, ya se encuentra en el carrito.');
+                return false;
+            }
 
             basket.push(product);
             localStorage.setItem('basket', JSON.stringify(basket));
+
+            countProductsOnBasket();
+            return true;
         }
 
-        function onLoadProductsOnBasket () {
+        /**
+         * Count product on busket
+         */
+        function countProductsOnBasket () {
             let basket = JSON.parse(localStorage.getItem('basket') || '[]');
-            const countItem = document.querySelector('.countItem');
+            const counter = document.querySelector('#busket-count');
 
-            if (countItem && basket && basket.length) {
-                countItem.textContent = basket.length;
+            if (counter) {
+                if (basket && basket.length) {
+                    counter.style.display = 'flex';
+                    counter.textContent = basket.length;
+                }
+                else {
+                    counter.style.display = 'none';
+                    counter.textContent = '0';
+                }
             }
         }
 
-        onLoadProductsOnBasket();
+        // Globalize function for all site
+        window.addProductToBasket = addProductToBasket;
+        window.countProductsOnBasket = countProductsOnBasket;
+
+        // Force count products on busket on initial screen load
+        countProductsOnBasket();
     });
 })();
 

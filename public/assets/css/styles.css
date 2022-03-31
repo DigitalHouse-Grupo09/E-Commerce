@@ -8,6 +8,7 @@
   --primary-dark: #369964;
   --primary-light: #82cea5;
 
+  --red: #C13E18;
   --blue: #03264c;
   --cyan: #1259c3;
   --cyan-dark: #0022aa;
@@ -572,6 +573,35 @@ a:active {
 .pr-3, .p-3 { padding-right: var(--spacing-lg); }
 .pr-4, .p-4 { padding-right: var(--spacing-xl); }
 .pr-5, .p-5 { padding-right: var(--spacing-big); }
+
+/*
+ * POSITIONS
+ */
+.relative {
+  position: relative;
+}
+
+/*
+ * BADGE
+ */
+.badge {
+  position: absolute;
+  color: var(--black);
+  bottom: 0;
+  right: -12px;
+  width: 1em;
+  height: 1em;
+  background-color: var(--primary);
+  text-align: center;
+  align-self: flex-end;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -12px;
+  font-size: 0.8em;
+  padding: 8px;
+}
 
 /*
  * HEADER

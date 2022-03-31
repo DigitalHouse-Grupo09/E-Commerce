@@ -27,6 +27,8 @@
         });
 
         totalProducts.text(`$ ${numeral(total).format('0,0.00')}`);
+
+        countProductsOnBasket();
     }
 
     $(() => render());
