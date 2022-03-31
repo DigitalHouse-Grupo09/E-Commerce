@@ -163,15 +163,9 @@
     });
 
     /**
+     * funcion que agrega o remueve el atributo data-theme dependiendo si esta el switch en on/off
      * Summary: function that adds or removes the attribute 'data-theme' depending if
      * the switch is 'on' or 'off'.
-     *
-     * Description: initTheme is a function that uses localStorage from JavaScript DOM,
-     * to store the value of the HTML switch. If the switch was already switched to
-     * 'on' it will set an HTML attribute to the body named: 'data-theme' to a 'dark'
-     * value. If it is the first time opening the page, or if the switch was off the
-     * 'data-theme' attribute will not be set.
-     * @return {void}
      */
     function initTheme() {
       var darkThemeSelected =
@@ -184,10 +178,7 @@
     }
 
     /**
-     * Summary: resetTheme checks if the switch is 'on' or 'off' and if it is toggled
-     * on it will set the HTML attribute 'data-theme' to dark so the dark-theme CSS is
-     * applied.
-     * @return {void}
+     * ResetTheme chequea si el switch esta en on/off, si esta en on seteara el atributo data-theme a dark
      */
     function resetTheme() {
       if (darkSwitch.checked) {
