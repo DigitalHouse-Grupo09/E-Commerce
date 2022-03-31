@@ -63,6 +63,7 @@ app.engine('ejs', ejs.renderFile);
     app.use('/admin', routes.admin);
     app.use('/client', routes.client);
     app.use('/products', routes.products);
+    app.use('/categories', routes.categories);
     app.use('/cart', routes.cart);
 
     //

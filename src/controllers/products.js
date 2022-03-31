@@ -17,10 +17,6 @@ const productById = (req, res, next) => {
     return res.render('products/details', { product });
 };
 
-const results = (req, res, next) => {
-    
-}
-
 //
 // export
 //

@@ -2,48 +2,21 @@
  * CATEGORIES
  */
 
-.category-literatura:before {
+.category-icon {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
-    content: "\f02d"
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
 }
-.category-conocimiento-y-ciencia:before {
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    content: "\f5dc"
-}
-.category-comic-y-fantasia:before {
-    font-family: "Font Awesome 6 Brands";
-    font-weight: 900;
-    content: "\f2dd"
-}
-.category-cocina-y-gastronomia:before {
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    content: "\f805"
-}
-.category-infantil-y-juvenil:before {
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    content: "\f77c"
-}
-.category-actualidad-y-empresa:before {
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    content: "\f1ad"
-}
-.category-bienestar-y-salud:before {
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    content: "\f48e"
-}
-.category-viajes-y-negocio:before {
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    content: "\f4d7"
-}
-.category-agendas-y-calendarios:before {
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    content: "\f133"
-}
+
+.category-icon.category-literatura:before {content: "\f02d"}
+.category-icon.category-conocimiento-y-ciencia:before {content: "\f5dc"}
+.category-icon.category-comic-y-fantasia:before {content: "\f2dd";font-family: "Font Awesome 6 Brands"}
+.category-icon.category-cocina-y-gastronomia:before {content: "\f805"}
+.category-icon.category-infantil-y-juvenil:before {content: "\f77c"}
+.category-icon.category-actualidad-y-empresa:before {content: "\f1ad"}
+.category-icon.category-bienestar-y-salud:before {content: "\f48e"}
+.category-icon.category-viajes-y-negocio:before {content: "\f4d7"}
+.category-icon.category-agendas-y-calendarios:before {content: "\f133"}
