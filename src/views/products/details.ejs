@@ -35,7 +35,17 @@
                         </div>
 
                         <div class="form-actions form-actions-end">
-                            <button type="button" class="btn btn-primary addToCart"><i class="fas fa-cart-arrow-down" ></i> Agregar al carrito</button>
+                            <button
+                                type="button"
+                                class="btn btn-primary addToCart"
+                                data-id="<%= product.id %>"
+                                data-title="<%= attr(product.attributes, 'title') %>"
+                                data-price="<%= formatPrice(product.price.amount, product.price.currency) %>"
+                                data-amount="<%= product.price.amount %>"
+                                data-currency="<%= product.price.currency %>"
+                                data-image="<%= firstImage(product) %>" >
+                                <i class="fas fa-cart-arrow-down" ></i> Agregar al carrito
+                            </button>
                         </div>
                     </form>
 

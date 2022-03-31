@@ -1,6 +1,6 @@
 <article class="product column-1 md:column-2 lg:column-4" data-id="<%= product.id %>">
-    <a href="/<%= product.slug %>">
-        <div class="product-content">
+    <div class="product-content">
+        <a href="/<%= product.slug %>">
             <figure>
                 <img class="product-image" src="<%= firstImage(product) %>" width="100%" />
             </figure>
@@ -10,6 +10,6 @@
                     <span class="product-amount"><%= formatPrice(product.price.amount, product.price.currency) %></span> <% if (product.price.discount_amount) { %><small class="product-offer"><%= formatDiscount(product.price.discount_amount, product.price.discount_type) %></small><% } %>
                 </p>
             </div>
-        </div>
-    </a>
+        </a>
+    </div>
 </article>

@@ -19,7 +19,7 @@
                 </p>
             </div>
             <form class="form">
-                <table class="table">
+                <table id="products-table" class="table">
                     <!-- HEADERS -->
                     <thead>
                         <tr>
@@ -31,32 +31,7 @@
                     </thead>
 
                     <!-- PRODUCTS -->
-                    <tbody>
-                        <tr>
-                            <td class="text-left">
-                                <div class="symbol">
-                                    <figure class="symbol-media">
-                                        <img class="symbol-media-image" src="<%= products[0].image %>" width="100%" />
-                                    </figure>
-                                    <div class="symbol-content">
-                                        <h4 class="symbol-title"><%= products[0].title %></h4>
-                                        <p class="symbol-subtitle">
-                                            <a href="/" class="text-primary">
-                                                <small><i class="fas fa-trash"></i> eliminar</small>
-                                            </a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="text-right"><%= products[0].price %></td>
-                            <td class="text-right">
-                                <div class="form-group">
-                                    <input type="number" id="product-quantity" name="product-quantity" class="form-input" value="1" style="width: 80px" />
-                                </div>
-                            </td>
-                            <td class="text-right"><%= products[0].price %></td>
-                        </tr>
-                    </tbody>
+                    <tbody></tbody>
 
                     <!-- FOOTER -->
                     <tfoot>
@@ -65,7 +40,7 @@
                             <th></th>
                             <th></th>
                             <th class="text-right">
-                                <b>Total</b>: <%= products[0].price %>
+                                <b>Total</b>: <span id="products-total"><span>
                             </th>
                         </tr>
                     </tfoot>
@@ -79,8 +54,38 @@
     </main>
     <!-- MAIN :: END -->
 
+    <!-- TEMPLATES :: START -->
+    <template id="product-row">
+        <tr>
+            <td class="text-left">
+                <div class="symbol">
+                    <figure class="symbol-media">
+                        <img class="symbol-media-image" src="[[= product.image ]]" width="35%" />
+                    </figure>
+                    <div class="symbol-content">
+                        <h4 class="symbol-title">[[= product.title ]]</h4>
+                        <p class="symbol-subtitle">
+                            <a href="#" class="text-primary remoteToCard" data-id="[[= product.id ]]">
+                                <small><i class="fas fa-trash"></i> eliminar</small>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </td>
+            <td class="text-right">[[= product.price ]]</td>
+            <td class="text-right">
+                <div class="form-group">
+                    <input type="number" id="product-quantity" name="product-quantity" class="form-input" value="1" style="width: 60px" disabled />
+                </div>
+            </td>
+            <td class="text-right">[[= product.price ]]</td>
+        </tr>
+    </template>
+    <!-- TEMPLATES :: END -->
+
     <%- include('../partials/footer') %>
 
     <%- include('../partials/scripts') %>
+    <script src="/assets/js/busket.js"></script>
 </body>
 </html>

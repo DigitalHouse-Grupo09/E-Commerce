@@ -254,3 +254,53 @@
         output.innerHTML = "";
     });
 })();
+
+
+/**
+ * BUSKET
+ */
+ (function () {
+    window.addEventListener('load', () => {
+        let botones = document.querySelectorAll('.addToCart');
+
+        //-loop with elemnents
+        botones.forEach(boton => boton.addEventListener('click', () => {
+            addProductToBasket({
+                id: boton.dataset.id,
+                title: boton.dataset.title,
+                price: boton.dataset.price,
+                amount: boton.dataset.amount,
+                currency: boton.dataset.currency,
+                image: boton.dataset.image
+            });
+        }));
+
+        function addProductToBasket (product) {
+            let basket = JSON.parse(localStorage.getItem('basket') || '[]');
+
+            basket.push(product);
+            localStorage.setItem('basket', JSON.stringify(basket));
+        }
+
+        function onLoadProductsOnBasket () {
+            let basket = JSON.parse(localStorage.getItem('basket') || '[]');
+            const countItem = document.querySelector('.countItem');
+
+            if (countItem && basket && basket.length) {
+                countItem.textContent = basket.length;
+            }
+        }
+
+        onLoadProductsOnBasket();
+    });
+})();
+
+
+/**
+ * LODASH
+ */
+_.templateSettings = {
+    evaluate: /\[\[([\s\S]+?)\]\]/g,
+    interpolate: /\[\[=([\s\S]+?)\]\]/g,
+    escape: /\[\[-([\s\S]+?)\]\]/g
+};
