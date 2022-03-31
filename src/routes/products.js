@@ -8,7 +8,7 @@ const controller = require('../controllers/products');
 //
 // mapping
 //
-router.get('/:id', controller.productById);
+router.get('/:slug', controller.productById);
 
 //
 // export
