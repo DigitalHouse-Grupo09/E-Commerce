@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <%- include('../partials/metas') %>
@@ -7,8 +8,71 @@
     <%- include('../partials/header') %>
 
     <!-- MAIN :: BEGIN -->
-    <main>
-        <h1> PAY </h1>
+
+    <main class="login">
+        <h1 class="create-title">Información de Pago</h1>
+        <form action="/admin/login" method="POST" class="form">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+                <section class="w-100 lg:w-25">
+                    <div class="form-wrapper w-100 p-2">
+                        <section>
+                            <label>Información Personal</label> 
+
+                            <div class="row form-group mx-0">
+                                <label for="name" class="form-label">Nombre y Apellido</label>
+                                <input type="text" id="name" name="name" placeholder="Pedro Alfonso" class="form-input w-100" value="">
+                            </div>
+                            <div class="row form-group mx-0">
+                                <label for="address" class="form-label">Dirección</label>
+                                <input type="text" id="address" name="address" placeholder="Antartica Armenia 767" class="form-input w-100" value="">
+                            </div>
+                            <div class="row form-group mx-0">
+                                <label for="dni" class="form-label">DNI</label>
+                                <input type="text" id="dni" name="dni" placeholder="40.226.777" class="form-input w-100" value="">
+                            </div>
+
+                        </section>
+                        <section>
+                            <label>Seleccione el metodo de pago</label>
+
+                              <label><input type="checkbox" id="card" value="card"> Tarjeta de debito / Credito</label>
+                                <div class="row form-group mx-0">
+                                    <label for="name" class="form-label">Nombre del Titular</label>
+                                    <input type="text" id="name" name="name" placeholder="Juan Román" class="form-input w-100" value="">
+                                </div>
+                                <div class="row form-group mx-0">
+                                    <label for="card" class="form-label">Numero de Tarjeta</label>
+                                    <input type="text" id="card" name="card" placeholder="3777 9577744 55221" class="form-input w-100" value="">
+                                </div>
+                                <div class="row form-group mx-0">
+                                    <label for="date" class="form-label">Fecha de expiración</label>
+                                    <input type="text" id="date" name="date" placeholder="07/2025" class="form-input w-100" value="">
+                                </div>
+                                <div class="row form-group mx-0">
+                                    <label for="securityCode" class="form-label">Codigo de seguridad</label>
+                                    <input type="text" id="securityCode" name="securityCode" placeholder="1234" class="form-input w-100" value="">
+                                </div>  
+
+                              <label><input type="checkbox" id="cash" value="cash"> Efectivo </label>
+
+                                <!-- COMPLETAR -->
+
+                              <label><input type="checkbox" id="transfer" value="transfer"> Transferencia </label>
+
+                                <!-- COMPLETAR -->
+
+
+                            </select>
+                            
+                        </section>
+                    </div>  
+                </section>
+
+                <div class="row form-actions my-3">
+                    <button type="submit" class="form-action-submit">Ingresar</button>
+                </div>
+            </div>
+        </form>
     </main>
     <!-- MAIN :: END -->
 
