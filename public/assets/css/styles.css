@@ -103,6 +103,7 @@ body {
 input,
 textarea,
 select {
+  font-family: var(--font-family);
   border: 1px solid var(--grey-light);
   border-radius: var(--radius);
   margin: 0;
@@ -166,8 +167,8 @@ a:active {
 
 /* GRID */
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: var(--spacing);
+  padding-left: var(--spacing);
   margin-right: auto;
   margin-left: auto;
 }
