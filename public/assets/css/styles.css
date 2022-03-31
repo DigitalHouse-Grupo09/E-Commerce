@@ -603,6 +603,14 @@ header {
   height: 30px;
 }
 
+.header-nav .header-brand .header-brand-logo.header-brand-logo-dark {
+  display: block;
+}
+
+.header-nav .header-brand .header-brand-logo.header-brand-logo-light {
+  display: none;
+}
+
 .header-nav .header-search-wrapper {
   display: none;
   flex-basis: 30%;
@@ -1092,6 +1100,7 @@ main {
 /*
  * PRODUCTS
  */
+
 .products .product .product-content {
   padding: var(--spacing);
   margin: var(--spacing-sm);
@@ -1704,4 +1713,9 @@ main {
   .login {
     padding: var(--spacing-big) 0;
   }
+}
+
+.product-image{
+  height: 400px;
+  object-fit: fill;
 }
