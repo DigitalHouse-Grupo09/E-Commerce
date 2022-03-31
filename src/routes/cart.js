@@ -11,6 +11,7 @@ const upload = require('../helpers/image');
 // mapping
 //
 router.get('/', controller.cart);
+router.post('/', middlewares.session.clientMiddleware, controller.pay)
 
 //
 // export
