@@ -7,3 +7,36 @@
 span{
     font-size: 1.5rem;
 }
+
+/*
+// PAY
+*/
+
+.pay-title {
+  white-space: pre;
+  margin-bottom: 15px;
+}
+
+.cardInfo {
+    display: none;
+}
+
+.show-cardInfo:checked + label .cardInfo{
+    display: block; 
+}
+
+.cashInfo {
+    display: none;
+}
+
+.show-cashInfo:checked + label .cashInfo{
+    display: block; 
+}
+
+.transferInfo {
+    display: none;
+}
+
+.show-transferInfo:checked + label .transferInfo{
+    display: block; 
+}
