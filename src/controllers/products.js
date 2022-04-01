@@ -16,7 +16,7 @@ const productById = async (req, res, next) => {
             id: Number(id)
         }
     });
-
+console.log(JSON.stringify(product,null,2));
     if (!product) {
         // Strategy used for response with 404
         return next();
