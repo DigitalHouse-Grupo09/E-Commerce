@@ -14,9 +14,9 @@
         <form action="/admin/login" method="POST" class="form">
             <div class="d-flex flex-column align-items-center justify-content-center">
                 <section class="w-100 lg:w-25">
-                    <div class="form-wrapper w-100 p-2">
-                        <section>
-                            <label>Información Personal</label> 
+                    <div  class= "d-flex">
+                        <section class="form-wrapper w-100 p-2">
+                            <h3 class="pay-title">Información Personal</h3> 
 
                             <div class="row form-group mx-0">
                                 <label for="name" class="form-label">Nombre y Apellido</label>
@@ -32,37 +32,56 @@
                             </div>
 
                         </section>
-                        <section>
-                            <label>Seleccione el metodo de pago</label>
+                        <section class="form-wrapper w-100 p-2">
+                            <h3 class="pay-title">Seleccionar forma de pago</h3>
 
-                              <label><input type="checkbox" id="card" value="card"> Tarjeta de debito / Credito</label>
-                                <div class="row form-group mx-0">
-                                    <label for="name" class="form-label">Nombre del Titular</label>
-                                    <input type="text" id="name" name="name" placeholder="Juan Román" class="form-input w-100" value="">
-                                </div>
-                                <div class="row form-group mx-0">
-                                    <label for="card" class="form-label">Numero de Tarjeta</label>
-                                    <input type="text" id="card" name="card" placeholder="3777 9577744 55221" class="form-input w-100" value="">
-                                </div>
-                                <div class="row form-group mx-0">
-                                    <label for="date" class="form-label">Fecha de expiración</label>
-                                    <input type="text" id="date" name="date" placeholder="07/2025" class="form-input w-100" value="">
-                                </div>
-                                <div class="row form-group mx-0">
-                                    <label for="securityCode" class="form-label">Codigo de seguridad</label>
-                                    <input type="text" id="securityCode" name="securityCode" placeholder="1234" class="form-input w-100" value="">
-                                </div>  
+                                <!-- PAY WITH CREDIT/DEBIT CARD -->
+                                <input class= "show-cardInfo" type="radio" id="card" value="card" name="paymentMethod"> Tarjeta de debito / Credito
+                                <label class="row form-group mx-0" for="card"> 
 
-                              <label><input type="checkbox" id="cash" value="cash"> Efectivo </label>
+                                    <div class="cardInfo">
+                                        <div class="row form-group mx-0">
+                                            <label for="name" class="form-label">Nombre del Titular</label>
+                                            <input type="text" id="name" name="name" placeholder="Juan Román" class="form-input w-100" value="">
+                                        </div>
+                                        <div class="row form-group mx-0">
+                                            <label for="card" class="form-label">Numero de Tarjeta</label>
+                                            <input type="text" id="card" name="card" placeholder="3777 9577744 55221" class="form-input w-100" value="">
+                                        </div>
+                                        <div class="row form-group mx-0">
+                                            <label for="date" class="form-label">Fecha de expiración</label>
+                                            <input type="text" id="date" name="date" placeholder="07/2025" class="form-input w-100" value="">
+                                        </div>
+                                        <div class="row form-group mx-0">
+                                            <label for="securityCode" class="form-label">Codigo de seguridad</label>
+                                            <input type="text" id="securityCode" name="securityCode" placeholder="1234" class="form-input w-100" value="">
+                                        </div>  
+                                    </div>
 
-                                <!-- COMPLETAR -->
+                                </label>
 
-                              <label><input type="checkbox" id="transfer" value="transfer"> Transferencia </label>
+                                <!-- PAY WITH CASH -->
+                                <input class="show-cashInfo" type="radio" id="cash" value="cash" name="paymentMethod"> Efectivo 
+                                <label class="row form-group mx-0" for="cash">
 
-                                <!-- COMPLETAR -->
+                                    <div class="cashInfo">
+                                        <label><input type="radio" id="rapiPago" value="rapiPago" name="paymentPlace"> RapiPago </label>
+                                        <label><input type="radio" id="pagoFacil" value="pagoFacil" name="paymentPlace"> PagoFacil </label>
+                                    </div>
 
+                                </label>
 
-                            </select>
+                                <!-- PAY WITH TRANSFER -->
+
+                                <input class= "show-transferInfo" type="radio" id="transfer" value="transfer" name="paymentMethod"> Transferencia 
+                                <label class="row form-group mx-0 ">
+
+                                    <div class="transferInfo">
+                                        <p> CBU: 123456789 </p>
+                                        <p> ALIAS: Pepito.Sapo.Pajaro </p>
+                                    </div>
+
+                                </label>
                             
                         </section>
                     </div>  
