@@ -42,6 +42,10 @@
   color: var(--grey);
 }
 
+[data-theme="dark"] .form-wrapper {
+  background-color: var(--black);
+}
+
 
 /*
  * Toogler icon Styles

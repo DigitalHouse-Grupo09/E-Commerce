@@ -8,45 +8,58 @@
     <%- include('../partials/header') %>
 
     <!-- MAIN :: BEGIN -->
+
     <main class="login">
-        <section class="form-wrapper">
-            <!-- FORM -->
-            <form method="POST" action="/client/register" class="form">
+        <h1 class="create-title">Registración</h1>
+        <form action="/client/register" method="POST" class="form">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+                <section class="w-100 lg:w-25">
+                    <div class="form-wrapper w-100 p-2">
+                        <div class="row form-group mx-0">
+                            <label for="full_name" class="form-label">Nombre completo</label>
+                            <input type="text" id="full_name" name="full_name" placeholder="..." class="form-input w-100" value="<%= (locals.old || {}).full_name || '' %>">
+                            <% if(locals.errors && errors.full_name) { %>
+                                <p class="feedback"><%= errors.full_name.msg %></p>
+                            <% } %>
+                        </div>
+                        <div class="row form-group mx-0">
+                            <label for="email" class="form-label">Correo electronico</label>
+                            <input type="text" id="email" name="email" placeholder="johndoe@email.com" class="form-input w-100" value="<%= (locals.old || {}).email || '' %>">
+                            <% if(locals.errors && errors.email) { %>
+                                <p class="feedback"><%= errors.email.msg %></p>
+                            <% } %>
+                            <small class="form-help">
+                                <i class="fa-solid fa-circle-info"></i> Tu correo electrónico sera tu <b>usuari@</b>
+                            </small>
+                        </div>
+                        <div class="row form-group mx-0">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="password" id="password" name="password" placeholder="********" class="form-input w-100" value="">
+                            <% if(locals.errors && errors.password) { %>
+                                <p class="feedback"><%= errors.password.msg %></p>
+                            <% } %>
+                        </div>
+                        <div class="row form-group mx-0">
+                            <label for="password_confirm" class="form-label">Confirmar contraseña</label>
+                            <input type="password" id="password_confirm" name="password_confirm" placeholder="********" class="form-input w-100" value="">
+                            <% if(locals.errors && errors.password_confirm) { %>
+                                <p class="feedback"><%= errors.password_confirm.msg %></p>
+                            <% } %>
+                        </div>
+                    </div>
+                </section>
 
-                <!-- FORM :: ACCOUNT -->
-                <div class="form-group form-group-column">
-                    <input type="text" class="form-input" id="name" name="name" placeholder="Nombre y apellido" value="<%= locals.old && old.name %>"/>
-                    <% if(locals.errors && errors.name) { %>
-
-                        <p class="feedback"> <%= errors.name.msg %> </p>
-
-                    <% } %>
+                <div class="client-register">
+                    <a href="/client/login">
+                        <small>¿Ya tenes usuari@? Ingresa!</small>
+                    </a>
                 </div>
-                <div class="form-group form-group-column">
-                    <input type="text" class="form-input" id="email" name="email" placeholder="Email" value="<%= locals.old && old.email %>"/>
-                    <% if(locals.errors && errors.email) { %>
 
-                        <p class="feedback"> <%= errors.email.msg %> </p>
-
-                    <% } %>
+                <div class="row form-actions my-3">
+                    <button type="submit" class="form-action-submit">Registrar</button>
                 </div>
-                <div class="form-group form-group-column">
-                    <input type="password" class="form-input" id="password" name="password" placeholder="Contraseña" value="<%= locals.old && old.password %>"/>
-                    <% if(locals.errors && errors.password) { %>
-
-                        <p class="feedback"> <%= errors.password.msg %> </p>
-
-                    <% } %>
-                </div>
-
-                <div class="separator separator-dashed"></div>
-
-                <!-- FORM :: ACTIONS -->
-                <div class="form-actions form-actions-center">
-                    <button type="submit" class="form-action-submit">Registrarme</button>
-                </div>
-            </form>   
-        </section>
+            </div>
+        </form>
     </main>
     <!-- MAIN :: END -->
 

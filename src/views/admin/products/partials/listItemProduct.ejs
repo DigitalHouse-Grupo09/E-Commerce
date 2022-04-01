@@ -9,12 +9,12 @@
     </td>
     <td class="text-right"><%= formatPrice(product.price.amount, product.price.currency) %></td>
     <td><%= authorsName(product) %></td>
-    <td><%= attr(product.attributes, 'language') %></td>
+    <td><%= attr(product.attributes, 'editorial') %></td>
     <td><%= attr(product.attributes, 'published_at') %></td>
     <td>
         <div class="d-flex align-items-center justify-content-center">
-            <a href="/admin/products/update/<%= product.id %>" class="text-center" title="Editar">📝</a>
-            <a href="#" onclick="destroyProduct(event, <%= product.id %>)" style="margin-left:15px;" class="text-center" title="Borrar">🗑</a>
+            <a href="/admin/products/update/<%= product.id %>" class="text-center" title="Editar"><i class="fa-solid fa-pen-to-square"></i></a>
+            <a href="#" onclick="destroyProduct(event, <%= product.id %>)" style="margin-left:15px;" class="text-center" title="Borrar"><i class="fa-solid fa-trash-can"></i></a>
             <form id="product-<%= product.id %>-delete-form" action="/admin/products/destroy/<%= product.id %>?_method=DELETE" method="POST" class="d-none"></form>
         </div>
     </td>

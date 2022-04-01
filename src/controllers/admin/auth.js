@@ -57,7 +57,7 @@ const loginPost = async (req, res) => {
         req.session.admin = {
             idUser: user.id,
             email: user.email,
-            name: user.name,
+            name: user.full_name,
             user
         };
 
@@ -78,7 +78,11 @@ const loginPost = async (req, res) => {
 // logout
 //
 const logout = (req, res) => {
-    req.session.destroy(() => res.redirect('/'));
+    req.session.user = null;
+    delete req.session.user;
+    req.session.isLogged = null;
+    delete req.session.isLogged;
+    req.session.save(() => req.session.destroy(() => res.redirect('/')));
 };
 
 //

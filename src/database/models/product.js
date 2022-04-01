@@ -10,10 +10,11 @@ const Sequelize = require('sequelize');
 //
 const alias = 'Product';
 const config = {
+    paranoid: true,
     timestamps: true,
     createdAt: 'created_at',
     updatedAt: 'updated_at',
-    deletedAt: false,
+    deletedAt: 'deleted_at',
     scopes: {
         fully: {
             include: ['category', 'price', 'images', 'authors', {
@@ -22,8 +23,14 @@ const config = {
                 as: 'attributes'
             }],
             order: [
+                ['id', 'DESC'],
                 ['images', 'priority', 'ASC']
-            ]
+            ],
+            where: {
+                deleted_at: {
+                    [Sequelize.Op.is]: null
+                }
+            }
         },
         rand: {
             include: ['category', 'price', 'images', 'authors', {
@@ -34,7 +41,12 @@ const config = {
             order: [
                 Sequelize.literal('rand()'),
                 ['images', 'priority', 'ASC']
-            ]
+            ],
+            where: {
+                deleted_at: {
+                    [Sequelize.Op.is]: null
+                }
+            }
         }
     }
 };
