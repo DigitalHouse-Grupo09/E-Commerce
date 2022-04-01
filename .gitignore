@@ -54,3 +54,6 @@ CMakeLists.txt
 
 # Logs
 tag.json
+
+# Book images
+public/assets/img/books/image-*

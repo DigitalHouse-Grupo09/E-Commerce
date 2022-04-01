@@ -92,14 +92,24 @@ const authorsName = (product = {}, defaultValue = '') => {
  * Encode UT8 characters
  */
 function encodeUtf8(s) {
-  return unescape(encodeURIComponent(s));
+  try {
+    return unescape(encodeURIComponent(s));
+  }
+  catch (e) {
+    return s;
+  }
 }
 
 /**
  * Decode UT8 characters
  */
 function decodeUtf8(s) {
-  return decodeURIComponent(escape(s));
+  try {
+    return decodeURIComponent(escape(s));
+  }
+  catch (e) {
+    return s;
+  }
 }
 
 module.exports = {

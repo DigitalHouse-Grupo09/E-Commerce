@@ -37,6 +37,15 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
             allowNull: false,
             defaultValue: 'AR$'
+        },
+        discount_amount: {
+            type: dataTypes.DECIMAL(8, 2),
+            allowNull: false
+        },
+        discount_type: {
+            type: dataTypes.STRING,
+            allowNull: false,
+            defaultValue: '%'
         }
     };
 

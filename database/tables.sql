@@ -53,6 +53,7 @@ CREATE TABLE `products` (
  `slug` varchar(512) NOT NULL,
  `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
  `updated_at` datetime ON UPDATE CURRENT_TIMESTAMP,
+ `deleted_at` datetime DEFAULT NULL,
  PRIMARY KEY (`id`),
  KEY `id_category` (`id_category`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

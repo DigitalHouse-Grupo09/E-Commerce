@@ -10,7 +10,7 @@
     <!-- MAIN :: BEGIN -->
     <main>
         <h1 class="create-title">Formulario de alta</h1>
-        <form action="/admin/products/create" method="POST" class="form">
+        <form action="/admin/products/create" method="POST" class="form" enctype="multipart/form-data">
             <div class="d-flex flex-column align-items-center justify-content-center">
                 <section class="w-100 lg:w-75">
                     <div class="form-header mb-3">
@@ -19,15 +19,15 @@
                     <div class="form-wrapper w-100 p-2">
                         <div class="row form-group mx-0">
                             <label for="title" class="form-label">Título <span class="required"></span></label>
-                            <input type="text" id="title" name="title" placeholder="Titulo del libro" class="form-input w-100" value="<%= (locals.old || {}).title || '' %>">
+                            <input type="text" id="title" name="title" placeholder="Titulo del libro" class="form-input w-100" tabindex="1" value="<%= (locals.old || {}).title || '' %>">
                         </div>
                         <div class="row form-group mx-0 mt-3">
                             <label for="description" class="form-label">Descripción</label>
-                            <textarea name="description" placeholder="Breve reseña del libro" class="form-input w-100" rows="5" cols="43"><%= (locals.old || {}).description || '' %></textarea>
+                            <textarea name="description" placeholder="Breve reseña del libro" class="form-input w-100" tabindex="2" rows="5" cols="43"><%= (locals.old || {}).description || '' %></textarea>
                         </div>
                         <div class="row form-group mx-0 mt-3">
                             <label for="category" class="form-label">Categoría <span class="required"></span></label>
-                            <select name="category" class="form-select">
+                            <select name="category" class="form-select" tabindex="3">
                                 <% categories.forEach(category => { %>
                                     <option value="<%= category.id %>" <%= ((locals.old || {}).category || -1) === category.id ? 'selected' : '' %>><%- decodeUtf8(category.description) %></option>
                                 <% }); %>
@@ -38,13 +38,13 @@
                                 <label for="price" class="form-label">Precio <span class="required"></span></label>
                                 <div class="form-input-wrapper">
                                     <i class="fa fa-dollar form-input-icon form-input-icon-start"></i>
-                                    <input type="number" name="price" placeholder="Precio del libro" class="form-input form-input-start w-100" value="<%= (locals.old || {}).price || '' %>">
+                                    <input type="number" name="price" placeholder="Precio del libro" class="form-input form-input-start w-100" tabindex="4" value="<%= (locals.old || {}).price || '' %>">
                                 </div>
                             </div>
                             <div class="column-2 pr-0">
                                 <label for="discount" class="form-label">Descuento</label>
                                 <div class="form-input-wrapper">
-                                    <input type="number" name="discount" placeholder="Descuento" class="form-input form-input-end w-100" value="<%= (locals.old || {}).discount || '' %>">
+                                    <input type="number" name="discount" placeholder="Descuento" class="form-input form-input-end w-100" tabindex="5" value="<%= (locals.old || {}).discount || '0' %>">
                                     <i class="fa fa-percent form-input-icon form-input-icon-end"></i>
                                 </div>
                             </div>
@@ -59,7 +59,7 @@
                     <div class="form-wrapper w-100 p-2">
                         <div class="row form-group mx-0 mt-3">
                             <label for="image" class="form-label">Portada del libro</label>
-                            <input type="file" name="image" placeholder="Imagen" class="form-input w-100" value="<%= (locals.old || {}).image || '' %>"> 
+                            <input type="file" name="image" placeholder="Imagen" class="form-input w-100" tabindex="6" value="<%= (locals.old || {}).image || '' %>"> 
                             <small class="form-help">
                                 <i class="fa-solid fa-circle-info"></i> Actualmente solo contamos con una imagen por libro. Próximamente se podran agregar hasta 5 imagenes.
                             </small>
@@ -74,7 +74,7 @@
                     <div class="form-wrapper w-100 p-2">
                         <div class="row form-group mx-0 mt-3">
                             <label for="author" class="form-label">Author <span class="required"></span></label>
-                            <select name="author" class="form-select">
+                            <select name="author" class="form-select" tabindex="7">
                                 <% authors.forEach(author => { %>
                                     <option value="<%= author.id %>" <%= ((locals.old || {}).author || -1) === author.id ? 'selected' : '' %>><%= author.full_name %></option>
                                 <% }); %>
@@ -90,19 +90,20 @@
                         <% sheetProperties.push({ name: 'presentation', label: 'Presentación' }); %>
 
                         <!-- SHEET EACH -->
-                        <% sheetProperties.forEach(sheet => { %>
+                        <% sheetProperties.forEach((sheet, i) => { %>
+                            <% const tabindex = 8 + i; %>
                             <% sheet.type = sheet.type || 'text'; %>
 
                             <div class="row form-group mx-0">
                                 <label for="<%= sheet.name %>" class="form-label"><%= sheet.label %></label>
                                 <% if (sheet.type === 'select' ) { %>
-                                    <select name="<%= sheet.name %>" class="form-select">
+                                    <select name="<%= sheet.name %>" class="form-select" tabindex="<%= tabindex %>">
                                         <% sheet.options.forEach(option => { %>
                                             <option value="<%= option %>" <%= ((locals.old || {}).option || '') === option ? 'selected' : '' %>><%= option %></option>
                                         <% }); %>
                                     </select>
                                 <% } else { %>
-                                    <input type="<%= sheet.type %>" id="<%= sheet.name %>" name="<%= sheet.name %>" placeholder="<%= sheet.placeholder || '' %>" class="form-input w-100" value="<%= (locals.old || {})[sheet.name] || '' %>">
+                                    <input type="<%= sheet.type %>" id="<%= sheet.name %>" name="<%= sheet.name %>" placeholder="<%= sheet.placeholder || '' %>" class="form-input w-100" tabindex="<%= tabindex %>" value="<%= (locals.old || {})[sheet.name] || '' %>">
                                 <% } %>
                             </div>
                         <% }); %>
@@ -110,7 +111,7 @@
                 </section>
 
                 <div class="row form-actions my-3">
-                    <button type="submit" class="form-action-submit">Crear</button>
+                    <button type="submit" class="form-action-submit" tabindex="13">Crear</button>
                     <a href="/admin" class="form-action-cancel">Cancelar</a>
                 </div>
             </div>
