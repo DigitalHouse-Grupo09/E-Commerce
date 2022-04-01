@@ -18,36 +18,8 @@ const create = async (req, res) => responseCreateForm(res);
 const createPost = async (req, res) => {
     // Normalize body
     const data = req.body;
+    // Normalize file
     const image = req.file;
-
-    /*
-        {
-          title: 'asdga',
-          description: 'asdg',
-          category: '1',
-          price: '500',
-          discount: '15',
-          author: '1',
-          published_at: '12/2021',
-          pages: '123',
-          language: 'Español',
-          editorial: 'Planeta',
-          presentation: 'Tapa dura'
-        }
-
-        --------------------------------------------------------------------------------------------------------
-
-        {
-          fieldname: 'image',
-          originalname: 'Screen Shot 2022-03-30 at 18.22.33.png',
-          encoding: '7bit',
-          mimetype: 'image/png',
-          destination: '/Users/nicolasmolina/src/temp/dh/bookify/public/assets/img/books',
-          filename: 'image-1648766870850-978354514',
-          path: '/Users/nicolasmolina/src/temp/dh/bookify/public/assets/img/books/image-1648766870850-978354514',
-          size: 309216
-        }
-    */
 
     try {
         await sequelize.transaction(async (transaction) => {
@@ -121,20 +93,7 @@ const responseCreateForm = async (res, status = 200, data = {}) => {
     return res.status(status).render('admin/products/create', {
         categories: (await Category.findAll()),
         authors: (await Author.findAll()),
-        ...data,
-        old: data.old || {
-            title: 'asdga',
-            description: 'asdg',
-            category: '1',
-            price: '500',
-            discount: '15',
-            author: '1',
-            published_at: '12/2021',
-            pages: '123',
-            language: 'Francés',
-            editorial: 'Planeta',
-            presentation: 'Tapa dura'
-        }
+        ...data
     });
 };
 
