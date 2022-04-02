@@ -1,3 +1,7 @@
+/*
+// INDEX
+*/
+
 .countItem {
     position: relative;
     bottom: 10px;
@@ -19,9 +23,10 @@ span{
 
 .cardInfo {
     display: none;
+    margin: 15px 15px 0px 15px;
 }
 
-.show-cardInfo:checked + label .cardInfo{
+.show-cardInfo:checked + label .cardInfo {
     display: block; 
 }
 
@@ -29,14 +34,23 @@ span{
     display: none;
 }
 
-.show-cashInfo:checked + label .cashInfo{
+.show-cashInfo:checked + label .cashInfo {
     display: block; 
+}
+
+.cashInfo div {
+    margin: 15px 15px 0px 15px;
 }
 
 .transferInfo {
     display: none;
 }
 
-.show-transferInfo:checked + label .transferInfo{
+.show-transferInfo:checked + label .transferInfo {
     display: block; 
 }
+
+.transferInfo p {
+    margin: 15px 15px 0px 15px;
+}
+

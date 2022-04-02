@@ -36,7 +36,7 @@
                             <h3 class="pay-title">Seleccionar forma de pago</h3>
 
                                 <!-- PAY WITH CREDIT/DEBIT CARD -->
-                                <input class= "show-cardInfo" type="radio" id="card" value="card" name="paymentMethod"> Tarjeta de debito / Credito
+                                <input class= "show-cardInfo" type="radio" id="card" value="card" name="paymentMethod"> Tarjeta de Debito/Credito
                                 <label class="row form-group mx-0" for="card"> 
 
                                     <div class="cardInfo">
@@ -49,11 +49,11 @@
                                             <input type="text" id="card" name="card" placeholder="3777 9577744 55221" class="form-input w-100" value="">
                                         </div>
                                         <div class="row form-group mx-0">
-                                            <label for="date" class="form-label">Fecha de expiración</label>
+                                            <label for="date" class="form-label">Fecha de Expiración</label>
                                             <input type="text" id="date" name="date" placeholder="07/2025" class="form-input w-100" value="">
                                         </div>
                                         <div class="row form-group mx-0">
-                                            <label for="securityCode" class="form-label">Codigo de seguridad</label>
+                                            <label for="securityCode" class="form-label">Codigo de Seguridad</label>
                                             <input type="text" id="securityCode" name="securityCode" placeholder="1234" class="form-input w-100" value="">
                                         </div>  
                                     </div>
@@ -65,14 +65,19 @@
                                 <label class="row form-group mx-0" for="cash">
 
                                     <div class="cashInfo">
-                                        <label><input type="radio" id="rapiPago" value="rapiPago" name="paymentPlace"> RapiPago </label>
-                                        <label><input type="radio" id="pagoFacil" value="pagoFacil" name="paymentPlace"> PagoFacil </label>
+                                        <div class="rapiPago">
+                                            <input type="radio" id="rapiPago" value="rapiPago" name="paymentPlace"> 
+                                            <label for="rapiPago"> RapiPago </label> 
+                                        </div>
+                                        <div class="pagoFacil">
+                                            <input type="radio" id="pagoFacil" value="pagoFacil" name="paymentPlace"> 
+                                            <label for="pagoFacil"> PagoFacil </label>
+                                        </div>
                                     </div>
 
                                 </label>
 
                                 <!-- PAY WITH TRANSFER -->
-
                                 <input class= "show-transferInfo" type="radio" id="transfer" value="transfer" name="paymentMethod"> Transferencia 
                                 <label class="row form-group mx-0 ">
 
@@ -88,7 +93,7 @@
                 </section>
 
                 <div class="row form-actions my-3">
-                    <button type="submit" class="form-action-submit">Ingresar</button>
+                    <button type="submit" class="form-action-submit">Comprar</button>
                 </div>
             </div>
         </form>
