@@ -47,8 +47,11 @@
         let price;
         let discount;
         let category;
+        let categorySelector;
+        let categoryNew;
         let author;
-        let attributes;
+        let authorSelector;
+        let authorNew;
 
         //
         // functions
@@ -59,11 +62,11 @@
             price = document.getElementById('price');
             discount = document.getElementById('discount');
             category = document.getElementById('category');
+            categorySelector = document.getElementById('category-selector');
+            categoryNew = document.getElementById('category-new');
             author = document.getElementById('author');
-            attributes = {
-                selects: document.querySelectorAll('.select-attribute'),
-                inputs: document.querySelectorAll('.input-attribute')
-            };
+            authorSelector = document.getElementById('author-selector');
+            authorNew = document.getElementById('author-new');
         }
 
         function agregarValidaciones () {
@@ -80,13 +83,54 @@
             price.addEventListener('blur', () => validarAmount(price));
             discount.addEventListener('blur', () => validarPercentage(discount));
             category.addEventListener('blur', () => validarVacio(category));
+            category.addEventListener('change', manejarSelectorCategoria);
             author.addEventListener('blur', () => validarVacio(author));
+            author.addEventListener('change', manejarSelectorAutor);
+        }
 
-            for (let select of attributes.selects) {
-                select.addEventListener('blur', () => validarVacio(select));
+        function manejarSelectorCategoria () {
+            const value = category.value;
+
+            if (!value || Number(value) > -1) {
+                categoryNew.style.display = 'none';
+                categoryNew.classList.remove('fade');
+                categorySelector.classList.remove('pl-0');
+                categorySelector.classList.remove('md:column-2');
+                categorySelector.classList.add('md:column-1');
+                categorySelector.classList.add('p-0');
             }
-            for (let input of attributes.inputs) {
-                input.addEventListener('blur', () => validarVacio(input));
+            else {
+                categorySelector.classList.remove('p-0');
+                categorySelector.classList.remove('md:column-1');
+                categorySelector.classList.add('md:column-2');
+                categorySelector.classList.add('pl-0');
+                setTimeout(() => {
+                    categoryNew.style.display = 'block';
+                    categoryNew.classList.add('fade');
+                }, 400);
+            }
+        }
+
+        function manejarSelectorAutor () {
+            const value = author.value;
+
+            if (!value || Number(value) > -1) {
+                authorNew.style.display = 'none';
+                authorNew.classList.remove('fade');
+                authorSelector.classList.remove('pl-0');
+                authorSelector.classList.remove('md:column-2');
+                authorSelector.classList.add('md:column-1');
+                authorSelector.classList.add('p-0');
+            }
+            else {
+                authorSelector.classList.remove('p-0');
+                authorSelector.classList.remove('md:column-1');
+                authorSelector.classList.add('md:column-2');
+                authorSelector.classList.add('pl-0');
+                setTimeout(() => {
+                    authorNew.style.display = 'block';
+                    authorNew.classList.add('fade');
+                }, 400);
             }
         }
 
@@ -101,12 +145,6 @@
             valid = validarPercentage(discount) && valid;
             valid = validarVacio(category) && valid;
             valid = validarVacio(author) && valid;
-            for (let select of attributes.selects) {
-                valid = validarVacio(select) && valid;
-            }
-            for (let input of attributes.inputs) {
-                valid = validarVacio(input) && valid;
-            }
             return valid;
         }
 

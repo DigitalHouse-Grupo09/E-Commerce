@@ -26,24 +26,36 @@
                             <% } %>
                         </div>
                         <div class="row form-group mx-0 mt-3">
-                            <label for="description" class="form-label">Descripción</label>
-                            <textarea id="description" name="description" placeholder="Breve reseña del libro" class="form-input w-100" tabindex="2" rows="5" cols="43"><%= (locals.old || {}).description || '' %></textarea>
+                            <label for="description" class="form-label">Descripción/Sinapsis <span class="required"></span></label>
+                            <textarea id="description" name="description" placeholder="Breve sinapsis del libro" class="form-input w-100" tabindex="2" rows="5" cols="43"><%= (locals.old || {}).description || '' %></textarea>
                             <p id="description-error" class="error-validation"></p>
                             <% if (locals.errors && errors.description) { %>
                                 <p class="feedback"><%= errors.description.msg %></p>
                             <% } %>
                         </div>
                         <div class="row form-group mx-0 mt-3">
-                            <label for="category" class="form-label">Categoría <span class="required"></span></label>
-                            <select id="category" name="category" class="form-select" tabindex="3">
-                                <% categories.forEach(category => { %>
-                                    <option value="<%= category.id %>" <%= ((locals.old || {}).category || -1) === category.id ? 'selected' : '' %>><%- decodeUtf8(category.description) %></option>
-                                <% }); %>
-                            </select>
-                            <p id="category-error" class="error-validation"></p>
-                            <% if (locals.errors && errors.category) { %>
-                                <p class="feedback"><%= errors.category.msg %></p>
-                            <% } %>
+                            <div id="category-selector" class="column-1 md:column-1 p-0 transition-all">
+                                <label for="category" class="form-label">Categoría <span class="required"></span></label>
+                                <select id="category" name="category" class="form-select" tabindex="3">
+                                    <option value="" <%= ((locals.old || {}).category) === '' ? 'selected' : '' %>>Seleccione una categoría</option>
+                                    <option value="-1" <%= ((locals.old || {}).category || -2) === -1 ? 'selected' : '' %>>*** Nueva categoría ***</option>
+                                    <% categories.forEach(category => { %>
+                                        <option value="<%= category.id %>" <%= ((locals.old || {}).category || -2) === category.id ? 'selected' : '' %>><%- decodeUtf8(category.description) %></option>
+                                    <% }); %>
+                                </select>
+                                <p id="category-error" class="error-validation"></p>
+                                <% if (locals.errors && errors.category) { %>
+                                    <p class="feedback"><%= errors.category.msg %></p>
+                                <% } %>
+                            </div>
+                            <div id="category-new" class="column-1 md:column-2 pr-0 transition-all" style="display: none;">
+                                <label for="category_name" class="form-label">Titulo de la nueva categoría <span class="required"></span></label>
+                                <input type="text" id="category_name" name="category_name" placeholder="Categoría..." class="form-input form-input-end w-100" value="<%= (locals.old || {}).category_name || '' %>">
+                                <p id="category_name-error" class="error-validation"></p>
+                                <% if (locals.errors && errors.category_name) { %>
+                                    <p class="feedback"><%= errors.category_name.msg %></p>
+                                <% } %>
+                            </div>
                         </div>
                         <div class="row form-group mx-0 mt-3">
                             <div class="column-2 pl-0">
@@ -97,16 +109,28 @@
                     </div>
                     <div class="form-wrapper w-100 p-2">
                         <div class="row form-group mx-0 mt-3">
-                            <label for="author" class="form-label">Author <span class="required"></span></label>
-                            <select id="author" name="author" class="form-select" tabindex="7">
-                                <% authors.forEach(author => { %>
-                                    <option value="<%= author.id %>" <%= ((locals.old || {}).author || -1) === author.id ? 'selected' : '' %>><%= author.full_name %></option>
-                                <% }); %>
-                            </select>
-                            <p id="author-error" class="error-validation"></p>
-                            <% if (locals.errors && errors.author) { %>
-                                <p class="feedback"><%= errors.author.msg %></p>
-                            <% } %>
+                            <div id="author-selector" class="column-1 md:column-1 p-0 transition-all">
+                                <label for="author" class="form-label">Author <span class="required"></span></label>
+                                <select id="author" name="author" class="form-select" tabindex="7">
+                                    <option value="" <%= ((locals.old || {}).author) === '' ? 'selected' : '' %>>Seleccione un autor</option>
+                                    <option value="-1" <%= ((locals.old || {}).author || -2) === -1 ? 'selected' : '' %>>*** Nuevo autor ***</option>
+                                    <% authors.forEach(author => { %>
+                                        <option value="<%= author.id %>" <%= ((locals.old || {}).author || -1) === author.id ? 'selected' : '' %>><%= author.full_name %></option>
+                                    <% }); %>
+                                </select>
+                                <p id="author-error" class="error-validation"></p>
+                                <% if (locals.errors && errors.author) { %>
+                                    <p class="feedback"><%= errors.author.msg %></p>
+                                <% } %>
+                            </div>
+                            <div id="author-new" class="column-1 md:column-2 pr-0 transition-all" style="display: none;">
+                                <label for="author_name" class="form-label">Titulo del nuevo author <span class="required"></span></label>
+                                <input type="text" id="author_name" name="author_name" placeholder="Nombre del autor..." class="form-input form-input-end w-100" value="<%= (locals.old || {}).author_name || '' %>">
+                                <p id="author_name-error" class="error-validation"></p>
+                                <% if (locals.errors && errors.author_name) { %>
+                                    <p class="feedback"><%= errors.author_name.msg %></p>
+                                <% } %>
+                            </div>
                         </div>
 
                         <!-- SHEET AVAILABLES -->

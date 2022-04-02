@@ -161,6 +161,10 @@ a:active {
   font-weight: bold;
 }
 
+.transition-all {
+  transition: .4s ease-out;
+}
+
 /*
  * GENERICS
  */
