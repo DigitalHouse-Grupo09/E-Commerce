@@ -1101,7 +1101,7 @@ main {
 
 .form-input-icon {
   position: absolute;
-  top: calc(50% - 0.5em); /* Keep icon in center of input, regardless of the input height */
+  top: 14px;
 }
 
 .form-input-icon.form-input-icon-start {
@@ -1151,6 +1151,39 @@ main {
 .form-actions .form-action:hover,
 .form-actions .form-action-submit:hover {
   background-color: var(--primary-dark);
+}
+
+/*
+ * VALIDATIONS
+ */
+
+.feedback,
+.error-validation {
+  margin-top: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  font-weight: lighter;
+}
+
+.error-validation {
+  display: none !important;
+}
+
+.is-valid {
+  color: var(--primary);
+}
+
+.is-valid + .error-validation {
+  display: none !important;
+}
+
+.is-invalid {
+  color: var(--red);
+}
+
+.is-invalid + .error-validation,
+.error-validation.error-validation-show {
+  display: block !important;
+  color: var(--red);
 }
 
 /*

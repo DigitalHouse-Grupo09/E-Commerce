@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node src/app",
-    "dev": "nodemon src/app",
+    "dev": "nodemon -L src/app",
     "db": "mysql -h us-cdbr-east-05.cleardb.net -u bfcabbfe5932c6 -pe57c8aeb heroku_33299a48260ae4d",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
