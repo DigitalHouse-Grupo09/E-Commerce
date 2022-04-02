@@ -1,3 +1,7 @@
+.font-weight-normal {
+    font-weight: normal !important;
+}
+
 /*
 // INDEX
 */
@@ -19,6 +23,7 @@ span{
 .pay-title {
   white-space: pre;
   margin-bottom: 15px;
+  color: darkgrey;
 }
 
 .cardInfo {
@@ -52,5 +57,9 @@ span{
 
 .transferInfo p {
     margin: 15px 15px 0px 15px;
+}
+
+.box {
+    margin: 0px 10px 0px 10px   ;
 }
 
