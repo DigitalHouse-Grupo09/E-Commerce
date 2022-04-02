@@ -14,26 +14,41 @@
         <form action="/admin/login" method="POST" class="form">
             <div class="d-flex flex-column align-items-center justify-content-center">
                 <section class="w-100 lg:w-25">
-                    <div  class= "d-flex">
-                        <section class="form-wrapper w-100 p-2">
-                            <h3 class="pay-title">Información Personal</h3> 
+                    <div  class= "d-flex justify-content-center">
 
-                            <div class="row form-group mx-0">
-                                <label for="name" class="form-label">Nombre y Apellido</label>
+                        <!-- INFORMACIÓN PERSONAL -->
+                        <section class="form-wrapper w-100 p-2 box">
+                            <h3 class="pay-title">Completar Información Personal</h3> 
+
+                            <div class="row form-group mx-0 font-weight-normal">
+                                <label for="name" class="form-label font-weight-normal"> Nombre y Apellido </label>
                                 <input type="text" id="name" name="name" placeholder="Pedro Alfonso" class="form-input w-100" value="">
                             </div>
                             <div class="row form-group mx-0">
-                                <label for="address" class="form-label">Dirección</label>
+                                <label for="address" class="form-label font-weight-normal">Dirección</label>
                                 <input type="text" id="address" name="address" placeholder="Antartica Armenia 767" class="form-input w-100" value="">
                             </div>
                             <div class="row form-group mx-0">
-                                <label for="dni" class="form-label">DNI</label>
-                                <input type="text" id="dni" name="dni" placeholder="40.226.777" class="form-input w-100" value="">
+                                <label for="district" class="form-label font-weight-normal">Localidad</label>
+                                <input type="text" id="district" name="district" placeholder="General Pacheco" class="form-input w-100" value="">
+                            </div>
+                            <div class="row form-group mx-0">
+                                <label for="province" class="form-label font-weight-normal">Provincia</label>
+                                <input type="text" id="province" name="province" placeholder="Buenos Aires" class="form-input w-100" value="">
+                            </div>
+                            <div class="row form-group mx-0">
+                                <label for="telephone" class="form-label font-weight-normal">Nro. Telefono</label>
+                                <input type="text" id="telephone" name="telephone" placeholder="1123247656" class="form-input w-100" value="">
+                            </div>
+                            <div class="row form-group mx-0">
+                                <label for="dni" class="form-label font-weight-normal">Nro. Documento</label>
+                                <input type="text" id="dni" name="dni" placeholder="40226777" class="form-input w-100" value="">
                             </div>
 
+                        <!-- METODOS DE PAGO -->
                         </section>
-                        <section class="form-wrapper w-100 p-2">
-                            <h3 class="pay-title">Seleccionar forma de pago</h3>
+                        <section class="form-wrapper w-100 p-2 box">
+                            <h3 class="pay-title">Seleccionar metodo de pago</h3>
 
                                 <!-- PAY WITH CREDIT/DEBIT CARD -->
                                 <input class= "show-cardInfo" type="radio" id="card" value="card" name="paymentMethod"> Tarjeta de Debito/Credito
@@ -41,19 +56,19 @@
 
                                     <div class="cardInfo">
                                         <div class="row form-group mx-0">
-                                            <label for="name" class="form-label">Nombre del Titular</label>
+                                            <label for="name" class="form-label font-weight-normal">Nombre del Titular</label>
                                             <input type="text" id="name" name="name" placeholder="Juan Román" class="form-input w-100" value="">
                                         </div>
                                         <div class="row form-group mx-0">
-                                            <label for="card" class="form-label">Numero de Tarjeta</label>
+                                            <label for="card" class="form-label font-weight-normal">Numero de Tarjeta</label>
                                             <input type="text" id="card" name="card" placeholder="3777 9577744 55221" class="form-input w-100" value="">
                                         </div>
                                         <div class="row form-group mx-0">
-                                            <label for="date" class="form-label">Fecha de Expiración</label>
+                                            <label for="date" class="form-label font-weight-normal">Fecha de Expiración</label>
                                             <input type="text" id="date" name="date" placeholder="07/2025" class="form-input w-100" value="">
                                         </div>
                                         <div class="row form-group mx-0">
-                                            <label for="securityCode" class="form-label">Codigo de Seguridad</label>
+                                            <label for="securityCode" class="form-label font-weight-normal">Codigo de Seguridad</label>
                                             <input type="text" id="securityCode" name="securityCode" placeholder="1234" class="form-input w-100" value="">
                                         </div>  
                                     </div>
@@ -78,8 +93,8 @@
                                 </label>
 
                                 <!-- PAY WITH TRANSFER -->
-                                <input class= "show-transferInfo" type="radio" id="transfer" value="transfer" name="paymentMethod"> Transferencia 
-                                <label class="row form-group mx-0 ">
+                                <input class= "show-transferInfo" type="radio" id="transfer" value="transfer" name="paymentMethod"> Transferencia
+                                <label class="row form-group mx-0" for="transfer">
 
                                     <div class="transferInfo">
                                         <p> CBU: 123456789 </p>
@@ -89,6 +104,51 @@
                                 </label>
                             
                         </section>
+
+                        <!-- CONFIRMACIÓN DE COMPRA -->
+                        <section class="form-wrapper w-100 p-2 box">
+                            <h3 class="pay-title">Confirmación de compra</h3>
+                            <table id="products-table" class="table">
+                                <thead>
+                                    <th>Producto</th>
+                                    <th>Cantidad</th>
+                                    <th>Total</th>
+                                </thead>
+                                <tbody>
+                                    <td>[[= product.title ]]</td>
+                                    <td>[[= product.price ]]</td>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <th class="text-right">
+                                            <b>Total</b>: <span id="products-total"><span>
+                                        </th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            <!-- TEMPLATES :: START -->
+                            <template id="product-row">
+                                <tr>
+                                    <td class="text-left">
+                                        <div class="symbol">
+                                            <div class="symbol-content">
+                                                <h4 class="symbol-title">[[= product.title ]]</h4>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-right">
+                                        <div class="form-group">
+                                            <input type="number" id="product-quantity" name="product-quantity" class="form-input" value="1" style="width: 60px" disabled />
+                                        </div>
+                                    </td>
+                                    <td class="text-right">[[= product.price ]]</td>
+                                </tr>
+                            </template>
+                            <!-- TEMPLATES :: END -->
+                        </section>
+
                     </div>  
                 </section>
 
@@ -103,5 +163,6 @@
     <%- include('../partials/footer') %>
 
     <%- include('../partials/scripts') %>
+    <script src="/assets/js/busket.js"></script>
 </body>
 </html>
