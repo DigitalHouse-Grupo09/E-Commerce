@@ -34,8 +34,6 @@ INSERT INTO `authors` (`id`, `full_name`, `created_at`, `updated_at`) VALUES
 	(25, 'Frederic Pons', NOW(), NULL),
     (26, 'Carl Chinn', NOW(), NULL);
 
-
-
 # ================================================
 
 INSERT INTO `products` (`id`, `id_category`, `slug`, `created_at`, `updated_at`) VALUES
@@ -108,7 +106,6 @@ INSERT INTO `product_authors` (`id`, `id_product`, `id_author`, `created_at`, `u
     (NULL, 31, 25, NOW(), NULL),
     (NULL, 32, 26, NOW(), NULL);
 
-
 # ================================================
 
 INSERT INTO `product_images` (`id`, `id_product`, `src`, `priority`, `created_at`, `updated_at`) VALUES
@@ -126,23 +123,23 @@ INSERT INTO `product_images` (`id`, `id_product`, `src`, `priority`, `created_at
     (NULL, 12, '/assets/img/books/book-12.jpg', 1, NOW(), NULL),
     (NULL, 13, '/assets/img/books/book-13.jpg', 1, NOW(), NULL),
     (NULL, 14, '/assets/img/books/book-14.jpg', 1, NOW(), NULL),
-    (NULL, 15, '/assets/img/books/book-15.jpg', 1, NOW(), NULL);
-    (NULL, 16, '/assets/img/books/book-16.jpg', 1, NOW(), NULL);
-    (NULL, 17, '/assets/img/books/book-17.jpg', 1, NOW(), NULL);
-    (NULL, 18, '/assets/img/books/book-18.jpg', 1, NOW(), NULL);
-    (NULL, 19, '/assets/img/books/book-19.jpg', 1, NOW(), NULL);
-    (NULL, 20, '/assets/img/books/book-20.jpg', 1, NOW(), NULL);
-    (NULL, 21, '/assets/img/books/book-21.jpg', 1, NOW(), NULL);
-    (NULL, 22, '/assets/img/books/book-22.jpg', 1, NOW(), NULL);
-    (NULL, 23, '/assets/img/books/book-23.jpg', 1, NOW(), NULL);
-    (NULL, 24, '/assets/img/books/book-24.jpg', 1, NOW(), NULL);
-    (NULL, 25, '/assets/img/books/book-25.jpg', 1, NOW(), NULL);
-    (NULL, 26, '/assets/img/books/book-26.jpg', 1, NOW(), NULL);
-    (NULL, 27, '/assets/img/books/book-27.jpg', 1, NOW(), NULL);
-    (NULL, 28, '/assets/img/books/book-28.jpg', 1, NOW(), NULL);
-    (NULL, 29, '/assets/img/books/book-29.jpg', 1, NOW(), NULL);
-    (NULL, 30, '/assets/img/books/book-30.jpg', 1, NOW(), NULL);
-    (NULL, 31, '/assets/img/books/book-31.jpg', 1, NOW(), NULL);
+    (NULL, 15, '/assets/img/books/book-15.jpg', 1, NOW(), NULL),
+    (NULL, 16, '/assets/img/books/book-16.jpg', 1, NOW(), NULL),
+    (NULL, 17, '/assets/img/books/book-17.jpg', 1, NOW(), NULL),
+    (NULL, 18, '/assets/img/books/book-18.jpg', 1, NOW(), NULL),
+    (NULL, 19, '/assets/img/books/book-19.jpg', 1, NOW(), NULL),
+    (NULL, 20, '/assets/img/books/book-20.jpg', 1, NOW(), NULL),
+    (NULL, 21, '/assets/img/books/book-21.jpg', 1, NOW(), NULL),
+    (NULL, 22, '/assets/img/books/book-22.jpg', 1, NOW(), NULL),
+    (NULL, 23, '/assets/img/books/book-23.jpg', 1, NOW(), NULL),
+    (NULL, 24, '/assets/img/books/book-24.jpg', 1, NOW(), NULL),
+    (NULL, 25, '/assets/img/books/book-25.jpg', 1, NOW(), NULL),
+    (NULL, 26, '/assets/img/books/book-26.jpg', 1, NOW(), NULL),
+    (NULL, 27, '/assets/img/books/book-27.jpg', 1, NOW(), NULL),
+    (NULL, 28, '/assets/img/books/book-28.jpg', 1, NOW(), NULL),
+    (NULL, 29, '/assets/img/books/book-29.jpg', 1, NOW(), NULL),
+    (NULL, 30, '/assets/img/books/book-30.jpg', 1, NOW(), NULL),
+    (NULL, 31, '/assets/img/books/book-31.jpg', 1, NOW(), NULL),
     (NULL, 32, '/assets/img/books/book-32.jpg', 1, NOW(), NULL);
 
 # ================================================
@@ -180,6 +177,7 @@ INSERT INTO `product_prices` (`id`, `id_product`, `amount`, `currency`, `created
     (NULL, 30, 3620.00, 'AR$', NOW(), NULL),
     (NULL, 31, 2290.00, 'AR$', NOW(), NULL),
     (NULL, 32, 3250.00, 'AR$', NOW(), NULL);
+
 # ================================================
 
 #
@@ -211,7 +209,6 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 2, 5, 'Español', NOW(), NULL),
     (NULL, 2, 6, 'Planeta', NOW(), NULL),
     (NULL, 2, 7, 'Rústica con solapas', NOW(), NULL);
-    
 
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 3, 1, 'La Reina', NOW(), NULL),
@@ -341,7 +338,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
 	
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 1, 1, 'Mitos de la Historia Argentina 1', NOW(), NULL),
-    (NULL, 1, 2, 'Este libro intenta acercar la historia argentina a nuestra gente. Para que la quieran; para que la reconquisten; para que disfruten de una maravillosa herencia común; que como todos los bienes de nuestro querido país está mal repartida y apropiada indebidamente. Esta edición corregida y aumentada del primer volumen que forma la serie Los mitos de la historia argentina se propone cumplir de manera más integral esa tarea: acercar la historia nacional a los lectores; haciendo la historia de todos. Con Mitos 1; Felipe Pigna renueva la convocatoria a discutir e interesarnos por saber de dónde venimos y quiénes somos; ya que 'la historia de un país es su identidad; es todo lo que nos pasó como sociedad desde que nacimos hasta el presente', NOW(), NULL),
+    (NULL, 1, 2, 'Este libro intenta acercar la historia argentina a nuestra gente. Para que la quieran; para que la reconquisten; para que disfruten de una maravillosa herencia común; que como todos los bienes de nuestro querido país está mal repartida y apropiada indebidamente. Esta edición corregida y aumentada del primer volumen que forma la serie Los mitos de la historia argentina se propone cumplir de manera más integral esa tarea: acercar la historia nacional a los lectores; haciendo la historia de todos. Con Mitos 1; Felipe Pigna renueva la convocatoria a discutir e interesarnos por saber de dónde venimos y quiénes somos; ya que \'la historia de un país es su identidad; es todo lo que nos pasó como sociedad desde que nacimos hasta el presente', NOW(), NULL),
     (NULL, 1, 3, '01/2019', NOW(), NULL),
     (NULL, 1, 4, '432', NOW(), NULL),
     (NULL, 1, 5, 'Español', NOW(), NULL),
@@ -350,7 +347,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
 	
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 1, 1, 'Mitos de la Historia Argentina 2', NOW(), NULL),
-    (NULL, 1, 2, 'Felipe Pigna nos convoca para conocer nuestra historia; para saber de dónde venimos; por qué estamos como estamos; quiénes somos y quiénes podemos ser. El estudio de vidas entregadas apasionadamente a una causa -Bouchard; Güemes; Dorrego; de personalidades polémicas -Rosas; Sarmiento- y de temas con una asombrosa resonancia actual el genocidio de la 'conquista del desierto'; la primera deuda externa argentina; las protestas sociales de hace un siglo le permitirá al lector comprobar que la historia argentina no se repite; se continúa.', NOW(), NULL),
+    (NULL, 1, 2, 'Felipe Pigna nos convoca para conocer nuestra historia; para saber de dónde venimos; por qué estamos como estamos; quiénes somos y quiénes podemos ser. El estudio de vidas entregadas apasionadamente a una causa -Bouchard; Güemes; Dorrego; de personalidades polémicas -Rosas; Sarmiento- y de temas con una asombrosa resonancia actual el genocidio de la \'conquista del desierto\'; la primera deuda externa argentina; las protestas sociales de hace un siglo le permitirá al lector comprobar que la historia argentina no se repite; se continúa.', NOW(), NULL),
     (NULL, 1, 3, '01/2019', NOW(), NULL),
     (NULL, 1, 4, '496', NOW(), NULL),
     (NULL, 1, 5, 'Español', NOW(), NULL),
@@ -458,7 +455,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
 	
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 1, 1, 'Pasteleria Urbana', NOW(), NULL),
-    (NULL, 1, 2, 'Cuán inagotable es la creatividad de los profesionales; como Nari; en concebir infinitas variantes de los cuatro jinetes de la pastelería: harina; azúcar; huevos y manteca'. (Osvaldo Gross)</br></br>8 partes con soluciones para cada momento del día; desde esos postres que siempre nos acompañaron en nuestras vidas; hasta cómo servir un té haciendo de nuestra casa un hotel de cinco estrellas. 60 recetas paso a paso; explicadas de forma simple; pero con técnica exacta; para obtener resultados perfectos. Alfajores; budines; cookies; tortas clásicas y modernas; trufas ¡y muchísmas delicias más!', NOW(), NULL),
+    (NULL, 1, 2, 'Cuán inagotable es la creatividad de los profesionales; como Nari; en concebir infinitas variantes de los cuatro jinetes de la pastelería: harina; azúcar; huevos y manteca. (Osvaldo Gross)</br></br>8 partes con soluciones para cada momento del día; desde esos postres que siempre nos acompañaron en nuestras vidas; hasta cómo servir un té haciendo de nuestra casa un hotel de cinco estrellas. 60 recetas paso a paso; explicadas de forma simple; pero con técnica exacta; para obtener resultados perfectos. Alfajores; budines; cookies; tortas clásicas y modernas; trufas ¡y muchísmas delicias más!', NOW(), NULL),
     (NULL, 1, 3, '11/2019', NOW(), NULL),
     (NULL, 1, 4, '176', NOW(), NULL),
     (NULL, 1, 5, 'Español', NOW(), NULL),

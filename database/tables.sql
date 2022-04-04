@@ -188,15 +188,14 @@ INSERT INTO `attributes` (`id`, `description`) VALUES
 # ================================================
 
 INSERT INTO `categories` (`id`, `description`, `slug`, `created_at`, `updated_at`) VALUES
-    (1, 'Literatura', 'literatura', NOW(), NULL),
-    (2, 'Conocimiento y ciencia', 'conocimiento-y-ciencia', NOW(), NULL),
-    (3, 'Cómic y fantasía', 'comic-y-fantasia', NOW(), NULL),
+    (1, 'Ficción y Literatura', 'ficcion-y-literatura', NOW(), NULL),
+    (2, 'Psicología', 'psicologia', NOW(), NULL),
+    (3, 'Historia', 'historia', NOW(), NULL),
     (4, 'Cocina y gastronomía', 'cocina-y-gastronomia', NOW(), NULL),
     (5, 'Infantil y juvenil', 'infantil-y-juvenil', NOW(), NULL),
-    (6, 'Actualidad y empresa', 'actualidad-y-empresa', NOW(), NULL),
-    (7, 'Bienestar y salud', 'bienestar-y-salud', NOW(), NULL),
-    (8, 'Viajes y negocio', 'viajes-y-negocio', NOW(), NULL),
-    (9, 'Agendas y calendarios', 'agendas-y-calendarios', NOW(), NULL);
+    (6, 'Economía y Negocios', 'economia-y-negocios', NOW(), NULL),
+    (7, 'Biografias y Relatos', 'biografias-y-relatos', NOW(), NULL),
+    (8, 'Autoayuda', 'autoayuda', NOW(), NULL);
 
 # ================================================
 
