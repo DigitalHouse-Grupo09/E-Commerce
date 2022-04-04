@@ -1628,6 +1628,7 @@ height: 350px !important;
   .form-regretful{
   display: flex;
   justify-content: center;
+  background-color: var(--grey-light)
   }
 
   #regretful {
@@ -1651,6 +1652,7 @@ height: 350px !important;
   .form-contact{
   display: flex;
   justify-content: center;
+  background-color: var(--grey-light);
   }
 
   #contact {
