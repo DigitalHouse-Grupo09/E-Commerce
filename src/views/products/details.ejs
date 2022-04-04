@@ -14,7 +14,7 @@
                 <!-- PRODUCT IMAGE AND TITLE -->
                 <div class="column-1 md:column-2 product-images">
                     <article>
-                        <figure>
+                        <figure class="d-flex justify-content-center">
                             <img src="<%= firstImage(product) %>" class="product-image product-image-large" />
                         </figure>
                     </article>
@@ -35,7 +35,7 @@
                             <input type="number" id="product-quantity" name="product-quantity" class="product-quantity form-input" value="1" style="width: 80px" disabled />
                         </div>
 
-                        <div class="form-actions form-actions-end">
+                        <div class="form-actions">
                             <button
                                 type="button"
                                 class="btn btn-primary addToCart"
