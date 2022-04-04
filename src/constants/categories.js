@@ -6,11 +6,11 @@ module.exports = {
         id: 1,
         icon: 'fas fa-book'
     }, {
-    'psicologia': {
+    psicologia: {
         id: 2,
         icon: 'fas fa-brain'
     }, {
-    'historia': {
+    historia: {
         id: 3,
         icon: 'fab fa-superpowers'
     }, {
@@ -30,12 +30,8 @@ module.exports = {
         id: 7,
         icon: 'fas fa-syringe'
     }, {
-    'autoayuda': {
+    autoayuda: {
         id: 8,
         icon: 'fas fa-route'
-    }, {
-    'agendas-y-calendarios': {
-        id: 9,
-        icon: 'fas fa-calendar'
     }
 };
