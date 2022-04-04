@@ -67,7 +67,7 @@ const firstOrDefault = (array, defaultValue, key) => {
  * For easy take a first image from product on EJS templates
  */
 const firstImage = (product = {}) => {
-  return firstOrDefault(product.images, '/assets/img/books/placeholder.jpeg', 'src');
+  return firstOrDefault(product.images, '/assets/img/books/placeholder.png', 'src');
 };
 
 /**

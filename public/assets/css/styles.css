@@ -1404,6 +1404,16 @@ height: 350px !important;
 }
 
 /*
+ * ACCOUNT
+ */
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+/*
  * RESPONSIVE
  */
 

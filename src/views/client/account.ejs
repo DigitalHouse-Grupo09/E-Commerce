@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('../partials/metas') %>
+    <%- include('../partials/styles') %>
+</head>
+<body>
+    <%- include('../partials/header') %>
+
+    <!-- MAIN :: BEGIN -->
+
+    <!-- MAIN :: BEGIN -->
+    <main class="main-fluid">
+        <section class="admin">
+            <div class="title-subtitle">
+                <h3 class="title-subtitle-title">
+                    Bienvenido <span class="text-primary">@<%= locals.session.user.name %></span>
+                </h3>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-center">
+                <img src="<%= user.avatar || '/assets/img/users/placeholder.png' %>" alt="<%= user.full_name %>" class="avatar" />
+            </div>
+
+            <form action="/client/account?_method=PUT" method="POST" class="form" enctype="multipart/form-data">
+                <div class="d-flex flex-column align-items-center justify-content-center">
+                    <section class="w-100 lg:w-25">
+                        <div class="form-wrapper w-100 p-2">
+                            <div class="row form-group mx-0">
+                                <label for="full_name" class="form-label">Nombre completo</label>
+                                <input type="text" id="full_name" name="full_name" placeholder="..." class="form-input w-100" value="<%= user.full_name || '' %>">
+                                <% if(locals.errors && errors.full_name) { %>
+                                    <p class="feedback"><%= errors.full_name.msg %></p>
+                                <% } %>
+                            </div>
+                            <div class="row form-group mx-0">
+                                <label for="email" class="form-label">Correo electronico</label>
+                                <input type="text" id="email" name="email" placeholder="johndoe@email.com" class="form-input w-100" value="<%= user.email || '' %>">
+                                <% if(locals.errors && errors.email) { %>
+                                    <p class="feedback"><%= errors.email.msg %></p>
+                                <% } %>
+                                <small class="form-help">
+                                    <i class="fa-solid fa-circle-info"></i> Tu correo electrónico sera tu <b>usuari@</b>
+                                </small>
+                            </div>
+                            <div class="row form-group mx-0 mt-3">
+                                <label for="image" class="form-label">Avatar</label>
+                                <input type="file" id="image" name="image" placeholder="Imagen" class="form-input w-100" tabindex="6" value="<%= user.avatar || '' %>"> 
+                                <p id="image-error" class="error-validation"></p>
+                                <% if (locals.errors && errors.image) { %>
+                                    <p class="feedback"><%= errors.image.msg %></p>
+                                <% } %>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="row form-actions my-3">
+                        <button type="submit" class="form-action-submit">Actualizar</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+    <!-- MAIN :: END -->
+
+    <%- include('../partials/footer') %>
+
+    <%- include('../partials/scripts') %>
+</body>
+</html>

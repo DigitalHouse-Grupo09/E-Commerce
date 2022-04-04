@@ -1,5 +1,4 @@
 //
-//
 // imports
 //
 const path = require('path');
@@ -23,7 +22,7 @@ const mimetypes = {
 //
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, `${basedir}/assets/img/books`);
+      cb(null, `${basedir}/assets/img/users`);
     },
     filename: function (req, file, cb) {
       const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
