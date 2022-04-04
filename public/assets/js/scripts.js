@@ -257,13 +257,13 @@
 
 
 /**
- * BUSKET
+ * BASKET
  */
  (function () {
     window.addEventListener('load', () => {
         let botones = document.querySelectorAll('.addToCart');
 
-        //-loop with elemnents
+        //-loop con elemnentos
         botones.forEach(boton => boton.addEventListener('click', e => {
             e.preventDefault();
             e.stopImmediatePropagation();
@@ -287,7 +287,7 @@
         }));
 
         /**
-         * Add product to busket
+         * Add product to basket
          */
         function addProductToBasket (product) {
             let basket = JSON.parse(localStorage.getItem('basket') || '[]');
@@ -309,7 +309,7 @@
         }
 
         /**
-         * Count product on busket
+         * Count product on basket
          */
         function countProductsOnBasket () {
             let basket = JSON.parse(localStorage.getItem('basket') || '[]');

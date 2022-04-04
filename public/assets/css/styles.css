@@ -1255,7 +1255,7 @@ display: flex;
 justify-content: center;
 width: 100%;
 object-fit: fill;
-height: 340px !important;
+height: 350px !important;
 }
 
 /*
@@ -1618,7 +1618,14 @@ height: 340px !important;
     color: red;
   }
 
+  .form-regretful{
+  display: flex;
+  justify-content: center;
+  }
+
   #regretful {
+    width: 50%;
+    margin-top: 15px;
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -1634,15 +1641,19 @@ height: 340px !important;
     margin-bottom: 25px;
   }
 
+  .form-contact{
+  display: flex;
+  justify-content: center;
+  }
+
   #contact {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
+    width: 50%;
+    margin-top: 15px;
+    padding: 15px;
     display: flex;
-    border-radius: 4px;
-    box-sizing: border-box;
     flex-direction: column;
   }
+
 
   #contact input,
   #contact select,
