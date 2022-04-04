@@ -2,15 +2,15 @@
 // export
 //
 module.exports = {
-    literatura: {
+    'ficcion-y-literatura': {
         id: 1,
         icon: 'fas fa-book'
     }, {
-    'conocimiento-y-ciencia': {
+    'psicologia': {
         id: 2,
         icon: 'fas fa-brain'
     }, {
-    'comic-y-fantasia': {
+    'historia': {
         id: 3,
         icon: 'fab fa-superpowers'
     }, {
@@ -22,15 +22,15 @@ module.exports = {
         id: 5,
         icon: 'fas fa-baby'
     }, {
-    'actualidad-y-empresa': {
+    'economia-y-negocios': {
         id: 6,
         icon: 'fas fa-building'
     }, {
-    'bienestar-y-salud': {
+    'biografias-y-relatos': {
         id: 7,
         icon: 'fas fa-syringe'
     }, {
-    'viajes-y-negocio': {
+    'autoayuda': {
         id: 8,
         icon: 'fas fa-route'
     }, {
