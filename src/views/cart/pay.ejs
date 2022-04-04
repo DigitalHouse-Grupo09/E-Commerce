@@ -3,6 +3,7 @@
 <head>
     <%- include('../partials/metas') %>
     <%- include('../partials/styles') %>
+    <link href="/assets/css/cart.css" rel="stylesheet" />
 </head>
 <body>
     <%- include('../partials/header') %>
@@ -10,7 +11,7 @@
     <!-- MAIN :: BEGIN -->
 
     <main class="login">
-        <h1 class="create-title">Información de Pago</h1>
+        <h1 class="pay-main-title">Información de Pago</h1>
         <form action="/admin/login" method="POST" class="form">
             <div class="d-flex flex-column align-items-center justify-content-center">
                 <section class="w-100 lg:w-25">
@@ -108,45 +109,39 @@
                         <!-- CONFIRMACIÓN DE COMPRA -->
                         <section class="form-wrapper w-100 p-2 box">
                             <h3 class="pay-title">Confirmación de compra</h3>
-                            <table id="products-table" class="table">
-                                <thead>
-                                    <th>Producto</th>
-                                    <th>Cantidad</th>
-                                    <th>Total</th>
+                            <table id="products-table" class="theader">
+                                <thead class="theader">
+                                    <th class="tCol">Producto</th>
+                                    <th class="tCol">Cantidad</th>
+                                    <th class="tCol">Total</th>
                                 </thead>
                                 <tbody>
-                                    <td>[[= product.title ]]</td>
-                                    <td>[[= product.price ]]</td>
+                                    <td class="tRow">[[= product.title ]]</td>
+                                    <td class="tRow">[[= product.price ]]</td>
                                 </tbody>
                                 <tfoot>
                                     <tr>
                                         <th></th>
-                                        <th></th>
-                                        <th class="text-right">
-                                            <b>Total</b>: <span id="products-total"><span>
-                                        </th>
+                                        <th class="text-center tRow"> Total </th>
+                                        <th id="products-total" class="text-format tRow"></th>
                                     </tr>
                                 </tfoot>
                             </table>
                             <!-- TEMPLATES :: START -->
                             <template id="product-row">
                                 <tr>
-                                    <td class="text-left">
-                                        <div class="symbol">
-                                            <div class="symbol-content">
-                                                <h4 class="symbol-title">[[= product.title ]]</h4>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="text-right">
-                                        <div class="form-group">
-                                            <input type="number" id="product-quantity" name="product-quantity" class="form-input" value="1" style="width: 60px" disabled />
-                                        </div>
-                                    </td>
-                                    <td class="text-right">[[= product.price ]]</td>
+                                    <td class="text-center font-weight-normal tRow">[[= product.title ]]</td>
+                                    <td class="text-center tRow">1</td>
+                                    <td class="text-center font-weight-normal tRow">[[= product.price ]]</td>
                                 </tr>
                             </template>
                             <!-- TEMPLATES :: END -->
+
+                            <!-- TERMINOS Y CONDICIONES -->
+                            <div>
+                                <input type="checkbox" id="terminosCondiciones" name="terminosCondiciones" class="terminosCondiciones">
+                                <label for="terminosCondiciones">Acepto los terminos y condiciones</label>
+                            </div>
                         </section>
 
                     </div>  
