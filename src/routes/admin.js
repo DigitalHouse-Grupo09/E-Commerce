@@ -20,9 +20,9 @@ router.post('/login', middlewares.validation.validateLogin, controller.loginPost
 router.get('/', middlewares.session.adminMiddleware, controller.main);
 router.all('/logout', middlewares.session.adminMiddleware, controller.logout);
 router.get('/products/create', middlewares.session.adminMiddleware, controller.create);
-router.post('/products/create', middlewares.session.adminMiddleware, upload.single('image'), controller.createPost);
+router.post('/products/create', middlewares.session.adminMiddleware, middlewares.validation.validateAdminProduct, upload.single('image'), controller.createPost);
 router.get('/products/update/:id', middlewares.session.adminMiddleware, controller.update);
-router.put('/products/update/:id', middlewares.session.adminMiddleware, upload.single('image'), controller.updatePut);
+router.put('/products/update/:id', middlewares.session.adminMiddleware, middlewares.validation.validateAdminProduct, upload.single('image'), controller.updatePut);
 router.delete('/products/destroy/:id', middlewares.session.adminMiddleware, controller.destroy);
 
 //
