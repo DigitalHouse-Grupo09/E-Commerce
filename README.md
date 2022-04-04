@@ -74,6 +74,9 @@ Las retrospectivas y detalles de cada sprint, van a estar anidados, de forma ord
 <!-- HELPER LINKS -->
 ## 🪄 Links útiles
 
+* Dashboard
+   - [API](https://github.com/DigitalHouse-Grupo09/E-Commerce-api)
+   - [Front-End](https://github.com/DigitalHouse-Grupo09/E-Commerce-dashboard)
 * Seguimiento. [Trello](https://trello.com/b/JwisJ7RO)
 * Wireframes + Diseño UI/UX. [Figma](https://www.figma.com/file/sx843dH2Djp7oQiAv3VfVX/DH-Venture-Capital---E-Commerse?node-id=18%3A109)
 
