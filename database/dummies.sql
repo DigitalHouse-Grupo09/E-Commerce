@@ -39,42 +39,40 @@ INSERT INTO `authors` (`id`, `full_name`, `created_at`, `updated_at`) VALUES
 # ================================================
 
 INSERT INTO `products` (`id`, `id_category`, `slug`, `created_at`, `updated_at`) VALUES
-    (1, 1, 'diego-nacido-para-molestar-id-1', NOW(), NULL),
+    (1, 7, 'diego-nacido-para-molestar-id-1', NOW(), NULL),
     (2, 1, 'la-bestia-id-2', NOW(), NULL),
     (3, 1, 'la-reina-id-3', NOW(), NULL),
     (4, 1, 'don-quijote-de-la-mancha-id-4', NOW(), NULL),
-    (5, 1, 'el-camino-del-libertario-id-5', NOW(), NULL),
+    (5, 6, 'el-camino-del-libertario-id-5', NOW(), NULL),
     (6, 1, 'lo-que-calla-la-sangre-id-6', NOW(), NULL),
-    (7, 1, 'el-reino-de-los-malditos-id-7', NOW(), NULL),
+    (7, 5, 'el-reino-de-los-malditos-id-7', NOW(), NULL),
     (8, 1, 'la-tia-cosima-id-8', NOW(), NULL),
-    (9, 1, 'harry-potter-y-la-piedra-filosofal-id-9', NOW(), NULL),
+    (9, 5, 'harry-potter-y-la-piedra-filosofal-id-9', NOW(), NULL),
     (10, 1, 'el-club-de-los-psicopatas-id-10', NOW(), NULL),
     (11, 1, 'el-italiano-id-11', NOW(), NULL),
     (12, 1, 'la-ultima-vez-id-12', NOW(), NULL),
     (13, 1, 'un-trato-con-el-rey-de-los-elfos-id-13', NOW(), NULL),
     (14, 1, 'el-libro-mas-lindo-del-mundo-id-14', NOW(), NULL),
-    (15, 1, 'moby-dick-id-15', NOW(), NULL);
-    (16, 1, 'notas-al-pie-id-16', NOW(), NULL);
-    (17, 1, 'mitos-de-la-argentina-01-id-17', NOW(), NULL);
-    (18, 1, 'mitos-de-la-argentina-02-id-18', NOW(), NULL);
-    (19, 1, 'mitos-de-la-argentina-03-id-19', NOW(), NULL);
-    (20, 1, 'mitos-de-la-argentina-04-id-20', NOW(), NULL);
-    (21, 1, 'bosque-de-sombras-id-21', NOW(), NULL);
-    (22, 1, 'el-bosque-encantado-id-22', NOW(), NULL);
-    (23, 1, 'palabras-cruzadas-id-23', NOW(), NULL);
-    (24, 1, 'el-precio-de-la-pasion-id-24', NOW(), NULL);
-    (25, 1, 'sexo-atr-id-25', NOW(), NULL);
-	(26, 1, 'carnaval-toda-la-vida-id-26', NOW(), NULL);
-    (27, 1, 'hola-vegan-id-27', NOW(), NULL);
-    (28, 1, 'panaderia-legado-natural-id-28', NOW(), NULL);
-    (29, 1, 'asi-cocinan-los-argentinos-id-29', NOW(), NULL);
-	(30, 1, 'pasteleria-urbana-id-30', NOW(), NULL);
-    (31, 1, 'vladimir-putin-id-31', NOW(), NULL);
-	(32, 1, 'peaky-blinders-id-32', NOW(), NULL);
+    (15, 1, 'moby-dick-id-15', NOW(), NULL),
+    (16, 1, 'notas-al-pie-id-16', NOW(), NULL),
+    (17, 3, 'mitos-de-la-argentina-01-id-17', NOW(), NULL),
+    (18, 3, 'mitos-de-la-argentina-02-id-18', NOW(), NULL),
+    (19, 3, 'mitos-de-la-argentina-03-id-19', NOW(), NULL),
+    (20, 3, 'mitos-de-la-argentina-04-id-20', NOW(), NULL),
+    (21, 5, 'bosque-de-sombras-id-21', NOW(), NULL),
+    (22, 5, 'el-bosque-encantado-id-22', NOW(), NULL),
+    (23, 2, 'palabras-cruzadas-id-23', NOW(), NULL),
+    (24, 2, 'el-precio-de-la-pasion-id-24', NOW(), NULL),
+    (25, 8, 'sexo-atr-id-25', NOW(), NULL),
+	(26, 8, 'carnaval-toda-la-vida-id-26', NOW(), NULL),
+    (27, 4, 'hola-vegan-id-27', NOW(), NULL),
+    (28, 4, 'panaderia-legado-natural-id-28', NOW(), NULL),
+    (29, 4, 'asi-cocinan-los-argentinos-id-29', NOW(), NULL),
+	(30, 4, 'pasteleria-urbana-id-30', NOW(), NULL),
+    (31, 7, 'vladimir-putin-id-31', NOW(), NULL),
+	(32, 7, 'peaky-blinders-id-32', NOW(), NULL);
 
 # ================================================  
-
-CONSULTAR ESTO + AUTORES
 
 INSERT INTO `product_authors` (`id`, `id_product`, `id_author`, `created_at`, `updated_at`) VALUES
     (NULL, 1, 1, NOW(), NULL),
@@ -91,7 +89,25 @@ INSERT INTO `product_authors` (`id`, `id_product`, `id_author`, `created_at`, `u
     (NULL, 12, 12, NOW(), NULL),
     (NULL, 13, 13, NOW(), NULL),
     (NULL, 14, 14, NOW(), NULL),
-    (NULL, 15, 15, NOW(), NULL);
+    (NULL, 15, 15, NOW(), NULL),
+    (NULL, 16, 16, NOW(), NULL),
+    (NULL, 17, 17, NOW(), NULL),
+    (NULL, 18, 17, NOW(), NULL),
+    (NULL, 19, 17, NOW(), NULL),
+    (NULL, 20, 17, NOW(), NULL),
+    (NULL, 21, 18, NOW(), NULL),
+    (NULL, 22, 18, NOW(), NULL),
+    (NULL, 23, 19, NOW(), NULL),
+    (NULL, 24, 19, NOW(), NULL),
+    (NULL, 25, 20, NOW(), NULL),
+    (NULL, 26, 20, NOW(), NULL),
+    (NULL, 27, 21, NOW(), NULL),
+    (NULL, 28, 22, NOW(), NULL),
+    (NULL, 29, 23, NOW(), NULL),
+    (NULL, 30, 24, NOW(), NULL),
+    (NULL, 31, 25, NOW(), NULL),
+    (NULL, 32, 26, NOW(), NULL);
+
 
 # ================================================
 
@@ -185,7 +201,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 1, 4, '192', NOW(), NULL),
     (NULL, 1, 5, 'Español', NOW(), NULL),
     (NULL, 1, 6, 'Planeta', NOW(), NULL),
-    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 1, 7, 'Rústica con solapas', NOW(), NULL);
 
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 2, 1, 'La Bestia', NOW(), NULL),
@@ -194,7 +210,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 2, 4, '544', NOW(), NULL),
     (NULL, 2, 5, 'Español', NOW(), NULL),
     (NULL, 2, 6, 'Planeta', NOW(), NULL),
-    (NULL, 2, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 2, 7, 'Rústica con solapas', NOW(), NULL);
     
 
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
@@ -204,7 +220,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 3, 4, '328', NOW(), NULL),
     (NULL, 3, 5, 'Español', NOW(), NULL),
     (NULL, 3, 6, 'Planeta', NOW(), NULL),
-    (NULL, 3, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 3, 7, 'Rústica con solapas', NOW(), NULL);
 
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 4, 1, 'Don quijote de la mancha', NOW(), NULL),
@@ -213,7 +229,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 4, 4, '1216', NOW(), NULL),
     (NULL, 4, 5, 'Español', NOW(), NULL),
     (NULL, 4, 6, 'Penguin Clasicos', NOW(), NULL),
-    (NULL, 4, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 4, 7, 'Rústica con solapas', NOW(), NULL);
 
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 5, 1, 'El camino del libertario', NOW(), NULL),
@@ -222,7 +238,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 5, 4, '352', NOW(), NULL),
     (NULL, 5, 5, 'Español', NOW(), NULL),
     (NULL, 5, 6, 'Planeta', NOW(), NULL),
-    (NULL, 5, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 5, 7, 'Rústica con solapas', NOW(), NULL);
 
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 6, 1, 'Lo que calla la sangre', NOW(), NULL),
@@ -231,7 +247,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 6, 4, '420', NOW(), NULL),
     (NULL, 6, 5, 'Español', NOW(), NULL),
     (NULL, 6, 6, 'El Emporio libros', NOW(), NULL),
-    (NULL, 6, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 6, 7, 'Rústica con solapas', NOW(), NULL);
 
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 7, 1, 'El reino de los malditos', NOW(), NULL),
@@ -240,7 +256,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 7, 4, '416', NOW(), NULL),
     (NULL, 7, 5, 'Español', NOW(), NULL),
     (NULL, 7, 6, 'Puck', NOW(), NULL),
-    (NULL, 7, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 7, 7, 'Rústica con solapas', NOW(), NULL);
 
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 8, 1, 'La tia Cosima', NOW(), NULL),
@@ -249,7 +265,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 8, 4, '576', NOW(), NULL),
     (NULL, 8, 5, 'Español', NOW(), NULL),
     (NULL, 8, 6, 'Suma de Letras', NOW(), NULL),
-    (NULL, 8, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 8, 7, 'Rústica con solapas', NOW(), NULL);
 
  INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 9, 1, 'Harry Potter y la Piedra Filosofal', NOW(), NULL),
@@ -258,7 +274,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 9, 4, '288', NOW(), NULL),
     (NULL, 9, 5, 'Español', NOW(), NULL),
     (NULL, 9, 6, 'Salamandra Bolsito', NOW(), NULL),
-    (NULL, 9, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 9, 7, 'Rústica con solapas', NOW(), NULL);
 
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 10, 1, 'El club de los Psicopatas', NOW(), NULL),
@@ -267,7 +283,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 10, 4, '632', NOW(), NULL),
     (NULL, 10, 5, 'Español', NOW(), NULL),
     (NULL, 10, 6, 'Grupo Zeta', NOW(), NULL),
-    (NULL, 10, 3, 'Rústica con solapas', NOW(), NULL);       
+    (NULL, 10, 7, 'Rústica con solapas', NOW(), NULL);       
 
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 11, 1, 'El Italiano', NOW(), NULL),
@@ -276,7 +292,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 11, 4, '400', NOW(), NULL),
     (NULL, 11, 5, 'Español', NOW(), NULL),
     (NULL, 11, 6, 'Alfaguara', NOW(), NULL),
-    (NULL, 11, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 11, 7, 'Rústica con solapas', NOW(), NULL);
 
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 12, 1, 'La ultima vez', NOW(), NULL),
@@ -285,7 +301,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 12, 4, '224', NOW(), NULL),
     (NULL, 12, 5, 'Español', NOW(), NULL),
     (NULL, 12, 6, 'Planeta', NOW(), NULL),
-    (NULL, 12, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 12, 7, 'Rústica con solapas', NOW(), NULL);
 
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 13, 1, 'Un trato con el Rey de los Elfos', NOW(), NULL),
@@ -294,7 +310,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 13, 4, '416', NOW(), NULL),
     (NULL, 13, 5, 'Español', NOW(), NULL),
     (NULL, 13, 6, 'Umbriel Editores', NOW(), NULL),
-    (NULL, 13, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 13, 7, 'Rústica con solapas', NOW(), NULL);
 
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 14, 1, 'El libro mas lindo del Mundo', NOW(), NULL),
@@ -303,7 +319,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 14, 4, '192', NOW(), NULL),
     (NULL, 14, 5, 'Español', NOW(), NULL),
     (NULL, 14, 6, 'Vergara', NOW(), NULL),
-    (NULL, 14, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 14, 7, 'Rústica con solapas', NOW(), NULL);
 
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 15, 1, 'Moby Dick', NOW(), NULL),
@@ -312,7 +328,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 15, 4, '752', NOW(), NULL),
     (NULL, 15, 5, 'Español', NOW(), NULL),
     (NULL, 15, 6, 'Penguin Clasicos', NOW(), NULL),
-    (NULL, 15, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 15, 7, 'Rústica con solapas', NOW(), NULL);
 
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 1, 1, 'Notas al pie', NOW(), NULL),
@@ -321,7 +337,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 1, 4, '480', NOW(), NULL),
     (NULL, 1, 5, 'Español', NOW(), NULL),
     (NULL, 1, 6, 'Planeta', NOW(), NULL),
-    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 1, 7, 'Rústica con solapas', NOW(), NULL);
 	
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 1, 1, 'Mitos de la Historia Argentina 1', NOW(), NULL),
@@ -330,7 +346,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 1, 4, '432', NOW(), NULL),
     (NULL, 1, 5, 'Español', NOW(), NULL),
     (NULL, 1, 6, 'Booket', NOW(), NULL),
-    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 1, 7, 'Rústica con solapas', NOW(), NULL);
 	
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 1, 1, 'Mitos de la Historia Argentina 2', NOW(), NULL),
@@ -339,7 +355,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 1, 4, '496', NOW(), NULL),
     (NULL, 1, 5, 'Español', NOW(), NULL),
     (NULL, 1, 6, 'Booket', NOW(), NULL),
-    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 1, 7, 'Rústica con solapas', NOW(), NULL);
 	
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 1, 1, 'Mitos de la Historia Argentina 3', NOW(), NULL),
@@ -348,7 +364,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 1, 4, '350', NOW(), NULL),
     (NULL, 1, 5, 'Español', NOW(), NULL),
     (NULL, 1, 6, 'Booket', NOW(), NULL),
-    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 1, 7, 'Rústica con solapas', NOW(), NULL);
 	
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 1, 1, 'Mitos de la Historia Argentina 4', NOW(), NULL),
@@ -357,7 +373,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 1, 4, '376', NOW(), NULL),
     (NULL, 1, 5, 'Español', NOW(), NULL),
     (NULL, 1, 6, 'Booket', NOW(), NULL),
-    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 1, 7, 'Rústica con solapas', NOW(), NULL);
 	
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 1, 1, 'Frozen 2 Bosque de Sombras', NOW(), NULL),
@@ -366,7 +382,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 1, 4, '472', NOW(), NULL),
     (NULL, 1, 5, 'Español', NOW(), NULL),
     (NULL, 1, 6, 'Planeta', NOW(), NULL),
-    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 1, 7, 'Rústica con solapas', NOW(), NULL);
 	
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 1, 1, 'Frozen 2 El Bosque Encantado', NOW(), NULL),
@@ -375,7 +391,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 1, 4, '144', NOW(), NULL),
     (NULL, 1, 5, 'Español', NOW(), NULL),
     (NULL, 1, 6, 'Planeta', NOW(), NULL),
-    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 1, 7, 'Rústica con solapas', NOW(), NULL);
 	
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 1, 1, 'Palabras Cruzadas', NOW(), NULL),
@@ -384,7 +400,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 1, 4, '288', NOW(), NULL),
     (NULL, 1, 5, 'Español', NOW(), NULL),
     (NULL, 1, 6, 'Planeta', NOW(), NULL),
-    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 1, 7, 'Rústica con solapas', NOW(), NULL);
 	
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 1, 1, 'El Precio de la Pasion', NOW(), NULL),
@@ -393,7 +409,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 1, 4, '190', NOW(), NULL),
     (NULL, 1, 5, 'Español', NOW(), NULL),
     (NULL, 1, 6, 'Planeta', NOW(), NULL),
-    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 1, 7, 'Rústica con solapas', NOW(), NULL);
 	
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 1, 1, 'Sexo ATR', NOW(), NULL),
@@ -402,7 +418,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 1, 4, '144', NOW(), NULL),
     (NULL, 1, 5, 'Español', NOW(), NULL),
     (NULL, 1, 6, 'Planeta', NOW(), NULL),
-    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 1, 7, 'Rústica con solapas', NOW(), NULL);
 	
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 1, 1, 'Carnaval toda la vida', NOW(), NULL),
@@ -411,7 +427,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 1, 4, '200', NOW(), NULL),
     (NULL, 1, 5, 'Español', NOW(), NULL),
     (NULL, 1, 6, 'Planeta', NOW(), NULL),
-    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 1, 7, 'Rústica con solapas', NOW(), NULL);
 
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 1, 1, 'Hola Vegan', NOW(), NULL),
@@ -420,7 +436,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 1, 4, '296', NOW(), NULL),
     (NULL, 1, 5, 'Español', NOW(), NULL),
     (NULL, 1, 6, 'Planeta', NOW(), NULL),
-    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 1, 7, 'Rústica con solapas', NOW(), NULL);
 	
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 1, 1, 'Panaderia Legado Natural', NOW(), NULL),
@@ -429,7 +445,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 1, 4, '264', NOW(), NULL),
     (NULL, 1, 5, 'Español', NOW(), NULL),
     (NULL, 1, 6, 'V&R', NOW(), NULL),
-    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 1, 7, 'Rústica con solapas', NOW(), NULL);
 
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 1, 1, 'Asi cocinan los Argentinos', NOW(), NULL),
@@ -438,7 +454,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 1, 4, '360', NOW(), NULL),
     (NULL, 1, 5, 'Español', NOW(), NULL),
     (NULL, 1, 6, 'EL ATENEO', NOW(), NULL),
-    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 1, 7, 'Rústica con solapas', NOW(), NULL);
 	
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 1, 1, 'Pasteleria Urbana', NOW(), NULL),
@@ -447,7 +463,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 1, 4, '176', NOW(), NULL),
     (NULL, 1, 5, 'Español', NOW(), NULL),
     (NULL, 1, 6, 'EL ATENEO', NOW(), NULL),
-    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 1, 7, 'Rústica con solapas', NOW(), NULL);
 	
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 1, 1, 'Vladimir Putin', NOW(), NULL),
@@ -456,7 +472,7 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 1, 4, '368', NOW(), NULL),
     (NULL, 1, 5, 'Español', NOW(), NULL),
     (NULL, 1, 6, 'EL ATENEO', NOW(), NULL),
-    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 1, 7, 'Rústica con solapas', NOW(), NULL);
 	
 INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
     (NULL, 1, 1, 'Peaky Blinders: La verdadera historia.', NOW(), NULL),
@@ -465,4 +481,4 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 1, 4, '256', NOW(), NULL),
     (NULL, 1, 5, 'Español', NOW(), NULL),
     (NULL, 1, 6, 'PRINCIPAL DE LOS LIBROS', NOW(), NULL),
-    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+    (NULL, 1, 7, 'Rústica con solapas', NOW(), NULL);
