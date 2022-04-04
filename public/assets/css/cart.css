@@ -2,6 +2,11 @@
     font-weight: normal !important;
 }
 
+.text-format {
+    white-space: pre !important;
+    text-align: center !important;
+}
+
 /*
 // INDEX
 */
@@ -19,6 +24,11 @@ span{
 /*
 // PAY
 */
+
+.pay-main-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
 
 .pay-title {
   white-space: pre;
@@ -61,5 +71,19 @@ span{
 
 .box {
     margin: 0px 10px 0px 10px   ;
+}
+
+.tCol {
+    padding: 0px 15px 10px 15px;
+    font-weight: normal;
+}
+
+.tRow {
+    padding: 5px 0px 5px 0px;
+}
+
+.terminosCondiciones {
+    margin-top: 30px;
+    white-space: pre !important;
 }
 
