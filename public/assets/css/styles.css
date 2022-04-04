@@ -1128,7 +1128,7 @@ main {
 }
 
 .form-actions.form-actions-end {
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .form-actions .form-action,
@@ -1250,6 +1250,13 @@ main {
   color: var(--green);
 }
 
+.products .product .product-image {
+display: flex;
+justify-content: center;
+width: 100%;
+object-fit: fill;
+height: 340px !important;
+}
 
 /*
  * CATEGORIES
@@ -1305,12 +1312,10 @@ main {
 .product-details .product-detail .product-image {
   border-radius: var(--radius);
   width: auto;
-  height: auto;
 }
 
 .product-details .product-detail .product-image.product-image-large {
   position: relative;
-  right: -50px;
   width: 70%;
   height: 70%;
 }
