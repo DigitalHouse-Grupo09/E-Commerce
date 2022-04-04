@@ -1128,7 +1128,7 @@ main {
 }
 
 .form-actions.form-actions-end {
-  justify-content: flex-start;
+  justify-content: flex-end;
 }
 
 .form-actions .form-action,

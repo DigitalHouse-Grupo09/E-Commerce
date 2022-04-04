@@ -24,6 +24,7 @@
                             <div class="row form-group mx-0">
                                 <label for="full_name" class="form-label">Nombre completo <span class="required"></span></label>
                                 <input type="text" id="full_name" name="full_name" placeholder="..." class="form-input w-100" value="<%= (locals.old || {}).full_name || '' %>">
+                                <p id="full_name-error" class="error-validation"></p>
                                 <% if(locals.errors && errors.full_name) { %>
                                     <p class="feedback"><%= errors.full_name.msg %></p>
                                 <% } %>
@@ -31,6 +32,7 @@
                             <div class="row form-group mx-0">
                                 <label for="email" class="form-label">Correo electronico <span class="required"></span></label>
                                 <input type="email" id="email" name="email" placeholder="johndoe@email.com" class="form-input w-100" value="<%= (locals.old || {}).email || '' %>">
+                                <p id="email-error" class="error-validation"></p>
                                 <% if(locals.errors && errors.email) { %>
                                     <p class="feedback"><%= errors.email.msg %></p>
                                 <% } %>
@@ -41,6 +43,7 @@
                             <div class="row form-group mx-0">
                                 <label for="phone" class="form-label">Telefono</label>
                                 <input type="text" id="phone" name="phone" placeholder="+5491112341234" class="form-input w-100" value="<%= (locals.old || {}).phone || '' %>">
+                                <p id="phone-error" class="error-validation"></p>
                                 <% if(locals.errors && errors.phone) { %>
                                     <p class="feedback"><%= errors.phone.msg %></p>
                                 <% } %>
@@ -48,6 +51,7 @@
                             <div class="row form-group mx-0">
                                 <label for="address" class="form-label">¿A donde te lo enviamos? <span class="required"></span></label>
                                 <input type="text" id="address" name="address" placeholder="Dirección exacta" class="form-input w-100" value="<%= (locals.old || {}).address || '' %>">
+                                <p id="address-error" class="error-validation"></p>
                                 <% if(locals.errors && errors.address) { %>
                                     <p class="feedback"><%= errors.address.msg %></p>
                                 <% } %>
@@ -67,7 +71,7 @@
                         <div class="form-wrapper w-100">
                             <!-- PAY WITH CASH -->
                             <div class="payment-container">
-                                <input class="payment-checkbox" type="radio" id="payment-cash" value="cash" name="paymentMethod" checked> Efectivo
+                                <input class="payment-checkbox" type="radio" id="payment-cash" value="cash" name="payment_method" checked> Efectivo
                                 <div class="payment-content fade py-1">
                                     <p>Abonas al momento de la entrega.</p>
                                 </div>
@@ -77,7 +81,7 @@
 
                             <!-- PAY WITH TRANSFER -->
                             <div class="payment-container">
-                                <input class="payment-checkbox" type="radio" id="payment-transfer" value="transfer" name="paymentMethod"> Transferencia
+                                <input class="payment-checkbox" type="radio" id="payment-transfer" value="transfer" name="payment_method"> Transferencia
                                 <div class="payment-content fade py-1">
                                     <ul class="ml-3">
                                         <li><p><b>CBU</b>: 0290000100000000058382</p></li>
@@ -92,11 +96,12 @@
 
                             <!-- PAY WITH CREDIT/DEBIT CARD -->
                             <div class="payment-container">
-                                <input class="payment-checkbox" type="radio" id="payment-card" value="card" name="paymentMethod"> Tarjeta de Debito/Credito
+                                <input class="payment-checkbox" type="radio" id="payment-card" value="card" name="payment_method"> Tarjeta de Debito/Credito
                                 <div class="payment-content fade py-1">
                                     <div class="row form-group mx-0">
                                         <label for="card_name" class="form-label">Nombre del titular <span class="required"></span></label>
                                         <input type="text" id="card_name" name="card_name" placeholder="Juan Román" class="form-input w-100" value="<%= (locals.old || {}).card_name || '' %>">
+                                        <p id="card_name-error" class="error-validation"></p>
                                         <% if(locals.errors && errors.card_name) { %>
                                             <p class="feedback"><%= errors.card_name.msg %></p>
                                         <% } %>
@@ -104,21 +109,24 @@
                                     <div class="row form-group mx-0">
                                         <label for="card_number" class="form-label">Número de tarjeta <span class="required"></span></label>
                                         <input type="number" id="card_number" name="card_number" placeholder="Juan Román" class="form-input w-100" value="<%= (locals.old || {}).card_number || '' %>">
+                                        <p id="card_number-error" class="error-validation"></p>
                                         <% if(locals.errors && errors.card_number) { %>
                                             <p class="feedback"><%= errors.card_number.msg %></p>
                                         <% } %>
                                     </div>
                                     <div class="row form-group mx-0 mb-0">
-                                        <div class="column-1 md:column-2 pr-1">
+                                        <div class="column-1 md:column-2 pr-1 pl-0">
                                             <label for="card_date" class="form-label">Fecha de expiración <span class="required"></span></label>
                                             <input type="text" id="card_date" name="card_date" placeholder="MM/AA" class="form-input w-100" value="<%= (locals.old || {}).card_date || '' %>">
+                                            <p id="card_date-error" class="error-validation"></p>
                                             <% if(locals.errors && errors.card_date) { %>
                                                 <p class="feedback"><%= errors.card_date.msg %></p>
                                             <% } %>
                                         </div>
-                                        <div class="column-1 md:column-2 pl-1">
+                                        <div class="column-1 md:column-2 pl-1 pr-0">
                                             <label for="card_code" class="form-label">Código de seguridad <span class="required"></span></label>
                                             <input type="number" id="card_code" name="card_code" placeholder="***" class="form-input w-100" value="<%= (locals.old || {}).card_code || '' %>">
+                                            <p id="card_code-error" class="error-validation"></p>
                                             <% if(locals.errors && errors.card_code) { %>
                                                 <p class="feedback"><%= errors.card_code.msg %></p>
                                             <% } %>
