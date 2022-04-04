@@ -1,42 +1,42 @@
 [{
     "id": 1,
-    "title": "Literatura",
-    "slug": "literatura",
+    "title": "Ficcion y Literatura",
+    "slug": "ficcion-y-literatura",
     "icon": "fas fa-book"
 }, {
     "id": 2,
-    "title": "Conocimiento y ciencia",
-    "slug": "conocimiento-y-ciencia",
+    "title": "Psicologia",
+    "slug": "psicologia",
     "icon": "fas fa-brain"
 }, {
     "id": 3,
-    "title": "Cómic y fantasía",
-    "slug": "comic-y-fantasia",
+    "title": "Historia",
+    "slug": "historia",
     "icon": "fab fa-superpowers"
 }, {
     "id": 4,
-    "title": "Cocina y gastronomía",
+    "title": "Cocina y Gastronomía",
     "slug": "cocina-y-gastronomia",
     "icon": "fas fa-hamburger"
 }, {
     "id": 5,
-    "title": "Infantil y juvenil",
+    "title": "Infantil y Juvenil",
     "slug": "infantil-y-juvenil",
     "icon": "fas fa-baby"
 }, {
     "id": 6,
-    "title": "Actualidad y empresa",
-    "slug": "actualidad-y-empresa",
+    "title": "Economia y Negocios",
+    "slug": "economia-y-negocios",
     "icon": "fas fa-building"
 }, {
     "id": 7,
-    "title": "Bienestar y salud",
-    "slug": "bienestar-y-salud",
+    "title": "Biografias y Relatos",
+    "slug": "biografias-y-relatos",
     "icon": "fas fa-syringe"
 }, {
     "id": 8,
-    "title": "Viajes y negocio",
-    "slug": "viajes-y-negocio",
+    "title": "Autoayuda",
+    "slug": "autoayuda",
     "icon": "fas fa-route"
 }, {
     "id": 9,

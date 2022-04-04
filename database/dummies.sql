@@ -21,7 +21,20 @@ INSERT INTO `authors` (`id`, `full_name`, `created_at`, `updated_at`) VALUES
     (12, 'Guillermo Martinez', NOW(), NULL),
     (13, 'Elise Kova', NOW(), NULL),
     (14, 'Rosario Oyhanarte', NOW(), NULL),
-    (15, 'Herman Melville', NOW(), NULL);
+    (15, 'Herman Melville', NOW(), NULL),
+    (16, 'Alejandro Dolina', NOW(), NULL),
+	(17, 'Felipe Pigna', NOW(), NULL),
+	(18, 'Disney', NOW(), NULL),
+	(19, 'Gabriel Rolon', NOW(), NULL),
+	(20, 'Cecilia Ce', NOW(), NULL),
+    (21, 'Sabrina Raffaelli', NOW(), NULL),
+	(22, 'Claudio Olijavetzky', NOW(), NULL),
+	(23, 'Alberto Vazquez-Prego', NOW(), NULL),
+	(24, 'Gustavo Nari', NOW(), NULL),
+	(25, 'Frederic Pons', NOW(), NULL),
+    (26, 'Carl Chinn', NOW(), NULL);
+
+
 
 # ================================================
 
@@ -41,8 +54,27 @@ INSERT INTO `products` (`id`, `id_category`, `slug`, `created_at`, `updated_at`)
     (13, 1, 'un-trato-con-el-rey-de-los-elfos-id-13', NOW(), NULL),
     (14, 1, 'el-libro-mas-lindo-del-mundo-id-14', NOW(), NULL),
     (15, 1, 'moby-dick-id-15', NOW(), NULL);
+    (16, 1, 'notas-al-pie-id-16', NOW(), NULL);
+    (17, 1, 'mitos-de-la-argentina-01-id-17', NOW(), NULL);
+    (18, 1, 'mitos-de-la-argentina-02-id-18', NOW(), NULL);
+    (19, 1, 'mitos-de-la-argentina-03-id-19', NOW(), NULL);
+    (20, 1, 'mitos-de-la-argentina-04-id-20', NOW(), NULL);
+    (21, 1, 'bosque-de-sombras-id-21', NOW(), NULL);
+    (22, 1, 'el-bosque-encantado-id-22', NOW(), NULL);
+    (23, 1, 'palabras-cruzadas-id-23', NOW(), NULL);
+    (24, 1, 'el-precio-de-la-pasion-id-24', NOW(), NULL);
+    (25, 1, 'sexo-atr-id-25', NOW(), NULL);
+	(26, 1, 'carnaval-toda-la-vida-id-26', NOW(), NULL);
+    (27, 1, 'hola-vegan-id-27', NOW(), NULL);
+    (28, 1, 'panaderia-legado-natural-id-28', NOW(), NULL);
+    (29, 1, 'asi-cocinan-los-argentinos-id-29', NOW(), NULL);
+	(30, 1, 'pasteleria-urbana-id-30', NOW(), NULL);
+    (31, 1, 'vladimir-putin-id-31', NOW(), NULL);
+	(32, 1, 'peaky-blinders-id-32', NOW(), NULL);
 
-# ================================================
+# ================================================  
+
+CONSULTAR ESTO + AUTORES
 
 INSERT INTO `product_authors` (`id`, `id_product`, `id_author`, `created_at`, `updated_at`) VALUES
     (NULL, 1, 1, NOW(), NULL),
@@ -79,6 +111,23 @@ INSERT INTO `product_images` (`id`, `id_product`, `src`, `priority`, `created_at
     (NULL, 13, '/assets/img/books/book-13.jpg', 1, NOW(), NULL),
     (NULL, 14, '/assets/img/books/book-14.jpg', 1, NOW(), NULL),
     (NULL, 15, '/assets/img/books/book-15.jpg', 1, NOW(), NULL);
+    (NULL, 16, '/assets/img/books/book-16.jpg', 1, NOW(), NULL);
+    (NULL, 17, '/assets/img/books/book-17.jpg', 1, NOW(), NULL);
+    (NULL, 18, '/assets/img/books/book-18.jpg', 1, NOW(), NULL);
+    (NULL, 19, '/assets/img/books/book-19.jpg', 1, NOW(), NULL);
+    (NULL, 20, '/assets/img/books/book-20.jpg', 1, NOW(), NULL);
+    (NULL, 21, '/assets/img/books/book-21.jpg', 1, NOW(), NULL);
+    (NULL, 22, '/assets/img/books/book-22.jpg', 1, NOW(), NULL);
+    (NULL, 23, '/assets/img/books/book-23.jpg', 1, NOW(), NULL);
+    (NULL, 24, '/assets/img/books/book-24.jpg', 1, NOW(), NULL);
+    (NULL, 25, '/assets/img/books/book-25.jpg', 1, NOW(), NULL);
+    (NULL, 26, '/assets/img/books/book-26.jpg', 1, NOW(), NULL);
+    (NULL, 27, '/assets/img/books/book-27.jpg', 1, NOW(), NULL);
+    (NULL, 28, '/assets/img/books/book-28.jpg', 1, NOW(), NULL);
+    (NULL, 29, '/assets/img/books/book-29.jpg', 1, NOW(), NULL);
+    (NULL, 30, '/assets/img/books/book-30.jpg', 1, NOW(), NULL);
+    (NULL, 31, '/assets/img/books/book-31.jpg', 1, NOW(), NULL);
+    (NULL, 32, '/assets/img/books/book-32.jpg', 1, NOW(), NULL);
 
 # ================================================
 
@@ -97,8 +146,24 @@ INSERT INTO `product_prices` (`id`, `id_product`, `amount`, `currency`, `created
     (NULL, 12, 1900.00, 'AR$', NOW(), NULL),
     (NULL, 13, 2150.00, 'AR$', NOW(), NULL),
     (NULL, 14, 1699.00, 'AR$', NOW(), NULL),
-    (NULL, 15, 2549.00, 'AR$', NOW(), NULL);
-
+    (NULL, 15, 2549.00, 'AR$', NOW(), NULL),
+    (NULL, 16, 2890.00, 'AR$', NOW(), NULL),
+    (NULL, 17, 1850.00, 'AR$', NOW(), NULL),
+    (NULL, 18, 1850.00, 'AR$', NOW(), NULL),
+    (NULL, 19, 1850.00, 'AR$', NOW(), NULL),
+    (NULL, 20, 1850.00, 'AR$', NOW(), NULL),
+    (NULL, 21, 1300.00, 'AR$', NOW(), NULL),
+    (NULL, 22, 720.00, 'AR$', NOW(), NULL),
+    (NULL, 23, 2520.00, 'AR$', NOW(), NULL),
+    (NULL, 24, 2350.00, 'AR$', NOW(), NULL),
+    (NULL, 25, 2720.00, 'AR$', NOW(), NULL),
+    (NULL, 26, 2480.00, 'AR$', NOW(), NULL),
+    (NULL, 27, 3930.00, 'AR$', NOW(), NULL),
+    (NULL, 28, 4949.00, 'AR$', NOW(), NULL),
+    (NULL, 29, 6200.00, 'AR$', NOW(), NULL),
+    (NULL, 30, 3620.00, 'AR$', NOW(), NULL),
+    (NULL, 31, 2290.00, 'AR$', NOW(), NULL),
+    (NULL, 32, 3250.00, 'AR$', NOW(), NULL);
 # ================================================
 
 #
@@ -248,3 +313,156 @@ INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `
     (NULL, 15, 5, 'Español', NOW(), NULL),
     (NULL, 15, 6, 'Penguin Clasicos', NOW(), NULL),
     (NULL, 15, 3, 'Rústica con solapas', NOW(), NULL);
+
+INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
+    (NULL, 1, 1, 'Notas al pie', NOW(), NULL),
+    (NULL, 1, 2, 'Luego de la muerte del escritor Sergei Vidal Morozov; su casa editorial le encarga a Franco de Robertis una edición anotada de cuentos póstumos. La elección no es casual: De Robertis ha sido; a lo largo de gran parte de la carrera del reconocido autor; su colaborador más estrecho; un subordinado intelectual ¿también emocional¿ en una relación que; como sostiene el propio anotador; tiene ¿la edad de su memoria?<br/><br/>Sin embargo; una vez lanzado a su métier; las cosas parecen salirse de cauce; y aquello que de entrada estaba planeado como una tarea panegírica cede el paso a una inesperada incontinencia textual. De Robertis destila en sus notas una historia otra que poco parece tener que ver con el libro madre. Una trama subterránea poblada de situaciones inéditas y personajes de lo más variopintos: el mismísimo Morozov y un documental hecho con un grupo de niños actores; amores cruzados; un diamante maldito; traiciones; secretos; celos; luces y sombras.\'.<br/><br/>Literaria; teatral; policial; infinita; alucinada; profunda y a la vez divertida: así es Notas al pie; la nueva novela de Alejandro Dolina. Un universo con sus propias reglas que se despliega frente al lector como un juego de cajas chinas. Una arquitectura exquisita que solo la maestría y la sensibilidad del autor de clásicos como Crónicas del Ángel Gris y Cartas marcadas son capaces de sostener.', NOW(), NULL),
+    (NULL, 1, 3, '10/2021', NOW(), NULL),
+    (NULL, 1, 4, '480', NOW(), NULL),
+    (NULL, 1, 5, 'Español', NOW(), NULL),
+    (NULL, 1, 6, 'Planeta', NOW(), NULL),
+    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+	
+INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
+    (NULL, 1, 1, 'Mitos de la Historia Argentina 1', NOW(), NULL),
+    (NULL, 1, 2, 'Este libro intenta acercar la historia argentina a nuestra gente. Para que la quieran; para que la reconquisten; para que disfruten de una maravillosa herencia común; que como todos los bienes de nuestro querido país está mal repartida y apropiada indebidamente. Esta edición corregida y aumentada del primer volumen que forma la serie Los mitos de la historia argentina se propone cumplir de manera más integral esa tarea: acercar la historia nacional a los lectores; haciendo la historia de todos. Con Mitos 1; Felipe Pigna renueva la convocatoria a discutir e interesarnos por saber de dónde venimos y quiénes somos; ya que 'la historia de un país es su identidad; es todo lo que nos pasó como sociedad desde que nacimos hasta el presente', NOW(), NULL),
+    (NULL, 1, 3, '01/2019', NOW(), NULL),
+    (NULL, 1, 4, '432', NOW(), NULL),
+    (NULL, 1, 5, 'Español', NOW(), NULL),
+    (NULL, 1, 6, 'Booket', NOW(), NULL),
+    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+	
+INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
+    (NULL, 1, 1, 'Mitos de la Historia Argentina 2', NOW(), NULL),
+    (NULL, 1, 2, 'Felipe Pigna nos convoca para conocer nuestra historia; para saber de dónde venimos; por qué estamos como estamos; quiénes somos y quiénes podemos ser. El estudio de vidas entregadas apasionadamente a una causa -Bouchard; Güemes; Dorrego; de personalidades polémicas -Rosas; Sarmiento- y de temas con una asombrosa resonancia actual el genocidio de la 'conquista del desierto'; la primera deuda externa argentina; las protestas sociales de hace un siglo le permitirá al lector comprobar que la historia argentina no se repite; se continúa.', NOW(), NULL),
+    (NULL, 1, 3, '01/2019', NOW(), NULL),
+    (NULL, 1, 4, '496', NOW(), NULL),
+    (NULL, 1, 5, 'Español', NOW(), NULL),
+    (NULL, 1, 6, 'Booket', NOW(), NULL),
+    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+	
+INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
+    (NULL, 1, 1, 'Mitos de la Historia Argentina 3', NOW(), NULL),
+    (NULL, 1, 2, 'En este nuevo tomo de Los mitos de la historia argentina; el autor recorre una etapa marcada por hechos y procesos tan importantes como la llegada del radicalismo al gobierno; los conflidos sociales de la Semana Trágica; las huelgas patagónicas y los fusilamientos de más de mil quinientos trabajadores; la división del radicalismo entre alvearistas e yrigoyenistas; los avatares de la nacionalización del petróleo; el primer golpe de Estado de la Argentina en el siglo xx; la Década lnfame. Los negociados; la tortura; y también el anarquismo expropiador con personajes novelescos como Severino Di Giovanni; la caída del presidente Ortiz; la asunción de Castillo; la vuelta del fraude electoral y el triunfo de la llamada revolución del 4 de junio de 1943; que marca el ingreso de Perón a la política.', NOW(), NULL),
+    (NULL, 1, 3, '04/2019', NOW(), NULL),
+    (NULL, 1, 4, '350', NOW(), NULL),
+    (NULL, 1, 5, 'Español', NOW(), NULL),
+    (NULL, 1, 6, 'Booket', NOW(), NULL),
+    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+	
+INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
+    (NULL, 1, 1, 'Mitos de la Historia Argentina 4', NOW(), NULL),
+    (NULL, 1, 2, 'Pocos procesos de la historia argentina despiertan tanto interés; local e internacional; como el que marca los orígenes; consolidación y perdurabilidad del peronismo. Es seguramente uno de los fenómenos históricos más particulares en América Latina y el mundo; y que despierta mayores polémicas; rodeadas aún por pasiones e interpretaciones cruzadas; a favor y en contra. Este libro recorre el apasionante período de 1943 a 1955; para develar los aspectos controversiales del movimiento político fundado por Juan Domingo Perón; las transformaciones que impulsó en el país durante sus primeros gobiernos; y la personalidad y la acción de su líder y de la figura mítica por excelencia de esta etapa: Evita; la mujer ¿más amada y más odiada? de la historia argentina.', NOW(), NULL),
+    (NULL, 1, 3, '04/2019', NOW(), NULL),
+    (NULL, 1, 4, '376', NOW(), NULL),
+    (NULL, 1, 5, 'Español', NOW(), NULL),
+    (NULL, 1, 6, 'Booket', NOW(), NULL),
+    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+	
+INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
+    (NULL, 1, 1, 'Frozen 2 Bosque de Sombras', NOW(), NULL),
+    (NULL, 1, 2, 'Anna de Arendelle no quiere más que ayudar a su hermana mayor Elsa. Sin embargo; desde su coronación; todo parece indicar que ella no la necesita. Ahora Elsa está a punto de embarcarse en un viaje alrededor del mundo; dejando a Anna atrás.</br></br>Sin embargo; una misteriosa enfermedad llega a Arendelle y Elsa debe retrasar su viaje; dándole la oportunidad perfecta a Anna de sentirse útil finalmente. Cuando Anna descubre una habitación secreta en el castillo; recita un hechizo que espera cumpla su deseo de curar la enfermedad de Arendelle. Pero; en vez de eso; en un sueño siniestro cobra vida: el gigantesco lobo de las pesadillas de la infancia de Anna.</br></br>Acompañada por su hermana; Olaf; Kristoff y Sven; Anna debe aventurarse a lo desconocido para detener al temible lobo antes de que destruya todo aquello que ama. En su travesía descubrirá mitos y maravillas únicas; pero necesitará de mucha valentía; sinceridad y; sobre todo; amor.</br></br>Esta novela original une las aventuras épicas de Frozen y Frozen II.', NOW(), NULL),
+    (NULL, 1, 3, '11/2019', NOW(), NULL),
+    (NULL, 1, 4, '472', NOW(), NULL),
+    (NULL, 1, 5, 'Español', NOW(), NULL),
+    (NULL, 1, 6, 'Planeta', NOW(), NULL),
+    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+	
+INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
+    (NULL, 1, 1, 'Frozen 2 El Bosque Encantado', NOW(), NULL),
+    (NULL, 1, 2, 'A pesar del peligro; Elsa se siente obligada a seguir la voz que la llama al Bosque Encantado. Pero no estará sola; su valiente hermana; Anna; y sus amigos Kristoff; Sven y Olaf; el muñeco de nieve; la acompañarán a una aventura llena de magia que definirá el futuro del reino de Arendelle.', NOW(), NULL),
+    (NULL, 1, 3, '10/2019', NOW(), NULL),
+    (NULL, 1, 4, '144', NOW(), NULL),
+    (NULL, 1, 5, 'Español', NOW(), NULL),
+    (NULL, 1, 6, 'Planeta', NOW(), NULL),
+    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+	
+INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
+    (NULL, 1, 1, 'Palabras Cruzadas', NOW(), NULL),
+    (NULL, 1, 2, 'Hace poco más de diez años; Gabriel Rolón publicaba su segundo libro. Después del éxito rotundo y casi sin precedentes de Historias de diván; Palabras cruzadas llegaba a las librerías para reconfirmar el lugar central de su autor en la industria editorial de los últimos veinte años en la Argentina. Pero también ¿y en esto marca un verdadero hito¿; terminaba de consolidar un vínculo inédito hasta ese momento entre el Psicoanálisis y un público lector cada vez más numeroso. Y no era para menos. En ese camino que el libro proponía ¿propone¿; en ese tránsito desde el dolor hacia la verdad; los casos narrados dejaban honda su huella en quienes se atrevían al desafío. La angustia; los miedos; la sexualidad; el amor y el desamor; las adicciones y la soledad se dan cita en un viaje que paciente y psicoanalista emprenden juntos. Una travesía las más de las veces dolorosa; sí; pero que una vez cumplida se vive como transformadora; poderosa; irreductiblemente humana. En esta edición definitiva y revisada; que incluye un caso nuevo; Rolón se lee a sí mismo. Se anima a interpelar ese reflejo que le devuelve un espejo anclado hace más de una década; en una sociedad otra en la que los debates por las políticas de género; la legalidad del consumo de marihuana y los usos disruptivos de la lengua ¿de un idioma¿; entre otras cosas; no tenían ni la visibilidad ni el peso específico que tienen hoy. Y es ahí; en ese gesto genuino; tan franco y veraz hacia los lectores (los de entonces; los de ahora); en donde el autor hace que Palabras cruzadas se vuelva; una vez más; un libro vital; orgánico; indispensable.', NOW(), NULL),
+    (NULL, 1, 3, '09/2021', NOW(), NULL),
+    (NULL, 1, 4, '288', NOW(), NULL),
+    (NULL, 1, 5, 'Español', NOW(), NULL),
+    (NULL, 1, 6, 'Planeta', NOW(), NULL),
+    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+	
+INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
+    (NULL, 1, 1, 'El Precio de la Pasion', NOW(), NULL),
+    (NULL, 1, 2, 'El nuevo libro de Gabriel Rolón echa anclas en las aguas profundas de la pasión. Esa fuerza primitiva que grita en nosotros desde el principio de los tiempos; y nos lleva a un límite en el que la distancia entre el placer y el dolor es nada más que una respiración. Un territorio habitado por dioses y demonios; por héroes épicos que han dado batallas antológicas; y esos otros cotidianos y de a pie; héroes anónimos que dan pelea poniendo en juego su piel con la misma intensidad; con el mismo arrebato. Mitos e historias: hombres y dioses que caminan de la mano por ese borde en el que la razón trastabilla y pierde sus herramientas para explicar el mundo.</br></br>Y es ahí; entonces; donde El precio de la pasión recurre a la mitología; la literatura; la música; el cine y; cómo no; al consultorio del analista para llevar algo de luz a la penumbra de ese abismo que nos atrae de manera irresistible. El amor; el desamor; la soledad; la desesperación; el deseo; la angustia; los celos; el duelo; el éxito; el fracaso y la felicidad se dan cita en este ¿breve ensayo nocturno¿ en el que Gabriel Rolón encuentra; una vez más; ese tono ajustado; preciso; siempre certero; para decirnos que cielo e infierno están muy cerca; pero que entre ellos hay toda una vida para sentir.', NOW(), NULL),
+    (NULL, 1, 3, '09/2019', NOW(), NULL),
+    (NULL, 1, 4, '190', NOW(), NULL),
+    (NULL, 1, 5, 'Español', NOW(), NULL),
+    (NULL, 1, 6, 'Planeta', NOW(), NULL),
+    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+	
+INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
+    (NULL, 1, 1, 'Sexo ATR', NOW(), NULL),
+    (NULL, 1, 2, '¿Sexo ATR trata de naturalizar y hablar de sexo con un lenguaje cómodo y accesible. Cuasi ATP. Se trata de liberarnos; desbloquearnos; y si es con ritmo y sustancia; mejor. Bueno; sin sustancia porque en la cama no ayuda ni un poco. Mi idea con este libro es acompañarte en eso; dándote info clara; precisa y concisa. Habilitarte y empoderarte (porque el conocimiento es poder) para vivir tu sexualidad ATR?.</br></br>La Lic. Cecilia Ce nos ofrece en este libro-guía información sexual valiosísima de una manera gráfica; divertida; empática y respetuosa; con la intención de que cada uno haga su propio recorrido de autodescubrimiento y reafirmación; para disfrutar de la sexualidad en libertad. Este es el libro sobre sexo que todos siempre ansiamos tener. Esta es la educación sexual que queremos.', NOW(), NULL),
+    (NULL, 1, 3, '09/2019', NOW(), NULL),
+    (NULL, 1, 4, '144', NOW(), NULL),
+    (NULL, 1, 5, 'Español', NOW(), NULL),
+    (NULL, 1, 6, 'Planeta', NOW(), NULL),
+    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+	
+INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
+    (NULL, 1, 1, 'Carnaval toda la vida', NOW(), NULL),
+    (NULL, 1, 2, '¿El sexo no es lo que te venden afuera; es lo que vos quieras construir desde adentro?</br></br>Luego de su primer libro; Sexo ATR. La educación sexual que queremos; en el que exploramos la anatomía genital humana; el deseo; la estimulación; la masturbación y las artes anales; entre tantos otros temas; con el simple y más maravilloso objetivo de entendernos mejor en el universo del placer; en esta nueva obra; la licenciada Cecilia Ce nos invita a participar de una fiesta de reconocimiento y aprendizaje mayor para librarnos de culpas y frustraciones sin sentido: ¿cómo funcionan la autoestima y las exigencias en la cama? ¿De qué creencias y pensamientos sobre la sexualidad partimos? ¿De dónde salen tantos mitos sobre la sexualidad que nos alejan del placer y generan ansiedades? ¿Qué sabemos sobre el orgasmo; sobre cuál es la mejor manera de vinculearnos; del sexo de a muchos; del sexo en las embarazadas; del sexo posparto y de posiciones que nos ayuden a ampliar el goce? Carnaval toda la vida (o Sexo ATR volumen II) llegó para que todas las personas nos sintamos acompañadas y empoderadas; y para que podamos construir una bella autoestima sexual que nos lleve a vivir experiencias placenteras.</br></br>Que empiece el carnaval.', NOW(), NULL),
+    (NULL, 1, 3, '10/2020', NOW(), NULL),
+    (NULL, 1, 4, '200', NOW(), NULL),
+    (NULL, 1, 5, 'Español', NOW(), NULL),
+    (NULL, 1, 6, 'Planeta', NOW(), NULL),
+    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+
+INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
+    (NULL, 1, 1, 'Hola Vegan', NOW(), NULL),
+    (NULL, 1, 2, 'Un libro pensado para abrir y facilitar tu camino hacia el veganismo. Hola Vegan surgió imaginando el libro que nos hubiese gustado leer cuando recién nos hicimos veganas, por eso lo pensamos como un ABC, un manual de cocina. Pero ojo, no está pensado solamente para las personas que se adentran en el veganismo, también es ideal para quienes están en transición, para aquellas personas que ya no comen carnes pero les resulta imposible dejar los lácteos y para quienes comen de todo, pero quieren empezar a ampliar la porción de vegetales que llevan a la mesa.', NOW(), NULL),
+    (NULL, 1, 3, '11/2021', NOW(), NULL),
+    (NULL, 1, 4, '296', NOW(), NULL),
+    (NULL, 1, 5, 'Español', NOW(), NULL),
+    (NULL, 1, 6, 'Planeta', NOW(), NULL),
+    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+	
+INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
+    (NULL, 1, 1, 'Panaderia Legado Natural', NOW(), NULL),
+    (NULL, 1, 2, 'Legado... una palabra que revela la esencia de este libro. Claudio Olijavetzky nos brinda un recorrido por las apasionantes historias, recetas y procedimientos para hacer desde una simple masa madre hasta un magnífico croissant. De su mano, descubriremos la magia de la transformación de las harinas y levaduras en ese místico alimento que es el pan. Clásicos, integrales, sin gluten, con sabores especiales, viennoiserie...</br>Los invitamos a adentrarse en este mundo de sabores que hacen agua la boca y nos transportan a paisajes diferentes.</br>"Mi vida está ligada al pan desde mi infancia cuando, por un accidente de tránsito, terminé dentro de una panadería con mi primer maestro, Nino. Hoy, después de 35 años de aquel momento, sé que lo mejor que podemos dejar en una persona es un lindo recuerdo y una enseñanza, y tengo este privilegio en mis manos desde hace 20 años, gracias a mi profesión de docente".', NOW(), NULL),
+    (NULL, 1, 3, '11/2021', NOW(), NULL),
+    (NULL, 1, 4, '264', NOW(), NULL),
+    (NULL, 1, 5, 'Español', NOW(), NULL),
+    (NULL, 1, 6, 'V&R', NOW(), NULL),
+    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+
+INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
+    (NULL, 1, 1, 'Asi cocinan los Argentinos', NOW(), NULL),
+    (NULL, 1, 2, '¡Ideal para recrear los sabores argentinos en cualquier lugar del mundo! RECETAS TRADICIONALES Y ACTUALES: Empanadas; Asados y parrillas; Verduras y rellenos; Salsas y vinagretas; Milanesas y croquetas; Pucheros; locros y humitas; Guisos; cazuelas y escabeches; Tortillas y revueltos; Pasteles; tartas y budines; Pastas; Postres y dulces; El mate. // Enjoy the true Argentinian experience at home! TRADITIONAL AND CONTEMPORARY RECIPES: Turnovers; Roasts and Grills; Vegetables and Fillings; Sauces and Vinaigrettes; Breaded Steaks and Croquettes; Beef Pots; Locro Stews and Corn Puddings and Pies; Stews; Casseroles and Soused Meats; Spanish Omelettes and Scrambles; Pies; Tarts and Loaf Cakes; Pasta; Desserts and Sweet Spreads; The Mate Drink', NOW(), NULL),
+    (NULL, 1, 3, '02/2022', NOW(), NULL),
+    (NULL, 1, 4, '360', NOW(), NULL),
+    (NULL, 1, 5, 'Español', NOW(), NULL),
+    (NULL, 1, 6, 'EL ATENEO', NOW(), NULL),
+    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+	
+INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
+    (NULL, 1, 1, 'Pasteleria Urbana', NOW(), NULL),
+    (NULL, 1, 2, 'Cuán inagotable es la creatividad de los profesionales; como Nari; en concebir infinitas variantes de los cuatro jinetes de la pastelería: harina; azúcar; huevos y manteca'. (Osvaldo Gross)</br></br>8 partes con soluciones para cada momento del día; desde esos postres que siempre nos acompañaron en nuestras vidas; hasta cómo servir un té haciendo de nuestra casa un hotel de cinco estrellas. 60 recetas paso a paso; explicadas de forma simple; pero con técnica exacta; para obtener resultados perfectos. Alfajores; budines; cookies; tortas clásicas y modernas; trufas ¡y muchísmas delicias más!', NOW(), NULL),
+    (NULL, 1, 3, '11/2019', NOW(), NULL),
+    (NULL, 1, 4, '176', NOW(), NULL),
+    (NULL, 1, 5, 'Español', NOW(), NULL),
+    (NULL, 1, 6, 'EL ATENEO', NOW(), NULL),
+    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+	
+INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
+    (NULL, 1, 1, 'Vladimir Putin', NOW(), NULL),
+    (NULL, 1, 2, 'Vladimir Putin es aún un enigma. ¿Cuál es su objetivo? ¿Afirmar su poder personal y el de su clan en la línea de los autócratas exitosos en el Kremlin durante siglos? ¿Restaurar la grandeza de su país y lograr una síntesis de la historia de Rusia; de los zares a los soviéticos? ¿Cómo ascendió de teniente coronel de la KGB a líder de una de las principales potencias del mundo? ¿Quién es este hombre que parece usar una máscara?</br>A través de una investigación rigurosa; con testimonios inéditos; Frédéric Pons responde a estas y otras preguntas. Sin ocultar nada; pinta un vívido retrato del amo del Kremlin. Desde su infancia en un modesto barrio de Leningrado y sus sueños de juventud hasta las etapas decisivas de su formidable ascenso; que incluyen el tramado de sus redes de poder. Con claridad y fundamento; demuestra hasta qué punto este hombre encarna las aspiraciones y los temores de Rusia desde la caída del comunismo.</br>En el contexto actual; este libro es una lectura esencial para descifrar la personalidad; los objetivos y la estrategia de este protagonista de la historia contemporánea.', NOW(), NULL),
+    (NULL, 1, 3, '04/2017', NOW(), NULL),
+    (NULL, 1, 4, '368', NOW(), NULL),
+    (NULL, 1, 5, 'Español', NOW(), NULL),
+    (NULL, 1, 6, 'EL ATENEO', NOW(), NULL),
+    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
+	
+INSERT INTO `product_attributes` (`id`, `id_product`, `id_attribute`, `value`, `created_at`, `updated_at`) VALUES
+    (NULL, 1, 1, 'Peaky Blinders: La verdadera historia.', NOW(), NULL),
+    (NULL, 1, 2, 'La verdadera historia de la banda criminal mas famosa de Gran Bretaña. Billy Kimber era un delincuente astuto con una personalidad magnetica que se hizo con el liderazgo de la banda criminal mas celebre de Gran Bretaña: los Peaky Blinders; que dominaban los negocios ilegales de proteccion de comercios y las apuestas de las carreras de caballos. Hoy; gracias a la exitosa serie de television; los Peaky Blinders son sinonimo de arrogancia; glamour y violencia desenfrenada. Pero ¿quienes fueron los verdaderos Peaky Blinders? Tras decadas de estudio; el historiador Carl Chinn; nieto de un miembro de los Peaky Blinders e hijo de un corredor de apuestas ilegales de Birmingham; se basa en material inedito y entrevistas con descendientes de los integrantes de la banda para ofrecer un relato fascinante sobre el auge y la caida de la infame mafia que sembro el caos en Inglaterra en un momento en que la clase obrera del Imperio britanico estaba en pie de guerra. Estos son los Peaky Blinders y esta es su verdadera historia.', NOW(), NULL),
+    (NULL, 1, 3, '02/2022', NOW(), NULL),
+    (NULL, 1, 4, '256', NOW(), NULL),
+    (NULL, 1, 5, 'Español', NOW(), NULL),
+    (NULL, 1, 6, 'PRINCIPAL DE LOS LIBROS', NOW(), NULL),
+    (NULL, 1, 3, 'Rústica con solapas', NOW(), NULL);
