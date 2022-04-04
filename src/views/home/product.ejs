@@ -17,7 +17,7 @@
                 </div>
                 <h4 class="product-title"><%= attr(product.attributes, 'title') %></h4>
                 <p class="product-price">
-                    <span class="product-amount"><%= formatPrice(product.price.amount, product.price.currency) %></span> <% if (product.price.discount_amount) { %><small class="product-offer"><%= formatDiscount(product.price.discount_amount, product.price.discount_type) %></small><% } %>
+                    <span class="product-amount"><%= formatPrice(product.price.amount, product.price.currency) %></span> <% if (product.price.discount_amount > 0) { %><small class="product-offer"><%= formatDiscount(product.price.discount_amount, product.price.discount_type) %></small><% } %>
                 </p>
             </div>
         </a>
