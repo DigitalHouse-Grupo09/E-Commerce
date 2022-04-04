@@ -497,19 +497,19 @@ a:active {
 
 /* TEXT */
 .text-left {
-  text-align: left;
+  text-align: left !important;
 }
 
 .text-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .text-right {
-  text-align: right;
+  text-align: right !important;
 }
 
 .text-primary {
-  color: var(--primary);
+  color: var(--primary) !important;
 }
 
 /* BUTTON */
@@ -1155,6 +1155,13 @@ main {
 .form-actions .form-action:hover,
 .form-actions .form-action-submit:hover {
   background-color: var(--primary-dark);
+}
+
+.form-actions .form-action:disabled,
+.form-actions .form-action-submit:disabled,
+.form-actions .form-action-reset:disabled,
+.form-actions .form-action-cancel:disabled {
+  background-color: var(--primary-light);
 }
 
 /*

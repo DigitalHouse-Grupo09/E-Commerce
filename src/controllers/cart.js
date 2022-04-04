@@ -1,17 +1,12 @@
 //
-// imports
-//
-const { products } = require('../models');
-
-//
 // endpoints
 //
 // cart
-const cart = (req, res) => res.render('cart', { products: products.getAll() });
+const cart = (req, res) => res.render('cart');
 
-const pay = (req, res) => res.render('cart/pay')
+const checkout = (req, res) => res.render('cart/checkout');
 
 //
 // export
 //
-module.exports = { cart, pay };
+module.exports = { cart, checkout };

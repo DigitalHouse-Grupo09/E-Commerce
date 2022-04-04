@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('../partials/metas') %>
+    <%- include('../partials/styles') %>
+    <link href="/assets/css/cart.css" rel="stylesheet" />
+</head>
+<body>
+    <%- include('../partials/header') %>
+
+    <!-- MAIN :: BEGIN -->
+
+    <main class="cart">
+        <form id="form-cart-checkout" action="/cart/checkout" method="POST" class="form">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+                <div class="row">
+                    <!-- INFORMACIÓN PERSONAL -->
+                    <section class="column-1 lg:column-2 p-2">
+                        <div class="title-subtitle">
+                            <h3 class="title-subtitle-title text-left">Información Personal</h3>
+                        </div>
+
+                        <div class="form-wrapper w-100">
+                            <div class="row form-group mx-0">
+                                <label for="full_name" class="form-label">Nombre completo <span class="required"></span></label>
+                                <input type="text" id="full_name" name="full_name" placeholder="..." class="form-input w-100" value="<%= (locals.old || {}).full_name || '' %>">
+                                <% if(locals.errors && errors.full_name) { %>
+                                    <p class="feedback"><%= errors.full_name.msg %></p>
+                                <% } %>
+                            </div>
+                            <div class="row form-group mx-0">
+                                <label for="email" class="form-label">Correo electronico <span class="required"></span></label>
+                                <input type="email" id="email" name="email" placeholder="johndoe@email.com" class="form-input w-100" value="<%= (locals.old || {}).email || '' %>">
+                                <% if(locals.errors && errors.email) { %>
+                                    <p class="feedback"><%= errors.email.msg %></p>
+                                <% } %>
+                                <small class="form-help">
+                                    <i class="fa-solid fa-circle-info"></i> Solo te mantendremos informado del estado de tu producto. <strong><i>No recibirás ningún tipo de promoción.</i></strong>
+                                </small>
+                            </div>
+                            <div class="row form-group mx-0">
+                                <label for="phone" class="form-label">Telefono</label>
+                                <input type="text" id="phone" name="phone" placeholder="+5491112341234" class="form-input w-100" value="<%= (locals.old || {}).phone || '' %>">
+                                <% if(locals.errors && errors.phone) { %>
+                                    <p class="feedback"><%= errors.phone.msg %></p>
+                                <% } %>
+                            </div>
+                            <div class="row form-group mx-0">
+                                <label for="address" class="form-label">¿A donde te lo enviamos? <span class="required"></span></label>
+                                <input type="text" id="address" name="address" placeholder="Dirección exacta" class="form-input w-100" value="<%= (locals.old || {}).address || '' %>">
+                                <% if(locals.errors && errors.address) { %>
+                                    <p class="feedback"><%= errors.address.msg %></p>
+                                <% } %>
+                                <small class="form-help">
+                                    <i class="fa-solid fa-circle-info"></i> Copia la dirección desde <a href="https://www.google.com/maps" target="_blank" class="text-primary"><b>Google Map</b></a>. Esto facilita la entrega ☺️
+                                </small>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- METODOS DE PAGO -->
+                    <section class="column-1 lg:column-2 p-2">
+                        <div class="title-subtitle">
+                            <h3 class="title-subtitle-title text-left">Metodo de pago</h3>
+                        </div>
+
+                        <div class="form-wrapper w-100">
+                            <!-- PAY WITH CASH -->
+                            <div class="payment-container">
+                                <input class="payment-checkbox" type="radio" id="payment-cash" value="cash" name="paymentMethod" checked> Efectivo
+                                <div class="payment-content fade py-1">
+                                    <p>Abonas al momento de la entrega.</p>
+                                </div>
+                            </div>
+
+                            <div class="separator separator-dashed"></div>
+
+                            <!-- PAY WITH TRANSFER -->
+                            <div class="payment-container">
+                                <input class="payment-checkbox" type="radio" id="payment-transfer" value="transfer" name="paymentMethod"> Transferencia
+                                <div class="payment-content fade py-1">
+                                    <ul class="ml-3">
+                                        <li><p><b>CBU</b>: 0290000100000000058382</p></li>
+                                        <li><p><b>ALIAS</b>: PEPITO.SAPO.PAJARO</p></li>
+                                    </ul>
+                                    <br>
+                                    <p>Una vez realiza la transferencia, le pedimos por favor, que nos envíe el comprobante a <a href="mailto:tickets@bookify.com" class="text-primary">tickets@bookify.com</a></p>
+                                </div>
+                            </div>
+
+                            <div class="separator separator-dashed"></div>
+
+                            <!-- PAY WITH CREDIT/DEBIT CARD -->
+                            <div class="payment-container">
+                                <input class="payment-checkbox" type="radio" id="payment-card" value="card" name="paymentMethod"> Tarjeta de Debito/Credito
+                                <div class="payment-content fade py-1">
+                                    <div class="row form-group mx-0">
+                                        <label for="card_name" class="form-label">Nombre del titular <span class="required"></span></label>
+                                        <input type="text" id="card_name" name="card_name" placeholder="Juan Román" class="form-input w-100" value="<%= (locals.old || {}).card_name || '' %>">
+                                        <% if(locals.errors && errors.card_name) { %>
+                                            <p class="feedback"><%= errors.card_name.msg %></p>
+                                        <% } %>
+                                    </div>
+                                    <div class="row form-group mx-0">
+                                        <label for="card_number" class="form-label">Número de tarjeta <span class="required"></span></label>
+                                        <input type="number" id="card_number" name="card_number" placeholder="Juan Román" class="form-input w-100" value="<%= (locals.old || {}).card_number || '' %>">
+                                        <% if(locals.errors && errors.card_number) { %>
+                                            <p class="feedback"><%= errors.card_number.msg %></p>
+                                        <% } %>
+                                    </div>
+                                    <div class="row form-group mx-0 mb-0">
+                                        <div class="column-1 md:column-2 pr-1">
+                                            <label for="card_date" class="form-label">Fecha de expiración <span class="required"></span></label>
+                                            <input type="text" id="card_date" name="card_date" placeholder="MM/AA" class="form-input w-100" value="<%= (locals.old || {}).card_date || '' %>">
+                                            <% if(locals.errors && errors.card_date) { %>
+                                                <p class="feedback"><%= errors.card_date.msg %></p>
+                                            <% } %>
+                                        </div>
+                                        <div class="column-1 md:column-2 pl-1">
+                                            <label for="card_code" class="form-label">Código de seguridad <span class="required"></span></label>
+                                            <input type="number" id="card_code" name="card_code" placeholder="***" class="form-input w-100" value="<%= (locals.old || {}).card_code || '' %>">
+                                            <% if(locals.errors && errors.card_code) { %>
+                                                <p class="feedback"><%= errors.card_code.msg %></p>
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="row form-actions d-flex align-items-center my-3">
+                    <button id="btn-cart-checkout" type="submit" class="form-action-submit" disabled>Comprar</button>
+                    <!-- TERMINOS Y CONDICIONES -->
+                    <div class="d-flex align-items-center ml-4">
+                        <input type="checkbox" id="terms" name="terms" class="mr-1">
+                        <label for="terminosCondiciones">Acepto los terminos y condiciones</label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </main>
+    <!-- MAIN :: END -->
+
+    <!-- TEMPLATES :: START -->
+    <template id="product-row">
+        <tr>
+            <td class="text-left">
+                <div class="symbol">
+                    <figure class="symbol-media">
+                        <img class="symbol-media-image" src="[[= product.image ]]" width="35%" />
+                    </figure>
+                    <div class="symbol-content">
+                        <h4 class="symbol-title">[[= product.title ]]</h4>
+                    </div>
+                </div>
+            </td>
+            <td class="text-right">[[= product.price ]]</td>
+            <td class="text-right">1</td>
+            <td class="text-right">[[= product.price ]]</td>
+        </tr>
+    </template>
+
+    <template id="product-input">
+        <input type="hidden" name="product[]" value="[[= product.id ]]" class="d-none selected-books-checkout" />
+    </template>
+    <!-- TEMPLATES :: END -->
+
+    <%- include('../partials/footer') %>
+
+    <%- include('../partials/scripts') %>
+    <script src="/assets/js/busket.js"></script>
+</body>
+</html>

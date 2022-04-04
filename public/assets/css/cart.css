@@ -22,68 +22,20 @@ span{
 }
 
 /*
-// PAY
+// CHECKOUT
 */
 
-.pay-main-title {
-    text-align: center;
-    margin-bottom: 50px;
+.payment-container {
+    font-weight: bolder;
+    font-size: var(--font-size-md);
 }
 
-.pay-title {
-  white-space: pre;
-  margin-bottom: 15px;
-  color: darkgrey;
-}
-
-.cardInfo {
+.payment-content {
     display: none;
-    margin: 15px 15px 0px 15px;
-}
-
-.show-cardInfo:checked + label .cardInfo {
-    display: block; 
-}
-
-.cashInfo {
-    display: none;
-}
-
-.show-cashInfo:checked + label .cashInfo {
-    display: block; 
-}
-
-.cashInfo div {
-    margin: 15px 15px 0px 15px;
-}
-
-.transferInfo {
-    display: none;
-}
-
-.show-transferInfo:checked + label .transferInfo {
-    display: block; 
-}
-
-.transferInfo p {
-    margin: 15px 15px 0px 15px;
-}
-
-.box {
-    margin: 0px 10px 0px 10px   ;
-}
-
-.tCol {
-    padding: 0px 15px 10px 15px;
     font-weight: normal;
+    font-size: var(--font-size);
 }
 
-.tRow {
-    padding: 5px 0px 5px 0px;
+.payment-checkbox:checked+.payment-content {
+    display: block;
 }
-
-.terminosCondiciones {
-    margin-top: 30px;
-    white-space: pre !important;
-}
-

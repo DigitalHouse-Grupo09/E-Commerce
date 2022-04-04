@@ -20,38 +20,37 @@
                     </a>
                 </p>
             </div>
-            <form class="form" method="POST" action='/cart'>
-                <table id="products-table" class="table">
-                    <!-- HEADERS -->
-                    <thead>
-                        <tr>
-                            <th class="text-left">Producto</th>
-                            <th class="text-right">Precio</th>
-                            <th class="text-right">Cantidad</th>
-                            <th class="text-right">Total</th>
-                        </tr>
-                    </thead>
 
-                    <!-- PRODUCTS -->
-                    <tbody></tbody>
+            <table id="products-table" class="table">
+                <!-- HEADERS -->
+                <thead>
+                    <tr>
+                        <th class="text-left">Producto</th>
+                        <th class="text-right">Precio</th>
+                        <th class="text-right">Cantidad</th>
+                        <th class="text-right">Total</th>
+                    </tr>
+                </thead>
 
-                    <!-- FOOTER -->
-                    <tfoot>
-                        <tr>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th class="text-right">
-                                <b>Total</b>: <span id="products-total"><span>
-                            </th>
-                        </tr>
-                    </tfoot>
-                </table>
+                <!-- PRODUCTS -->
+                <tbody></tbody>
 
-                <div class="form-actions form-actions-end">
-                    <button type="submit" class="btn btn-big">Confirmar</button>
-                </div>
-            </form>
+                <!-- FOOTER -->
+                <tfoot>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th class="text-right">
+                            <b>Total</b>: <span id="products-total"><span>
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <div class="form-actions form-actions-end">
+                <a href="/cart/checkout" class="btn btn-big">Confirmar</a>
+            </div>
         </section>
     </main>
     <!-- MAIN :: END -->
@@ -82,6 +81,10 @@
             </td>
             <td class="text-right">[[= product.price ]]</td>
         </tr>
+    </template>
+
+    <template id="product-input">
+        <input type="hidden" name="product[]" value="[[= product.id ]]" class="d-none" />
     </template>
     <!-- TEMPLATES :: END -->
 
