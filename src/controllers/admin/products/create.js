@@ -39,7 +39,7 @@ const createPost = async (req, res) => {
 
             // Check if is necesary create new category model
             if (data.category_name) {
-                category = await Category.create({ full_name: data.category_name }, { transaction });
+                category = await Category.create({ full_name: data.category_name, slug: prepareSlug(data.category_name) }, { transaction });
             }
 
             // Try to insert product model

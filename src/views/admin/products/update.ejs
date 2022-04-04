@@ -9,55 +9,172 @@
 
     <!-- MAIN :: BEGIN -->
     <main>
-        <h1 class="create-title">Formulario de edición</h1>
-        <section class="form-wrapper">
-            <form action="/admin/products/update/<%= product.id %>?_method=PUT" method="POST" class="form">
-                <div class="form-group">
-                    <input type="text" name="title" placeholder="Titulo" class="form-input" value="<%= product.title || '' %>">
-                </div>
-                <div class="form-group">
-                    <textarea name="description" placeholder="Descripción" class="form-input" rows="5" cols="43"><%= product.description || '' %></textarea>
-                </div>
-                <div class="form-group">
-                    <input type="file" name="image" placeholder="Imagen" class="form-input" value="<%= product.image || '' %>"> 
-                </div>
-                <div class="form-group">
-                    <input type="number" name="price" placeholder="Precio" class="form-input" value="<%= product.price || '' %>">
-                </div>
-                <div class="form-group">
-                    <input type="number" name="discount" placeholder="Descuento" class="form-input" value="<%= product.discount || '' %>">
-                </div>
-                <div class="form-group">
-                    <input type="text" name="author" placeholder="Autor" class="form-input" value="<%= product.author || '' %>">
-                </div>
-                <div class="form-group">
-                    <label for="publishedAt" class="form-label">Fecha de publicación</label>
-                    <input type="date" name="publishedAt" class="form-input" value="<%= product.publishedAt || '' %>-01-01">
-                </div>
-                <div class="form-group">
-                    <input type="number" name="pages" placeholder="Cantidad de paginas" class="form-input" value="<%= product.pages || '' %>">
-                </div>
-                <div class="form-group">
-                    <label for="language" class="form-label">Seleccionar idioma</label>
-                    <select name="language">
-                        <option value="spanish" <%= (product.language || '').toLowerCase() === 'spanish' ? 'selected' : '' %>>Español</option>
-                        <option value="english" <%= (product.language || '').toLowerCase() === 'english' ? 'selected' : '' %>>Inglés</option>
-                        <option value="french" <%= (product.language || '').toLowerCase() === 'french' ? 'selected' : '' %>>Francés</option>
-                        <option value="portuguese" <%= (product.language || '').toLowerCase() === 'portuguese' ? 'selected' : '' %>>Portugues</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="editorial" placeholder="Tamaño" class="form-input" value="<%= product.editorial || '' %>">
-                </div>
-                <div class="form-group">
-                    <input type="text" name="presentation" placeholder="Presentación" class="form-input" value="<%= product.presentation || '' %>">
-                </div>
-                <div class="form-actions">
-                    <button type="submit" class="form-action-submit">Actualizar</button>
+        <h1 class="create-title">Actualizando "<%= product.title || '' %>"</h1>
+        <form id="form-products-edit" action="/admin/products/update/<%= product.id %>?_method=PUT" method="POST" class="form" enctype="multipart/form-data">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+                <section class="w-100 lg:w-75">
+                    <div class="form-header mb-3">
+                        <h2>Datos principales</h2>
+                    </div>
+                    <div class="form-wrapper w-100 p-2">
+                        <div class="row form-group mx-0">
+                            <label for="title" class="form-label">Título <span class="required"></span></label>
+                            <input type="text" id="title" name="title" placeholder="Titulo del libro" class="form-input w-100" tabindex="1" value="<%= decodeUtf8(product.title || '') %>">
+                            <p id="title-error" class="error-validation"></p>
+                            <% if (locals.errors && errors.title) { %>
+                                <p class="feedback"><%= errors.title.msg %></p>
+                            <% } %>
+                        </div>
+                        <div class="row form-group mx-0 mt-3">
+                            <label for="description" class="form-label">Descripción/Sinapsis <span class="required"></span></label>
+                            <textarea id="description" name="description" placeholder="Breve sinapsis del libro" class="form-input w-100" tabindex="2" rows="5" cols="43"><%= decodeUtf8(product.description || '') %></textarea>
+                            <p id="description-error" class="error-validation"></p>
+                            <% if (locals.errors && errors.description) { %>
+                                <p class="feedback"><%= errors.description.msg %></p>
+                            <% } %>
+                        </div>
+                        <div class="row form-group mx-0 mt-3">
+                            <div id="category-selector" class="column-1 md:column-1 p-0 transition-all">
+                                <label for="category" class="form-label">Categoría <span class="required"></span></label>
+                                <select id="category" name="category" class="form-select" tabindex="3">
+                                    <option value="" <%= product.category.id === '' ? 'selected' : '' %>>Seleccione una categoría</option>
+                                    <option value="-1" <%= product.category.id === -1 ? 'selected' : '' %>>*** Nueva categoría ***</option>
+                                    <% categories.forEach(category => { %>
+                                        <option value="<%= category.id %>" <%= product.category.id === category.id ? 'selected' : '' %>><%- decodeUtf8(category.description) %></option>
+                                    <% }); %>
+                                </select>
+                                <p id="category-error" class="error-validation"></p>
+                                <% if (locals.errors && errors.category) { %>
+                                    <p class="feedback"><%= errors.category.msg %></p>
+                                <% } %>
+                            </div>
+                            <div id="category-new" class="column-1 md:column-2 pr-0 transition-all" style="display: none;">
+                                <label for="category_name" class="form-label">Titulo de la nueva categoría <span class="required"></span></label>
+                                <input type="text" id="category_name" name="category_name" placeholder="Categoría..." class="form-input form-input-end w-100">
+                                <p id="category_name-error" class="error-validation"></p>
+                                <% if (locals.errors && errors.category_name) { %>
+                                    <p class="feedback"><%= errors.category_name.msg %></p>
+                                <% } %>
+                            </div>
+                        </div>
+                        <div class="row form-group mx-0 mt-3">
+                            <div class="column-2 pl-0">
+                                <label for="price" class="form-label">Precio <span class="required"></span></label>
+                                <div class="form-input-wrapper">
+                                    <i class="fa fa-dollar form-input-icon form-input-icon-start"></i>
+                                    <input type="number" id="price" name="price" placeholder="Precio del libro" class="form-input form-input-start w-100" tabindex="4" value="<%= product.price.amount %>">
+                                    <p id="price-error" class="error-validation"></p>
+                                </div>
+                                <% if (locals.errors && errors.price) { %>
+                                    <p class="feedback"><%= errors.price.msg %></p>
+                                <% } %>
+                            </div>
+                            <div class="column-2 pr-0">
+                                <label for="discount" class="form-label">Descuento</label>
+                                <div class="form-input-wrapper">
+                                    <input type="number" id="discount" name="discount" placeholder="Descuento" class="form-input form-input-end w-100" tabindex="5" value="<%= product.price.discount || '0' %>">
+                                    <p id="discount-error" class="error-validation"></p>
+                                    <i class="fa fa-percent form-input-icon form-input-icon-end"></i>
+                                </div>
+                                <% if (locals.errors && errors.discount) { %>
+                                    <p class="feedback"><%= errors.discount.msg %></p>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="w-100 lg:w-75">
+                    <div class="form-header my-3">
+                        <h2>Imagenes</h2>
+                    </div>
+                    <div class="form-wrapper w-100 p-2">
+                        <div class="row d-flex justify-content-center align-items-start">
+                            <img src="<%= product.image.src || '/assets/img/placeholder.png' %>" alt="<%= product.title %>" width="200px" />
+                        </div>
+                        <div class="row form-group mx-0 mt-3">
+                            <label for="image" class="form-label">Portada del libro</label>
+                            <input type="file" id="image" name="image" placeholder="Imagen" class="form-input w-100" tabindex="6" value="<%= product.image.src %>"> 
+                            <p id="image-error" class="error-validation"></p>
+                            <% if (locals.errors && errors.image) { %>
+                                <p class="feedback"><%= errors.image.msg %></p>
+                            <% } %>
+                            <small class="form-help">
+                                <i class="fa-solid fa-circle-info"></i> Actualmente solo contamos con una imagen por libro. Próximamente se podran agregar hasta 5 imagenes.
+                            </small>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="w-100 lg:w-75">
+                    <div class="form-header my-3">
+                        <h2>Información adicional</h2>
+                    </div>
+                    <div class="form-wrapper w-100 p-2">
+                        <div class="row form-group mx-0 mt-3">
+                            <div id="author-selector" class="column-1 md:column-1 p-0 transition-all">
+                                <label for="author" class="form-label">Author <span class="required"></span></label>
+                                <select id="author" name="author" class="form-select" tabindex="7">
+                                    <option value="" <%= product.author.id === '' ? 'selected' : '' %>>Seleccione un autor</option>
+                                    <option value="-1" <%= product.author.id === -1 ? 'selected' : '' %>>*** Nuevo autor ***</option>
+                                    <% authors.forEach(author => { %>
+                                        <option value="<%= author.id %>" <%= product.author.id === author.id ? 'selected' : '' %>><%= author.full_name %></option>
+                                    <% }); %>
+                                </select>
+                                <p id="author-error" class="error-validation"></p>
+                                <% if (locals.errors && errors.author) { %>
+                                    <p class="feedback"><%= errors.author.msg %></p>
+                                <% } %>
+                            </div>
+                            <div id="author-new" class="column-1 md:column-2 pr-0 transition-all" style="display: none;">
+                                <label for="author_name" class="form-label">Titulo del nuevo author <span class="required"></span></label>
+                                <input type="text" id="author_name" name="author_name" placeholder="Nombre del autor..." class="form-input form-input-end w-100" value="<%= product.author_name || '' %>">
+                                <p id="author_name-error" class="error-validation"></p>
+                                <% if (locals.errors && errors.author_name) { %>
+                                    <p class="feedback"><%= errors.author_name.msg %></p>
+                                <% } %>
+                            </div>
+                        </div>
+
+                        <!-- SHEET AVAILABLES -->
+                        <% const sheetProperties = []; %>
+                        <% sheetProperties.push({ name: 'published_at', label: 'Fecha de publicación', placeholder: 'MM/AAAA' }); %>
+                        <% sheetProperties.push({ name: 'pages', label: 'Páginas' }); %>
+                        <% sheetProperties.push({ name: 'language', label: 'Idioma', type: 'select', options: ['Español', 'Ingles', 'Francés', 'Portugues'] }); %>
+                        <% sheetProperties.push({ name: 'editorial', label: 'Editorial' }); %>
+                        <% sheetProperties.push({ name: 'presentation', label: 'Presentación' }); %>
+
+                        <!-- SHEET EACH -->
+                        <% sheetProperties.forEach((sheet, i) => { %>
+                            <% const tabindex = 8 + i; %>
+                            <% sheet.type = sheet.type || 'text'; %>
+
+                            <div class="row form-group mx-0">
+                                <label for="<%= sheet.name %>" class="form-label"><%= sheet.label %></label>
+                                <% if (sheet.type === 'select' ) { %>
+                                    <select id="<%= sheet.name %>" name="<%= sheet.name %>" class="form-select select-attribute" tabindex="<%= tabindex %>">
+                                        <% sheet.options.forEach(option => { %>
+                                            <option value="<%= option %>" <%= (product[sheet.name] || '') === option ? 'selected' : '' %>><%= option %></option>
+                                        <% }); %>
+                                    </select>
+                                <% } else { %>
+                                    <input type="<%= sheet.type %>" id="<%= sheet.name %>" name="<%= sheet.name %>" placeholder="<%= sheet.placeholder || '' %>" class="form-input w-100 input-attribute" tabindex="<%= tabindex %>" value="<%= decodeUtf8(product[sheet.name] || '') %>">
+                                <% } %>
+                                <p id="<%= sheet.name %>-error" class="error-validation"></p>
+                                <% if (locals.errors && errors[sheet.name]) { %>
+                                    <p class="feedback"><%= errors[sheet.name].msg %></p>
+                                <% } %>
+                            </div>
+                        <% }); %>
+                    </div>
+                </section>
+
+                <div class="row form-actions my-3">
+                    <button id="btn-products-edit" type="submit" class="form-action-submit" tabindex="13">Actualizar</button>
                     <a href="/admin" class="form-action-cancel">Cancelar</a>
                 </div>
-            </form>
-        </section>
+            </div>
+        </form>
     </main>
     <!-- MAIN :: END -->
 
