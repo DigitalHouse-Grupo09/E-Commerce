@@ -38,7 +38,8 @@
 [data-theme="dark"] .products .product .product-details,
 [data-theme="dark"] .products .product .product-title,
 [data-theme="dark"] .products .product .product-price,
-[data-theme="dark"] .category-icon {
+[data-theme="dark"] .category-icon,
+[data-theme="dark"] #captchaHeading {
   color: var(--grey);
 }
 
