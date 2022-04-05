@@ -11,7 +11,8 @@ const upload = require('../helpers/image');
 // mapping
 //
 router.get('/', controller.cart);
-router.get('/checkout', controller.checkout)
+router.get('/checkout', controller.checkout);
+router.post('/checkout', controller.checkoutConfirm)
 
 //
 // export
