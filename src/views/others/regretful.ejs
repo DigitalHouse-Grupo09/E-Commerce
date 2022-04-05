@@ -8,36 +8,66 @@
     <%- include('../partials/header') %> 
 
     <!-- MAIN :: BEGIN -->
-    <main class="form-regretful">
-      <form id="regretful" action="/" method="POST">
-        <label for="1">N° de Pedido</label>
-        <input type="text" id="1" required />
+    <main class="main-fluid">
+        <section class="admin">
+            <div class="title-subtitle">
+                <h3 class="title-subtitle-title">
+                    Solicitud de devolución
+                </h3>
+            </div>
 
-        <label for="2">Nombre y Apellido</label>
-        <input type="text" id="2" required/>
+            <form action="/" method="POST" class="form">
+                <div class="d-flex flex-column align-items-center justify-content-center">
+                    <section class="w-100 lg:w-50">
+                        <div class="form-wrapper w-100 p-2">
+                            <div class="row form-group mx-0">
+                                <label for="1" class="form-label">N° de Pedido</label>
+                                <input type="text" id="1" class="form-input w-100" required/>
+                            </div>
 
-        <label for="3">D.N.I</label>
-        <input type="text" id="3" required/>
+                            <div class="row form-group mx-0">
+                                <label for="2" class="form-label">Nombre y Apellido</label>
+                                <input type="text" id="2" class="form-input w-100" required/>
+                            </div>
 
-        <label for="4">Direccion de Email</label>
-        <input type="mail" id="4" required/>
+                            <div class="row form-group mx-0">
+                                <label for="3" class="form-label">D.N.I</label>
+                                <input type="text" id="3" class="form-input w-100" required/>
+                            </div>
 
-        <label for="comentarios">Comentarios</label>
-        <textarea name="comentarios" id="comentarios" required></textarea>
+                            <div class="row form-group mx-0">
+                                <label for="4" class="form-label">Direccion de Email</label>
+                                <input type="mail" id="4" class="form-input w-100" required/>
+                            </div>
 
-        <div class="center">
-          <h4 id="captchaHeading">Validar</h4>
-          <div id="captchaBackground">
-            <canvas id="captcha">captcha text</canvas>
-          </div>
-          <input id="textBox" type="text" name="text" required/>
-        </div>
-        <div class="captcha-buttons">
-          <input id="submitButton" type="submit" />
-          <button id="refreshButton" type="submit">Refresh</button>
-        </div>
-        <span id="output"></span>
-      </form>
+                            <div class="row form-group mx-0">
+                                <label for="comentarios" class="form-label">Comentarios</label>
+                                <textarea name="comentarios" id="comentarios" class="form-input w-100" required></textarea>
+                            </div>
+
+                            <div class="row d-flex flex-column align-items-center justify-content-center form-group mx-0">
+                                <div class="center">
+                                    <h4 id="captchaHeading">Validar</h4>
+                                    <div id="captchaBackground">
+                                        <canvas id="captcha">captcha text</canvas>
+                                    </div>
+                                    <input id="textBox" type="text" name="text" required/>
+                                </div>
+                                <div class="captcha-buttons">
+                                    <input id="submitButton" type="submit" value="Validar" />
+                                    <button id="refreshButton" type="submit">Cambiar</button>
+                                </div>
+                                <span id="output"></span>
+                            </div>
+                          </div>
+                    </section>
+
+                    <div class="row form-actions my-3">
+                        <button type="submit" class="form-action-submit" id="submitButton">Enviar</button> 
+                    </div>
+                </div>
+            </form>
+        </section>
     </main>
     <!-- MAIN :: END -->
 

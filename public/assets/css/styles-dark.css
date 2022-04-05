@@ -5,7 +5,7 @@
 
 [data-theme="dark"] {
   background-color: var(--grey-dark) !important;
-  color: var(--black);
+  color: var(--grey);
 }
 
 [data-theme="dark"] .category-title {

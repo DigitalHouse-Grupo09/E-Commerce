@@ -19,6 +19,6 @@ BASES DE DATOS
    - ✅ Archivos de configuración.
    - ✅ Modelos con sus relaciones.
 * CRUD
-   - De productos.
+   - ✅ De productos.
    - De usuarios.
    - (Opcional) De tablas secundarias.
